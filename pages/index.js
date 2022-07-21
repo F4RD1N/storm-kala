@@ -1,3 +1,12 @@
-export default function Home() {
-  return <div>Hello World</div>;
-}
+import React from "react";
+import { Hero, SpecialOffer } from "../components";
+const Home = () => {
+  return (
+    <div>
+      <Hero />
+      <SpecialOffer />
+    </div>
+  );
+};
+
+export default Home;

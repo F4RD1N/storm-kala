@@ -1,7 +1,8 @@
 import Theme from "../styles/theme";
 import Layout from "../layout";
+import Head from "next/head";
 
-export default function App({ Component, pageProps }) {
+const _app = ({ Component, pageProps }) => {
   return (
     <>
       <Theme>
@@ -11,4 +12,6 @@ export default function App({ Component, pageProps }) {
       </Theme>
     </>
   );
-}
+};
+
+export default _app;

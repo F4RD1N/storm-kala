@@ -1,8 +1,17 @@
 export default {
   // Temp fonts
-  fonts: {},
+  fonts: {
+    main: 'Vazirmatn, sans-serif'
+  },
   // Colors for layout
-  colors: {},
+  colors: {
+    primary: '#EE384E',
+    border: '#efefef',
+    gray: '#efefef'
+  },
+  utilities: {
+    radius: '5px'
+  },
   // Breakpoints for responsive design
   breakpoints: {
     sm: "screen and (min-width: 640px)",
