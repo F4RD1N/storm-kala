@@ -5,8 +5,9 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1.5rem .7rem;
   user-select: none;
+  height: 270px;
 `;
 export const ImageContainer = styled.div`
   width: 100px;
@@ -19,13 +20,13 @@ export const ImageContainer = styled.div`
 export const ProductName = styled.h3`
   text-align: center;
   font-size: 0.9rem;
-  line-height: 1.8;
+  line-height: 1.5;
+  width: 80%;
 `;
 
 export const Details = styled.div`
   display: flex;
   border-top: 1px solid ${(props) => props.theme.colors.border};
-  margin-top: 1rem;
   gap: 0.5rem;
   padding: 0.5rem 0;
 `;
@@ -36,7 +37,6 @@ export const PriceContainer = styled.div`
 `;
 
 export const Price = styled.h4`
-  margin-top: 0.5rem;
   font-weight: bold;
 `;
 export const OldPrice = styled.h4`

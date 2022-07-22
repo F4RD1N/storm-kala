@@ -12,45 +12,42 @@ import { FreeMode } from "swiper";
 //Styled Components
 import {
   Container,
-  Titlebar,
   Title,
   SecTitle,
-  HorizontalRule,
+  LoadMoreContainer,
+  LoadMoreButton
 } from "./ListSlider.style";
+
+//Icons 
+import { AiOutlineArrowLeft } from "react-icons/ai";
 
 const ListSlider = () => {
   const mainTitle = "تخفیفات ما";
   const secTitle = "خریدی به صرفه با تخفیفات شگفت انگیز";
   return (
     <Container>
-      <Titlebar>
-        <Title>{mainTitle}</Title>
-        <HorizontalRule />
-      </Titlebar>
+      <Title>{mainTitle}</Title>
       <SecTitle>{secTitle}</SecTitle>
       <Swiper
         spaceBetween={0}
-        slidesPerView={2.2}
+        slidesPerView={2.6}
         freeMode={true}
         modules={[FreeMode]}
       >
+        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
+          return (
+            <SwiperSlide key={item} className="swiper-item">
+              <ProductCard />
+            </SwiperSlide>
+          );
+        })}
+
         <SwiperSlide className="swiper-item">
-          <ProductCard/>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-item">
-          <ProductCard/>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-item">
-          <ProductCard/>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-item">
-          <ProductCard/>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-item">
-          <ProductCard/>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-item">
-          <ProductCard/>
+          <LoadMoreContainer>
+            <LoadMoreButton>
+                <AiOutlineArrowLeft />
+            </LoadMoreButton>
+            </LoadMoreContainer>
         </SwiperSlide>
       </Swiper>
     </Container>

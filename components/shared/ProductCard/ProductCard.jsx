@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 //Images
-import Loptop from "../../../assets/loptop.png";
+import Loptop from "../../../assets/phone.png";
 
 //Styled Components
 import {
@@ -18,7 +18,7 @@ import {
 
 const ProductCard = ({ hasDiscount = false }) => {
   const product = {
-    name: "لپتاپ ایسوس مدل zenbook4523 ui",
+    name: "لپتاپ ایسوس  zenbook4523 ui",
     price: "۴۵,۰۰۰,۰۰۰",
   };
   return (

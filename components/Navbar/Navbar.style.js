@@ -19,7 +19,7 @@ export const InputContainer = styled.div`
   background-color: ${(props) => props.theme.colors.gray};
   padding: 0.7rem 1rem;
   width: 80%;
-  border-radius: ${(props) => props.theme.utilities.radius};
+  border-radius: ${(props) => props.theme.utilities.radius.card};
   font-size: 1.4rem;
   color: rgb(153, 153, 153);
   gap: 0.5rem;

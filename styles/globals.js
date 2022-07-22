@@ -33,6 +33,8 @@ const GlobalStyles = createGlobalStyle`
     border-right: 1px solid ${(props) => props.theme.colors.border};
     border-radius: 0 5px 5px 0;
   }
+
+  
   
   h1,h2,h3,h4,h5,h6,button {
     /* font-family: ${(props) => props.theme.fonts.title}; */

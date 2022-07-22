@@ -17,7 +17,13 @@ export default {
     gray: "#efefef",
   },
   utilities: {
-    radius: "15px",
+    radius: {
+      card: '10px',
+      button: '5px'
+    },
+    shadow: {
+      button: '1px 1px 15px rgba(0, 0, 0, 0.1)'
+    }
   },
   // Breakpoints for responsive design
   breakpoints: {
