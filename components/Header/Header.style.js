@@ -15,5 +15,5 @@ export const Item = styled.div`
 export const MainTitle = styled.h1`
     font-size: 1.5rem;
     font-weight: bold;
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.red};
 `

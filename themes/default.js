@@ -2,6 +2,10 @@ export default {
   // Temp fonts
   fonts: {
     main: "Vazirmatn, sans-serif",
+    size: {
+      listTitle: "1.5rem",
+      listSecTitle: '.9rem'
+    },
   },
   // Colors for layout
   colors: {
@@ -9,7 +13,7 @@ export default {
     textPrimary: "#1B1924",
     textSecondary: "#8A86A1",
     border: "#D9D9D9",
-    red: '#FC185A',
+    red: "#FC185A",
     gray: "#efefef",
   },
   utilities: {

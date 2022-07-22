@@ -1,12 +1,12 @@
 import React from "react";
-import { Hero, SpecialOffer } from "../components";
-import { ProductCard } from "../components/shared";
+import { Hero, SpecialOffer, ListSlider } from "../components";
+
 const Home = () => {
   return (
     <div>
       <Hero />
       {/* <SpecialOffer /> */}
-      <ProductCard />
+      <ListSlider />
     </div>
   );
 };

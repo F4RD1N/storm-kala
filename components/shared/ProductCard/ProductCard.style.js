@@ -7,8 +7,8 @@ export const Container = styled(GlobalCard)`
   align-items: center;
   justify-content: space-between;
   border: 1px solid ${(props) => props.theme.colors.border};
-  width: 35%;
   padding: 1.5rem;
+  user-select: none;
 `;
 export const ImageContainer = styled.div`
   width: 100px;
