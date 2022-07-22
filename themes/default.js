@@ -1,16 +1,19 @@
 export default {
   // Temp fonts
   fonts: {
-    main: 'Vazirmatn, sans-serif'
+    main: "Vazirmatn, sans-serif",
   },
   // Colors for layout
   colors: {
-    primary: '#EE384E',
-    border: '#efefef',
-    gray: '#efefef'
+    primary: "#FFAB06",
+    textPrimary: "#1B1924",
+    textSecondary: "#8A86A1",
+    border: "#D9D9D9",
+    red: '#FC185A',
+    gray: "#efefef",
   },
   utilities: {
-    radius: '5px'
+    radius: "10px",
   },
   // Breakpoints for responsive design
   breakpoints: {

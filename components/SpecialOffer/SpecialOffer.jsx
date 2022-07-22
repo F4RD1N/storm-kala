@@ -14,6 +14,8 @@ import {
   ProductPrice,
   OldProductPrice,
 } from "./SpecialOffer.style";
+
+
 const SpecialOffer = () => {
   const title = "پیشنهاد شگفت‌انگیز";
   const product = {

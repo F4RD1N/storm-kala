@@ -1,10 +1,12 @@
 import React from "react";
 import { Hero, SpecialOffer } from "../components";
+import { ProductCard } from "../components/shared";
 const Home = () => {
   return (
     <div>
       <Hero />
-      <SpecialOffer />
+      {/* <SpecialOffer /> */}
+      <ProductCard />
     </div>
   );
 };
