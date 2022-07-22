@@ -13,7 +13,7 @@ export default {
     gray: "#efefef",
   },
   utilities: {
-    radius: "10px",
+    radius: "15px",
   },
   // Breakpoints for responsive design
   breakpoints: {

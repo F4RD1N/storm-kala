@@ -6,17 +6,19 @@ export const Container = styled(GlobalCard)`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid ${(props) => props.theme.colors.border};
-  width: 40%;
+  border: 1px solid ${(props) => props.theme.colors.border};
+  width: 35%;
   padding: 1.5rem;
 `;
 export const ImageContainer = styled.div`
-  width: 85%;
-  height: 85%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const ProductName = styled.h3`
-  font-weight: bold;
   text-align: center;
   font-size: 0.9rem;
   line-height: 1.8;
@@ -47,11 +49,14 @@ export const OldPrice = styled.h4`
 `;
 
 export const Badge = styled.div`
-  display: ${(props) => (props.isVisible ? "block" : "none")};
-  font-size: 0.9rem;
+  display: ${(props) => (props.isVisible ? "flex" : "none")};
   background-color: ${(props) => props.theme.colors.red};
   align-self: center;
   color: #fff;
   padding: 0.6rem 0.5rem;
   border-radius: 1rem 0.3rem 1rem 1rem;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
 `;

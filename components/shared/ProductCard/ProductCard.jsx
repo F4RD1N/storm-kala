@@ -24,10 +24,9 @@ const ProductCard = ({ hasDiscount = false }) => {
   return (
     <Container>
       <ImageContainer>
-        <Image src={Loptop} objectFit="cover" />
+        <Image src={Loptop} objectFit="cover"/>
       </ImageContainer>
       <ProductName>{product.name}</ProductName>
-
       <Details>
         <Badge isVisible={hasDiscount}>%۱۵</Badge>
         <PriceContainer>
