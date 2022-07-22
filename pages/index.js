@@ -1,12 +1,23 @@
 import React from "react";
-import { Hero, SpecialOffer, ListSlider,CatagoryList  } from "../components";
+import { Hero, SpecialOffer, ListSlider, CatagoryList, SpecialCatagoryList } from "../components";
 
 const Home = () => {
   return (
     <div>
       <Hero />
-      {/* <SpecialOffer /> */}
+      
+      <ListSlider />
+      <br />
+      <br />
       <CatagoryList />
+      <br />
+      <br />
+
+      <SpecialCatagoryList />
+      <br />
+      <br />
+      <br />
+
     </div>
   );
 };
