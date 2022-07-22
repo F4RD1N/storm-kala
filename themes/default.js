@@ -3,7 +3,7 @@ export default {
   fonts: {
     main: "Vazirmatn, sans-serif",
     size: {
-      listTitle: "1.5rem",
+      listTitle: "1.3rem",
       listSecTitle: '.9rem'
     },
   },
@@ -23,7 +23,8 @@ export default {
     },
     shadow: {
       button: '1px 1px 15px rgba(0, 0, 0, 0.1)'
-    }
+    },
+    transition: '100ms linear'
   },
   // Breakpoints for responsive design
   breakpoints: {
