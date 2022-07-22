@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import { GlobalCard } from "../../../styles/shared";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid ${(props) => props.theme.colors.border};
   padding: 1.5rem;
   user-select: none;
 `;

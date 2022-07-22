@@ -30,27 +30,27 @@ const ListSlider = () => {
       <SecTitle>{secTitle}</SecTitle>
       <Swiper
         spaceBetween={0}
-        slidesPerView={2.1}
+        slidesPerView={2.2}
         freeMode={true}
         modules={[FreeMode]}
       >
-        <SwiperSlide>
-          <ProductCard hasDiscount={true} />
+        <SwiperSlide className="swiper-item">
+          <ProductCard/>
         </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard hasDiscount={true} />
+        <SwiperSlide className="swiper-item">
+          <ProductCard/>
         </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard hasDiscount={true} />
+        <SwiperSlide className="swiper-item">
+          <ProductCard/>
         </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard hasDiscount={true} />
+        <SwiperSlide className="swiper-item">
+          <ProductCard/>
         </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard hasDiscount={true} />
+        <SwiperSlide className="swiper-item">
+          <ProductCard/>
         </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard hasDiscount={true} />
+        <SwiperSlide className="swiper-item">
+          <ProductCard/>
         </SwiperSlide>
       </Swiper>
     </Container>

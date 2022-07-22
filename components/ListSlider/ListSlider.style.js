@@ -7,6 +7,7 @@ export const Titlebar = styled.div`
   justify-content: space-between;
   gap: 2rem;
 `;
+
 export const Title = styled.h2`
   font-size: ${(props) => props.theme.fonts.size.listTitle};
   font-weight: bold;
