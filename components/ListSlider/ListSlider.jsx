@@ -29,11 +29,9 @@ const ListSlider = () => {
       </Titlebar>
       <SecTitle>{secTitle}</SecTitle>
       <Swiper
-        spaceBetween={10}
-        slidesPerView={2.8}
+        spaceBetween={0}
+        slidesPerView={2.1}
         freeMode={true}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
         modules={[FreeMode]}
       >
         <SwiperSlide>

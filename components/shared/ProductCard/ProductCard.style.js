@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { GlobalCard } from "../../../styles/shared";
 
-export const Container = styled(GlobalCard)`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
