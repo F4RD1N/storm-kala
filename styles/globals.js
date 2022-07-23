@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: ${(props) => props.theme.fonts.main};
     color: ${(props) => props.theme.colors.textPrimary};
+    background-color: ${props => props.theme.colors.natural}
   }
 
   /* Swiper Styles */
@@ -47,6 +48,10 @@ const GlobalStyles = createGlobalStyle`
   }
   li{
     list-style: none;
+  }
+
+  input {
+    font-family: ${props => props.theme.fonts.main};
   }
 `;
 

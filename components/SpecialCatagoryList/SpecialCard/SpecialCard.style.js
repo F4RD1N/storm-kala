@@ -30,10 +30,14 @@ export const Description = styled.h4`
 
 export const BuyButton = styled(GlobalButton)`
 align-self: flex-end;
-padding: .4rem 1.5rem;
-border-radius: 10px 5px 10px 10px;
+font-size: 1.1rem;
+padding: .3rem 1.5rem;
+border-radius: ${props => props.theme.utilities.radius.button};
 `
 
 export const LeftContainer = styled.div`
     align-self: flex-start;
+    border-radius: 50%;
+    border: 1px solid ${props => props.theme.colors.border};
+    padding: 1rem;
 `;

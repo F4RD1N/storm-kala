@@ -16,14 +16,14 @@ const SpecialList = () => {
   return (
     <Container>
       <Swiper
-        spaceBetween={0}
-        slidesPerView={1.02}
+        spaceBetween={5}
+        slidesPerView={1.1}
         freeMode={false}
         modules={[FreeMode]}
       >
       {[0, 1, 2].map((item) => {
           return (
-            <SwiperSlide key={item} className="swiper-item">
+            <SwiperSlide key={item} className="swiper-item no-border">
               <SpecialCard />
             </SwiperSlide>
           );

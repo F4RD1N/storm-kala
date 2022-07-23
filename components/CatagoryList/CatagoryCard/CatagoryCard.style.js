@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  border-left: 1px solid ${(props) => props.theme.colors.border};
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  background-color: #fff;
   user-select: none;
   display: flex;
   flex-direction: column;
@@ -12,18 +11,7 @@ export const Container = styled.div`
   justify-content: space-between;
   transition: all ${(props) => props.theme.utilities.transition};
 
-  &:nth-child(5),
-  &:nth-child(6),
-  &:nth-child(7),
-  &:nth-child(8) {
-    border-bottom: none;
-  }
-  &:last-child {
-    border-left: none;
-  }
-  &:nth-child(4) {
-    border-left: none;
-  }
+ 
 
   &:hover {
     background-color: ${(props) => props.theme.colors.red};

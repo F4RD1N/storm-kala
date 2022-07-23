@@ -27,7 +27,7 @@ export const ProductName = styled.h3`
 
 export const Details = styled.div`
   display: flex;
-  border-top: 1px solid ${(props) => props.theme.colors.border};
+  /* border-top: 1px solid ${(props) => props.theme.colors.border}; */
   gap: 0.5rem;
   padding: 0.5rem 0;
 `;

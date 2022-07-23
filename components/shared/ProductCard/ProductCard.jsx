@@ -31,7 +31,7 @@ const ProductCard = ({ hasDiscount = false }) => {
         <Badge isVisible={hasDiscount}>%۱۵</Badge>
         <PriceContainer>
           <OldPrice isVisible={hasDiscount}>{product.price}</OldPrice>
-          <Price>{product.price}ت</Price>
+          <Price>{product.price} ت</Price>
         </PriceContainer>
       </Details>
     </Container>

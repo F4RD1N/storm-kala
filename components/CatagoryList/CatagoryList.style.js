@@ -12,7 +12,7 @@ export const SectionTitle = styled.h2`
 export const List = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border: 1px solid ${(props) => props.theme.colors.border};
   border-radius: 5px;
   overflow: hidden;
+  gap: .3rem;
 `;

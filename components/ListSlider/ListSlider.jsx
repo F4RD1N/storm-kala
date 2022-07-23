@@ -29,20 +29,20 @@ const ListSlider = () => {
       <Title>{mainTitle}</Title>
       <SecTitle>{secTitle}</SecTitle>
       <Swiper
-        spaceBetween={0}
+        spaceBetween={5}
         slidesPerView={2.6}
         freeMode={true}
         modules={[FreeMode]}
       >
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
           return (
-            <SwiperSlide key={item} className="swiper-item">
-              <ProductCard/>
+            <SwiperSlide key={item} className="swiper-item no-border">
+              <ProductCard hasDiscount={true}/>
             </SwiperSlide>
           );
         })}
 
-        <SwiperSlide className="swiper-item">
+        <SwiperSlide className="swiper-item no-border">
           <LoadMoreContainer>
             <LoadMoreButton>
                 <AiOutlineArrowLeft />
