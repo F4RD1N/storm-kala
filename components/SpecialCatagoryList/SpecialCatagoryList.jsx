@@ -1,7 +1,7 @@
 import React from "react";
 
 //Components
-import SpecialCard from "./SpecialCard/SpecialCard";
+import SpecialCard from "./SpecialCard";
 
 //Shared Components
 import { Container } from "./SpecialCatagoryList.style";

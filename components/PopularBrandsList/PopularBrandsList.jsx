@@ -4,7 +4,7 @@ import React from "react";
 import { Container, Title } from "./PopularBrandsList.style";
 
 //Components
-import BrandCard from "./BrandCard/BrandCard";
+import BrandCard from "./BrandCard";
 
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";

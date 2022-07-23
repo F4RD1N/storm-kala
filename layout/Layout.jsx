@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Navbar } from '../components'
+import { Header, Navbar, Footer } from '../components'
 import { Container } from "./Layout.style";
 
 const Layout = ({ children }) => {
@@ -8,6 +8,7 @@ const Layout = ({ children }) => {
       <Header />
       <Navbar />
       <main>{children}</main>
+      <Footer />
     </Container>
   );
 };

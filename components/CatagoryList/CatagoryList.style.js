@@ -15,5 +15,5 @@ export const List = styled.div`
   grid-template-columns: repeat(4, 1fr);
   border-radius: 5px;
   overflow: hidden;
-  gap: .2rem;
+  gap: 3px;
 `;

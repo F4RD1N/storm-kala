@@ -4,7 +4,7 @@ import React from "react";
 import { Container, SectionTitle, List } from "./CatagoryList.style";
 
 //Shared Components
-import CatagoryCard from "./CatagoryCard/CatagoryCard";
+import CatagoryCard from "./CatagoryCard";
 
 const CatagoryList = () => {
   return (

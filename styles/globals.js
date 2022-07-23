@@ -62,6 +62,10 @@ const GlobalStyles = createGlobalStyle`
   section {
     margin-bottom: 3rem;
   }
+
+  p{
+    line-height: 1.6;
+  }
 `;
 
 export default GlobalStyles;
