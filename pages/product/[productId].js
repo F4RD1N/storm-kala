@@ -8,6 +8,7 @@ import {
   Introduce,
   Information,
   Reviews,
+  AddReview
 } from "../../components/ProductDetails";
 const ddd = () => {
   return (
@@ -18,6 +19,7 @@ const ddd = () => {
       <Introduce />
       <Information />
       <Reviews />
+      <AddReview />
     </div>
   );
 };

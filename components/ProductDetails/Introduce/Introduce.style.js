@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
-  background-color: #fff;
-  padding: 1rem;
-  margin-bottom: 0.3rem;
-  font-size: 0.9rem;
+//Shared Styles
+import { SectionCard } from "../../../styles/shared";
+
+export const Container = styled(SectionCard)`
 `;
 
 export const Title = styled.h2`

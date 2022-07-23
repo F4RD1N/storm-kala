@@ -4,3 +4,4 @@ export { default as Options } from "./Options/Options";
 export { default as Introduce } from "./Introduce/Introduce";
 export { default as Information } from "./Information/Information";
 export { default as Reviews } from "./Reviews/Reviews";
+export { default as AddReview } from "./AddReview/AddReview";

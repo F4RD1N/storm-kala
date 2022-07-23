@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
-background-color: #fff;
-padding: 1rem;
-margin-bottom: .3rem;
-/* border-radius: ${props => props.theme.utilities.radius.card}; */
+//Shared Styles
+import { SectionCard } from "../../../styles/shared";
+
+export const Container = styled(SectionCard)`
 `;
 
 export const ProductName = styled.h2`

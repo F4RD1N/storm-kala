@@ -9,4 +9,6 @@ export const Container = styled.section`
   padding: 1rem;
   text-align: center;
   font-size: .9rem;
+  /* background-color: ${props => props.theme.colors.natural}; */
+  border-top: 3px solid ${props => props.theme.colors.natural};
 `;

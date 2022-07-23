@@ -15,6 +15,7 @@ export default {
     red: "#FC185A",
     gray: "#efefef",
     blue: "#3A97FF",
+    card: '#fff'
   },
   utilities: {
     radius: {
