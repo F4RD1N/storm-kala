@@ -5,6 +5,7 @@ import { SectionCard } from "../../../styles/shared";
 export const Container = styled(SectionCard)`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 3rem;
 `;
 
 export const Title = styled.h2`

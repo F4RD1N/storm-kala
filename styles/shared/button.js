@@ -8,6 +8,7 @@ const LoadMoreButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: ${(props) => props.theme.utilities.radius.button};
   box-shadow: ${(props) => props.theme.utilities.shadow.button};
   transition: filter 100ms linear;
   &:hover {
@@ -18,4 +19,4 @@ const LoadMoreButton = styled.button`
   }
 `;
 
-export default LoadMoreButton
+export default LoadMoreButton;

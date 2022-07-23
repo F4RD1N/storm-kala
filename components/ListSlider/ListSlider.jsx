@@ -39,7 +39,7 @@ const ListSlider = ({discount}) => {
       >
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
           return (
-            <SwiperSlide key={item} className="swiper-item no-border">
+            <SwiperSlide key={item} className="swiper-item">
               <Link href="/product/298221">
               <a>
               <ProductCard hasDiscount={discount}/>
@@ -50,7 +50,7 @@ const ListSlider = ({discount}) => {
           );
         })}
 
-        <SwiperSlide className="swiper-item no-border">
+        <SwiperSlide className="swiper-item">
           <LoadMoreContainer>
             <LoadMoreButton pressed={false}>
                 <AiOutlineArrowLeft />

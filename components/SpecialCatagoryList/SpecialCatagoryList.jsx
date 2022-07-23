@@ -21,9 +21,9 @@ const SpecialList = () => {
         freeMode={false}
         modules={[FreeMode]}
       >
-      {[0, 1, 2].map((item) => {
+        {[0, 1, 2].map((item) => {
           return (
-            <SwiperSlide key={item} className="swiper-item no-border">
+            <SwiperSlide key={item} className="swiper-item">
               <SpecialCard />
             </SwiperSlide>
           );

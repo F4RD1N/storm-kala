@@ -8,8 +8,11 @@ import {
   Introduce,
   Information,
   Reviews,
-  AddReview
+  AddReview,
+  AddToCart
 } from "../../components/ProductDetails";
+
+import {ListSlider, CatagoryList} from '../../components'
 const ddd = () => {
   return (
     <div>
@@ -20,6 +23,10 @@ const ddd = () => {
       <Information />
       <Reviews />
       <AddReview />
+      <AddToCart />
+      <ListSlider />
+      <CatagoryList />
+      <ListSlider discount={true}/>
     </div>
   );
 };

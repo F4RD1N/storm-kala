@@ -23,7 +23,7 @@ const PopularBrandsList = () => {
       >
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
           return (
-            <SwiperSlide key={item} className="swiper-item no-border">
+            <SwiperSlide key={item} className="swiper-item">
               <BrandCard />
             </SwiperSlide>
           );

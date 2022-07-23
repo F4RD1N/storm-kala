@@ -24,7 +24,7 @@ export const ReviewsCount = styled.span`
 
 export const ReviewContainer = styled.div`
   margin: 0 1rem;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  border-bottom: 2px solid ${(props) => props.theme.colors.natural};
   padding: 0.5rem 0;
 
   margin-bottom: 2rem;

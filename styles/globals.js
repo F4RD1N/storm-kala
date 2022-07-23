@@ -21,27 +21,35 @@ const GlobalStyles = createGlobalStyle`
   }
 
   /* Swiper Styles */
-  .swiper-item {
+  .swiper-item.border {
   border: 1px solid ${(props) => props.theme.colors.border};
   border-left: none;
-  overflow: hidden;
-  transition: all ${(props) => props.theme.utilities.transition};
-  &:hover {
-    box-shadow: ${(props) => props.theme.utilities.shadow.card};
-  }
+  background-color: transparent;
   }
 
-  .swiper-item:last-child {
+  .swiper-item.border:last-child {
     border-left: 1px solid ${(props) => props.theme.colors.border};
     border-radius: 5px 0 0 5px;
   }
-  .swiper-item:first-child {
+  .swiper-item.border:first-child {
     border-right: 1px solid ${(props) => props.theme.colors.border};
     border-radius: 0 5px 5px 0;
   }
-  .swiper-item.no-border{
-  border: none;
-  background-color: #fff;
+
+  .swiper-item:last-child {
+    border-radius: 5px 0 0 5px;
+  }
+  .swiper-item:first-child {
+    border-radius: 0 5px 5px 0;
+  }
+  .swiper-item{
+  background-color: ${(props) => props.theme.colors.card};
+  overflow: hidden;
+  transition: all ${(props) => props.theme.utilities.transition};
+  
+  &:hover {
+    box-shadow: ${(props) => props.theme.utilities.shadow.card};
+  }
   }
   
   
@@ -82,12 +90,12 @@ const GlobalStyles = createGlobalStyle`
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: ${props => props.theme.colors.textSecondary};
+  background: ${(props) => props.theme.colors.textSecondary};
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: ${props => props.theme.colors.red}
+  background-color: ${(props) => props.theme.colors.red}
 }
 
 `;
