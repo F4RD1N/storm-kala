@@ -6,6 +6,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem .7rem;
+  padding-bottom: 1rem;
   user-select: none;
   height: 270px;
 `;
@@ -38,10 +39,13 @@ export const PriceContainer = styled.div`
 
 export const Price = styled.h4`
   font-weight: bold;
+  font-size: .9rem;
+  margin-top: .5rem;
 `;
 export const OldPrice = styled.h4`
   display: ${(props) => (props.isVisible ? "block" : "none")};
   margin-top: 0.5rem;
+  font-size: .8rem;
   text-decoration: line-through;
   color: ${(props) => props.theme.colors.textSecondary};
 `;
@@ -49,12 +53,12 @@ export const OldPrice = styled.h4`
 export const Badge = styled.div`
   display: ${(props) => (props.isVisible ? "flex" : "none")};
   background-color: ${(props) => props.theme.colors.red};
-  align-self: center;
+  align-self: flex-e;
   color: #fff;
-  padding: 0.6rem 0.5rem;
-  border-radius: 1rem 0.3rem 1rem 1rem;
-  width: 40px;
-  height: 40px;
+  border-radius: 5px;
+  width: 45px;
+  height: 25px;
+  font-size: .9rem;
   justify-content: center;
   align-items: center;
 `;

@@ -21,7 +21,7 @@ import {
 //Icons 
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
-const ListSlider = () => {
+const ListSlider = ({discount}) => {
   const mainTitle = "تخفیفات ما";
   const secTitle = "خریدی به صرفه با تخفیفات شگفت انگیز";
   return (
@@ -37,7 +37,7 @@ const ListSlider = () => {
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
           return (
             <SwiperSlide key={item} className="swiper-item">
-              <ProductCard />
+              <ProductCard hasDiscount={discount}/>
             </SwiperSlide>
           );
         })}

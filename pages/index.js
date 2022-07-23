@@ -5,19 +5,16 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      
       <ListSlider />
       <br />
+      <ListSlider discount={true}/>
+      <br />
+      <ListSlider />
       <br />
       <CatagoryList />
       <br />
-      <br />
-
       <SpecialCatagoryList />
       <br />
-      <br />
-      <br />
-
     </div>
   );
 };
