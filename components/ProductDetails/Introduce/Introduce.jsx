@@ -1,7 +1,14 @@
 import React from "react";
 
+//Icons
+import { AiOutlineArrowLeft } from "react-icons/ai";
+
 //Styled Components
-import { Container, Title, Description, ReadMore } from "./Introduce.style";
+import { Container, Title, Description } from "./Introduce.style";
+
+//Shared Styled Components
+import { ReadMore } from "../../../styles/shared";
+
 const Introduce = () => {
   return (
     <Container>
@@ -22,7 +29,9 @@ const Introduce = () => {
         قبولی را برای کاربر به ارمغان می‌آورد و برای استفاده‌های عمومی و
         غیرحرفه‌ای کافی خواهد بود.
       </Description>
-      <ReadMore>بیشتر</ReadMore>
+      <ReadMore>
+        بیشتر <AiOutlineArrowLeft />
+      </ReadMore>
     </Container>
   );
 };

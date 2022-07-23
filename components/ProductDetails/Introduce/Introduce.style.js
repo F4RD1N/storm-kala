@@ -21,10 +21,3 @@ export const Description = styled.p`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: ${props => props.showFull ? 'N' : 3}; /* number of lines to show */
 `;
-
-export const ReadMore = styled.span`
-    display: inline-block;
-    color: #3A97FF;
-    margin: 0 .5rem;
-    margin-top: 1rem;
-`
