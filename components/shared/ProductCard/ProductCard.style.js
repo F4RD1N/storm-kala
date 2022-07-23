@@ -53,7 +53,7 @@ export const OldPrice = styled.h4`
 export const Badge = styled.div`
   display: ${(props) => (props.isVisible ? "flex" : "none")};
   background-color: ${(props) => props.theme.colors.red};
-  align-self: flex-e;
+  align-self: flex-start;
   color: #fff;
   border-radius: 5px;
   width: 45px;

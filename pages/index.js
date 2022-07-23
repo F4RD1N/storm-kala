@@ -13,6 +13,10 @@ const Home = () => {
       <Hero />
       <ListSlider />
       <br />
+      <ListSlider discount={true}/>
+      <br />
+      <ListSlider />
+      <br />
       <CatagoryList />
       <br />
       <SpecialCatagoryList />

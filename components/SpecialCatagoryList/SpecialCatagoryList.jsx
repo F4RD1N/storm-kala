@@ -23,7 +23,7 @@ const SpecialList = () => {
       >
       {[0, 1, 2].map((item) => {
           return (
-            <SwiperSlide className="swiper-item">
+            <SwiperSlide key={item} className="swiper-item">
               <SpecialCard />
             </SwiperSlide>
           );
