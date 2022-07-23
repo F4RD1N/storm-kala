@@ -21,9 +21,9 @@ const ddd = () => {
       <Options />
       <Introduce />
       <Information />
+      <AddToCart />
       <Reviews />
       <AddReview />
-      <AddToCart />
       <ListSlider />
       <CatagoryList />
       <ListSlider discount={true}/>

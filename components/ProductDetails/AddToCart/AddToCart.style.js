@@ -12,12 +12,12 @@ export const Container = styled(SectionCard)`
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 3rem;
+  margin: 1rem 0;
 `;
 
 export const AddButton = styled(GlobalButton)`
   font-size: 1rem;
-  padding: 0.8rem 2rem;
+  padding: 0.7rem 1.5rem;
 `;
 
 export const ProductPrice = styled.span`
