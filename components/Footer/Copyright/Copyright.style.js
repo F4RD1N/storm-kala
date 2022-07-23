@@ -8,6 +8,5 @@ export const Container = styled.section`
   margin: 0;
   padding: 1rem;
   text-align: center;
-  background-color: ${(props) => props.theme.colors.gray};
   font-size: .9rem;
 `;

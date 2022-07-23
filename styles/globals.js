@@ -27,7 +27,7 @@ const GlobalStyles = createGlobalStyle`
   overflow: hidden;
   transition: all ${(props) => props.theme.utilities.transition};
   &:hover {
-    box-shadow: ${props => props.theme.utilities.shadow.card};
+    box-shadow: ${(props) => props.theme.utilities.shadow.card};
   }
   }
 
@@ -50,6 +50,7 @@ const GlobalStyles = createGlobalStyle`
   }
   a {
     text-decoration: none;
+    color: initial
   }
   li{
     list-style: none;
@@ -66,6 +67,29 @@ const GlobalStyles = createGlobalStyle`
   p{
     line-height: 1.6;
   }
+
+
+  /* custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: ${props => props.theme.colors.textSecondary};
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: ${props => props.theme.colors.red}
+}
+
 `;
 
 export default GlobalStyles;

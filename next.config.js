@@ -4,7 +4,14 @@ const nextConfig = {
   swcMinify: true,
   compiler: {
     styledComponents: true
-  }
+  },
+  redirects: async () => [
+    {
+      source: '/product',
+      destination: '/',
+      permanent: false
+    }
+  ]
 }
 
 module.exports = nextConfig
