@@ -23,7 +23,7 @@ const SpecialCard = () => {
         <BuyButton>خرید</BuyButton>
       </RightContainer>
       <LeftContainer>
-        <Image src={Digital} width={90} height={90} objectFit="cover" />
+        <Image src={Digital} width={80} height={80} objectFit="cover" />
       </LeftContainer>
     </Container>
   );

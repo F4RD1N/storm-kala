@@ -17,8 +17,8 @@ const SpecialList = () => {
     <Container>
       <Swiper
         spaceBetween={0}
-        slidesPerView={1.3}
-        freeMode={true}
+        slidesPerView={1.02}
+        freeMode={false}
         modules={[FreeMode]}
       >
       {[0, 1, 2].map((item) => {

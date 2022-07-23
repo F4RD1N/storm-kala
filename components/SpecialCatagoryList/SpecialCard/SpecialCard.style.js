@@ -24,14 +24,14 @@ export const Title = styled.h3`
 
 export const Description = styled.h4`
   color: ${(props) => props.theme.colors.textSecondary};
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin-bottom: 1rem;
 `;
 
 export const BuyButton = styled(GlobalButton)`
 align-self: flex-end;
-padding: .6rem 1.5rem;
-border-radius: 20px 5px 20px 20px;
+padding: .4rem 1.5rem;
+border-radius: 10px 5px 10px 10px;
 `
 
 export const LeftContainer = styled.div`

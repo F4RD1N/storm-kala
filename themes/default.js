@@ -3,8 +3,8 @@ export default {
   fonts: {
     main: "Vazirmatn, sans-serif",
     size: {
-      listTitle: "1.3rem",
-      listSecTitle: '.9rem'
+      listTitle: "1.2rem",
+      listSecTitle: '.8rem'
     },
   },
   // Colors for layout
