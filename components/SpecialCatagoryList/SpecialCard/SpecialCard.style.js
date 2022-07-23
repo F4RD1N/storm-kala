@@ -30,8 +30,8 @@ export const Description = styled.h4`
 `;
 
 export const BuyButton = styled(GlobalButton)`
-  align-self: flex-end;
-  font-size: 1.1rem;
+  align-self: flex-start;
+  font-size: 1rem;
   padding: 0.3rem 1.5rem;
   border-radius: ${(props) => props.theme.utilities.radius.button};
 `;

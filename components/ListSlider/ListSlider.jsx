@@ -31,7 +31,7 @@ const ListSlider = ({discount}) => {
       <Title>{mainTitle}</Title>
       <SecTitle>{discount && secTitle}</SecTitle>
       <Swiper
-        spaceBetween={5}
+        spaceBetween={3}
         slidesPerView={2.6}
         freeMode={true}
         modules={[FreeMode]}
@@ -41,6 +41,7 @@ const ListSlider = ({discount}) => {
             <SwiperSlide key={item} className="swiper-item no-border">
               <ProductCard hasDiscount={discount}/>
             </SwiperSlide>
+            
           );
         })}
 

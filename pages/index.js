@@ -5,6 +5,7 @@ import {
   ListSlider,
   CatagoryList,
   SpecialCatagoryList,
+  PopularBrandsList
 } from "../components";
 
 const Home = () => {
@@ -17,7 +18,7 @@ const Home = () => {
       <ListSlider />
       <SpecialCatagoryList />
       <ListSlider discount={true} />
-
+      <PopularBrandsList />
     </div>
   );
 };
