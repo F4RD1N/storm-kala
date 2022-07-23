@@ -12,11 +12,12 @@ const Home = () => {
     <div>
       <Hero />
       <ListSlider />
-      <br />
+      <ListSlider discount={true} />
       <CatagoryList />
-      <br />
+      <ListSlider />
       <SpecialCatagoryList />
-      <br />
+      <ListSlider discount={true} />
+
     </div>
   );
 };

@@ -17,13 +17,18 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: ${(props) => props.theme.fonts.main};
     color: ${(props) => props.theme.colors.textPrimary};
-    background-color: ${props => props.theme.colors.natural}
+    background-color: ${(props) => props.theme.colors.natural}
   }
 
   /* Swiper Styles */
   .swiper-item {
   border: 1px solid ${(props) => props.theme.colors.border};
   border-left: none;
+  overflow: hidden;
+  transition: all ${(props) => props.theme.utilities.transition};
+  &:hover {
+    box-shadow: ${props => props.theme.utilities.shadow.card};
+  }
   }
 
   .swiper-item:last-child {
@@ -51,7 +56,11 @@ const GlobalStyles = createGlobalStyle`
   }
 
   input {
-    font-family: ${props => props.theme.fonts.main};
+    font-family: ${(props) => props.theme.fonts.main};
+  }
+
+  section {
+    margin-bottom: 3rem;
   }
 `;
 

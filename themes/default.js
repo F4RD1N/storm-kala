@@ -23,9 +23,11 @@ export default {
       button: '5px'
     },
     shadow: {
-      button: '1px 1px 15px rgba(0, 0, 0, 0.1)'
+      button: '1px 1px 15px rgba(0, 0, 0, 0.1)',
+      card: '1px 1px 5px rgba(0, 0, 0, 0.1)',
     },
-    transition: '100ms linear'
+    transition: '100ms linear',
+    translate: '1px'
   },
   // Breakpoints for responsive design
   breakpoints: {

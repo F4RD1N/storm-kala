@@ -11,11 +11,10 @@ export const Container = styled.div`
   justify-content: space-between;
   transition: all ${(props) => props.theme.utilities.transition};
 
- 
-
   &:hover {
-    background-color: ${(props) => props.theme.colors.red};
-    color: #fff;
+    /* background-color: ${(props) => props.theme.colors.red};
+    color: #fff; */
+    box-shadow: ${props => props.theme.utilities.shadow.card};
   }
 `;
 export const ImageContainer = styled.div``;

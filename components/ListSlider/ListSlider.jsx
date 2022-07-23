@@ -21,13 +21,15 @@ import {
 //Icons 
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
-const ListSlider = () => {
+const ListSlider = ({discount}) => {
   const mainTitle = "تخفیفات ما";
   const secTitle = "خریدی به صرفه با تخفیفات شگفت انگیز";
+
+  
   return (
     <Container>
       <Title>{mainTitle}</Title>
-      <SecTitle>{secTitle}</SecTitle>
+      <SecTitle>{discount && secTitle}</SecTitle>
       <Swiper
         spaceBetween={5}
         slidesPerView={2.6}
@@ -37,14 +39,14 @@ const ListSlider = () => {
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
           return (
             <SwiperSlide key={item} className="swiper-item no-border">
-              <ProductCard hasDiscount={true}/>
+              <ProductCard hasDiscount={discount}/>
             </SwiperSlide>
           );
         })}
 
         <SwiperSlide className="swiper-item no-border">
           <LoadMoreContainer>
-            <LoadMoreButton>
+            <LoadMoreButton pressed={false}>
                 <AiOutlineArrowLeft />
             </LoadMoreButton>
             </LoadMoreContainer>

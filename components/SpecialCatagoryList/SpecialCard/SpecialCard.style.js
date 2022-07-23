@@ -10,6 +10,7 @@ export const Container = styled.div`
   align-items: center;
   border-radius: 5px;
   padding: 1rem;
+ 
 `;
 
 export const RightContainer = styled.div`
@@ -29,15 +30,15 @@ export const Description = styled.h4`
 `;
 
 export const BuyButton = styled(GlobalButton)`
-align-self: flex-end;
-font-size: 1.1rem;
-padding: .3rem 1.5rem;
-border-radius: ${props => props.theme.utilities.radius.button};
-`
+  align-self: flex-end;
+  font-size: 1.1rem;
+  padding: 0.3rem 1.5rem;
+  border-radius: ${(props) => props.theme.utilities.radius.button};
+`;
 
 export const LeftContainer = styled.div`
-    align-self: flex-start;
-    border-radius: 50%;
-    border: 1px solid ${props => props.theme.colors.border};
-    padding: 1rem;
+  align-self: flex-start;
+  border-radius: 50%;
+  border: 1px solid ${(props) => props.theme.colors.border};
+  padding: 1rem;
 `;

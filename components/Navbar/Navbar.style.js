@@ -16,7 +16,8 @@ export const Item = styled.div`
 export const InputContainer = styled.div`
   display: flex;
   align-items: center;
-  background-color: ${(props) => props.theme.colors.gray};
+  /* background-color: ${(props) => props.theme.colors.gray}; */
+  background-color: #fff;
   padding: 0.7rem 1rem;
   width: 80%;
   border-radius: ${(props) => props.theme.utilities.radius.card};
