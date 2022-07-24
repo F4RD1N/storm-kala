@@ -40,7 +40,7 @@ const ListSlider = ({discount}) => {
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
           return (
             <SwiperSlide key={item} className="swiper-item">
-              <Link href="/product/298221">
+              <Link href="/product/8119459">
               <a>
               <ProductCard hasDiscount={discount}/>
               </a>

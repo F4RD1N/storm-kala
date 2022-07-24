@@ -1,19 +1,22 @@
 import React from "react";
-import Image from "next/image";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import required modules
-import { Pagination, Navigation } from "swiper";
+import { Pagination } from "swiper";
 
 //Styled Components
-import { Container, Item } from "./ImageSlider.style";
+import { Container} from "./ImageSlider.style";
 
-//Images
-import Details from "../../../assets/details.jpg";
+//Components
+import SliderItem from "./SliderItem";
+
+//state
+import productState from "../productState";
 
 const ImageSlider = () => {
+  const { images } = productState();
   return (
     <Container>
       <Swiper
@@ -25,15 +28,14 @@ const ImageSlider = () => {
         }}
         modules={[Pagination]}
       >
-        {[0, 1, 2, 3, 4, 5].map((item) => {
-          return (
-            <SwiperSlide key={item}>
-              <Item>
-                <Image src={Details} objectFit="cover" height={700} />
-              </Item>
-            </SwiperSlide>
-          );
-        })}
+        {images &&
+          images.map((item) => {
+            return (
+              <SwiperSlide key={item.url[0]}>
+                <SliderItem source={item.url[0]} />
+              </SwiperSlide>
+            );
+          })}
       </Swiper>
     </Container>
   );

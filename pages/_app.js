@@ -1,6 +1,9 @@
 import Theme from "../styles/theme";
 import Layout from "../layout";
-import Head from "next/head";
+
+//redux
+import { Provider } from "react-redux";
+import store from "../redux/store";
 
 // Import Swiper styles
 import "swiper/css";
@@ -11,11 +14,13 @@ import "swiper/css/navigation";
 const _app = ({ Component, pageProps }) => {
   return (
     <>
-      <Theme>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </Theme>
+      <Provider store={store}>
+        <Theme>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </Theme>
+      </Provider>
     </>
   );
 };

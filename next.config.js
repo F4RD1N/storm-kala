@@ -11,7 +11,10 @@ const nextConfig = {
       destination: '/',
       permanent: false
     }
-  ]
+  ],
+  images: {
+    domains: ["dkstatics-public.digikala.com"]
+  }
 }
 
 module.exports = nextConfig

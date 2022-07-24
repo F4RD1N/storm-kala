@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 //Components
 import {
@@ -9,11 +9,25 @@ import {
   Information,
   Reviews,
   AddReview,
-  AddToCart
+  AddToCart,
 } from "../../components/ProductDetails";
+import { ListSlider, CatagoryList } from "../../components";
 
-import {ListSlider, CatagoryList} from '../../components'
-const ddd = () => {
+//data presets
+import { productPreset } from "../../presets";
+
+//redux
+import { useDispatch } from "react-redux";
+import { getProduct } from "../../redux/product/productAction";
+
+const ProductDetails = ({ productData }) => {
+
+  //send data to productReducer
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getProduct(productData));
+  }, []);
+
   return (
     <div>
       <ImageSlider />
@@ -26,9 +40,26 @@ const ddd = () => {
       <AddReview />
       <ListSlider />
       <CatagoryList />
-      <ListSlider discount={true}/>
+      <ListSlider discount={true} />
     </div>
   );
 };
 
-export default ddd;
+export default ProductDetails;
+
+
+//fetch Product Data
+export const getServerSideProps = async (context) => {
+  const { productId } = context.params;
+  const res = await fetch(`https://api.digikala.com/v1/product/${productId}/`);
+  const data = await res.json();
+
+  if (!data.data) {
+    return {
+      notFound: true,
+    };
+  }
+  return {
+    props: { productData: productPreset(data.data) },
+  };
+};
