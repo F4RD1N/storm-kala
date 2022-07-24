@@ -5,12 +5,12 @@ const useProductState = () => {
 
   return {
     id: product.id,
-    title: product.title,
+    mainDetails: product.mainDetails,
     brand: product.brand,
     catagory: product.category,
     images: product.images,
     rating: product.rating,
-    colors: product.colors,
+    price: product.price,
     videos: product.videos,
     introduce: product.introduce,
     options: product.options,

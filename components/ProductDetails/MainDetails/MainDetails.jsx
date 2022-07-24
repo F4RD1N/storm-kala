@@ -7,18 +7,22 @@ import {
   ColorsContainer,
   Color,
 } from "./MainDetails.style";
+
+//state
+import useProductState from "../useProductState";
+
 const MainDetails = () => {
+  const { mainDetails } = useProductState();
+
   return (
     <Container>
-      <ProductName>
-        گوشی موبایل سامسونگ مدل Galaxy A32 SM-A325F/DS دو سیم‌کارت ظرفیت 128
-        گیگابایت و رم 6 گیگابایت
-      </ProductName>
+      <ProductName>{mainDetails?.title}</ProductName>
       <ColorsContainer>
         رنگ:
-        <Color color="rgb(33, 150, 243)" />
-        <Color color="white" pressed={true} />
-        <Color color="rgb(156, 39, 177)" />
+        {mainDetails?.colors.map((item) => {
+          const { id, hex_code } = item;
+          return <Color key={id} color={hex_code} pressed={false} />;
+        })}
       </ColorsContainer>
     </Container>
   );

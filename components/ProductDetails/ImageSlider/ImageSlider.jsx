@@ -28,8 +28,7 @@ const ImageSlider = () => {
         }}
         modules={[Pagination]}
       >
-        {images &&
-          images.map((item) => {
+        {images?.map((item) => {
             return (
               <SwiperSlide key={item.url[0]}>
                 <SliderItem source={item.url[0]} />

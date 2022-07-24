@@ -16,7 +16,7 @@ export const Item = styled.li`
   font-size: 0.9rem;
   margin: 0 0.5rem 1rem 0;
   display: flex;
-  gap: .5rem;
+  gap: .3rem;
   font-weight: 300;
 `;
 export const ItemValue = styled.span`

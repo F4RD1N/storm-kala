@@ -24,4 +24,5 @@ export const Item = styled.li`
   font-weight: 300;
 `;
 export const ItemValue = styled.h3`
+line-height: 1.5;
 `

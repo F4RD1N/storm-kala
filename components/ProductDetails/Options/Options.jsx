@@ -1,25 +1,38 @@
 import React from "react";
 
 //Styled Components
-import { Container, Title, Item, ItemValue, HorizontalRuler } from "./Options.style";
+import {
+  Container,
+  Title,
+  Item,
+  ItemValue,
+  HorizontalRuler,
+} from "./Options.style";
+
+//state
+import useProductState from "../useProductState";
+
 const Options = () => {
+  const { options } = useProductState();
   return (
     <Container>
       <Title>ویژگی ها</Title>
 
-      <Item>
-        فناوری صفحه‌نمایش : <ItemValue>Super AMOLED</ItemValue>
-      </Item>
-      <Item>
-        اندازه : <ItemValue>6.4</ItemValue>
-      </Item>
-      <Item>
-        شبکه های ارتباطی : <ItemValue>2G، 3G، 4G</ItemValue>
-      </Item>
+      {options?.map((item) => {
+        const {title, values} = item
+        return (
+          <Item key={title}>
+            {title}:
+            {values.map((item) => (
+              <ItemValue key={item}>{item}</ItemValue>
+            ))}
+          </Item>
+        );
+      })}
       <HorizontalRuler />
       <Item>
-        امکان برگشت کالا در گروه لپ تاپ و الترابوک با دلیل  از خرید تنها
-        در صورتی مورد قبول است که پلمب کالا باز نشده باشد.
+        امکان برگشت کالا در گروه لپ تاپ و الترابوک با دلیل از خرید تنها در صورتی
+        مورد قبول است که پلمب کالا باز نشده باشد.
       </Item>
     </Container>
   );
