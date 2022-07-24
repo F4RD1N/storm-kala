@@ -54,7 +54,15 @@ const ProductDetails = ({ productData }) => {
 export default ProductDetails;
 
 //fetch Product Data
-export const getServerSideProps = async (context) => {
+
+export const getStaticPaths = async() => {
+  return {
+    paths:[],
+    fallback: `blocking`
+  }
+}
+
+export const getStaticProps = async (context) => {
   const { productId } = context.params;
   const res = await fetch(`https://api.digikala.com/v1/product/${productId}/`);
   const data = await res.json();
@@ -66,5 +74,6 @@ export const getServerSideProps = async (context) => {
   }
   return {
     props: { productData: productPreset(data.data) },
+    revalidate: 604800
   };
 };
