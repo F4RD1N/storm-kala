@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 
-const productState = () => {
+const useProductState = () => {
   const { product } = useSelector((state) => state.productState);
 
   return {
@@ -19,4 +19,4 @@ const productState = () => {
   };
 };
 
-export default productState;
+export default useProductState;

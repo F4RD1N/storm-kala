@@ -13,10 +13,10 @@ import { Container} from "./ImageSlider.style";
 import SliderItem from "./SliderItem";
 
 //state
-import productState from "../productState";
+import useProductState from "../useProductState";
 
 const ImageSlider = () => {
-  const { images } = productState();
+  const { images } = useProductState();
   return (
     <Container>
       <Swiper
