@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useRouter } from "next/router";
 
 //Components
 import {
@@ -7,7 +8,7 @@ import {
   Options,
   Introduce,
   Information,
-  Reviews,
+  Comments,
   AddReview,
   AddToCart,
 } from "../../components/ProductDetails";
@@ -20,13 +21,18 @@ import { productPreset } from "../../presets";
 import { useDispatch } from "react-redux";
 import { getProduct } from "../../redux/product/productAction";
 
-const ProductDetails = ({ productData }) => {
+//state
+import useProductState from "../../components/ProductDetails/useProductState";
 
+const ProductDetails = ({ productData }) => {
   //send data to productReducer
   const dispatch = useDispatch();
+  const router = useRouter()
   useEffect(() => {
     dispatch(getProduct(productData));
-  }, []);
+  }, [router.query]);
+
+  const { recommended } = useProductState();
 
   return (
     <div>
@@ -36,9 +42,9 @@ const ProductDetails = ({ productData }) => {
       <Introduce />
       <Information />
       <AddToCart />
-      <Reviews />
+      <Comments />
       <AddReview />
-      <ListSlider />
+      <ListSlider data={recommended} title="کالا های مشابه" />
       <CatagoryList />
       <ListSlider discount={true} />
     </div>
@@ -46,7 +52,6 @@ const ProductDetails = ({ productData }) => {
 };
 
 export default ProductDetails;
-
 
 //fetch Product Data
 export const getServerSideProps = async (context) => {

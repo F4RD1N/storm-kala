@@ -23,7 +23,12 @@ export const ProductName = styled.h3`
   text-align: center;
   font-size: 0.9rem;
   line-height: 1.5;
-  width: 80%;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: ${props => props.showFull ? 'N' : 2}; /* number of lines to show */
 `;
 
 export const Details = styled.div`
