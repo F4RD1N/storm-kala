@@ -41,4 +41,9 @@ export const LeftContainer = styled.div`
   border-radius: 50%;
   border: 1px solid ${(props) => props.theme.colors.border};
   padding: 1rem;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

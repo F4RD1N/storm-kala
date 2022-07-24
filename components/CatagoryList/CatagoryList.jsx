@@ -6,19 +6,22 @@ import { Container, SectionTitle, List } from "./CatagoryList.style";
 //Shared Components
 import CatagoryCard from "./CatagoryCard";
 
+//state
+import useHomeState from "../useHomeState";
+
 const CatagoryList = () => {
+  const { categories } = useHomeState();
+
+  
   return (
     <Container>
       <SectionTitle>دسته بندی ها</SectionTitle>
       <List>
-        <CatagoryCard />
-        <CatagoryCard />
-        <CatagoryCard />
-        <CatagoryCard />
-        <CatagoryCard />
-        <CatagoryCard />
-        <CatagoryCard />
-        <CatagoryCard />
+        {categories &&
+          categories.length &&
+          categories.map((category) => {
+            return <CatagoryCard key={category.id} data={category} />;
+          })}
       </List>
     </Container>
   );

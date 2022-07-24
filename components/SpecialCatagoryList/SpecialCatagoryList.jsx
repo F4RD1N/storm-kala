@@ -12,7 +12,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 //required modules
 import { FreeMode } from "swiper";
 
+//state
+import useHomeState from "../useHomeState";
+
 const SpecialList = () => {
+  const { recommendationSubCategories } = useHomeState();
   return (
     <Container>
       <Swiper
@@ -21,10 +25,12 @@ const SpecialList = () => {
         freeMode={false}
         modules={[FreeMode]}
       >
-        {[0, 1, 2].map((item) => {
+ 
+
+        {recommendationSubCategories?.map((category) => {
           return (
-            <SwiperSlide key={item} className="swiper-item">
-              <SpecialCard />
+            <SwiperSlide key={category.id} className="swiper-item">
+              <SpecialCard category={category}/>
             </SwiperSlide>
           );
         })}

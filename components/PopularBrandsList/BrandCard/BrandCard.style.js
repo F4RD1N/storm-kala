@@ -6,6 +6,7 @@ export const Container = styled.div`
   height: 180px;
   display: flex;
   align-items: center;
+  justify-content: center;
   user-select: none;
 `;
 

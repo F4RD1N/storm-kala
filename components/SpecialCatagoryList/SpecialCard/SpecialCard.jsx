@@ -14,16 +14,18 @@ import {
 //Images
 import Digital from "../../../assets/digital.png";
 
-const SpecialCard = () => {
+const SpecialCard = ({ category }) => {
+  const { title_fa, top_product_image, products_count } = category;
+
   return (
     <Container>
       <RightContainer>
-        <Title>انواع اکسسوری</Title>
-        <Description>بیش از 2500 کالا در این دسته بندی</Description>
+        <Title>{title_fa}</Title>
+        <Description>بیش از {products_count} کالا در این دسته بندی</Description>
         <BuyButton>خرید</BuyButton>
       </RightContainer>
       <LeftContainer>
-        <Image src={Digital} width={60} height={60} objectFit="cover" />
+        <Image src={top_product_image} width={60} height={60} objectFit="cover" />
       </LeftContainer>
     </Container>
   );

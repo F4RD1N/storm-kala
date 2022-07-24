@@ -6,13 +6,14 @@ import { Container, Title, ImageContainer } from "./CatagoryCard.style";
 
 //Images
 import Digital from "../../../assets/digital.png";
-const CatagoryCard = () => {
+const CatagoryCard = ({ data }) => {
+  const { title_fa, logo } = data;
   return (
     <Container>
       <ImageContainer>
-        <Image src={Digital} width={50} height={50} objectFit="cover" />
+        <Image src={logo.url[0]} width={50} height={50} objectFit="cover" />
       </ImageContainer>
-      <Title>کالا دیجیتال</Title>
+      <Title>{title_fa}</Title>
     </Container>
   );
 };

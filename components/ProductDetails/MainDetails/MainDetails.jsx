@@ -21,7 +21,7 @@ const MainDetails = () => {
         رنگ:
         {mainDetails?.colors.map((item) => {
           const { id, hex_code } = item;
-          return <Color key={id} color={hex_code} pressed={false} />;
+          return <Color key={id} color={hex_code} pressed={true} />;
         })}
       </ColorsContainer>
     </Container>

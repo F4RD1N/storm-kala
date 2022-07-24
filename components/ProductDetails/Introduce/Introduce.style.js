@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { SectionCard } from "../../../styles/shared";
 
 export const Container = styled(SectionCard)`
+  display: ${props => props.isVisible ? 'block' : 'none'};
 `;
 
 export const Title = styled.h2`

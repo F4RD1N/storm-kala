@@ -15,7 +15,7 @@ import useProductState from "../useProductState";
 const Options = () => {
   const { options } = useProductState();
   return (
-    <Container>
+    <Container isVisible={options}>
       <Title>ویژگی ها</Title>
 
       {options?.map((item) => {

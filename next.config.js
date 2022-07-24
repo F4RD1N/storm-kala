@@ -3,18 +3,21 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   compiler: {
-    styledComponents: true
+    styledComponents: true,
   },
   redirects: async () => [
     {
-      source: '/product',
-      destination: '/',
-      permanent: false
-    }
+      source: "/product",
+      destination: "/",
+      permanent: false,
+    },
   ],
   images: {
-    domains: ["dkstatics-public.digikala.com"]
-  }
-}
+    domains: [
+      "dkstatics-public.digikala.com",
+      "dkstatics-public-2.digikala.com",
+    ],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

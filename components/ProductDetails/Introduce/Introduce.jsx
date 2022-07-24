@@ -15,7 +15,7 @@ import useProductState from "../useProductState";
 const Introduce = () => {
   const { introduce } = useProductState();
   return (
-    <Container>
+    <Container isVisible={introduce}>
       <Title>معرفی</Title>
       <Description showFull={false}>{introduce}</Description>
       <ReadMore>

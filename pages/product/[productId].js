@@ -64,8 +64,8 @@ export const getStaticPaths = async() => {
 
 export const getStaticProps = async (context) => {
   const { productId } = context.params;
-  const res = await fetch(`https://api.digikala.com/v1/product/${productId}/`);
-  const data = await res.json();
+  const response = await fetch(`https://api.digikala.com/v1/product/${productId}/`);
+  const data = await response.json();
 
   if (!data.data) {
     return {

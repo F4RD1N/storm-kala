@@ -11,7 +11,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 //required modules
 import { FreeMode } from "swiper";
+
+//state
+import useHomeState from "../useHomeState";
+
 const PopularBrandsList = () => {
+  const { popularBrands } = useHomeState();
   return (
     <Container>
       <Title>محبوبترین برند ها</Title>
@@ -21,15 +26,13 @@ const PopularBrandsList = () => {
         freeMode={true}
         modules={[FreeMode]}
       >
-        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
+        {popularBrands && popularBrands.length && popularBrands.map((brand) => {
           return (
-            <SwiperSlide key={item} className="swiper-item">
-              <BrandCard />
+            <SwiperSlide key={brand.id} className="swiper-item">
+              <BrandCard brand={brand}/>
             </SwiperSlide>
           );
         })}
-
-       
       </Swiper>
     </Container>
   );
