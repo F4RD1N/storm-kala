@@ -41,9 +41,9 @@ const Information = () => {
         return <InfoCard key={title} title={title} value={values[0]} />;
       })}
 
-      <ReadMore onClick={toggleHandler} showFull={toggle}>
+      {information?.length > 4 && <ReadMore onClick={toggleHandler} showFull={toggle}>
         {toggle ? "کمتر" : "بیشتر"} <AiOutlineArrowLeft />
-      </ReadMore>
+      </ReadMore>}
     </Container>
   );
 };

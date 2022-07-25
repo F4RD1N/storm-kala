@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 //Images
-import Phone from "../../assets/phone.png";
+import digital from "../../assets/digital.png";
 
 //Styled Components
 import {

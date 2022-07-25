@@ -9,9 +9,6 @@ export const Container = styled.div`
   padding-bottom: 1rem;
   user-select: none;
   height: 270px;
-  &:active {
-    background-color: rgba(58, 151, 255, .3);
-  }
  
 `;
 export const ImageContainer = styled.div`

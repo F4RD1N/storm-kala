@@ -15,6 +15,7 @@ const ReadMore = styled.span`
   transition: gap ${(props) => props.theme.utilities.transition};
   background: ${(props) =>
     props.showFull ? "" : "linear-gradient(to top, #fff 20%, transparent)"};
+  font-size: 1rem;
   &:hover {
     gap: 0.5rem;
   }

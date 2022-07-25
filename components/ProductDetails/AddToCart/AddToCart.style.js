@@ -34,4 +34,7 @@ export const GoToSimilarSection = styled.a`
   font-weight: initial;
   font-size: .9rem;
   cursor: pointer;
+  &:hover{
+    text-decoration: underline;
+}
 `

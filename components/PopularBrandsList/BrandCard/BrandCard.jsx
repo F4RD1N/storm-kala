@@ -4,8 +4,7 @@ import Image from 'next/image'
 //Styled Components
 import { Container, ImageContainer, Overlay } from './BrandCard.style'
 
-//Images
-import Brand from '../../../assets/tsco.png'
+
 const BrandCard = ({brand}) => {
 
   const {title_fa, logo} = brand

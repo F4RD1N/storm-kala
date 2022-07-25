@@ -50,6 +50,9 @@ const GlobalStyles = createGlobalStyle`
   &:hover {
     box-shadow: ${(props) => props.theme.utilities.shadow.card};
   }
+  &:active {
+    transform: translateY(-3px);
+  }
   }
   
   
@@ -128,6 +131,27 @@ input[type="text"], textarea, [contenteditable]
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
+}
+
+
+.user {
+  padding: 1rem;
+}
+
+.user-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+
+  .user {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    margin: 0.25rem;
+    background: #eee;
+  }
 }
 `;
 
