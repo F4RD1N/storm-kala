@@ -29,19 +29,19 @@ const Home = ({ homeData }) => {
 
   //push data to list
   const incrediblePusher = {
-    endpoint: page => `http://f4rd1n.herokuapp.com/v1/incredible-offers/products/?page=${page}`,
+    endpoint: page => `https://storm-reverse.herokuapp.com/v1/incredible-offers/products/?page=${page}`,
     action: (payload) => pushIncredible(payload),
     dataPath: (path) => path.data?.products,
   };
 
   const mobilePusher = {
-    endpoint: page => `http://f4rd1n.herokuapp.com/v1/categories/mobile/search/?page=${page}`,
+    endpoint: page => `https://storm-reverse.herokuapp.com/v1/categories/mobile/search/?page=${page}`,
     action: (payload) => pushMobile(payload),
     dataPath: (path) => path.data?.products,
   };
 
   const laptopPusher = {
-    endpoint: page => `http://f4rd1n.herokuapp.com/v1/categories/laptop/search/?page=${page}`,
+    endpoint: page => `https://storm-reverse.herokuapp.com/v1/categories/laptop/search/?page=${page}`,
     action: (payload) => pushLaptop(payload),
     dataPath: (path) => path.data?.products,
   };
