@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 //Icons
 import { AiOutlineArrowLeft } from "react-icons/ai";
@@ -16,6 +17,9 @@ const Introduce = () => {
   //toogle view
   const [toggle, setToggle] = useState(false);
   const toggleHandler = () => setToggle((currentValue) => !currentValue);
+  const router = useRouter()
+  useEffect(() => setToggle(false), [router.query])
+
 
   const { introduce } = useProductState();
   return (

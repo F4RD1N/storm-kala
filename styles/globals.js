@@ -98,6 +98,37 @@ const GlobalStyles = createGlobalStyle`
   background-color: ${(props) => props.theme.colors.red}
 }
 
+
+
+//remove blue overlay on links
+/*IE9*/
+*::selection 
+{
+    background-color:transparent;
+} 
+*::-moz-selection
+{
+    background-color:transparent;
+}
+*
+{        
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    /*IE10*/
+    -ms-user-select: none;
+    user-select: none;
+
+    /*You just need this if you are only concerned with android and not desktop browsers.*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}    
+input[type="text"], textarea, [contenteditable]
+{
+
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
 `;
 
 export default GlobalStyles;

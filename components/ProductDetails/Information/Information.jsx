@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 //Icons
 import { AiOutlineArrowLeft } from "react-icons/ai";
@@ -26,6 +27,8 @@ const Information = () => {
   //toogle view
   const [toggle, setToggle] = useState(false);
   const toggleHandler = () => setToggle((currentValue) => !currentValue);
+  const router = useRouter();
+  useEffect(() => setToggle(false), [router.query]);
 
   const { information } = useProductState();
 
