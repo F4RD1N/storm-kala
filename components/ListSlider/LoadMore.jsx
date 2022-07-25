@@ -11,32 +11,34 @@ import { LoadingIndicator } from "../shared";
 import { useDispatch } from "react-redux";
 
 const LoadMore = ({ pusher }) => {
-  const [page, setPage] = useState(2)
+  // const [page, setPage] = useState(2)
   const [loading, setLoading] = useState(false);
   const [end, setEnd] = useState(false);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const handler = () => {
-    setLoading(true);
+  // const handler = () => {
+  //   setLoading(true);
 
-    const fetcher = async () => {
-      const response = await axios(pusher.endpoint(page));
-      if (!pusher.dataPath(response).length) setEnd(true);
-      return pusher.dataPath(response);
-    };
-    fetcher().then((res) => {
-      dispatch(pusher.action(res));
-      setLoading(false);
-      setPage((currentValue) => currentValue + 1);
-    }).catch(err => {
-      console.log(err.message)
-      setLoading(false)
-    })
-  };
+  //   const fetcher = async () => {
+  //     const response = await axios(pusher.endpoint(page));
+  //     if (!pusher.dataPath(response).length) setEnd(true);
+  //     return pusher.dataPath(response);
+  //   };
+  //   fetcher().then((res) => {
+  //     dispatch(pusher.action(res));
+  //     setLoading(false);
+  //     setPage((currentValue) => currentValue + 1);
+  //   }).catch(err => {
+  //     console.log(err.message)
+  //     setLoading(false)
+  //   })
+  // };
+
+
   return (
     <LoadMoreContainer>
      {
-      !end ? <LoadMoreButton disabled={loading} onClick={handler} pressed={loading}>
+      !end ? <LoadMoreButton disabled={loading} onClick={pusher} pressed={loading}>
       {loading ? <LoadingIndicator /> : <AiOutlineArrowLeft />}
     </LoadMoreButton>: 'محصول دیگری موجود نیست!'
      }

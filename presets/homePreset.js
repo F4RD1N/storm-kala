@@ -4,7 +4,7 @@ const homePreset = ({
   best_selling_products,
   main_categories,
   recommendation_sub_categories,
-}, mobileList, laptopList) => {
+}, mobileList, laptopList, newMobileData) => {
   return {
     incredibleProducts: incredible_products.products,
     popularBrands: popular_brands.brands,
@@ -12,7 +12,8 @@ const homePreset = ({
     categories: main_categories.categories.slice(0, 8),
     recommendationSubCategories: recommendation_sub_categories,
     mobileList: mobileList.data.products,
-    laptopList: laptopList.data.products
+    laptopList: laptopList.data.products,
+    newMobileData: newMobileData.data.products
   };
 };
 

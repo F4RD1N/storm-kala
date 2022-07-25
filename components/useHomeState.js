@@ -11,6 +11,7 @@ const useHomeState = () => {
     recommendationSubCategories: state.recommendationSubCategories,
     mobileList: state.mobileList,
     laptopList: state.laptopList,
+    newMobileData: state.newMobileData
   };
 };
 

@@ -78,3 +78,4 @@ export const getStaticProps = async (context) => {
     revalidate: 604800,
   };
 };
+
