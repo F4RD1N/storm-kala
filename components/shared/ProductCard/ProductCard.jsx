@@ -30,7 +30,7 @@ const ProductCard = ({ data }) => {
       </ImageContainer>
       <ProductName>{title_fa}</ProductName>
       <Details>
-        <Badge isVisible={default_variant.price.discount_percent && true}>
+        <Badge isVisible={default_variant?.price.discount_percent && true}>
           %{englishToPersian(default_variant?.price.discount_percent)}
         </Badge>
         <PriceContainer>

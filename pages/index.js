@@ -15,7 +15,12 @@ import { homePreset } from "../presets";
 
 //redux
 import { useDispatch } from "react-redux";
-import { getHomeData, pushIncredible, pushLaptop, pushMobile } from "../redux/home/homeAction";
+import {
+  getHomeData,
+  pushIncredible,
+  pushLaptop,
+  pushMobile,
+} from "../redux/home/homeAction";
 
 //state
 import useHomeState from "../components/useHomeState";
@@ -29,29 +34,28 @@ const Home = ({ homeData }) => {
 
   //push data to list
   const incrediblePusher = {
-    endpoint: page => `https://reverse-vercel.vercel.app/v1/incredible-offers/products/?page=${page}`,
+    endpoint: (page) =>
+      `https://reverse-vercel.vercel.app/v1/incredible-offers/products/?page=${page}`,
     action: (payload) => pushIncredible(payload),
-    dataPath: (path) => path.data?.products,
+    dataPath: (path) => path.data?.data.products,
   };
 
   const mobilePusher = {
-    endpoint: page => `https://reverse-vercel.vercel.app/v1/categories/mobile/search/?page=${page}`,
+    endpoint: (page) =>
+      `https://reverse-vercel.vercel.app/v1/categories/mobile/search/?page=${page}`,
     action: (payload) => pushMobile(payload),
-    dataPath: (path) => path.data?.products,
+    dataPath: (path) => path.data?.data.products,
   };
 
   const laptopPusher = {
-    endpoint: page => `https://reverse-vercel.vercel.app/v1/categories/laptop/search/?page=${page}`,
+    endpoint: (page) =>
+      `https://reverse-vercel.vercel.app/v1/categories/laptop/search/?page=${page}`,
     action: (payload) => pushLaptop(payload),
-    dataPath: (path) => path.data?.products,
+    dataPath: (path) => path.data?.data.products,
   };
 
-  const { 
-    incredibleProducts, 
-    bestSellingProducts,
-    mobileList, 
-    laptopList 
-    } = useHomeState();
+  const { incredibleProducts, bestSellingProducts, mobileList, laptopList } =
+    useHomeState();
 
   return (
     <div>
@@ -67,7 +71,7 @@ const Home = ({ homeData }) => {
       <SpecialCatagoryList />
       <PopularBrandsList />
       <ListSlider data={mobileList} title="موبایل" pusher={mobilePusher} />
-      <ListSlider data={laptopList} title="لپتاپ" pusher={laptopPusher}/>
+      <ListSlider data={laptopList} title="لپتاپ" pusher={laptopPusher} />
     </div>
   );
 };
@@ -94,8 +98,8 @@ export const getStaticProps = async () => {
     const data = await response.json();
     return data;
   };
-  await fetchMobile().then((item) => mobileList = item);
-  await fetchLoptop().then((item) => laptopList = item);
+  await fetchMobile().then((item) => (mobileList = item));
+  await fetchLoptop().then((item) => (laptopList = item));
   return {
     props: { homeData: homePreset(data.data, mobileList, laptopList) },
   };

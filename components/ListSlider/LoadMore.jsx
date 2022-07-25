@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import useSWR from "swr";
-
+import axios from "axios";
 //Styled Components
 import { LoadMoreContainer, LoadMoreButton } from "./ListSlider.style";
 //Icons
@@ -19,17 +18,20 @@ const LoadMore = ({ pusher }) => {
 
   const handler = () => {
     setLoading(true);
+
     const fetcher = async () => {
-      const response = await fetch(pusher.endpoint(page));
-      const data = await response.json();
-      if (!pusher.dataPath(data).length) setEnd(true);
-      return pusher.dataPath(data);
+      const response = await axios(pusher.endpoint(page));
+      if (!pusher.dataPath(response).length) setEnd(true);
+      return pusher.dataPath(response);
     };
     fetcher().then((res) => {
       dispatch(pusher.action(res));
       setLoading(false);
-      setPage((current) => current + 1);
-    });
+      setPage((currentValue) => currentValue + 1);
+    }).catch(err => {
+      console.log(err.message)
+      setLoading(false)
+    })
   };
   return (
     <LoadMoreContainer>
