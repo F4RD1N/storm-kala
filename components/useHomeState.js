@@ -8,7 +8,9 @@ const useHomeState = () => {
     popularBrands: state.popularBrands,
     bestSellingProducts: state.bestSellingProducts,
     categories: state.categories,
-    recommendationSubCategories: state.recommendationSubCategories
+    recommendationSubCategories: state.recommendationSubCategories,
+    mobileList: state.mobileList,
+    laptopList: state.laptopList,
   };
 };
 

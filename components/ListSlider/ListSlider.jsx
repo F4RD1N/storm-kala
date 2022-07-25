@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-
+import { v4 } from "uuid";
 //Shared Components
 import { ProductCard } from "../shared";
 
@@ -11,18 +11,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode } from "swiper";
 
 //Styled Components
-import {
-  Container,
-  Title,
-  SecTitle,
-  LoadMoreContainer,
-  LoadMoreButton,
-} from "./ListSlider.style";
+import { Container, Title, SecTitle } from "./ListSlider.style";
 
-//Icons
-import { AiOutlineArrowLeft } from "react-icons/ai";
+//Components
+import LoadMore from "./LoadMore";
 
-const ListSlider = ({ data, title, subTitle }) => {
+//redux
+import { pushIncredible } from "../../redux/home/homeAction";
+
+const ListSlider = ({ data, title, subTitle, pusher, pageHandler }) => {
+
   return (
     <Container>
       <Title>{title}</Title>
@@ -35,7 +33,7 @@ const ListSlider = ({ data, title, subTitle }) => {
       >
         {data &&
           data.length &&
-          data.map((product) => {
+          data.map((product, index) => {
             const { id } = product;
             return (
               <SwiperSlide key={id} className="swiper-item">
@@ -49,11 +47,7 @@ const ListSlider = ({ data, title, subTitle }) => {
           })}
 
         <SwiperSlide className="swiper-item">
-          <LoadMoreContainer>
-            <LoadMoreButton pressed={false}>
-              <AiOutlineArrowLeft />
-            </LoadMoreButton>
-          </LoadMoreContainer>
+          <LoadMore pusher={pusher}/>
         </SwiperSlide>
       </Swiper>
     </Container>

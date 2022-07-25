@@ -25,12 +25,10 @@ const SpecialList = () => {
         freeMode={false}
         modules={[FreeMode]}
       >
- 
-
         {recommendationSubCategories?.map((category) => {
           return (
             <SwiperSlide key={category.id} className="swiper-item">
-              <SpecialCard category={category}/>
+              <SpecialCard category={category} />
             </SwiperSlide>
           );
         })}

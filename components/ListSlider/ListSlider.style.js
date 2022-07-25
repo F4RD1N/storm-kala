@@ -22,6 +22,8 @@ export const LoadMoreContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  font-size: .8rem;
 `;
 
 export const LoadMoreButton = styled(GlobalButton)`
