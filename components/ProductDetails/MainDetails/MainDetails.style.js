@@ -15,7 +15,7 @@ export const ProductName = styled.h2`
 
 export const ColorsContainer = styled.div`
   font-weight: bold;
-  display: flex;
+  display: ${props => props.isVisible ? 'flex' : 'none'};
   align-items: center;
   gap: .6rem;
 `;

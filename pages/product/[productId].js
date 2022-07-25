@@ -27,7 +27,7 @@ import useProductState from "../../components/ProductDetails/useProductState";
 const ProductDetails = ({ productData }) => {
   //send data to productReducer
   const dispatch = useDispatch();
-  const router = useRouter()
+  const router = useRouter();
   useEffect(() => {
     dispatch(getProduct(productData));
   }, [router.query]);
@@ -44,8 +44,7 @@ const ProductDetails = ({ productData }) => {
       <AddToCart />
       <Comments />
       <AddReview />
-      <ListSlider data={recommended} title="کالا های مشابه" />
-      <CatagoryList />
+      <ListSlider data={recommended} title="کالا های مشابه" pusherLess={true} />
       <ListSlider discount={true} />
     </div>
   );
@@ -55,16 +54,18 @@ export default ProductDetails;
 
 //fetch Product Data
 
-export const getStaticPaths = async() => {
+export const getStaticPaths = async () => {
   return {
-    paths:[],
-    fallback: `blocking`
-  }
-}
+    paths: [],
+    fallback: `blocking`,
+  };
+};
 
 export const getStaticProps = async (context) => {
   const { productId } = context.params;
-  const response = await fetch(`https://api.digikala.com/v1/product/${productId}/`);
+  const response = await fetch(
+    `https://api.digikala.com/v1/product/${productId}/`
+  );
   const data = await response.json();
 
   if (!data.data) {
@@ -74,6 +75,6 @@ export const getStaticProps = async (context) => {
   }
   return {
     props: { productData: productPreset(data.data) },
-    revalidate: 604800
+    revalidate: 604800,
   };
 };

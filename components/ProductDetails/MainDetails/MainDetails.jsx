@@ -17,7 +17,7 @@ const MainDetails = () => {
   return (
     <Container>
       <ProductName>{mainDetails?.title}</ProductName>
-      <ColorsContainer>
+      <ColorsContainer isVisible={ !mainDetails?.colors.length ? false : true}>
         رنگ:
         {mainDetails?.colors.map((item) => {
           const { id, hex_code } = item;

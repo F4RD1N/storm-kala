@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //Icons
 import { AiOutlineArrowLeft } from "react-icons/ai";
@@ -13,13 +13,17 @@ import { ReadMore } from "../../../styles/shared";
 import useProductState from "../useProductState";
 
 const Introduce = () => {
+  //toogle view
+  const [toggle, setToggle] = useState(false);
+  const toggleHandler = () => setToggle((currentValue) => !currentValue);
+
   const { introduce } = useProductState();
   return (
     <Container isVisible={introduce}>
       <Title>معرفی</Title>
-      <Description showFull={false}>{introduce}</Description>
-      <ReadMore>
-        بیشتر <AiOutlineArrowLeft />
+      <Description showFull={toggle}>{introduce}</Description>
+      <ReadMore onClick={toggleHandler} showFull={toggle}>
+        {toggle ? "کمتر" : "بیشتر"} <AiOutlineArrowLeft />
       </ReadMore>
     </Container>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //Icons
 import { AiOutlineArrowLeft } from "react-icons/ai";
@@ -23,10 +23,14 @@ import InfoCard from "./InfoCard";
 import useProductState from "../useProductState";
 
 const Information = () => {
+  //toogle view
+  const [toggle, setToggle] = useState(false);
+  const toggleHandler = () => setToggle((currentValue) => !currentValue);
+
   const { information } = useProductState();
 
   return (
-    <Container>
+    <Container showFull={toggle}>
       <Title>مشخصات</Title>
 
       {information?.map((item) => {
@@ -34,8 +38,8 @@ const Information = () => {
         return <InfoCard key={title} title={title} value={values[0]} />;
       })}
 
-      <ReadMore>
-        بیشتر <AiOutlineArrowLeft />
+      <ReadMore onClick={toggleHandler} showFull={toggle}>
+        {toggle ? "کمتر" : "بیشتر"} <AiOutlineArrowLeft />
       </ReadMore>
     </Container>
   );

@@ -30,14 +30,14 @@ const ProductCard = ({ data }) => {
       </ImageContainer>
       <ProductName>{title_fa}</ProductName>
       <Details>
-        <Badge isVisible={default_variant?.price.discount_percent && true}>
-          %{englishToPersian(default_variant?.price.discount_percent)}
+        <Badge isVisible={default_variant?.price?.discount_percent && true}>
+          %{englishToPersian(default_variant?.price?.discount_percent)}
         </Badge>
         <PriceContainer>
-          <OldPrice isVisible={default_variant.price.discount_percent && true}>
-            {convertPrice(default_variant?.price.rrp_price)}
+          <OldPrice isVisible={default_variant?.price?.discount_percent && true}>
+            {convertPrice(default_variant?.price?.rrp_price)}
           </OldPrice>
-          <Price>{convertPrice(default_variant?.price.selling_price)}ت</Price>
+          <Price>{convertPrice(default_variant?.price?.selling_price)}ت</Price>
         </PriceContainer>
       </Details>
     </Container>

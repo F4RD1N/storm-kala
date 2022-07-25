@@ -11,7 +11,12 @@ export const pushIncredible = (items) => {
         payload: items
     }
 }
-
+export const pushBestSelling = (items) => {
+    return {
+        type: 'PUSH_BEST_SELLING',
+        payload: items
+    }
+}
 
 export const pushMobile = (items) => {
     return {

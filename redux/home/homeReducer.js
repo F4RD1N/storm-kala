@@ -13,6 +13,8 @@ const initialState = {
         return {...action.payload};
       case 'PUSH_INCREDIBLE':
         return {...state, incredibleProducts: [...state.incredibleProducts, ...action.payload]}
+        case 'PUSH_BEST_SELLING':
+        return {...state, bestSellingProducts: [...state.bestSellingProducts, ...action.payload]}
         case 'PUSH_MOBILE':
           return {...state, mobileList: [...state.mobileList, ...action.payload]}
       case 'PUSH_LAPTOP':

@@ -15,5 +15,5 @@ export const Title = styled.h2`
 export const Add = styled.span`
   color: ${(props) => props.theme.colors.blue};
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 `;

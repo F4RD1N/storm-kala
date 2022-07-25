@@ -6,6 +6,7 @@ const useProductState = () => {
   return {
     id: product.id,
     mainDetails: product.mainDetails,
+    status: product.status,
     brand: product.brand,
     catagory: product.category,
     images: product.images,

@@ -18,6 +18,7 @@ import { useDispatch } from "react-redux";
 import {
   getHomeData,
   pushIncredible,
+  pushBestSelling,
   pushLaptop,
   pushMobile,
 } from "../redux/home/homeAction";
@@ -25,34 +26,15 @@ import {
 //state
 import useHomeState from "../components/useHomeState";
 
+//pusher
+import { dataPusher } from "../helpers/pusher";
+
 const Home = ({ homeData }) => {
   //send data to productReducer
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getHomeData(homeData));
   }, []);
-
-  //push data to list
-  const incrediblePusher = {
-    endpoint: (page) =>
-      `https://reverse-vercel.vercel.app/v1/incredible-offers/products/?page=${page}`,
-    action: (payload) => pushIncredible(payload),
-    dataPath: (path) => path.data?.data.products,
-  };
-
-  const mobilePusher = {
-    endpoint: (page) =>
-      `https://reverse-vercel.vercel.app/v1/categories/mobile/search/?page=${page}`,
-    action: (payload) => pushMobile(payload),
-    dataPath: (path) => path.data?.data.products,
-  };
-
-  const laptopPusher = {
-    endpoint: (page) =>
-      `https://reverse-vercel.vercel.app/v1/categories/laptop/search/?page=${page}`,
-    action: (payload) => pushLaptop(payload),
-    dataPath: (path) => path.data?.data.products,
-  };
 
   const { incredibleProducts, bestSellingProducts, mobileList, laptopList } =
     useHomeState();
@@ -64,14 +46,29 @@ const Home = ({ homeData }) => {
         data={incredibleProducts}
         title="تخفیفات شگفت انگیز"
         subTitle="خریدی به صرفه با تخفیفات شگفت انگیز"
-        pusher={incrediblePusher}
+        pusher={dataPusher("incredible-offers/products/?", pushIncredible)}
       />
-      <ListSlider data={bestSellingProducts} title="محبوب ترین ها" />
+      <ListSlider
+        data={bestSellingProducts}
+        title="محبوب ترین ها"
+        pusher={dataPusher(
+          "promotion-search/?promotion_types%5B0%5D=incredible_offer&promotion_types%5B1%5D=promotion&",
+          pushBestSelling
+        )}
+      />
       <CatagoryList />
       <SpecialCatagoryList />
       <PopularBrandsList />
-      <ListSlider data={mobileList} title="موبایل" pusher={mobilePusher} />
-      <ListSlider data={laptopList} title="لپتاپ" pusher={laptopPusher} />
+      <ListSlider
+        data={mobileList}
+        title="موبایل"
+        pusher={dataPusher("categories/mobile/search/?", pushMobile)}
+      />
+      <ListSlider
+        data={laptopList}
+        title="لپتاپ"
+        pusher={dataPusher("categories/laptop/search/?", pushLaptop)}
+      />
     </div>
   );
 };

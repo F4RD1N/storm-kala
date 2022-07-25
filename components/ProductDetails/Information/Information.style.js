@@ -4,6 +4,10 @@ import styled from "styled-components";
 import { SectionCard } from "../../../styles/shared";
 
 export const Container = styled(SectionCard)`
+ position: relative;
+ max-height: ${props => props.showFull ? '' : '275px'};
+ padding-bottom: 2rem;
+
 `;
 
 export const Title = styled.h2`

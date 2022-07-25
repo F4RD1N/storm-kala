@@ -16,11 +16,7 @@ import { Container, Title, SecTitle } from "./ListSlider.style";
 //Components
 import LoadMore from "./LoadMore";
 
-//redux
-import { pushIncredible } from "../../redux/home/homeAction";
-
-const ListSlider = ({ data, title, subTitle, pusher, pageHandler }) => {
-
+const ListSlider = ({ data, title, subTitle, pusher, pusherLess }) => {
   return (
     <Container>
       <Title>{title}</Title>
@@ -34,7 +30,9 @@ const ListSlider = ({ data, title, subTitle, pusher, pageHandler }) => {
         {data &&
           data.length &&
           data.map((product, index) => {
-            const { id } = product;
+            const { id, status } = product;
+            if (status === "out_of_stock") return;
+
             return (
               <SwiperSlide key={id} className="swiper-item">
                 <Link href={`/product/${id}`}>
@@ -46,9 +44,11 @@ const ListSlider = ({ data, title, subTitle, pusher, pageHandler }) => {
             );
           })}
 
-        <SwiperSlide className="swiper-item">
-          <LoadMore pusher={pusher}/>
-        </SwiperSlide>
+        {!pusherLess && (
+          <SwiperSlide className="swiper-item">
+            <LoadMore pusher={pusher} />
+          </SwiperSlide>
+        )}
       </Swiper>
     </Container>
   );
