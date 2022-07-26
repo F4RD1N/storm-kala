@@ -13,14 +13,16 @@ export const Item = styled.div`
   color: #000;
 `;
 
+export const SearchBox = styled.div`
+  width: 80%;
+  padding: 0.7rem 1rem;
+  background-color: #fff;
+  border-radius: ${(props) => props.theme.utilities.radius.card};
+`;
 export const InputContainer = styled.div`
   display: flex;
   align-items: center;
   /* background-color: ${(props) => props.theme.colors.gray}; */
-  background-color: #fff;
-  padding: 0.7rem 1rem;
-  width: 80%;
-  border-radius: ${(props) => props.theme.utilities.radius.card};
   font-size: 1.4rem;
   color: rgb(153, 153, 153);
   gap: 0.5rem;
@@ -39,6 +41,7 @@ export const Input = styled.input`
 export const LeftContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-self: flex-start;
   align-items: center;
   font-size: 1.8rem;
   width: 15%;

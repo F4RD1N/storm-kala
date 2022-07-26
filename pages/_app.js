@@ -11,6 +11,9 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+//config
+import '../config'
+
 const _app = ({ Component, pageProps }) => {
   return (
     <>
