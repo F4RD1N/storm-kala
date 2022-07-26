@@ -3,7 +3,7 @@ const initialState = {
     popularBrands: [],
     bestSellingProducts: [],
     categories: [],
-    moblieList: [],
+    mobileList: [],
     laptopList: []
   };
   

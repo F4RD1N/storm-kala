@@ -16,7 +16,7 @@ import { Container, Title, SecTitle } from "./ListSlider.style";
 //Components
 import LoadMore from "./LoadMore";
 
-const ListSlider = ({ data, title, subTitle, pusher, pusherLess }) => {
+const ListSlider = ({ data, title, subTitle, pusher, pusherLess, dataPusher }) => {
   return (
     <Container>
       <Title>{title}</Title>
@@ -46,7 +46,7 @@ const ListSlider = ({ data, title, subTitle, pusher, pusherLess }) => {
 
         {!pusherLess && (
           <SwiperSlide className="swiper-item">
-            <LoadMore pusher={pusher} />
+            <LoadMore pusher={dataPusher} />
           </SwiperSlide>
         )}
       </Swiper>
