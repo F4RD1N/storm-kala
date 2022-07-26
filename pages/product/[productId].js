@@ -12,7 +12,7 @@ import {
   AddReview,
   AddToCart,
 } from "../../components/ProductDetails";
-import { ListSlider, CatagoryList } from "../../components";
+import { ListSlider } from "../../components";
 
 //data presets
 import { productPreset } from "../../presets";
@@ -78,4 +78,3 @@ export const getStaticProps = async (context) => {
     revalidate: 604800,
   };
 };
-

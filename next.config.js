@@ -16,6 +16,8 @@ const nextConfig = {
     domains: [
       "dkstatics-public.digikala.com",
       "dkstatics-public-2.digikala.com",
+      'dkstatics-private.digikala.com',
+      'dkstatics-private-2.digikala.com'
     ],
   },
 };

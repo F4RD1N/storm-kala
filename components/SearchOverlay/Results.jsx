@@ -1,61 +1,67 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 
 //redux
 import { useDispatch } from "react-redux";
-import { fetchSearch, clearSearch } from "../../redux/search/searchAction";
+import { fetchSearch } from "../../redux/search/searchAction";
 
 //state
 import useSearchState from "./useSearchState";
 
 //Styled Components
-import { ResultsContainer } from "./SearchOverlay.style";
+import {
+  ResultsContainer,
+  LoadMoreButton,
+  Loading,
+} from "./SearchOverlay.style";
 
 //Components
-import ResultCard from "./ResultCard";
-
-//Swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-
-//required modules
-import { FreeMode } from "swiper";
+import { ProductCard } from "../shared";
 
 const Results = ({ value }) => {
   const dispatch = useDispatch();
-
-  //clear search data when component renders
-  useEffect(() => {}, []);
-
   useEffect(() => {
     const timeout = setTimeout(() => {
       value && dispatch(fetchSearch(value));
     }, 1000);
     return () => clearTimeout(timeout);
   }, [value]);
+  const { products, loading, pager } = useSearchState();
+  //page Handler
+  const [page, setPage] = useState(1);
+  const pageHandler = () => {
+    setPage((currentValue) => currentValue + 1);
+    dispatch(fetchSearch(value, page));
+  };
 
-  const { products } = useSearchState();
   return (
-    <ResultsContainer>
-      <Swiper
-        spaceBetween={3}
-        slidesPerView={1.9}
-        freeMode={true}
-        modules={[FreeMode]}
-      >
+    <>
+      <ResultsContainer>
         {products?.map((product) => {
           const { id } = product;
+
+          //check if the page is last page
+          if (pager?.current_page + 3 === pager?.total_pages) return;
+
           return (
-            <SwiperSlide key={id} className="swiper-item">
-              <Link href={`/product/${id}`}>
-                <a>
-                  <ResultCard data={product} />
-                </a>
-              </Link>
-            </SwiperSlide>
+            <Link href={`/product/${id}`} key={id}>
+              <a>
+                <ProductCard data={product} />
+              </a>
+            </Link>
           );
         })}
-      </Swiper>
-    </ResultsContainer>
+      </ResultsContainer>
+
+      {!products.length && loading ? <Loading>کمی صبر کنید ...</Loading> : ""}
+      {products.length ? (
+        <LoadMoreButton onClick={pageHandler}>
+          {loading ? "کمی صبر کنید ..." : "بیشتر"}
+        </LoadMoreButton>
+      ) : (
+        ""
+      )}
+    </>
   );
 };
 

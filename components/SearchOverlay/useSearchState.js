@@ -6,7 +6,7 @@ const useSearchState = () => {
     loading: state.loading,
     error: state.error,
     filters: state.results?.filters,
-    products: state.results?.products,
+    products: state?.products,
     sort: state.results?.sort,
     sortOptions: state.results?.sortOptions,
     didYouMean: state.results?.didYouMean,

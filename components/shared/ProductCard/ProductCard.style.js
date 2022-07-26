@@ -9,6 +9,7 @@ export const Container = styled.div`
   padding-bottom: 1rem;
   user-select: none;
   height: 270px;
+  background-color: ${props => props.theme.colors.card}
  
 `;
 export const ImageContainer = styled.div`
