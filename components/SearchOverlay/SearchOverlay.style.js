@@ -1,23 +1,23 @@
 import styled from "styled-components";
 //shared
-import {GlobalButton} from '../../styles/shared'
+import { GlobalButton } from "../../styles/shared";
 export const Container = styled.section`
-  position: absolute;
+  position: ${props => props.hasData ? 'absolute' : 'fixed'};
   margin-bottom: 0;
-  padding: 1rem 0.5rem;
+  padding: 1rem ${props => props.hasData ? '0.5rem' : '3rem'};
   background-color: ${(props) => props.theme.colors.natural};
   top: 0;
   left: 0;
   right: 0;
-  min-height: 100%;
+  height: ${props => props.hasData ? '100%' : '100vh'};
   z-index: 10;
 `;
 
 export const ResultsContainer = styled.div`
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: .2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.2rem;
 `;
 
 export const CardContainer = styled.div`
@@ -92,20 +92,25 @@ export const IconContainer = styled.div`
   margin-top: 5px;
 `;
 
-
 export const LoadMoreButton = styled(GlobalButton)`
   width: 100%;
   margin-top: 1rem;
-  background-color: ${props => props.theme.colors.card};
-  color: ${props => props.theme.colors.textPrimary};
+  background-color: ${(props) => props.theme.colors.card};
+  color: ${(props) => props.theme.colors.textPrimary};
   font-size: 1rem;
-`
+  cursor: pointer;
+`;
 
 export const Loading = styled.span`
   font-size: 1rem;
   display: inline-block;
   text-align: center;
   width: 100%;
-  color: ${props => props.theme.colors.blue};
+  color: ${(props) => props.theme.colors.blue};
   font-weight: bold;
-`
+`;
+
+export const Error = styled(Loading)`
+  color: ${(props) => props.theme.colors.red};
+  margin-top: 2rem;
+`;

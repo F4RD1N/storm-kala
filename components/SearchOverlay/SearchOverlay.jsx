@@ -5,14 +5,18 @@ import { Container } from "./SearchOverlay.style";
 
 //redux
 import { useDispatch } from "react-redux";
-import { fetchSearch, clearSearch } from "../../redux/search/searchAction";
+import { clearSearch } from "../../redux/search/searchAction";
 
 //Components
 import SearchInput from "./SearchInput";
 import Results from "./Results";
 import Related from "./Related";
 
+//state
+import useSearchState from "./useSearchState";
+
 const SearchOverlay = ({ overlayHandler }) => {
+  const {products} = useSearchState()
   //input handle
   const [value, setValue] = useState("");
   const valueHandler = (event) => setValue(event.target.value);
@@ -23,7 +27,7 @@ const SearchOverlay = ({ overlayHandler }) => {
     return () => dispatch(clearSearch());
   }, []);
   return (
-    <Container>
+    <Container hasData={products?.length}>
       <SearchInput
         overlayHandler={overlayHandler}
         value={value}

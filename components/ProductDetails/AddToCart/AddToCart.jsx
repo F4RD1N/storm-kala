@@ -15,8 +15,8 @@ const AddToCart = () => {
 
   return (
     <Container>
-      <AddButton outStock={ status === 'out_of_stock' && true}>{status === 'out_of_stock' ? 'اتمام موجودی' : "افزودن به سبد خرید"}</AddButton>
-      <ProductPrice>{status === 'out_of_stock' ? <GoToSimilarSection href="#similar">مشاهده کالا های مشابه</GoToSimilarSection> : convertPrice(price?.selling_price) + ' تومان' }</ProductPrice>
+      <AddButton outStock={ status === 'out_of_stock' || status === 'in_supply' && true}>{status === 'out_of_stock' || status === 'in_supply' ? 'اتمام موجودی' : "افزودن به سبد خرید"}</AddButton>
+      <ProductPrice>{status === 'out_of_stock' || status === 'in_supply' ? <GoToSimilarSection href="#similar">مشاهده کالا های مشابه</GoToSimilarSection> : convertPrice(price?.selling_price) + ' تومان' }</ProductPrice>
     </Container>
   );
 };

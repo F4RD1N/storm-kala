@@ -3,7 +3,7 @@ import Link from "next/link";
 
 //redux
 import { useDispatch } from "react-redux";
-import { fetchSearch } from "../../redux/search/searchAction";
+import { fetchSearch, clearSearch } from "../../redux/search/searchAction";
 
 //state
 import useSearchState from "./useSearchState";
@@ -13,6 +13,7 @@ import {
   ResultsContainer,
   LoadMoreButton,
   Loading,
+  Error
 } from "./SearchOverlay.style";
 
 //Components
@@ -24,11 +25,14 @@ const Results = ({ value }) => {
     const timeout = setTimeout(() => {
       value && dispatch(fetchSearch(value));
     }, 1000);
-    return () => clearTimeout(timeout);
+    return () => {
+      dispatch(clearSearch());
+      clearTimeout(timeout);
+    };
   }, [value]);
-  const { products, loading, pager } = useSearchState();
+  const { products, loading,error, pager } = useSearchState();
   //page Handler
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(2);
   const pageHandler = () => {
     setPage((currentValue) => currentValue + 1);
     dispatch(fetchSearch(value, page));
@@ -38,11 +42,12 @@ const Results = ({ value }) => {
     <>
       <ResultsContainer>
         {products?.map((product) => {
-          const { id } = product;
+          const { id, status } = product;
 
           //check if the page is last page
-          if (pager?.current_page + 3 === pager?.total_pages) return;
-
+          if (pager?.current_page + 1 === pager?.total_pages) return;
+          //check if item is unavailavle
+          if (status === "out_of_stock" || status === "in_supply") return;
           return (
             <Link href={`/product/${id}`} key={id}>
               <a>
@@ -54,13 +59,19 @@ const Results = ({ value }) => {
       </ResultsContainer>
 
       {!products.length && loading ? <Loading>کمی صبر کنید ...</Loading> : ""}
-      {products.length ? (
-        <LoadMoreButton onClick={pageHandler}>
-          {loading ? "کمی صبر کنید ..." : "بیشتر"}
-        </LoadMoreButton>
-      ) : (
-        ""
-      )}
+      {products.length
+        ? pager?.current_page < pager?.total_pages && (
+            <LoadMoreButton
+              disabled={loading ? true : false}
+              onClick={pageHandler}
+            >
+              {loading ? "کمی صبر کنید ..." : "بیشتر"}
+            </LoadMoreButton>
+          )
+        : ""}
+        {
+          error && <Error>{error}</Error>
+        }
     </>
   );
 };
