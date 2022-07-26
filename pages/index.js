@@ -41,7 +41,7 @@ const Home = ({ homeData }) => {
     dispatch(getHomeData(homeData));
   }, []);
 
-  const { incredibleProducts, bestSellingProducts, mobileList, laptopList, newMobileData } =
+  const { incredibleProducts, bestSellingProducts, mobileList, laptopList } =
     useHomeState();
 
   const router = useRouter();
@@ -53,14 +53,14 @@ const Home = ({ homeData }) => {
   return (
     <div>
       <Hero />
-      <button onClick={() => handler(pushIncredible, newMobileData)}>Load More</button>
+      <button onClick={() => handler(pushIncredible, homeData.newMobileData)}>Load More</button>
       <br />
       <ListSlider
         data={incredibleProducts}
         title="تخفیفات شگفت انگیز"
         subTitle="خریدی به صرفه با تخفیفات شگفت انگیز"
         pusher={dataPusher("incredible-offers/products/?", pushIncredible)}
-        dataPusher={() => handler(pushIncredible, newMobileData)}
+        dataPusher={() => handler(pushIncredible, homeData.newMobileData)}
       />
       <ListSlider
         data={bestSellingProducts}
@@ -77,6 +77,7 @@ const Home = ({ homeData }) => {
         data={mobileList}
         title="موبایل"
         pusher={dataPusher("categories/mobile/search/?", pushMobile)}
+        dataPusher={() => handler(pushMobile, homeData.newMobileData)}
       />
       <ListSlider
         data={laptopList}
@@ -129,7 +130,10 @@ export const getServerSideProps = async () => {
     }
     return userData;
   };
-  await pushDataToMobile().then((item) => newMobileData = item);
+  await pushDataToMobile().then((item) => {
+    newMobileData = item
+    console.log(newMobileData.data.products[0].id)
+  });
   return {
     props: { homeData: homePreset(data.data, mobileList, laptopList, newMobileData) },
   };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 //Styled Components
 import { LoadMoreContainer, LoadMoreButton } from "./ListSlider.style";
@@ -34,11 +34,19 @@ const LoadMore = ({ pusher }) => {
   //   })
   // };
 
+    const handler = () => {
+      setLoading(true)
+      setTimeout(() => {
+        pusher()
+        setLoading(false)
+      }, 500);
+      // if(pusher.length) setLoading(false)
+    }
 
   return (
     <LoadMoreContainer>
      {
-      !end ? <LoadMoreButton disabled={loading} onClick={pusher} pressed={loading}>
+      !end ? <LoadMoreButton disabled={loading} onClick={pusher} pressed={false}>
       {loading ? <LoadingIndicator /> : <AiOutlineArrowLeft />}
     </LoadMoreButton>: 'محصول دیگری موجود نیست!'
      }

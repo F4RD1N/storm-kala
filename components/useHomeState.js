@@ -10,8 +10,7 @@ const useHomeState = () => {
     categories: state.categories,
     recommendationSubCategories: state.recommendationSubCategories,
     mobileList: state.mobileList,
-    laptopList: state.laptopList,
-    newMobileData: state.newMobileData
+    laptopList: state.laptopList
   };
 };
 
