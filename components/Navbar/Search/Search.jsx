@@ -1,56 +1,39 @@
-import React, { useEffect } from "react";
-import Link from "next/link";
-//redux
-import { useDispatch } from "react-redux";
-import { fetchSearch } from "../../../redux/search/searchAction";
+import React, { useState } from "react";
 
 //state
 import useSearchState from "./useSearchState";
 //Styled Components
-import { Container, Results } from "../Search/Search.style";
+import {
+  Container,
+  RelatedWordsContainer,
+  RelatedWordsTitle,
+  RelatedWord,
+} from "../Search/Search.style";
+
 
 //Components
-import SearchCard from "./SearchCard";
+import SearchInput from "../Input";
+import Results from "./Results";
 
-//Swiper
-import { Swiper, SwiperSlide } from "swiper/react";
+const Search = ({overlayHandler}) => {
+  const [searchValue, setSearchValue] = useState("");
+ 
 
-//required modules
-import { FreeMode } from "swiper";
+  const { relatedWords } = useSearchState();
 
-const Search = ({ value }) => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      value && dispatch(fetchSearch(value));
-    }, 1000);
-    return () => clearTimeout(timeout);
-  }, [value]);
-
-  const { products } = useSearchState();
+  const inputHandler = (event) => setSearchValue(event.target.value);
   return (
-    <Container>
-      <Results>
-        <Swiper
-          spaceBetween={3}
-          slidesPerView={1.5}
-          freeMode={true}
-          modules={[FreeMode]}
-        >
-          {products?.map((product) => {
-            const { id } = product;
-            return (
-              <SwiperSlide key={id} className="swiper-item">
-                <Link href={`/product/${id}`}>
-                  <a>
-                    <SearchCard data={product} />
-                  </a>
-                </Link>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </Results>
+    <Container >
+
+      <SearchInput value={searchValue} handler={inputHandler} overlayHandler={overlayHandler} />
+      <Results value={searchValue} overlayHandler={overlayHandler}/>
+      
+      <RelatedWordsContainer isVisible={relatedWords?.length}>
+        <RelatedWordsTitle>جستوی مشابه</RelatedWordsTitle>
+        {relatedWords?.map((word, index) => {
+          return <RelatedWord key={index}>{word}</RelatedWord>;
+        })}
+      </RelatedWordsContainer>
     </Container>
   );
 };

@@ -25,6 +25,12 @@ const searchReducer = (state = initalState, action) => {
                 results: [],
                 error: action.payload
             }
+        case 'CLEAR_SEARCH':
+            return {
+                loading:false,
+                results: [],
+                error: null
+            }
         default:
             return state
     }

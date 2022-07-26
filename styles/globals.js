@@ -105,14 +105,7 @@ const GlobalStyles = createGlobalStyle`
 
 //remove blue overlay on links
 /*IE9*/
-*::selection 
-{
-    background-color:transparent;
-} 
-*::-moz-selection
-{
-    background-color:transparent;
-}
+
 *
 {        
     -webkit-user-select: none;
@@ -134,25 +127,6 @@ input[type="text"], textarea, [contenteditable]
 }
 
 
-.user {
-  padding: 1rem;
-}
-
-.user-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 1rem;
-
-  .user {
-    width: 100%;
-    text-align: center;
-    padding: 2rem;
-    margin: 0.25rem;
-    background: #eee;
-  }
-}
 `;
 
 export default GlobalStyles;

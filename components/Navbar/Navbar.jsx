@@ -19,21 +19,23 @@ import Search from "./Search/Search";
 
 const Navbar = () => {
   const [searchValue, setSearchValue] = useState("");
-
+  const [toggleOverlay, setToggleOverlay] = useState(false);
   const inputHandler = (event) => setSearchValue(event.target.value);
+
+  const overlayHandler = () => setToggleOverlay(currentValue => !currentValue);
   return (
     <Container>
-      <SearchBox>
-        <InputContainer>
-          <FiSearch />
-          <Input
-            placeholder="جستجو"
-            value={searchValue}
-            onChange={inputHandler}
-          />
-        </InputContainer>
-        <Search value={searchValue} />
-      </SearchBox>
+      {toggleOverlay && <SearchBox>
+        <Search
+          value={searchValue}
+          handler={inputHandler}
+          overlayHandler={overlayHandler}
+        />
+      </SearchBox>}
+      <InputContainer onClick={overlayHandler}>
+        <FiSearch />
+        <Input disabled placeholder="جستجو" />
+      </InputContainer>
       <LeftContainer>
         <Item>
           <BsPerson />

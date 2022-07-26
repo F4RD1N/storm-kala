@@ -19,12 +19,17 @@ const fetchSearchFailure = (error) => {
     payload: error,
   };
 };
+export const clearSearch = () => {
+  return {
+    type: "CLEAR_SEARCH"
+  };
+};
 
 export const fetchSearch = (query, page = 1) => {
   return (dispatch) => {
     dispatch(fetchSearchRequest());
     axios
-      .get(`/search/?q=${query}&page=${page}`)
+      .get(`search/?q=${query}&page=${page}`)
       .then((response) => {
         const users = response.data;
         dispatch(fetchSearchSuccess(users));

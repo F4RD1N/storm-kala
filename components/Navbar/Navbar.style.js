@@ -24,8 +24,12 @@ export const InputContainer = styled.div`
   align-items: center;
   /* background-color: ${(props) => props.theme.colors.gray}; */
   font-size: 1.4rem;
-  color: rgb(153, 153, 153);
+  color: ${props => props.theme.colors.textPrimary};
   gap: 0.5rem;
+  background-color: #fff;
+  padding: 1rem;
+  min-width: 70%;
+  border-radius: 2px;
 `;
 
 export const Input = styled.input`
@@ -35,14 +39,17 @@ export const Input = styled.input`
   width: 100%;
   &::placeholder {
     font-family: ${(props) => props.theme.fonts.main};
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 `;
 export const LeftContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-self: flex-start;
   align-items: center;
   font-size: 1.8rem;
-  width: 15%;
+  width: 20%;
 `;
+
+export const IconContainer = styled.div`
+  margin-top: 5px;
+`
