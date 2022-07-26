@@ -1,3 +1,3 @@
 //set url to axios
 import axios from 'axios';
-axios.defaults.baseURL = 'https://reverse-vercel.vercel.app/v1';
+axios.defaults.baseURL = 'http://localhost:3000/api';
