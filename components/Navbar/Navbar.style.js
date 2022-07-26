@@ -13,12 +13,7 @@ export const Item = styled.div`
   color: #000;
 `;
 
-export const SearchBox = styled.div`
-  width: 80%;
-  padding: 0.7rem 1rem;
-  background-color: #fff;
-  border-radius: ${(props) => props.theme.utilities.radius.card};
-`;
+
 export const InputContainer = styled.div`
   display: flex;
   align-items: center;
@@ -42,6 +37,10 @@ export const Input = styled.input`
     font-size: 0.9rem;
   }
 `;
+
+export const IconContainer = styled.div`
+  margin-top: 5px;
+`
 export const LeftContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -49,7 +48,3 @@ export const LeftContainer = styled.div`
   font-size: 1.8rem;
   width: 20%;
 `;
-
-export const IconContainer = styled.div`
-  margin-top: 5px;
-`

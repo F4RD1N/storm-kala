@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 //Icons
 import { FiSearch } from "react-icons/fi";
 import { BsPerson, BsCart } from "react-icons/bs";
@@ -11,27 +11,24 @@ import {
   InputContainer,
   Item,
   LeftContainer,
-  SearchBox,
 } from "./Navbar.style";
 
 //Components
-import Search from "./Search/Search";
+import { SearchOverlay } from "../";
 
 const Navbar = () => {
-  const [searchValue, setSearchValue] = useState("");
   const [toggleOverlay, setToggleOverlay] = useState(false);
-  const inputHandler = (event) => setSearchValue(event.target.value);
-
-  const overlayHandler = () => setToggleOverlay(currentValue => !currentValue);
+  const overlayHandler = () =>
+    setToggleOverlay((currentValue) => !currentValue);
+  //close overlay when route changes
+  const router = useRouter();
+  useEffect(() => {
+    setToggleOverlay(false);
+  }, [router.query]);
   return (
     <Container>
-      {toggleOverlay && <SearchBox>
-        <Search
-          value={searchValue}
-          handler={inputHandler}
-          overlayHandler={overlayHandler}
-        />
-      </SearchBox>}
+      {toggleOverlay && <SearchOverlay overlayHandler={overlayHandler} />}
+
       <InputContainer onClick={overlayHandler}>
         <FiSearch />
         <Input disabled placeholder="جستجو" />

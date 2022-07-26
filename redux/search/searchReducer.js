@@ -27,7 +27,7 @@ const searchReducer = (state = initalState, action) => {
             }
         case 'CLEAR_SEARCH':
             return {
-                loading:false,
+                loading: false,
                 results: [],
                 error: null
             }
