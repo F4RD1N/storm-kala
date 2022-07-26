@@ -4,7 +4,7 @@ import { GlobalButton } from "../../styles/shared";
 export const Container = styled.section`
   position: ${props => props.hasData ? 'absolute' : 'fixed'};
   margin-bottom: 0;
-  padding: 1rem ${props => props.hasData ? '0.5rem' : '3rem'};
+  padding: 1rem 0.5rem;
   background-color: ${(props) => props.theme.colors.natural};
   top: 0;
   left: 0;
@@ -94,7 +94,7 @@ export const IconContainer = styled.div`
 
 export const LoadMoreButton = styled(GlobalButton)`
   width: 100%;
-  margin-top: 1rem;
+  margin: 1rem 0;
   background-color: ${(props) => props.theme.colors.card};
   color: ${(props) => props.theme.colors.textPrimary};
   font-size: 1rem;

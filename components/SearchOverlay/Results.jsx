@@ -38,6 +38,9 @@ const Results = ({ value }) => {
     dispatch(fetchSearch(value, page));
   };
 
+  //check if there is no product to show
+  if(pager?.total_items === 0) return <Error>موردی یافت نشد</Error>
+
   return (
     <>
       <ResultsContainer>
