@@ -107,7 +107,7 @@ export const Loading = styled.span`
   text-align: center;
   width: 100%;
   color: ${(props) => props.theme.colors.blue};
-  font-weight: bold;
+  margin: 1rem 0;
 `;
 
 export const Error = styled(Loading)`

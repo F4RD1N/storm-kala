@@ -13,7 +13,7 @@ import {
   ResultsContainer,
   LoadMoreButton,
   Loading,
-  Error
+  Error,
 } from "./SearchOverlay.style";
 
 //Components
@@ -30,7 +30,7 @@ const Results = ({ value }) => {
       clearTimeout(timeout);
     };
   }, [value]);
-  const { products, loading,error, pager } = useSearchState();
+  const { products, loading, error, pager } = useSearchState();
   //page Handler
   const [page, setPage] = useState(2);
   const pageHandler = () => {
@@ -39,7 +39,7 @@ const Results = ({ value }) => {
   };
 
   //check if there is no product to show
-  if(pager?.total_items === 0) return <Error>موردی یافت نشد</Error>
+  if (pager?.total_items === 0) return <Error>موردی یافت نشد</Error>;
 
   return (
     <>
@@ -48,7 +48,7 @@ const Results = ({ value }) => {
           const { id, status } = product;
 
           //check if the page is last page
-          if (pager?.current_page + 1 === pager?.total_pages) return;
+          if (pager?.current_page === pager?.total_pages) return;
           //check if item is unavailavle
           if (status === "out_of_stock" || status === "in_supply") return;
           return (
@@ -62,19 +62,21 @@ const Results = ({ value }) => {
       </ResultsContainer>
 
       {!products.length && loading ? <Loading>کمی صبر کنید ...</Loading> : ""}
-      {products.length
-        ? pager?.current_page < pager?.total_pages && (
-            <LoadMoreButton
-              disabled={loading ? true : false}
-              onClick={pageHandler}
-            >
-              {loading ? "کمی صبر کنید ..." : "بیشتر"}
-            </LoadMoreButton>
-          )
-        : ""}
-        {
-          error && <Error>{error}</Error>
-        }
+      {products.length ? (
+        pager?.current_page < pager?.total_pages ? (
+          <LoadMoreButton
+            disabled={loading ? true : false}
+            onClick={pageHandler}
+          >
+            {loading ? "کمی صبر کنید ..." : "بیشتر"}
+          </LoadMoreButton>
+        ) : (
+          <Loading>به انتهای لیست رسیدید!</Loading>
+        )
+      ) : (
+        ""
+      )}
+      {error && <Error>{error}</Error>}
     </>
   );
 };

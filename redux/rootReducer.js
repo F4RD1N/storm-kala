@@ -4,11 +4,13 @@ import { combineReducers } from "redux";
 import productReducer from './product/productReducer'
 import homeReducer from './home/homeReducer'
 import searchReducer from "./search/searchReducer";
+import cartReducer from "./cart/cartReducer";
 
 const rootReducer = combineReducers({
     productState: productReducer,
     homeState: homeReducer,
-    searchState: searchReducer
+    searchState: searchReducer,
+    cartState: cartReducer
 })
 
 export default rootReducer
