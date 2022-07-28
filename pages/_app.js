@@ -3,7 +3,8 @@ import Layout from "../layout";
 
 //redux
 import { Provider } from "react-redux";
-import store from "../redux/store";
+import { PersistGate } from "reduxjs-toolkit-persist/integration/react";
+import store, {persistor} from "../redux/store";
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,17 +13,19 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 //config
-import '../config'
+import "../config";
 
 const _app = ({ Component, pageProps }) => {
   return (
     <>
       <Provider store={store}>
-        <Theme>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </Theme>
+        <PersistGate persistor={persistor}>
+          <Theme>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </Theme>
+        </PersistGate>
       </Provider>
     </>
   );

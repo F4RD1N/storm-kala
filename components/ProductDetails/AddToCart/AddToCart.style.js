@@ -46,11 +46,12 @@ export const HandleButtonsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: .5rem;
+  width: fit-content;
 `;
 export const HandleButton = styled.div`
   font-size: 1.5rem;
-  padding: .75rem;
+  padding: .75rem .25rem;
   color: ${props => props.theme.colors.blue};
   display: flex;
   justify-content: center;
