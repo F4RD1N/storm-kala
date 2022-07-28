@@ -1,10 +1,12 @@
 import { useSelector } from "react-redux";
 
 const useCartState = () => {
-  const { cartItems } = useSelector((state) => state.cartState);
+  const { cartItems, itemsCounter, total } = useSelector((state) => state.cartState);
 
   return {
-    cartItems
+    cartItems,
+    itemsCounter,
+    total,
   };
 };
 

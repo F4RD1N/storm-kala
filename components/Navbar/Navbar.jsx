@@ -10,23 +10,27 @@ import {
   Input,
   InputContainer,
   Item,
+  CartCounter,
   LeftContainer,
 } from "./Navbar.style";
 
 //Components
-import { SearchOverlay } from "../";
+import { SearchOverlay, CartOverlay } from "../";
 
 //logic
 import useNavbar from "./useNavbar";
 
-const Navbar = () => {
-    const {toggleOverlay, overlayHandler} = useNavbar()
+//cart state
+import useCartState from "../ProductDetails/AddToCart/useCartState";
 
+const Navbar = () => {
+  const { toggleSearch, searchHandler } = useNavbar();
+  const { itemsCounter } = useCartState();
   return (
     <Container>
-      {toggleOverlay && <SearchOverlay overlayHandler={overlayHandler} />}
+      {toggleSearch && <SearchOverlay overlayHandler={searchHandler} />}
 
-      <InputContainer onClick={overlayHandler}>
+      <InputContainer onClick={searchHandler}>
         <FiSearch />
         <Input disabled placeholder="جستجو" />
       </InputContainer>
@@ -36,6 +40,7 @@ const Navbar = () => {
         </Item>
         <Item>
           <BsCart />
+          {itemsCounter ? <CartCounter>{itemsCounter}</CartCounter> : ""}
         </Item>
       </LeftContainer>
     </Container>

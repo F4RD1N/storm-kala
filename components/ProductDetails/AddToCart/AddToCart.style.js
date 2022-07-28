@@ -29,7 +29,7 @@ export const AddButton = styled(GlobalButton)`
 export const PriceContainer = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 export const ProductPrice = styled.span`
   font-size: 1rem;
   font-weight: bold;
@@ -43,7 +43,6 @@ export const OldPrice = styled.h4`
   color: ${(props) => props.theme.colors.textSecondary};
   align-self: flex-end;
 `;
-
 
 export const GoToSimilarSection = styled.a`
   color: ${(props) => props.theme.colors.blue};
@@ -60,18 +59,37 @@ export const HandleButtonsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: .5rem;
+  gap: 1rem;
   width: fit-content;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 1rem;
 `;
-export const HandleButton = styled.div`
+export const HandleButton = styled.button`
+  border: none;
+  outline: none;
+  background-color: transparent;
   font-size: 1.5rem;
-  padding: .75rem .25rem;
-  color: ${props => props.theme.colors.blue};
+  padding: 0.75rem 0.25rem;
+  color: ${(props) => props.theme.colors.blue};
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:disabled {
+    opacity: 0.4;
+  }
 `;
 
 export const Quantity = styled.span`
   font-size: 1rem;
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+`;
+
+export const QuantityLimit = styled.span`
+  color: ${(props) => props.theme.colors.textSecondary};
+  font-size: 0.9rem;
+`;

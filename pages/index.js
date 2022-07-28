@@ -99,6 +99,7 @@ export const getStaticProps = async () => {
   await fetchLoptop().then((item) => (laptopList = item));
   return {
     props: { homeData: homePreset(data.data, mobileList, laptopList) },
+    revalidate: 21600
   };
 };
 

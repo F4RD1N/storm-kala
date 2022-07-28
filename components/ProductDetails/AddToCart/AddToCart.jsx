@@ -11,6 +11,7 @@ import {
   HandleButtonsContainer,
   HandleButton,
   Quantity,
+  QuantityLimit,
 } from "./AddToCart.style";
 
 //Icons
@@ -46,10 +47,20 @@ const AddToCart = () => {
         </AddButton>
       ) : (
         <HandleButtonsContainer>
-          <HandleButton onClick={increaseHandler}>
+          <HandleButton
+            disabled={itemQuantity === price.order_limit ? true : false}
+            onClick={increaseHandler}
+          >
             <AiOutlinePlus />
           </HandleButton>
-          <Quantity> {itemQuantity} عدد موجود در سبد</Quantity>
+          <Quantity>
+            {itemQuantity}
+            {itemQuantity === price.order_limit ? (
+              <QuantityLimit>حداکثر</QuantityLimit>
+            ) : (
+              ""
+            )}
+          </Quantity>
           {itemQuantity > 1 ? (
             <HandleButton onClick={decreaseHandler}>
               <AiOutlineMinus />

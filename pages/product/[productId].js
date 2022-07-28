@@ -75,6 +75,6 @@ export const getStaticProps = async (context) => {
   }
   return {
     props: { productData: productPreset(data.data) },
-    revalidate: 604800,
+    revalidate: 100000,
   };
 };

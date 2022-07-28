@@ -11,7 +11,7 @@ const productPreset = ({ product, recommendations }) => {
       catagory: product.category,
       images: product.images.list.slice(0, 10),
       rating: product.rating,
-      price: product.variants[0]?.price ? product.variants[0].price : null,
+      price: product.default_variant?.price ? product.default_variant.price : null,
       videos: product.videos,
       introduce: product.review.description ? product.review.description : null,
       options: product.review.attributes ? product.review.attributes : null,

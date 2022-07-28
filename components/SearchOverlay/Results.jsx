@@ -19,7 +19,6 @@ import { ProductCard } from "../shared";
 import useResults from "./useResults";
 
 const Results = ({ value }) => {
-  
   const { pageHandler } = useResults(value);
 
   const { products, loading, error, pager } = useSearchState();
@@ -38,11 +37,9 @@ const Results = ({ value }) => {
           //check if item is unavailavle
           if (status !== "marketable") return;
           return (
-            <Link href={`/product/${id}`} key={id}>
-              <a>
-                <ProductCard data={product} />
-              </a>
-            </Link>
+            <a target="_blank" href={`/product/${id}`} key={id}>
+              <ProductCard data={product} />
+            </a>
           );
         })}
       </ResultsContainer>

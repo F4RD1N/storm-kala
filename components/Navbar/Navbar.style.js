@@ -11,15 +11,30 @@ export const Container = styled.nav`
 
 export const Item = styled.div`
   color: #000;
+  position: relative;
 `;
 
+export const CartCounter = styled.span`
+  position: absolute;
+  font-size: 0.8rem;
+  right: -10px;
+  bottom: 0;
+  background-color: ${(props) => props.theme.colors.blue};
+  color: #fff;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const InputContainer = styled.div`
   display: flex;
   align-items: center;
   /* background-color: ${(props) => props.theme.colors.gray}; */
   font-size: 1.4rem;
-  color: ${props => props.theme.colors.textPrimary};
+  color: ${(props) => props.theme.colors.textPrimary};
   gap: 0.5rem;
   background-color: #fff;
   padding: 1rem;
@@ -40,7 +55,7 @@ export const Input = styled.input`
 
 export const IconContainer = styled.div`
   margin-top: 5px;
-`
+`;
 export const LeftContainer = styled.div`
   display: flex;
   justify-content: space-between;

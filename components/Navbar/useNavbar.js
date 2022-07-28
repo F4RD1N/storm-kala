@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 const useNavbar = () => {
-  const [toggleOverlay, setToggleOverlay] = useState(false);
-  const overlayHandler = () =>
-    setToggleOverlay((currentValue) => !currentValue);
+  const [toggleSearch, setToggleSearch] = useState(false);
+  const searchHandler = () =>
+    setToggleSearch((currentValue) => !currentValue);
   //close overlay when route changes
   const router = useRouter();
   useEffect(() => {
-    setToggleOverlay(false);
+    setToggleSearch(false);
   }, [router.query]);
 
   return {
-    toggleOverlay,
-    overlayHandler,
+    toggleSearch,
+    searchHandler,
   };
 };
 
