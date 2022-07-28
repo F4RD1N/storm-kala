@@ -23,6 +23,4 @@ export const Description = styled.p`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: ${(props) =>
     props.showFull ? "N" : 4}; /* number of lines to show */
-
-  &: ;
 `;

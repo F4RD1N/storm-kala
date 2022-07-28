@@ -18,7 +18,7 @@ export const Container = styled(SectionCard)`
 export const AddButton = styled(GlobalButton)`
   font-size: 1rem;
   padding: 0.7rem 1.5rem;
-
+  min-width: 180px;
   ${(props) =>
     props.outStock &&
     `
@@ -64,6 +64,7 @@ export const HandleButtonsContainer = styled.div`
   border-radius: 5px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
   padding: 0 1rem;
+  min-width: 180px;
 `;
 export const HandleButton = styled.button`
   border: none;
