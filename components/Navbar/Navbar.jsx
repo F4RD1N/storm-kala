@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import React from "react";
+
 //Icons
 import { FiSearch } from "react-icons/fi";
 import { BsPerson, BsCart } from "react-icons/bs";
@@ -16,15 +16,12 @@ import {
 //Components
 import { SearchOverlay } from "../";
 
+//logic
+import useNavbar from "./useNavbar";
+
 const Navbar = () => {
-  const [toggleOverlay, setToggleOverlay] = useState(false);
-  const overlayHandler = () =>
-    setToggleOverlay((currentValue) => !currentValue);
-  //close overlay when route changes
-  const router = useRouter();
-  useEffect(() => {
-    setToggleOverlay(false);
-  }, [router.query]);
+    const {toggleOverlay, overlayHandler} = useNavbar()
+
   return (
     <Container>
       {toggleOverlay && <SearchOverlay overlayHandler={overlayHandler} />}

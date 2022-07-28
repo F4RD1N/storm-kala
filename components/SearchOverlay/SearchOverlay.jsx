@@ -17,6 +17,7 @@ import useSearchState from "./useSearchState";
 
 const SearchOverlay = ({ overlayHandler }) => {
   const {products} = useSearchState()
+
   //input handle
   const [value, setValue] = useState("");
   const valueHandler = (event) => setValue(event.target.value);
@@ -26,6 +27,7 @@ const SearchOverlay = ({ overlayHandler }) => {
   useEffect(() => {
     return () => dispatch(clearSearch());
   }, []);
+  
   return (
     <Container hasData={products?.length}>
       <SearchInput

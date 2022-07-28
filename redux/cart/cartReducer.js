@@ -7,7 +7,7 @@ const initialState = {
 
 const cartReducer = (state = initialState, action) => {
   const indexItem = state.cartItems.findIndex(
-    (item) => item.id === action.payload.id
+    (item) => item.id === action.payload?.id
   );
   switch (action.type) {
     case "ADD_ITEM":
@@ -19,13 +19,13 @@ const cartReducer = (state = initialState, action) => {
       };
     case "REMOVE_ITEM":
       const newItems = state.cartItems.filter(
-        (item) => item.id !== action.payload.id
+        (item) => item.id !== action.payload?.id
       );
       return {
         ...state,
         cartItems: [...newItems],
         itemsCounter: state.itemsCounter - 1,
-        total: state.total - action.payload.price.selling_price,
+        total: state.total - action.payload?.price.selling_price,
       };
     case "INCREASE":
       return {
@@ -34,7 +34,7 @@ const cartReducer = (state = initialState, action) => {
           index === indexItem ? { ...item, quantity: item.quantity + 1 } : item
         ),
         itemsCounter: state.itemsCounter + 1,
-        total: state.total + action.payload.price.selling_price,
+        total: state.total + action.payload?.price.selling_price,
       };
     case "DECREASE":
       return {
@@ -43,7 +43,7 @@ const cartReducer = (state = initialState, action) => {
           index === indexItem ? { ...item, quantity: item.quantity - 1 } : item
         ),
         itemsCounter: state.itemsCounter - 1,
-        total: state.total - action.payload.price.selling_price,
+        total: state.total - action.payload?.price.selling_price,
       };
     case "CLEAR":
       return {

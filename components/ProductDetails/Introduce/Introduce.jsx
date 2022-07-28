@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import React from "react";
 
 //Icons
 import { AiOutlineArrowLeft } from "react-icons/ai";
@@ -13,12 +12,11 @@ import { ReadMore } from "../../../styles/shared";
 //state
 import useProductState from "../useProductState";
 
+//logic (the logic is same with Information component)
+import useInformation from "../Information/useInformation";
+
 const Introduce = () => {
-  //toogle view
-  const [toggle, setToggle] = useState(false);
-  const toggleHandler = () => setToggle((currentValue) => !currentValue);
-  const router = useRouter()
-  useEffect(() => setToggle(false), [router.query])
+  const { toggle, toggleHandler } = useInformation();
 
 
   const { introduce } = useProductState();

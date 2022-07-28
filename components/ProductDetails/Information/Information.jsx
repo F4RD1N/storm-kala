@@ -1,18 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import React from "react";
 
 //Icons
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 //Styled Components
-import {
-  Container,
-  Title,
-  ItemContainer,
-  Item,
-  ItemValue,
-  HorizontalRuler,
-} from "./Information.style";
+import { Container, Title } from "./Information.style";
 
 //Shared Styled Components
 import { ReadMore } from "../../../styles/shared";
@@ -23,12 +15,11 @@ import InfoCard from "./InfoCard";
 //state
 import useProductState from "../useProductState";
 
+//logic
+import useInformation from "./useInformation";
+
 const Information = () => {
-  //toogle view
-  const [toggle, setToggle] = useState(false);
-  const toggleHandler = () => setToggle((currentValue) => !currentValue);
-  const router = useRouter();
-  useEffect(() => setToggle(false), [router.query]);
+  const { toggle, toggleHandler } = useInformation();
 
   const { information } = useProductState();
 
@@ -41,9 +32,11 @@ const Information = () => {
         return <InfoCard key={title} title={title} value={values[0]} />;
       })}
 
-      {information?.length > 4 && <ReadMore onClick={toggleHandler} showFull={toggle}>
-        {toggle ? "کمتر" : "بیشتر"} <AiOutlineArrowLeft />
-      </ReadMore>}
+      {information?.length > 4 && (
+        <ReadMore onClick={toggleHandler} showFull={toggle}>
+          {toggle ? "کمتر" : "بیشتر"} <AiOutlineArrowLeft />
+        </ReadMore>
+      )}
     </Container>
   );
 };

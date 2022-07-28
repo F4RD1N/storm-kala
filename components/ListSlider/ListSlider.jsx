@@ -31,7 +31,7 @@ const ListSlider = ({ data, title, subTitle, pusher, pusherLess }) => {
           data.length &&
           data.map((product, index) => {
             const { id, status } = product;
-            if (status === "out_of_stock" || status === "in_supply") return;
+            if (status !== "marketable") return;
 
             return (
               <SwiperSlide key={id} className="swiper-item">

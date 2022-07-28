@@ -26,10 +26,24 @@ export const AddButton = styled(GlobalButton)`
   `}
 `;
 
+export const PriceContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 export const ProductPrice = styled.span`
   font-size: 1rem;
   font-weight: bold;
 `;
+
+export const OldPrice = styled.h4`
+  display: ${(props) => (props.isVisible ? "block" : "none")};
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: ${(props) => props.theme.colors.textSecondary};
+  align-self: flex-end;
+`;
+
 
 export const GoToSimilarSection = styled.a`
   color: ${(props) => props.theme.colors.blue};

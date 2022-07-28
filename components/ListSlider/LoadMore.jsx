@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
+
 //Styled Components
 import { LoadMoreContainer, LoadMoreButton } from "./ListSlider.style";
 //Icons
@@ -7,32 +7,11 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 //Components
 import { LoadingIndicator } from "../shared";
 
-//redux
-import { useDispatch } from "react-redux";
+//logic
+import useLoadMore from "./useLoadMore";
 
 const LoadMore = ({ pusher }) => {
-  const [page, setPage] = useState(2)
-  const [loading, setLoading] = useState(false);
-  const [end, setEnd] = useState(false);
-  const dispatch = useDispatch();
-
-  const handler = () => {
-    setLoading(true);
-
-    const fetcher = async () => {
-      const response = await axios(pusher.endpoint(page));
-      if (!pusher.dataPath(response).length) setEnd(true);
-      return pusher.dataPath(response);
-    };
-    fetcher().then((res) => {
-      dispatch(pusher.action(res));
-      setLoading(false);
-      setPage((currentValue) => currentValue + 1);
-    }).catch(err => {
-      console.log(err.message)
-      setLoading(false)
-    })
-  };
+  const {loading, end, handler} = useLoadMore(pusher)
   return (
     <LoadMoreContainer>
      {

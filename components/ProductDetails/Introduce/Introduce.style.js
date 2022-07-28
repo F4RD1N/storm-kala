@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { SectionCard } from "../../../styles/shared";
 
 export const Container = styled(SectionCard)`
-  display: ${props => props.isVisible ? 'block' : 'none'};
+  display: ${(props) => (props.isVisible ? "block" : "none")};
   position: relative;
   padding-bottom: 2.5rem;
 `;
@@ -21,7 +21,8 @@ export const Description = styled.p`
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: ${props => props.showFull ? 'N' : 4}; /* number of lines to show */
+  -webkit-line-clamp: ${(props) =>
+    props.showFull ? "N" : 4}; /* number of lines to show */
 
-  &:
-  `;
+  &: ;
+`;

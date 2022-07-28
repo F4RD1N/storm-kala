@@ -4,15 +4,17 @@ import React from "react";
 import {
   Container,
   AddButton,
+  PriceContainer,
   ProductPrice,
+  OldPrice,
   GoToSimilarSection,
   HandleButtonsContainer,
   HandleButton,
-  Quantity
+  Quantity,
 } from "./AddToCart.style";
 
 //Icons
-import { AiOutlinePlus, AiOutlineMinus} from "react-icons/ai";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { BsTrash } from "react-icons/bs";
 //state
 import useProductState from "../useProductState";
@@ -38,31 +40,43 @@ const AddToCart = () => {
       {!isItemExist ? (
         <AddButton
           onClick={addHandler}
-          outStock={
-            status === "out_of_stock" || (status === "in_supply" && true)
-          }
+          outStock={status !== "marketable" && true}
         >
-          {status === "out_of_stock" ? "اتمام موجودی" : "افزودن به سبد خرید"}
+          {status !== "marketable" ? "اتمام موجودی" : "افزودن به سبد خرید"}
         </AddButton>
       ) : (
         <HandleButtonsContainer>
-          <HandleButton onClick={increaseHandler}><AiOutlinePlus /></HandleButton><Quantity> {itemQuantity} عدد موجود در سبد</Quantity>
+          <HandleButton onClick={increaseHandler}>
+            <AiOutlinePlus />
+          </HandleButton>
+          <Quantity> {itemQuantity} عدد موجود در سبد</Quantity>
           {itemQuantity > 1 ? (
-            <HandleButton onClick={decreaseHandler}><AiOutlineMinus /></HandleButton>
+            <HandleButton onClick={decreaseHandler}>
+              <AiOutlineMinus />
+            </HandleButton>
           ) : (
-            <HandleButton onClick={removeHanlder}><BsTrash /></HandleButton>
+            <HandleButton onClick={removeHanlder}>
+              <BsTrash />
+            </HandleButton>
           )}
         </HandleButtonsContainer>
       )}
-      <ProductPrice>
-        {status === "out_of_stock" || status === "in_supply" ? (
+      <PriceContainer>
+        {status !== "marketable" ? (
           <GoToSimilarSection href="#similar">
             مشاهده کالا های مشابه
           </GoToSimilarSection>
         ) : (
-          convertPrice(price?.selling_price) + " تومان"
+          <>
+            <OldPrice isVisible={price?.discount_percent && true}>
+              {convertPrice(price?.rrp_price)}
+            </OldPrice>
+            <ProductPrice>
+              {convertPrice(price?.selling_price) + " تومان"}
+            </ProductPrice>
+          </>
         )}
-      </ProductPrice>
+      </PriceContainer>
     </Container>
   );
 };

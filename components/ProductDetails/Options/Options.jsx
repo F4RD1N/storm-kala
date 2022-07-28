@@ -19,7 +19,7 @@ const Options = () => {
       <Title>ویژگی ها</Title>
 
       {options?.map((item) => {
-        const {title, values} = item
+        const { title, values } = item;
         return (
           <Item key={title}>
             {title}:
