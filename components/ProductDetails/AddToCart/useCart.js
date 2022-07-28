@@ -6,6 +6,7 @@ import {
   increase,
   decrease,
   removeItem,
+  clearCart,
 } from "../../../redux/cart/cartAction";
 
 //state
@@ -41,13 +42,17 @@ const useCart = () => {
     if (!isItemExist) dispatch(addItem(cartPreset));
   };
   const increaseHandler = () => {
-    dispatch(increase(cartPreset.id));
+    dispatch(increase(cartPreset));
   };
   const decreaseHandler = () => {
-    if (isItemExist && itemQuantity > 1) dispatch(decrease(cartPreset.id));
+    if (isItemExist && itemQuantity > 1) dispatch(decrease(cartPreset));
   };
   const removeHanlder = () => {
-    if (isItemExist && itemQuantity === 1) dispatch(removeItem(cartPreset.id));
+    if (isItemExist && itemQuantity === 1) dispatch(removeItem(cartPreset));
+  };
+
+  const clearHandler = () => {
+    dispatch(clearCart());
   };
 
   return {
@@ -55,6 +60,7 @@ const useCart = () => {
     increaseHandler,
     decreaseHandler,
     removeHanlder,
+    clearHandler,
     isItemExist,
     itemQuantity,
   };

@@ -32,7 +32,7 @@ export const checkout = () => {
   };
 };
 
-export const clear = () => {
+export const clearCart = () => {
   return {
     type: "CLEAR",
   };
