@@ -37,7 +37,7 @@ const Results = ({ value }) => {
           //check if item is unavailavle
           if (status !== "marketable") return;
           return (
-            <a target="_blank" href={`/product/${id}`} key={id}>
+            <a target="_blank" rel="noreferrer" href={`/product/${id}`} key={id}>
               <ProductCard data={product} />
             </a>
           );
