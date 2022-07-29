@@ -6,7 +6,7 @@ import {
   HandleButton,
   PriceContainer,
   ProductPrice,
-  TotalTitle
+  TotalTitle,
 } from "./NextButton.style";
 
 //state
@@ -16,7 +16,10 @@ import useCartState from "../../../ProductDetails/AddToCart/useCartState";
 import { convertPrice } from "../../../../helpers";
 
 const NextButton = () => {
-  const { total } = useCartState();
+  const { cartItems, total } = useCartState();
+
+  if (!cartItems.length) return;
+  
   return (
     <Container>
       <HandleButton>ادامه</HandleButton>
