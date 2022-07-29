@@ -15,6 +15,7 @@ import useCartState from "./useCartState";
 const useCart = (product) => {
   const [isItemExist, setIsItemExist] = useState(false);
   const [itemQuantity, setItemQuantity] = useState(0);
+  const [orderLimit, setOrderLimit] = useState(1);
   const dispatch = useDispatch();
   const { cartItems } = useCartState();
   const { id, price, mainDetails, images } = product;
@@ -35,6 +36,9 @@ const useCart = (product) => {
 
     //get item quantity
     setItemQuantity(cartItems.find((item) => item.id === id)?.quantity);
+
+    //get item order limit
+    setOrderLimit(price?.order_limit);
   }, [cartItems, id]);
 
   const addHandler = () => {
@@ -62,6 +66,7 @@ const useCart = (product) => {
     clearHandler,
     isItemExist,
     itemQuantity,
+    orderLimit,
   };
 };
 

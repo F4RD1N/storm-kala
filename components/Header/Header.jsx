@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 //Icons
 import { FiMenu } from "react-icons/fi";
 import { BsQuestionCircle } from "react-icons/bs";
@@ -10,7 +11,11 @@ const Header = () => {
       <Item>
         <FiMenu />
       </Item>
-      <MainTitle>StromKala</MainTitle>
+      <Link href="/">
+        <a>
+          <MainTitle>StromKala</MainTitle>
+        </a>
+      </Link>
       <Item>
         <BsQuestionCircle />
       </Item>

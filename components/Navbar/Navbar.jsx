@@ -38,7 +38,7 @@ const Navbar = () => {
         <Item>
           <BsPerson />
         </Item>
-        <Link href="/cart">
+        <Link href="/checkout/cart">
           <a>
             <Item>
               <BsCart />

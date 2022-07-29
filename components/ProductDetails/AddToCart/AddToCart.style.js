@@ -5,7 +5,6 @@ import { SectionCard, GlobalButton } from "../../../styles/shared";
 export const Container = styled(SectionCard)`
   position: sticky;
   bottom: 0;
-
   z-index: 5;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -58,11 +57,12 @@ export const HandleButtonsContainer = styled.div`
   color: #000;
   display: flex;
   align-items: center;
+  background-color: ${props => props.theme.col};
   justify-content: space-between;
   gap: .5rem;
   width: fit-content;
   border-radius: 5px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.08);
   padding: 0 1rem;
   width: 140px;
 `;

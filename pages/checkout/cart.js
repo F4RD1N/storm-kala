@@ -1,15 +1,16 @@
 import React from "react";
 
 //Styled Components
-import { Container, Title } from "../components/Cart/Cart.style";
+import { Container, Title } from "../../components/Checkout/Cart/Cart.style";
 //Components
-import { Items } from "../components/Cart";
+import { Items, NextButton } from "../../components/Checkout/Cart";
 const cart = () => {
   return (
     <div>
       <Container>
         <Title>سبد خرید شما</Title>
         <Items />
+        <NextButton />
       </Container>
     </div>
   );

@@ -8,15 +8,11 @@ import {
   ProductPrice,
   OldPrice,
   GoToSimilarSection,
-  HandleButtonsContainer,
-  HandleButton,
-  Quantity,
-  QuantityLimit,
 } from "./AddToCart.style";
 
-//Icons
-import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
-import { BsTrash } from "react-icons/bs";
+//Components
+import CartHandler from "./CartHandler";
+
 //state
 import useProductState from "../useProductState";
 
@@ -29,11 +25,7 @@ const AddToCart = () => {
   //cart functions
   const {
     addHandler,
-    increaseHandler,
-    decreaseHandler,
-    removeHanlder,
     isItemExist,
-    itemQuantity,
   } = useCart(useProductState());
 
   return (
@@ -46,31 +38,7 @@ const AddToCart = () => {
           {status !== "marketable" ? "اتمام موجودی" : "افزودن به سبد خرید"}
         </AddButton>
       ) : (
-        <HandleButtonsContainer>
-          <HandleButton
-            disabled={itemQuantity === price.order_limit ? true : false}
-            onClick={increaseHandler}
-          >
-            <AiOutlinePlus />
-          </HandleButton>
-          <Quantity>
-            {itemQuantity}
-            {itemQuantity === price.order_limit ? (
-              <QuantityLimit>حداکثر</QuantityLimit>
-            ) : (
-              ""
-            )}
-          </Quantity>
-          {itemQuantity > 1 ? (
-            <HandleButton onClick={decreaseHandler}>
-              <AiOutlineMinus />
-            </HandleButton>
-          ) : (
-            <HandleButton onClick={removeHanlder}>
-              <BsTrash />
-            </HandleButton>
-          )}
-        </HandleButtonsContainer>
+        <CartHandler data={useProductState}/>
       )}
       <PriceContainer>
         {status !== "marketable" ? (
