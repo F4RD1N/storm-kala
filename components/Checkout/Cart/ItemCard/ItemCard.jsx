@@ -5,6 +5,7 @@ import Link from "next/link";
 //Styled Components
 import {
   Container,
+  RightContainer,
   ImageContainer,
   DetailsContainer,
   Title,
@@ -21,6 +22,7 @@ const ItemCard = ({ data }) => {
 
   return (
     <Container>
+      <RightContainer>
       <Link href={`/product/${id}`}>
         <a>
           <ImageContainer>
@@ -37,6 +39,7 @@ const ItemCard = ({ data }) => {
       <Title title={title}>{title}</Title>
       <Price>{convertPrice(price.selling_price * quantity)} تومان</Price>
       </DetailsContainer>
+      </RightContainer>
       <CartHandler data={() => data} />
     </Container>
   );

@@ -10,8 +10,8 @@ const cart = () => {
       <Container>
         <Title>سبد خرید شما</Title>
         <Items />
-        <NextButton />
       </Container>
+        <NextButton />
     </div>
   );
 };
