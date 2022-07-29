@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 //Styled Components
 import {
   Container,
@@ -19,10 +19,14 @@ const NextButton = () => {
   const { cartItems, total } = useCartState();
 
   if (!cartItems.length) return;
-  
+
   return (
     <Container>
-      <HandleButton>ادامه</HandleButton>
+      <Link href='/checkout/shipping'>
+        <a>
+          <HandleButton>ادامه</HandleButton>
+        </a>
+      </Link>
       <PriceContainer>
         <TotalTitle>جمع سبد خرید</TotalTitle>
         <ProductPrice>{convertPrice(total)} تومان</ProductPrice>

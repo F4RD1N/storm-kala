@@ -16,9 +16,12 @@ import CartHandler from "./CartHandler";
 //state
 import useProductState from "../useProductState";
 
-//logic
+// helpers
 import { convertPrice } from "../../../helpers";
+
+//logic
 import useCart from "./useCart";
+
 const AddToCart = () => {
   const { price, status } = useProductState();
 

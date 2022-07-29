@@ -19,7 +19,7 @@ import CartHandler from "../../../ProductDetails/AddToCart/CartHandler";
 import { convertPrice } from "../../../../helpers";
 const ItemCard = ({ data }) => {
   const { id, title, images, price, quantity } = data;
-
+  
   return (
     <Container>
       <RightContainer>

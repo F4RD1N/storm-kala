@@ -31,18 +31,17 @@ const useCart = (product) => {
     quantity: 1,
     images,
   };
-  
+
   //broadcast channel
   const [pressed, setPressed] = useState(0);
   useEffect(() => {
-    const channel = new BroadcastChannel("cart");
-
-    channel.postMessage({ cartItems, itemsCounter, total });
-    channel.onmessage = (msg) => {
+    const cartChannel = new BroadcastChannel("cart");
+    cartChannel.postMessage({ cartItems, itemsCounter, total });
+    cartChannel.onmessage = (msg) => {
       dispatch(broadCastCart(msg));
-      console.log("broadcast runned");
+      console.log("broadcast created!");
     };
-    return async () => await channel.close();
+    return async () => await cartChannel.close();
   }, [pressed]);
 
   useEffect(() => {
@@ -92,4 +91,6 @@ const useCart = (product) => {
   };
 };
 
+
 export default useCart;
+

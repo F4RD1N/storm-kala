@@ -11,7 +11,7 @@ import EmptyCart from "./EmptyCart/EmptyCart";
 //logic
 import useCart from "../../ProductDetails/AddToCart/useCart";
 const Items = () => {
-  const { clearHandler } = useCart({ id: 2 });
+  const { clearHandler } = useCart({ id: '' });
   const { cartItems } = useCartState();
 
   //check if there is no data in Cart
