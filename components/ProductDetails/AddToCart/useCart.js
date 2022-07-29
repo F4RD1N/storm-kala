@@ -10,19 +10,18 @@ import {
 } from "../../../redux/cart/cartAction";
 
 //state
-import useProductState from "../useProductState";
 import useCartState from "./useCartState";
 
-const useCart = () => {
+const useCart = (product) => {
   const [isItemExist, setIsItemExist] = useState(false);
   const [itemQuantity, setItemQuantity] = useState(0);
   const dispatch = useDispatch();
   const { cartItems } = useCartState();
-  const { id, price, mainDetails, images } = useProductState();
+  const { id, price, mainDetails, images } = product;
   //create a preset of data to pushin into redux store
   const cartPreset = {
     id,
-    title: mainDetails?.title,
+    title: mainDetails ? mainDetails.title : "",
     price,
     quantity: 1,
     images,

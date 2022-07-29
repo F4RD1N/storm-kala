@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 //Icons
 import { FiSearch } from "react-icons/fi";
 import { BsPerson, BsCart } from "react-icons/bs";
@@ -38,10 +38,14 @@ const Navbar = () => {
         <Item>
           <BsPerson />
         </Item>
-        <Item>
-          <BsCart />
-          {itemsCounter ? <CartCounter>{itemsCounter}</CartCounter> : ""}
-        </Item>
+        <Link href="/cart">
+          <a>
+            <Item>
+              <BsCart />
+              {itemsCounter ? <CartCounter>{itemsCounter}</CartCounter> : ""}
+            </Item>
+          </a>
+        </Link>
       </LeftContainer>
     </Container>
   );

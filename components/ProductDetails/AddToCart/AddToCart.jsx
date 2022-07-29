@@ -34,7 +34,7 @@ const AddToCart = () => {
     removeHanlder,
     isItemExist,
     itemQuantity,
-  } = useCart();
+  } = useCart(useProductState());
 
   return (
     <Container>

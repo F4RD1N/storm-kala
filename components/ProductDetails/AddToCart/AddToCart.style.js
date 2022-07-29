@@ -59,24 +59,24 @@ export const HandleButtonsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: .5rem;
   width: fit-content;
   border-radius: 5px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.05);
   padding: 0 1rem;
-  min-width: 180px;
+  width: 140px;
 `;
 export const HandleButton = styled.button`
   border: none;
   outline: none;
   background-color: transparent;
   font-size: 1.5rem;
-  padding: 0.75rem 0.25rem;
+  padding: 0.75rem 0;
   color: ${(props) => props.theme.colors.blue};
   display: flex;
   justify-content: center;
   align-items: center;
-
+  cursor: pointer;
   &:disabled {
     opacity: 0.4;
   }
