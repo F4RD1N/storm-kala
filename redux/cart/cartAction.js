@@ -37,3 +37,11 @@ export const clearCart = () => {
     type: "CLEAR",
   };
 };
+
+
+export const broadCastCart = (data) => {
+  return {
+    type: 'BROADCAST_CART',
+    payload: data
+  }
+}

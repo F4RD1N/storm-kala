@@ -9,36 +9,36 @@ import {
   ImageContainer,
   DetailsContainer,
   Title,
-  Price
+  Price,
 } from "./ItemCard.style";
 
 //Components
 import CartHandler from "../../../ProductDetails/AddToCart/CartHandler";
 
 //helpers
-import {convertPrice} from '../../../../helpers'
+import { convertPrice } from "../../../../helpers";
 const ItemCard = ({ data }) => {
   const { id, title, images, price, quantity } = data;
 
   return (
     <Container>
       <RightContainer>
-      <Link href={`/product/${id}`}>
-        <a>
-          <ImageContainer>
-            <Image
-              src={images[0].url[0]}
-              objectFit="cover"
-              width={50}
-              height={70}
-            />
-          </ImageContainer>
-        </a>
-      </Link>
-      <DetailsContainer>
-      <Title title={title}>{title}</Title>
-      <Price>{convertPrice(price.selling_price * quantity)} تومان</Price>
-      </DetailsContainer>
+        <Link href={`/product/${id}`}>
+          <a>
+            <ImageContainer>
+              <Image
+                src={images[0].url[0]}
+                objectFit="contain"
+                width={50}
+                height={70}
+              />
+            </ImageContainer>
+          </a>
+        </Link>
+        <DetailsContainer>
+          <Title title={title}>{title}</Title>
+          <Price>{convertPrice(price.selling_price * quantity)} تومان</Price>
+        </DetailsContainer>
       </RightContainer>
       <CartHandler data={() => data} />
     </Container>

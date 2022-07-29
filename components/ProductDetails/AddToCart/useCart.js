@@ -7,18 +7,22 @@ import {
   decrease,
   removeItem,
   clearCart,
+  broadCastCart,
 } from "../../../redux/cart/cartAction";
 
 //state
 import useCartState from "./useCartState";
+
+import { BroadcastChannel } from "broadcast-channel";
 
 const useCart = (product) => {
   const [isItemExist, setIsItemExist] = useState(false);
   const [itemQuantity, setItemQuantity] = useState(0);
   const [orderLimit, setOrderLimit] = useState(1);
   const dispatch = useDispatch();
-  const { cartItems } = useCartState();
+  const { cartItems, itemsCounter, total } = useCartState();
   const { id, price, mainDetails, images } = product;
+
   //create a preset of data to pushin into redux store
   const cartPreset = {
     id,
@@ -27,6 +31,19 @@ const useCart = (product) => {
     quantity: 1,
     images,
   };
+  
+  //broadcast channel
+  const [pressed, setPressed] = useState(0);
+  useEffect(() => {
+    const channel = new BroadcastChannel("cart");
+
+    channel.postMessage({ cartItems, itemsCounter, total });
+    channel.onmessage = (msg) => {
+      dispatch(broadCastCart(msg));
+      console.log("broadcast runned");
+    };
+    return async () => await channel.close();
+  }, [pressed]);
 
   useEffect(() => {
     //check if already exists in the store and if exists, then dont push it again!
@@ -43,19 +60,24 @@ const useCart = (product) => {
 
   const addHandler = () => {
     if (!isItemExist) dispatch(addItem(cartPreset));
+    setPressed((currentValue) => currentValue + 1);
   };
-  const increaseHandler = () => {
+  const increaseHandler = async () => {
     dispatch(increase(cartPreset));
+    setPressed((currentValue) => currentValue + 1);
   };
   const decreaseHandler = () => {
     if (isItemExist && itemQuantity > 1) dispatch(decrease(cartPreset));
+    setPressed((currentValue) => currentValue + 1);
   };
   const removeHanlder = () => {
     if (isItemExist && itemQuantity === 1) dispatch(removeItem(cartPreset));
+    setPressed((currentValue) => currentValue + 1);
   };
 
   const clearHandler = () => {
     dispatch(clearCart());
+    setPressed((currentValue) => currentValue + 1);
   };
 
   return {

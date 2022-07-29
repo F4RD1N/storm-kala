@@ -48,10 +48,12 @@ const cartReducer = (state = initialState, action) => {
     case "CLEAR":
       return {
         cartItems: [],
-        cartItems: [],
         itemsCounter: 0,
         total: 0,
       };
+    case 'BROADCAST_CART':
+      return action.payload
+      
     default:
       return state;
   }

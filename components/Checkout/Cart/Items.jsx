@@ -7,7 +7,7 @@ import useCartState from "../../ProductDetails/AddToCart/useCartState";
 
 //Components
 import ItemCard from "./ItemCard/ItemCard";
-import EmptyCard from "./EmptyCart/EmptyCard";
+import EmptyCart from "./EmptyCart/EmptyCart";
 //logic
 import useCart from "../../ProductDetails/AddToCart/useCart";
 const Items = () => {
@@ -15,7 +15,7 @@ const Items = () => {
   const { cartItems } = useCartState();
 
   //check if there is no data in Cart
-  if (!cartItems.length) return <EmptyCard />;
+  if (!cartItems.length) return <EmptyCart />;
 
   return (
     <>

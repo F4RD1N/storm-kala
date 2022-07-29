@@ -8,7 +8,7 @@ import { Empty, GoBackToTheShop, Icon } from "./EmptyCart.style";
 //Icons
 import { BsCart } from "react-icons/bs";
 
-const EmptyCard = () => {
+const EmptyCart = () => {
   return (
     <>
       <Empty>
@@ -26,4 +26,4 @@ const EmptyCard = () => {
   );
 };
 
-export default EmptyCard;
+export default EmptyCart;
