@@ -8,6 +8,7 @@ export const Container = styled.div`
   padding-bottom: .5rem
   ;
   border-bottom: 2px solid ${props => props.theme.colors.natural};
+  gap: 1rem;
 `;
 
 export const ImageContainer = styled.div``;
