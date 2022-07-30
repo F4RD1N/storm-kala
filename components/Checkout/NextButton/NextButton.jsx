@@ -16,7 +16,7 @@ import useCartState from "../../ProductDetails/AddToCart/useCartState";
 import { convertPrice } from "../../../helpers";
 
 const NextButton = ({url, title = 'ادامه'}) => {
-  const { cartItems, total } = useCartState();
+  const { cartItems, total, discount } = useCartState();
 
   if (!cartItems.length) return;
 
@@ -29,7 +29,7 @@ const NextButton = ({url, title = 'ادامه'}) => {
       </Link>
       <PriceContainer>
         <TotalTitle>جمع سبد خرید</TotalTitle>
-        <ProductPrice>{convertPrice(total)} تومان</ProductPrice>
+        <ProductPrice>{convertPrice(total - (total * discount))} تومان</ProductPrice>
       </PriceContainer>
     </Container>
   );

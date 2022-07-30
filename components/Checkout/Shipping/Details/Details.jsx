@@ -17,7 +17,7 @@ import useCartState from "../../../ProductDetails/AddToCart/useCartState";
 import { englishToPersian, convertPrice } from "../../../../helpers";
 
 const Details = () => {
-  const { itemsCounter, total } = useCartState();
+  const { itemsCounter, total, discount } = useCartState();
   return (
     <DetailsContainer>
       <DetailsTitlebar>
@@ -32,9 +32,14 @@ const Details = () => {
         <DetailsItemPrice>رایگان</DetailsItemPrice>
       </DetailsItemContainer>
 
+      {discount > 0 && <DetailsItemContainer>
+        <DetailsItemTitle>تخفیف ({englishToPersian(discount * 100)}%)</DetailsItemTitle>
+        <DetailsItemPrice>{convertPrice(total * discount)} تومان</DetailsItemPrice>
+      </DetailsItemContainer>}
+
       <DetailsItemContainer>
         <DetailsItemTitle>قابل پرداخت</DetailsItemTitle>
-        <DetailsItemPrice>{convertPrice(total)} تومان</DetailsItemPrice>
+        <DetailsItemPrice>{convertPrice(total - (total * discount))} تومان</DetailsItemPrice>
       </DetailsItemContainer>
     </DetailsContainer>
   );

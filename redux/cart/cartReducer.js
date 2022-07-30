@@ -2,6 +2,7 @@ const initialState = {
   cartItems: [],
   itemsCounter: 0,
   total: 0,
+  discount: 0
   //   checkout: false,
 };
 
@@ -50,9 +51,16 @@ const cartReducer = (state = initialState, action) => {
         cartItems: [],
         itemsCounter: 0,
         total: 0,
+        discount: 0
       };
     case 'BROADCAST_CART':
-      return action.payload
+      return action.payload;
+
+    case 'SET_DISCOUNT':
+      return {
+        ...state,
+        discount: action.payload
+      }
       
     default:
       return state;

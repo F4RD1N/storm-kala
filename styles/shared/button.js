@@ -11,6 +11,7 @@ const LoadMoreButton = styled.button`
   border-radius: ${(props) => props.theme.utilities.radius.button};
   box-shadow: ${(props) => props.theme.utilities.shadow.button};
   transition: filter 100ms linear;
+  cursor: pointer;
   &:hover {
     filter: saturate(4);
   }

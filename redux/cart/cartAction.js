@@ -45,3 +45,10 @@ export const broadCastCart = (data) => {
     payload: data
   }
 }
+
+export const setDiscount = (value) => {
+  return {
+    type: 'SET_DISCOUNT',
+    payload: value
+  }
+}

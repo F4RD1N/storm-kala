@@ -20,7 +20,7 @@ const useCart = (product) => {
   const [itemQuantity, setItemQuantity] = useState(0);
   const [orderLimit, setOrderLimit] = useState(1);
   const dispatch = useDispatch();
-  const { cartItems, itemsCounter, total } = useCartState();
+  const { cartItems, itemsCounter, total, discount } = useCartState();
   const { id, price, mainDetails, images } = product;
 
   //create a preset of data to pushin into redux store
@@ -34,11 +34,13 @@ const useCart = (product) => {
 
   //broadcast channel
   const [pressed, setPressed] = useState(0);
+  
   useEffect(() => {
     const cartChannel = new BroadcastChannel("cart");
-    cartChannel.postMessage({ cartItems, itemsCounter, total });
+    cartChannel.postMessage({ cartItems, itemsCounter, total, discount });
     cartChannel.onmessage = (msg) => {
       dispatch(broadCastCart(msg));
+      console.log('first')
     };
     return async () => await cartChannel.close();
   }, [pressed]);
