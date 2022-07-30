@@ -9,7 +9,7 @@ import {
 } from "./MainDetails.style";
 
 //state
-import useProductState from "../useProductState";
+import { useProductState } from "../../../hooks";
 
 const MainDetails = () => {
   const { mainDetails } = useProductState();

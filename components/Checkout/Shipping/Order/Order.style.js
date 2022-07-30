@@ -42,4 +42,5 @@ export const BackToCart = styled.div`
   bottom: 0;
   left: 0;
   margin: 1rem;
+  cursor: pointer;
 `;

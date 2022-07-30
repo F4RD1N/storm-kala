@@ -10,8 +10,7 @@ import {
 } from "./NextButton.style";
 
 //state
-import useCartState from "../../ProductDetails/AddToCart/useCartState";
-
+import { useCartState } from "../../../hooks";
 //helpers
 import { convertPrice } from "../../../helpers";
 

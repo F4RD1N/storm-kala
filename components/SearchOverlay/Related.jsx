@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 //state
-import useSearchState from "./useSearchState";
+import { useSearchState } from "../../hooks";
+
 //Styled Components
 import {
   RelatedWordsContainer,

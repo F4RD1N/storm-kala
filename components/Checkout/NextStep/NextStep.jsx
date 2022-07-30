@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 //Icons
 import { BsCart } from "react-icons/bs";
 import { MdOutlineLocalShipping } from "react-icons/md";
@@ -19,7 +20,7 @@ const NextStep = ({ status }) => {
 
   return (
     <Container>
-      <MainTitle>StormKala</MainTitle>
+      <Link href='/'><MainTitle>StormKala</MainTitle></Link>
       <ItemsContainer>
         <Item isMain={false}  onClick={(status === "shipping" || status === "payment") ? () => router.replace('cart') : () => ''}>
           <IconContainer>

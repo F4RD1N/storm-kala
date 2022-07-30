@@ -13,7 +13,7 @@ import Results from "./Results";
 import Related from "./Related";
 
 //state
-import useSearchState from "./useSearchState";
+import { useSearchState } from "../../hooks";
 
 const SearchOverlay = ({ overlayHandler }) => {
   const {products} = useSearchState()

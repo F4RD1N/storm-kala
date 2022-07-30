@@ -14,13 +14,13 @@ import {
 import CartHandler from "./CartHandler";
 
 //state
-import useProductState from "../useProductState";
+import {useProductState} from '../../../hooks'
 
 // helpers
 import { convertPrice } from "../../../helpers";
 
 //logic
-import useCart from "./useCart";
+import { useCart } from "../../../hooks";
 
 const AddToCart = () => {
   const { price, status } = useProductState();

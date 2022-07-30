@@ -14,7 +14,7 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { BsTrash } from "react-icons/bs";
 
 //logic
-import useCart from "./useCart";
+import { useCart } from "../../../hooks";
 
 const CartHandler = ({ data }) => {
   //Cart functions

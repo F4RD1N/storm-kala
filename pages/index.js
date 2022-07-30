@@ -24,7 +24,7 @@ import {
 } from "../redux/home/homeAction";
 
 //state
-import useHomeState from "../components/useHomeState";
+import { useHomeState } from "../hooks";
 
 //pusher
 import { dataPusher } from "../helpers/pusher";

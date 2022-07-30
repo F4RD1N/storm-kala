@@ -11,7 +11,7 @@ const BrandCard = ({brand}) => {
   return (
     <Container>
         <ImageContainer>
-        <Image src={brand.logo.url[0]} objectFit="cover" width={90} height={90}/>
+        <Image src={logo.url[0]} objectFit="contain" width={80} height={80}/>
         </ImageContainer>
         <Overlay>{title_fa}</Overlay>
     </Container>

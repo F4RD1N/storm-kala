@@ -2,7 +2,7 @@ import { useState } from "react";
 
 //redux
 import { useDispatch } from "react-redux";
-import { setDiscount } from "../../../../redux/cart/cartAction";
+import { setDiscount } from "../redux/cart/cartAction";
 
 const useDiscount = () => {
   const [discountCode, setDiscountCode] = useState("");

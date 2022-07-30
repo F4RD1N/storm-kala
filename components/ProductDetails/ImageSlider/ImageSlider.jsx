@@ -13,7 +13,7 @@ import { Container} from "./ImageSlider.style";
 import SliderItem from "./SliderItem";
 
 //state
-import useProductState from "../useProductState";
+import { useProductState } from "../../../hooks";
 
 const ImageSlider = () => {
   const { images } = useProductState();

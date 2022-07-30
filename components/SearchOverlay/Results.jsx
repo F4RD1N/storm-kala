@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 //state
-import useSearchState from "./useSearchState";
+import { useSearchState } from "../../hooks";
 
 //Styled Components
 import {
@@ -16,8 +16,7 @@ import {
 import { ProductCard } from "../shared";
 
 //logic
-import useResults from "./useResults";
-
+import {useResults} from '../../hooks'
 const Results = ({ value }) => {
   const { pageHandler } = useResults(value);
 

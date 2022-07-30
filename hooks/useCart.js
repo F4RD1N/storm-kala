@@ -8,10 +8,10 @@ import {
   removeItem,
   clearCart,
   broadCastCart,
-} from "../../../redux/cart/cartAction";
+} from "../redux/cart/cartAction";
 
 //state
-import useCartState from "./useCartState";
+import {useCartState} from "./";
 
 import { BroadcastChannel } from "broadcast-channel";
 

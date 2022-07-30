@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
+
 //Styled Components
 import {
   OrderContainer,
@@ -11,7 +13,7 @@ import {
 } from "./Order.style";
 
 //state
-import useCartState from "../../../ProductDetails/AddToCart/useCartState";
+import {useCartState} from "../../../../hooks";
 
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,6 +22,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode } from "swiper";
 
 const Order = () => {
+  const router = useRouter()
+  const routeHandler = () => router.replace('cart')
+
   const { cartItems } = useCartState();
   return (
     <OrderContainer>
@@ -50,7 +55,7 @@ const Order = () => {
         })}
       </Swiper>
 
-      <BackToCart>بازگشت به سبد خرید</BackToCart>
+      <BackToCart onClick={routeHandler}>بازگشت به سبد خرید</BackToCart>
     </OrderContainer>
   );
 };

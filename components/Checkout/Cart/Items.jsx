@@ -2,14 +2,14 @@ import React from "react";
 //Styled Components
 import { ClearCart } from "./Cart.style";
 
-//state
-import useCartState from "../../ProductDetails/AddToCart/useCartState";
 
 //Components
 import ItemCard from "./ItemCard/ItemCard";
 import EmptyCart from "./EmptyCart/EmptyCart";
-//logic
-import useCart from "../../ProductDetails/AddToCart/useCart";
+
+//hooks
+import { useCart, useCartState } from "../../../hooks";
+
 const Items = () => {
   const { clearHandler } = useCart({ id: '' });
   const { cartItems } = useCartState();

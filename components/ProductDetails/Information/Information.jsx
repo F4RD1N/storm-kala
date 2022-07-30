@@ -13,10 +13,10 @@ import { ReadMore } from "../../../styles/shared";
 import InfoCard from "./InfoCard";
 
 //state
-import useProductState from "../useProductState";
+import { useProductState } from "../../../hooks";
 
 //logic
-import useInformation from "./useInformation";
+import { useInformation } from "../../../hooks";
 
 const Information = () => {
   const { toggle, toggleHandler } = useInformation();

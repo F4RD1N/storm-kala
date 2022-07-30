@@ -12,11 +12,8 @@ import {
   CodeAlreadyUsed
 } from "./Discount.style";
 
-//logic
-import useDiscount from "./useDiscount";
-
-//state
-import useCartState from "../../../ProductDetails/AddToCart/useCartState";
+//state & logic
+import { useCartState, useDiscount } from "../../../../hooks";
 
 const Discount = () => {
   const [toggle, setToggle] = useState(false);

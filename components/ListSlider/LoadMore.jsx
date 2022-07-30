@@ -8,7 +8,7 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { LoadingIndicator } from "../shared";
 
 //logic
-import useLoadMore from "./useLoadMore";
+import { useLoadMore } from "../../hooks";
 
 const LoadMore = ({ pusher }) => {
   const {loading, end, handler} = useLoadMore(pusher)

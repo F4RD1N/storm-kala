@@ -13,7 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode } from "swiper";
 
 //state
-import useHomeState from "../useHomeState";
+import { useHomeState } from "../../hooks";
 
 const SpecialList = () => {
   const { recommendationSubCategories } = useHomeState();

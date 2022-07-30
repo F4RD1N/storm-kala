@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 //redux
 import { useDispatch } from "react-redux";
-import { fetchSearch, clearSearch } from "../../redux/search/searchAction";
+import { fetchSearch, clearSearch } from "../redux/search/searchAction";
 
 
 const useResults = (value) => {

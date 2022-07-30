@@ -10,14 +10,12 @@ import { Container, Title, Description } from "./Introduce.style";
 import { ReadMore } from "../../../styles/shared";
 
 //state
-import useProductState from "../useProductState";
+import { useProductState } from "../../../hooks";
 
 //logic (the logic is same with Information component)
-import useInformation from "../Information/useInformation";
-
+import { useInformation } from "../../../hooks";
 const Introduce = () => {
   const { toggle, toggleHandler } = useInformation();
-
 
   const { introduce } = useProductState();
   return (

@@ -15,13 +15,12 @@ import {
 } from "./Navbar.style";
 
 //Components
-import { SearchOverlay, CartOverlay } from "../";
+import { SearchOverlay } from "../";
 
 //logic
-import useNavbar from "./useNavbar";
-
+import { useNavbar } from "../../hooks";
 //cart state
-import useCartState from "../ProductDetails/AddToCart/useCartState";
+import { useCartState } from "../../hooks";
 
 const Navbar = () => {
   const { toggleSearch, searchHandler } = useNavbar();

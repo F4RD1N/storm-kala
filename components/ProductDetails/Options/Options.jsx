@@ -10,7 +10,7 @@ import {
 } from "./Options.style";
 
 //state
-import useProductState from "../useProductState";
+import { useProductState } from "../../../hooks";
 
 const Options = () => {
   const { options } = useProductState();

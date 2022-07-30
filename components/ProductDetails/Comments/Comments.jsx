@@ -7,7 +7,7 @@ import { Container, Titlebar, Title, CommentsCount } from "./Comments.style";
 import CommentCard from "./CommentCard";
 
 //state
-import useProductState from "../useProductState";
+import { useProductState } from "../../../hooks";
 
 const Comments = () => {
   const {comments} = useProductState()

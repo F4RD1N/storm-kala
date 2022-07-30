@@ -11,11 +11,12 @@ export const Title = styled.h2`
   font-weight: bold;
   margin-bottom: 2rem;
 `;
-export const MethodContainer = styled.div`
+export const MethodContainer = styled.label`
   display: flex;
   align-items: center;
   gap: 0 1rem;
   margin-bottom: 1rem;
+  cursor: pointer;
 `;
 
 export const Radio = styled.input``

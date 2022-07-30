@@ -22,7 +22,7 @@ import { useDispatch } from "react-redux";
 import { getProduct } from "../../redux/product/productAction";
 
 //state
-import useProductState from "../../components/ProductDetails/useProductState";
+import { useProductState } from "../../hooks";
 
 const ProductDetails = ({ productData }) => {
   const { recommended } = useProductState();

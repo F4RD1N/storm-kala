@@ -12,7 +12,7 @@ import {
 } from "./Detials.style";
 
 //state
-import useCartState from "../../../ProductDetails/AddToCart/useCartState";
+import { useCartState } from "../../../../hooks";
 
 import { englishToPersian, convertPrice } from "../../../../helpers";
 

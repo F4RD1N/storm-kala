@@ -20,16 +20,16 @@ const PaymentType = () => {
     <Container>
       <Title>انتخاب روش پرداخت</Title>
 
-      <MethodContainer>
-        <Radio type="radio" name="method"/>
+      <MethodContainer for="credit">
+        <Radio type="radio" name="method" id="credit"/>
         <IconContainer>
           <BsCreditCard />
         </IconContainer>
         <MethodTitle>پرداخت اینترنتی</MethodTitle>
       </MethodContainer>
 
-      <MethodContainer>
-        <Radio type="radio" name="method"/>
+      <MethodContainer for="home">
+        <Radio type="radio" name="method" id="home"/>
         <IconContainer>
           <BiHomeAlt />
         </IconContainer>

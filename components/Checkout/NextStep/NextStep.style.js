@@ -10,6 +10,7 @@ export const MainTitle = styled.h1`
     color: ${props => props.theme.colors.red};
     text-align: center;
     margin-bottom: 2rem;
+    cursor: pointer;
 `
 
 export const ItemsContainer = styled.div`
