@@ -8,10 +8,10 @@ import {
   OrderItemImageContainer,
   OrderItemQuantity,
   BackToCart
-} from "./Shipping.style";
+} from "./Order.style";
 
 //state
-import useCartState from "../../ProductDetails/AddToCart/useCartState";
+import useCartState from "../../../ProductDetails/AddToCart/useCartState";
 
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -27,8 +27,8 @@ const Order = () => {
       <OrderTitle>سفارش شما</OrderTitle>
 
       <Swiper
-        spaceBetween={3}
-        slidesPerView={4}
+        spaceBetween={15}
+        slidesPerView={3.5}
         freeMode={true}
         modules={[FreeMode]}
       >

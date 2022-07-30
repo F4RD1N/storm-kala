@@ -10,21 +10,21 @@ import {
 } from "./NextButton.style";
 
 //state
-import useCartState from "../../../ProductDetails/AddToCart/useCartState";
+import useCartState from "../../ProductDetails/AddToCart/useCartState";
 
 //helpers
-import { convertPrice } from "../../../../helpers";
+import { convertPrice } from "../../../helpers";
 
-const NextButton = () => {
+const NextButton = ({url, title = 'ادامه'}) => {
   const { cartItems, total } = useCartState();
 
   if (!cartItems.length) return;
 
   return (
     <Container>
-      <Link href='/checkout/shipping'>
+      <Link href={`/checkout${url}`}>
         <a>
-          <HandleButton>ادامه</HandleButton>
+          <HandleButton>{title}</HandleButton>
         </a>
       </Link>
       <PriceContainer>

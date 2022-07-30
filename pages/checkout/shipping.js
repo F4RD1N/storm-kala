@@ -1,11 +1,8 @@
 import React from 'react'
 
 //Components
-import NextStep from '../../components/Checkout/NextStep/NextStep'
-import Address from '../../components/Checkout/Shipping/Address'
-import Order from '../../components/Checkout/Shipping/Order'
-import Details from '../../components/Checkout/Shipping/Details'
-import { NextButton } from '../../components/Checkout/Cart'
+import {NextStep, NextButton} from '../../components/Checkout'
+import {Address, Order, Details} from '../../components/Checkout/Shipping'
 //Styled Components
 import { Container } from '../../components/Checkout/Shipping/Shipping.style'
 const shipping = () => {
@@ -15,7 +12,7 @@ const shipping = () => {
         <Address />
         <Order />
         <Details />
-        <NextButton />
+        <NextButton url='/payment'/>
     </Container>
   )
 }

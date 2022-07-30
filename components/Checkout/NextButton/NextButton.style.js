@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 //shared styles
-import { GlobalButton, SectionCard } from "../../../../styles/shared";
+import { GlobalButton, SectionCard } from "../../../styles/shared";
 
 export const Container = styled(SectionCard)`
   position: sticky;

@@ -9,12 +9,12 @@ import {
   DetailsItemContainer,
   DetailsItemTitle,
   DetailsItemPrice,
-} from "./Shipping.style";
+} from "./Detials.style";
 
 //state
-import useCartState from "../../ProductDetails/AddToCart/useCartState";
+import useCartState from "../../../ProductDetails/AddToCart/useCartState";
 
-import { englishToPersian, convertPrice } from "../../../helpers";
+import { englishToPersian, convertPrice } from "../../../../helpers";
 
 const Details = () => {
   const { itemsCounter, total } = useCartState();
