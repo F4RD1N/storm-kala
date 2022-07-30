@@ -25,14 +25,14 @@ import { getProduct } from "../../redux/product/productAction";
 import useProductState from "../../components/ProductDetails/useProductState";
 
 const ProductDetails = ({ productData }) => {
+  const { recommended } = useProductState();
+
   //send data to productReducer
   const dispatch = useDispatch();
   const router = useRouter();
   useEffect(() => {
     dispatch(getProduct(productData));
   }, [router.query]);
-
-  const { recommended } = useProductState();
 
   return (
     <div>
@@ -53,7 +53,6 @@ const ProductDetails = ({ productData }) => {
 export default ProductDetails;
 
 //fetch Product Data
-
 export const getStaticPaths = async () => {
   return {
     paths: [],

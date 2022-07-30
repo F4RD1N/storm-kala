@@ -30,14 +30,17 @@ import useHomeState from "../components/useHomeState";
 import { dataPusher } from "../helpers/pusher";
 
 const Home = ({ homeData }) => {
-  //send data to productReducer
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getHomeData(homeData));
-  }, []);
-
   const { incredibleProducts, bestSellingProducts, mobileList, laptopList } =
     useHomeState();
+
+  //send data to homeReducer
+  const dispatch = useDispatch();
+  useEffect(() => {
+    //check if there is data in home reducer and only dispatch when its empty
+    if (!incredibleProducts.length) {
+      dispatch(getHomeData(homeData));
+    }
+  }, []);
 
   return (
     <div>
@@ -99,9 +102,6 @@ export const getStaticProps = async () => {
   await fetchLoptop().then((item) => (laptopList = item));
   return {
     props: { homeData: homePreset(data.data, mobileList, laptopList) },
-    revalidate: 21600
+    revalidate: 21600,
   };
 };
-
-
-

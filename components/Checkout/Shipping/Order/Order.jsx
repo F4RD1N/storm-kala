@@ -21,7 +21,6 @@ import { FreeMode } from "swiper";
 
 const Order = () => {
   const { cartItems } = useCartState();
-  console.log(cartItems);
   return (
     <OrderContainer>
       <OrderTitle>سفارش شما</OrderTitle>

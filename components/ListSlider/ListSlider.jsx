@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import { v4 } from "uuid";
+
 //Shared Components
 import { ProductCard } from "../shared";
 

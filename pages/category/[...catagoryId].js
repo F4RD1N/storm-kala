@@ -4,7 +4,7 @@ import { ListSlider } from "../../components";
 var currentPage = 0;
 
 const CatagoryId = ({ userData }) => {
-  console.log(userData.data.products[0].id);
+  (userData.data.products[0].id);
 
   const router = useRouter();
   const handler = () => {
@@ -26,7 +26,6 @@ export default CatagoryId;
 
 export const getServerSideProps = async ({ query }) => {
   currentPage = currentPage + 1;
-  console.log(currentPage);
 
   let userData = null;
   try {

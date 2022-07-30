@@ -8,7 +8,7 @@ import { Container } from '../../components/Checkout/Shipping/Shipping.style'
 const shipping = () => {
   return (
     <Container>
-        <NextStep />
+        <NextStep status='shipping'/>
         <Address />
         <Order />
         <Details />

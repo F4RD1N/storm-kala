@@ -39,7 +39,6 @@ const useCart = (product) => {
     cartChannel.postMessage({ cartItems, itemsCounter, total });
     cartChannel.onmessage = (msg) => {
       dispatch(broadCastCart(msg));
-      console.log("broadcast created!");
     };
     return async () => await cartChannel.close();
   }, [pressed]);
