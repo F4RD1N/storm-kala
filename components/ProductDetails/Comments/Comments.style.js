@@ -29,7 +29,7 @@ export const IconContainer = styled.div`
 export const CommentContainer = styled.div`
   margin: 0 1rem 2rem 1rem;
   border-bottom: 2px solid ${(props) => props.theme.colors.natural};
-  padding: 0.5rem 0 0 0;
+  padding: 0.5rem 0 .5rem 0;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -66,7 +66,7 @@ export const Rate = styled.span`
   align-items: center;
   padding-top: 2px;
   font-size: 0.8rem;
-  width: 20px;
+  width: 35px;
   height: 20px;
   border-radius: 5px;
 `;

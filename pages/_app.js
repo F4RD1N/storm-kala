@@ -29,7 +29,6 @@ const _app = ({ Component, pageProps }) => {
   }
 
   return (
-    <>
       <Provider store={store}>
         <PersistGate persistor={persistor}>
           <Theme>
@@ -39,7 +38,6 @@ const _app = ({ Component, pageProps }) => {
           </Theme>
         </PersistGate>
       </Provider>
-    </>
   );
 };
 

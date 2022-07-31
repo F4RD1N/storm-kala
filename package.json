@@ -11,6 +11,7 @@
     "@reduxjs/toolkit": "^1.8.3",
     "axios": "^0.27.2",
     "broadcast-channel": "^4.14.0",
+    "framer-motion": "^6.5.1",
     "next": "12.2.2",
     "next-auth": "^4.10.2",
     "next-redux-wrapper": "^7.0.5",

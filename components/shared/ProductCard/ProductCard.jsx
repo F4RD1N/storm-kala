@@ -17,6 +17,9 @@ import {
 //Helpers
 import { convertPrice, englishToPersian } from "../../../helpers";
 
+//motion
+import MotionHOC from "../../../HOC/MotionHOC";
+
 const ProductCard = ({ data }) => {
   const { title_fa, images, default_variant } = data;
   return (
@@ -45,4 +48,4 @@ const ProductCard = ({ data }) => {
   );
 };
 
-export default ProductCard;
+export default MotionHOC(ProductCard);
