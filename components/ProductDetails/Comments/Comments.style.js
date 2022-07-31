@@ -16,10 +16,15 @@ export const Title = styled.h2`
   font-weight: bold;
 `;
 
-export const CommentsCount = styled.span`
-  color: ${(props) => props.theme.colors.blue};
-  font-size: 0.8rem;
+export const Suggestion = styled.span`
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: .2rem;
 `;
+export const IconContainer = styled.div`
+  color: green;
+`
 
 export const CommentContainer = styled.div`
   margin: 0 1rem 2rem 1rem;
@@ -29,7 +34,8 @@ export const CommentContainer = styled.div`
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: ${props => props.showFull ? 'N' : 3}; /* number of lines to show */ 
+  -webkit-line-clamp: ${(props) =>
+    props.showFull ? "N" : 3}; /* number of lines to show */
 `;
 export const CommentTitlebar = styled.div`
   margin-bottom: 1rem;
@@ -40,10 +46,47 @@ export const CommentTitlebar = styled.div`
 
 export const CommentTitle = styled.h3`
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+`;
+export const IsBuyer = styled.span`
+  color: ${(props) => props.theme.colors.blue};
 `;
 export const CommentTime = styled.h3`
   color: ${(props) => props.theme.colors.textSecondary};
+  gap: 0.5rem;
+`;
+export const Rate = styled.span`
+  color: #fff;
+  background-color: ${(props) =>
+    props.value < 3 ? "#FF8804" : props.value < 4 ? "#36E802" : "#7F8801 "};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2px;
+  font-size: 0.8rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
 `;
 export const CommentBody = styled.p`
   font-weight: 300;
+`;
+
+export const LoadMore = styled.button`
+  outline: none;
+  border: none;
+  background-color: transparent;
+  display: block;
+  color: ${(props) => props.theme.colors.blue};
+  font-size: 1rem;
+  margin: 0 auto;
+  cursor: pointer;
+`;
+
+export const EndOfList = styled.span`
+  display: block;
+  color: ${(props) => props.theme.colors.textSecondary};
+  text-align: center;
 `;

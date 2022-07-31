@@ -11,14 +11,16 @@ import { LoadingIndicator } from "../shared";
 import { useLoadMore } from "../../hooks";
 
 const LoadMore = ({ pusher }) => {
-  const {loading, end, handler} = useLoadMore(pusher)
+  const { loading, end, handler } = useLoadMore(pusher);
   return (
     <LoadMoreContainer>
-     {
-      !end ? <LoadMoreButton disabled={loading} onClick={handler} pressed={loading}>
-      {loading ? <LoadingIndicator /> : <AiOutlineArrowLeft />}
-    </LoadMoreButton>: 'محصول دیگری موجود نیست!'
-     }
+      {!end ? (
+        <LoadMoreButton disabled={loading} onClick={handler} pressed={loading}>
+          {loading ? <LoadingIndicator /> : <AiOutlineArrowLeft />}
+        </LoadMoreButton>
+      ) : (
+        "محصول دیگری موجود نیست!"
+      )}
     </LoadMoreContainer>
   );
 };

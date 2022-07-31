@@ -7,6 +7,7 @@ const useProductState = () => {
     id: product?.id,
     mainDetails: product?.mainDetails,
     status: product?.status,
+    suggestion: product?.suggestion,
     brand: product?.brand,
     category: product?.category,
     images: product?.images,

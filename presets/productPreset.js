@@ -7,6 +7,7 @@ const productPreset = ({ product, recommendations }) => {
         colors: product.colors?.slice(0, 5),
       },
       status: product.status,
+      suggestion: product.suggestion,
       brand: product.brand,
       category: product.category,
       images: product.images?.list?.slice(0, 10),

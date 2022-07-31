@@ -19,14 +19,16 @@ import { productPreset } from "../../presets";
 
 //redux
 import { useDispatch } from "react-redux";
-import { getProduct } from "../../redux/product/productAction";
+import { getProduct, pushComments } from "../../redux/product/productAction";
 
 //state
 import { useProductState } from "../../hooks";
 
-const ProductDetails = ({ productData }) => {
-  const { recommended } = useProductState();
+//pusher
+import { dataPusher } from "../../helpers/pusher";
 
+const ProductDetails = ({ productData }) => {
+  const { id, recommended } = useProductState();
   //send data to productReducer
   const dispatch = useDispatch();
   const router = useRouter();
@@ -42,10 +44,9 @@ const ProductDetails = ({ productData }) => {
       <Introduce />
       <Information />
       <AddToCart />
-      <Comments />
+      <Comments pusher={dataPusher(`product/${id}/comments/?`, pushComments, 'comments')}/>
       <AddReview />
       <ListSlider data={recommended} title="کالا های مشابه" pusherLess={true} />
-      <ListSlider discount={true} />
     </div>
   );
 };

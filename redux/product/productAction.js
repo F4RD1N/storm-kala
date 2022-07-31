@@ -4,3 +4,10 @@ export const getProduct = (product) => {
         payload: product
     }
 }
+
+export const pushComments = (comment) => {
+    return {
+        type: 'PUSH_COMMENTS',
+        payload: comment
+    }
+}

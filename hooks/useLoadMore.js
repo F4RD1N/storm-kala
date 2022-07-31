@@ -9,13 +9,15 @@ const useLoadMore = (pusher) => {
   const [loading, setLoading] = useState(false);
   const [end, setEnd] = useState(false);
   const dispatch = useDispatch();
-
   const handler = () => {
     setLoading(true);
 
     const fetcher = async () => {
       const response = await axios(pusher.endpoint(page));
-      if (!pusher.dataPath(response).length) setEnd(true);
+
+      //check if the fetched page is the last one and has to data
+      if (!pusher.dataPath(response) || !pusher.dataPath(response).length) setEnd(true);
+
       return pusher.dataPath(response);
     };
     fetcher()

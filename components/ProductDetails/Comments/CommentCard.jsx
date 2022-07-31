@@ -7,13 +7,18 @@ import {
   CommentTitle,
   CommentTime,
   CommentBody,
+  IsBuyer,
+  Rate
 } from "./Comments.style";
 
-const CommentCard = ({ name, body, time }) => {
+//helpers
+import { englishToPersian } from "../../../helpers";
+
+const CommentCard = ({ name, body, time, isBuyer, rate }) => {
   return (
     <CommentContainer showFull={false}>
       <CommentTitlebar>
-        <CommentTitle>{name}</CommentTitle>
+        <CommentTitle><Rate value={rate}>{englishToPersian(rate)}</Rate> {name}{isBuyer ? <IsBuyer> (خریدار)</IsBuyer> : ''}</CommentTitle>
         <CommentTime>{time}</CommentTime>
       </CommentTitlebar>
       <CommentBody>{body}</CommentBody>
