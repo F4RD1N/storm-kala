@@ -22,11 +22,12 @@ const nextConfig = {
       'dkstatics-private-2.digikala.com'
     ],
   },
-  webpack: function(config) {
-    config.plugins.push(new CompressionPlugin());
-    
-    return config;
-  }
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
+  experimental: {
+    outputStandalone: true,
+  },
 };
 
 module.exports = nextConfig;
