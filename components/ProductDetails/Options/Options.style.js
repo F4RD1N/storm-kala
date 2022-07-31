@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { SectionCard } from "../../../styles/shared";
 
 export const Container = styled(SectionCard)`
-  display: ${props => props.isVisible ? 'block' : 'none'};
+  display: ${(props) => (props.isVisible ? "block" : "none")};
 `;
 
 export const Title = styled.h2`
@@ -17,7 +17,7 @@ export const Item = styled.li`
   font-size: 0.9rem;
   margin: 0 0.5rem 1rem 0;
   display: flex;
-  gap: .3rem;
+  gap: 0.3rem;
   font-weight: 300;
 `;
 export const ItemValue = styled.span`
@@ -25,8 +25,13 @@ export const ItemValue = styled.span`
 `;
 
 export const HorizontalRuler = styled.hr`
-    border: none;
-    outline: none;
-    border-top: 1px solid ${props => props.theme.colors.border};
-    margin-bottom: 1rem;
-`
+  border: none;
+  outline: none;
+  border-top: 1px solid ${(props) => props.theme.colors.border};
+  margin-bottom: 1rem;
+`;
+
+export const ContentDescription = styled.p`
+  margin: 0 0.5rem 1rem 0;
+  font-weight: 300;
+`;

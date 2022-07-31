@@ -1,3 +1,5 @@
+const CompressionPlugin = require('compression-webpack-plugin');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -20,6 +22,11 @@ const nextConfig = {
       'dkstatics-private-2.digikala.com'
     ],
   },
+  webpack: function(config) {
+    config.plugins.push(new CompressionPlugin());
+    
+    return config;
+  }
 };
 
 module.exports = nextConfig;

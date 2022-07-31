@@ -8,7 +8,7 @@ const productPreset = ({ product, recommendations }) => {
       },
       status: product.status,
       brand: product.brand,
-      catagory: product.category,
+      category: product.category,
       images: product.images?.list?.slice(0, 10),
       rating: product.rating,
       price: product.default_variant?.price ? product.default_variant.price : null,

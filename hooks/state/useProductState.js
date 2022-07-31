@@ -8,7 +8,7 @@ const useProductState = () => {
     mainDetails: product?.mainDetails,
     status: product?.status,
     brand: product?.brand,
-    catagory: product?.category,
+    category: product?.category,
     images: product?.images,
     rating: product?.rating,
     price: product?.price,

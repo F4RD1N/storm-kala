@@ -7,13 +7,14 @@ import {
   Item,
   ItemValue,
   HorizontalRuler,
+  ContentDescription,
 } from "./Options.style";
 
 //state
 import { useProductState } from "../../../hooks";
 
 const Options = () => {
-  const { options } = useProductState();
+  const { options, category } = useProductState();
   return (
     <Container isVisible={options}>
       <Title>ویژگی ها</Title>
@@ -29,11 +30,14 @@ const Options = () => {
           </Item>
         );
       })}
-      <HorizontalRuler />
-      <Item>
-        امکان برگشت کالا در گروه لپ تاپ و الترابوک با دلیل از خرید تنها در صورتی
-        مورد قبول است که پلمب کالا باز نشده باشد.
-      </Item>
+      {category?.content_description && (
+        <>
+          <HorizontalRuler />
+          <ContentDescription>
+            {category?.content_description}
+          </ContentDescription>
+        </>
+      )}
     </Container>
   );
 };
