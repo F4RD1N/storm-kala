@@ -1,5 +1,8 @@
 import axios from "axios";
-import searchPreset from "../../presets/searchPreset";
+
+//preset
+import { searchPreset } from "../../presets";
+
 const fetchSearchRequest = () => {
   return {
     type: "FETCH_SEARCH_REQUEST",

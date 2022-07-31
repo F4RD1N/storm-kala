@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 //Components
 import {
   Hero,
-  SpecialOffer,
   ListSlider,
   CatagoryList,
   SpecialCatagoryList,
@@ -35,6 +34,7 @@ const Home = ({ homeData }) => {
 
   //send data to homeReducer
   const dispatch = useDispatch();
+
   useEffect(() => {
     //check if there is data in home reducer and only dispatch when its empty
     if (!incredibleProducts.length) {

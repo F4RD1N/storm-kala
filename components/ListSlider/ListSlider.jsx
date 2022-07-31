@@ -29,7 +29,7 @@ const ListSlider = ({ data, title, subTitle, pusher, pusherLess }) => {
       >
         {data &&
           data.length &&
-          data.map((product, index) => {
+          data.map((product) => {
             const { id, status } = product;
             if (status !== "marketable") return;
 
