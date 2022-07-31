@@ -60,7 +60,7 @@ export const CommentTime = styled.h3`
 export const Rate = styled.span`
   color: #fff;
   background-color: ${(props) =>
-    props.value < 3 ? "#FF8804" : props.value < 4 ? "#36E802" : "#7F8801 "};
+    props.value < 3 ? "orangered" : props.value < 4 ? "orange" : "green"};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,6 +83,9 @@ export const LoadMore = styled.button`
   font-size: 1rem;
   margin: 0 auto;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const EndOfList = styled.span`

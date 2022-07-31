@@ -12,7 +12,7 @@ import {
 } from "./Comments.style";
 
 //Icons
-import { AiFillLike } from "react-icons/ai";
+import { AiFillLike, AiOutlineArrowDown } from "react-icons/ai";
 
 //Components
 import CommentCard from "./CommentCard";
@@ -56,7 +56,8 @@ const Comments = ({ pusher }) => {
       })}
       {!end ? (
         <LoadMore disabled={loading} onClick={handler}>
-          {loading ? "کمی صبر کنید ..." : "بیشتر"}
+          {loading ? "کمی صبر کنید ... " : "بیشتر"}
+          {!loading && <AiOutlineArrowDown />}
         </LoadMore>
       ) : (
         <EndOfList>به انتهای لیست رسیدید!</EndOfList>

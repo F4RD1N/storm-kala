@@ -34,12 +34,8 @@ const Home = ({ homeData }) => {
 
   //send data to homeReducer
   const dispatch = useDispatch();
-
   useEffect(() => {
-    //check if there is data in home reducer and only dispatch when its empty
-    if (!incredibleProducts.length) {
       dispatch(getHomeData(homeData));
-    }
   }, []);
 
   return (

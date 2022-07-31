@@ -4,7 +4,7 @@ const initialState = {
     bestSellingProducts: [],
     categories: [],
     mobileList: [],
-    laptopList: []
+    laptopList: [],
   };
   
   const homeReducer = (state = initialState, action) => {

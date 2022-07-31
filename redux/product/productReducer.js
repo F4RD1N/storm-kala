@@ -8,11 +8,17 @@ const productReducer = (state = initialState, action) => {
     case "GET_PRODUCT":
       return { ...action.payload };
     case "PUSH_COMMENTS":
-      return { ...state, product:{...state.product, comments: [...state.product.comments, ...action.payload]} };
+      return {
+        ...state,
+        product: {
+          ...state.product,
+          comments: [...state.product.comments, ...action.payload],
+        },
+      };
+    
     default:
       return state;
   }
 };
 
 export default productReducer;
-

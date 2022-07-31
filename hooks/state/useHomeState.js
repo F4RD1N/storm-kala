@@ -12,6 +12,7 @@ const useHomeState = () => {
     recommendationSubCategories: state.recommendationSubCategories?.filter((v,i,a)=>a.findIndex(v2=>(v2.id===v.id))===i),
     mobileList: state.mobileList?.filter((v,i,a)=>a.findIndex(v2=>(v2.id===v.id))===i),
     laptopList: state.laptopList?.filter((v,i,a)=>a.findIndex(v2=>(v2.id===v.id))===i),
+    isLastPage: state.isLastPage
   };
 };
 
