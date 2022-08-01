@@ -8,8 +8,8 @@ export const MainTitle = styled.h1`
     font-size: 1.5rem;
     font-weight: bold;
     color: ${props => props.theme.colors.red};
-    text-align: center;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem auto;
+    width: fit-content;
     cursor: pointer;
 `
 

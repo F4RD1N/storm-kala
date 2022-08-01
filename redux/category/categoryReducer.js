@@ -3,7 +3,8 @@ const initialState = {
   products: [],
   filters: [],
   error: null,
-  pager: []
+  pager: [],
+  seo: {}
 };
 
 const categoryReducer = (state = initialState, action) => {

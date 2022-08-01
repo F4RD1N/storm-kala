@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
 const useProductState = () => {
-  const { product, recommendations } = useSelector((state) => state.productState);
+  const { product, recommendations, seo } = useSelector((state) => state.productState);
 
   return {
     id: product?.id,
@@ -18,7 +18,10 @@ const useProductState = () => {
     options: product?.options,
     information: product?.information,
     comments: product?.comments,
-    recommended: recommendations
+    recommended: {
+      products: recommendations
+    },
+    seo
   };
 };
 

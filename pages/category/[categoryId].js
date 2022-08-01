@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 //Components
 import { Results, LoadMore } from "../../components/Catergory";
@@ -21,6 +22,8 @@ import {
 import { useCategoryState } from "../../hooks";
 
 const CategoryId = ({ data }) => {
+  const {seo} = useCategoryState()
+  console.log(seo)
   //store data to redux in the first load
   const dispatch = useDispatch();
   useEffect(() => {
@@ -44,6 +47,9 @@ const CategoryId = ({ data }) => {
 
   return (
     <div>
+      <Head>
+        <title>{seo?.title}</title>
+      </Head>
       <Results state={useCategoryState} />
       <LoadMore
         pusher={dataPusher(

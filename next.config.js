@@ -26,7 +26,7 @@ const nextConfig = {
     ignoreDuringBuilds: false,
   },
   experimental: {
-    outputStandalone: true,
+    // outputStandalone: true,
     scrollRestoration: true,
   },
 };

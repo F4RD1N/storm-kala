@@ -1,6 +1,7 @@
 const initialState = {
   product: {},
   recommendations: {},
+  seo: {}
 };
 
 const productReducer = (state = initialState, action) => {

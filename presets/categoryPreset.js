@@ -1,4 +1,4 @@
-const categoryPreset = ({ products, filters, pager }) => {
+const categoryPreset = ({ products, filters, pager, seo }) => {
   return {
     products: [
       ...products.map((product) => {
@@ -24,7 +24,10 @@ const categoryPreset = ({ products, filters, pager }) => {
       }),
     ],
     filters: filters,
-    pager: pager
+    pager: pager,
+    seo: {
+      title: seo.open_graph.title,
+    },
   };
 };
 

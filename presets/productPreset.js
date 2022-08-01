@@ -1,4 +1,4 @@
-const productPreset = ({ product, recommendations }) => {
+const productPreset = ({ product, recommendations, seo }) => {
   return {
     product: {
       id: product.id,
@@ -45,6 +45,11 @@ const productPreset = ({ product, recommendations }) => {
         };
       }),
     ],
+    seo: {
+      title: seo.open_graph.title,
+      image: seo.open_graph.image,
+
+    }
   };
 };
 

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Head from "next/head";
 
 //Components
 import {
@@ -42,6 +43,9 @@ const Home = ({ homeData }) => {
 
   return (
     <div>
+      <Head>
+        <title>صفحه اصلی | استورم کالا</title>
+      </Head>
       <Hero />
       <ListSlider
         data={incredible}

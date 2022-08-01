@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Head from "next/head";
 import { useRouter } from "next/router";
 
 //Components
@@ -28,13 +29,14 @@ import { useProductState } from "../../hooks";
 import { dataPusher } from "../../helpers/pusher";
 
 const ProductDetails = ({ productData }) => {
-  const { id, recommended } = useProductState();
+  const { id, recommended, seo } = useProductState();
+
   //send data to productReducer
   const dispatch = useDispatch();
   const router = useRouter();
+
   useEffect(() => {
     dispatch(getProduct(productData));
-
     //cleanup product state after unmounting
     return () => dispatch(getProduct({products:[], recommendations: []}))
   }, [router.query]);
@@ -44,6 +46,10 @@ const ProductDetails = ({ productData }) => {
   // }
   return (
     <div>
+      <Head>
+        <title>{seo?.title}</title>
+        <link rel="icon" href={seo?.image} />
+      </Head>
       <ImageSlider />
       <MainDetails />
       <Options />
