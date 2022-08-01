@@ -7,3 +7,4 @@ export { default as SpecialCatagoryList } from "./SpecialCatagoryList/SpecialCat
 export { default as PopularBrandsList } from "./PopularBrandsList/PopularBrandsList";
 export { default as SearchOverlay } from "./SearchOverlay/SearchOverlay";
 export { default as Footer } from "./Footer/Footer";
+export { default as Loading } from "./Loading/Loading";

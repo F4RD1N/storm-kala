@@ -12,7 +12,7 @@ import {
   AddReview,
   AddToCart,
 } from "../../components/ProductDetails";
-import { ListSlider } from "../../components";
+import { ListSlider, Loading } from "../../components";
 
 //data presets
 import { productPreset } from "../../presets";
@@ -36,6 +36,9 @@ const ProductDetails = ({ productData }) => {
     dispatch(getProduct(productData));
   }, [router.query]);
 
+  // if(router.isFallback) {
+  //   return <Loading />
+  // }
   return (
     <div>
       <ImageSlider />

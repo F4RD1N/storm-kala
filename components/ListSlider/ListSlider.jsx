@@ -16,6 +16,7 @@ import { Container, Title, SecTitle } from "./ListSlider.style";
 //Components
 import LoadMore from "./LoadMore";
 
+
 const ListSlider = ({ data, title, subTitle, pusher, pusherLess }) => {
   return (
     <Container>

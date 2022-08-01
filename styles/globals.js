@@ -17,7 +17,8 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: ${(props) => props.theme.fonts.main};
     color: ${(props) => props.theme.colors.textPrimary};
-    background-color: ${(props) => props.theme.colors.natural}
+    background-color: ${(props) => props.theme.colors.natural};
+    position: relative;
   }
 
   /* Swiper Styles */

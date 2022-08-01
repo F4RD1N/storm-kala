@@ -14,7 +14,6 @@ import "swiper/css/navigation";
 
 //config
 import "../config";
-
 const _app = ({ Component, pageProps }) => {
   if (Component.getLayout) {
     return Component.getLayout(
@@ -29,6 +28,7 @@ const _app = ({ Component, pageProps }) => {
   }
 
   return (
+    <>
       <Provider store={store}>
         <PersistGate persistor={persistor}>
           <Theme>
@@ -38,6 +38,7 @@ const _app = ({ Component, pageProps }) => {
           </Theme>
         </PersistGate>
       </Provider>
+    </>
   );
 };
 
