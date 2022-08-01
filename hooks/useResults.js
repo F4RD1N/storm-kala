@@ -4,10 +4,8 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchSearch, clearSearch } from "../redux/search/searchAction";
 
-
 const useResults = (value) => {
-
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   useEffect(() => {
     const timeout = setTimeout(() => {
       value && dispatch(fetchSearch(value));
@@ -17,7 +15,7 @@ const useResults = (value) => {
       clearTimeout(timeout);
     };
   }, [value]);
-  
+
   //page Handler
   const [page, setPage] = useState(2);
   const pageHandler = () => {
@@ -25,10 +23,9 @@ const useResults = (value) => {
     dispatch(fetchSearch(value, page));
   };
 
-    return {
-        pageHandler
-    }
-}
+  return {
+    pageHandler,
+  };
+};
 
-
-export default useResults
+export default useResults;

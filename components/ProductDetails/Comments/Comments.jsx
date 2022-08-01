@@ -54,14 +54,17 @@ const Comments = ({ pusher }) => {
           />
         );
       })}
-      {!end ? (
+
+      {comments?.length > 2 ? !end ? (
         <LoadMore disabled={loading} onClick={handler}>
           {loading ? "کمی صبر کنید ... " : "بیشتر"}
           {!loading && <AiOutlineArrowDown />}
         </LoadMore>
       ) : (
         <EndOfList>به انتهای لیست رسیدید!</EndOfList>
-      )}
+      )
+        : ''
+    }
     </Container>
   );
 };

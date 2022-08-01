@@ -17,7 +17,6 @@ import { useSearchState } from "../../hooks";
 
 const SearchOverlay = ({ overlayHandler }) => {
   const {products} = useSearchState()
-
   //input handle
   const [value, setValue] = useState("");
   const valueHandler = (event) => setValue(event.target.value);
@@ -35,7 +34,7 @@ const SearchOverlay = ({ overlayHandler }) => {
         value={value}
         valueHandler={valueHandler}
       />
-      <Results value={value}/>
+      <Results value={value} state={useSearchState}/>
       <Related />
     </Container>
   );

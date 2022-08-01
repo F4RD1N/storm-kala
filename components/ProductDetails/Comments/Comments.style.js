@@ -20,22 +20,16 @@ export const Suggestion = styled.span`
   font-size: 0.9rem;
   display: flex;
   align-items: center;
-  gap: .2rem;
+  gap: 0.2rem;
 `;
 export const IconContainer = styled.div`
   color: green;
-`
+`;
 
 export const CommentContainer = styled.div`
   margin: 0 1rem 2rem 1rem;
   border-bottom: 2px solid ${(props) => props.theme.colors.natural};
-  padding: 0.5rem 0 .5rem 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: ${(props) =>
-    props.showFull ? "N" : 3}; /* number of lines to show */
+  padding: 0.5rem 0 0.5rem 0;
 `;
 export const CommentTitlebar = styled.div`
   margin-bottom: 1rem;
@@ -43,13 +37,20 @@ export const CommentTitlebar = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
-
-export const CommentTitle = styled.h3`
-  font-weight: bold;
+export const CommentTitleContianer = styled.div`
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
+  width: 60%;
 `;
+export const CommentTitle = styled.h3`
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
 export const IsBuyer = styled.span`
   color: ${(props) => props.theme.colors.blue};
 `;
@@ -72,6 +73,12 @@ export const Rate = styled.span`
 `;
 export const CommentBody = styled.p`
   font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: ${(props) =>
+    props.showFull ? "N" : 3}; /* number of lines to show */
 `;
 
 export const LoadMore = styled.button`

@@ -1,9 +1,6 @@
 import React from "react";
 import Link from "next/link";
 
-//state
-import { useSearchState } from "../../hooks";
-
 //Styled Components
 import {
   ResultsContainer,
@@ -17,10 +14,10 @@ import { ProductCard } from "../shared";
 
 //logic
 import {useResults} from '../../hooks'
-const Results = ({ value }) => {
+const Results = ({ value , state }) => {
   const { pageHandler } = useResults(value);
 
-  const { products, loading, error, pager } = useSearchState();
+  const { products, loading, error, pager } = state();
 
   //check if there is no product to show
   if (pager?.total_items === 0) return <Error>موردی یافت نشد</Error>;
