@@ -10,6 +10,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   transition: all ${(props) => props.theme.utilities.transition};
+  cursor: pointer;
 
   &:hover {
     /* background-color: ${(props) => props.theme.colors.red};

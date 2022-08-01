@@ -29,26 +29,28 @@ import { useHomeState } from "../hooks";
 import { dataPusher } from "../helpers/pusher";
 
 const Home = ({ homeData }) => {
-  const { incredibleProducts, bestSellingProducts, mobileList, laptopList } =
+  const { incredible, bestSelling, mobileList, laptopList, popularBrands } =
     useHomeState();
 
   //send data to homeReducer
   const dispatch = useDispatch();
   useEffect(() => {
-      dispatch(getHomeData(homeData));
+      if(!popularBrands.length) {
+        dispatch(getHomeData(homeData));
+      }
   }, []);
 
   return (
     <div>
       <Hero />
       <ListSlider
-        data={incredibleProducts}
+        data={incredible}
         title="تخفیفات شگفت انگیز"
         subTitle="خریدی به صرفه با تخفیفات شگفت انگیز"
         pusher={dataPusher("incredible-offers/products/?", pushIncredible)}
       />
       <ListSlider
-        data={bestSellingProducts}
+        data={bestSelling}
         title="محبوب ترین ها"
         pusher={dataPusher(
           "promotion-search/?promotion_types%5B0%5D=incredible_offer&promotion_types%5B1%5D=promotion&",

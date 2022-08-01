@@ -28,9 +28,9 @@ const ListSlider = ({ data, title, subTitle, pusher, pusherLess }) => {
         freeMode={true}
         modules={[FreeMode]}
       >
-        {data &&
-          data.length &&
-          data.map((product) => {
+        {data.products &&
+          data.products.length &&
+          data.products.map((product) => {
             const { id, status } = product;
             if (status !== "marketable") return;
 
@@ -47,7 +47,7 @@ const ListSlider = ({ data, title, subTitle, pusher, pusherLess }) => {
 
         {!pusherLess && (
           <SwiperSlide className="swiper-item">
-            <LoadMore pusher={pusher} />
+            <LoadMore pusher={pusher} pager={data?.pager}/>
           </SwiperSlide>
         )}
       </Swiper>

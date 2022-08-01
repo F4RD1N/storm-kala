@@ -9,8 +9,7 @@ export const Container = styled.div`
   padding-bottom: 1rem;
   user-select: none;
   height: 270px;
-  background-color: ${props => props.theme.colors.card}
- 
+  background-color: ${(props) => props.theme.colors.card};
 `;
 export const ImageContainer = styled.div`
   width: 100px;
@@ -29,7 +28,8 @@ export const ProductName = styled.h3`
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: ${props => props.showFull ? 'N' : 2}; /* number of lines to show */
+  -webkit-line-clamp: ${(props) =>
+    props.showFull ? "N" : 2}; /* number of lines to show */
 `;
 
 export const Details = styled.div`
@@ -57,6 +57,10 @@ export const OldPrice = styled.h4`
   color: ${(props) => props.theme.colors.textSecondary};
 `;
 
+export const Unavailable = styled.span`
+  font-size: .9rem;
+  color: ${props => props.theme.colors.textSecondary};
+`;
 export const Badge = styled.div`
   display: ${(props) => (props.isVisible ? "flex" : "none")};
   background-color: ${(props) => props.theme.colors.red};

@@ -25,6 +25,19 @@ const CategoryId = ({ data }) => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCategoryData(data));
+
+    return () =>
+      dispatch(
+        getCategoryData({
+          categoryState: {
+            loading: false,
+            products: [],
+            filters: [],
+            error: null,
+            pager: [],
+          },
+        })
+      );
   }, []);
 
   const { query } = useRouter();

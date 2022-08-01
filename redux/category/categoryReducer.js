@@ -3,6 +3,7 @@ const initialState = {
   products: [],
   filters: [],
   error: null,
+  pager: []
 };
 
 const categoryReducer = (state = initialState, action) => {
@@ -10,7 +11,7 @@ const categoryReducer = (state = initialState, action) => {
     case "GET_CATEGORY_DATA":
       return { ...action.payload };
     case "PUSH_CATEGORY":
-      return { ...state, products: [...state.products, ...action.payload] };
+      return { ...state, products: [...state.products, ...action.payload.products], pager: {...action.payload.pager} };
     default:
       return state;
   }

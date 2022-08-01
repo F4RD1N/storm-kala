@@ -31,3 +31,15 @@ export const Color = styled.span`
   align-items: center;
   
 `;
+
+export const CategoryContainer = styled.div`
+  margin-top: 2rem;
+  display: flex;
+  gap: .5rem;
+  `
+export const Category = styled.span`
+  color: ${props => props.theme.colors.blue};
+  &:hover {
+    text-decoration: underline;
+  }
+`

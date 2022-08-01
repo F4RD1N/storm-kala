@@ -1,41 +1,30 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useRouter } from "next/router";
 
 //redux
 import { useDispatch } from "react-redux";
 
-//state
-const useLoadMore = (pusher) => {
-  const [page, setPage] = useState(2);
+const useLoadMore = (pusher, pager) => {
   const [loading, setLoading] = useState(false);
-  const [end, setEnd] = useState(false);
+  const [end, setEnd] = useState(pager?.current_page >= pager?.total_pages);
   const dispatch = useDispatch();
 
-  //reset states when route change
-  const router = useRouter();
-  useEffect(() => {
-      setPage(2);
-      setEnd(false);
-  }, [router.query]);
-
+  useEffect(() => {}, [pager]);
   const handler = () => {
     setLoading(true);
 
     const fetcher = async () => {
-      const response = await axios(pusher.endpoint(page));
+      const response = await axios(pusher.endpoint(pager?.current_page + 1));
 
-      //check if the fetched page is the last one and has to data
-      if (!pusher.dataPath(response) || !pusher.dataPath(response).length)
+      if (pager?.current_page + 1 >= pager?.total_pages) {
         setEnd(true);
-
+      }
       return pusher.dataPath(response);
     };
     fetcher()
       .then((res) => {
         dispatch(pusher.action(res));
         setLoading(false);
-        setPage((currentValue) => currentValue + 1);
       })
       .catch((err) => {
         console.log(err.message);

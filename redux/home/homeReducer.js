@@ -1,10 +1,10 @@
 const initialState = {
-    incredibleProducts: [],
+    incredible: {},
+    bestSelling: {},
     popularBrands: [],
-    bestSellingProducts: [],
     categories: [],
-    mobileList: [],
-    laptopList: [],
+    mobileList: {},
+    laptopList: {},
   };
   
   const homeReducer = (state = initialState, action) => {
@@ -12,13 +12,13 @@ const initialState = {
       case "GET_HOME_DATA":
         return {...action.payload};
       case 'PUSH_INCREDIBLE':
-        return {...state, incredibleProducts: [...state.incredibleProducts, ...action.payload]}
+        return {...state, incredible: {...state.incredible, products:[...state.incredible.products, ...action.payload.products], pager: {...action.payload.pager}}}
         case 'PUSH_BEST_SELLING':
-        return {...state, bestSellingProducts: [...state.bestSellingProducts, ...action.payload]}
+        return {...state, bestSelling: {...state.bestSelling, products:[...state.bestSelling.products, ...action.payload.products], pager: {...action.payload.pager}}}
         case 'PUSH_MOBILE':
-          return {...state, mobileList: [...state.mobileList, ...action.payload]}
+          return {...state, mobileList: {...state.mobileList, products:[...state.mobileList.products, ...action.payload.products], pager: {...action.payload.pager}}}
       case 'PUSH_LAPTOP':
-          return {...state, laptopList: [...state.laptopList, ...action.payload]}
+          return {...state, laptopList: {...state.laptopList, products:[...state.laptopList.products, ...action.payload.products], pager: {...action.payload.pager}}}
       default:
           return state
     }

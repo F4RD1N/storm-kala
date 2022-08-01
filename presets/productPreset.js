@@ -17,7 +17,10 @@ const productPreset = ({ product, recommendations }) => {
       introduce: product.review.description ? product.review.description : null,
       options: product.review.attributes ? product.review.attributes : null,
       information: product.specifications[0].attributes,
-      comments: product.last_comments,
+      comments: {
+        comments: product.last_comments,
+        pager: {current_page: 1, total_pages: 3}
+      },
     },
     recommendations: [
       ...recommendations.related_products.products.map((product) => {

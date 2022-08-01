@@ -28,7 +28,8 @@ import { englishToPersian } from "../../../helpers";
 
 const Comments = ({ pusher }) => {
   const { comments, suggestion } = useProductState();
-  const { loading, end, handler } = useLoadMore(pusher);
+  console.log(comments);
+  const { loading, end, handler } = useLoadMore(pusher, comments?.pager);
   return (
     <Container>
       <Titlebar>
@@ -41,7 +42,7 @@ const Comments = ({ pusher }) => {
         </Suggestion>
       </Titlebar>
 
-      {comments?.map((item) => {
+      {comments?.comments?.map((item) => {
         const { id, user_name, body, created_at, is_buyer, rate } = item;
         return (
           <CommentCard
@@ -55,7 +56,7 @@ const Comments = ({ pusher }) => {
         );
       })}
 
-      {comments?.length > 2 ? !end ? (
+      {comments?.comments?.length > 2 ? !end ? (
         <LoadMore disabled={loading} onClick={handler}>
           {loading ? "کمی صبر کنید ... " : "بیشتر"}
           {!loading && <AiOutlineArrowDown />}

@@ -27,6 +27,7 @@ const nextConfig = {
   },
   experimental: {
     outputStandalone: true,
+    scrollRestoration: true,
   },
 };
 

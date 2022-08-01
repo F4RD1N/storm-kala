@@ -34,6 +34,9 @@ const ProductDetails = ({ productData }) => {
   const router = useRouter();
   useEffect(() => {
     dispatch(getProduct(productData));
+
+    //cleanup product state after unmounting
+    return () => dispatch(getProduct({products:[], recommendations: []}))
   }, [router.query]);
 
   // if(router.isFallback) {

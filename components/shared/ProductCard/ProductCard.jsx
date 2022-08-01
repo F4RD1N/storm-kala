@@ -11,8 +11,8 @@ import {
   Price,
   OldPrice,
   Badge,
+  Unavailable,
 } from "./ProductCard.style";
-
 
 //Helpers
 import { convertPrice, englishToPersian } from "../../../helpers";
@@ -35,10 +35,18 @@ const ProductCard = ({ data }) => {
           %{englishToPersian(default_variant?.price?.discount_percent)}
         </Badge>
         <PriceContainer>
-          <OldPrice isVisible={default_variant?.price?.discount_percent && true}>
+          <OldPrice
+            isVisible={default_variant?.price?.discount_percent && true}
+          >
             {convertPrice(default_variant?.price?.rrp_price)}
           </OldPrice>
-          <Price>{convertPrice(default_variant?.price?.selling_price)}ت</Price>
+          {default_variant?.price?.selling_price ? (
+            <Price>
+              {convertPrice(default_variant?.price?.selling_price)}ت
+            </Price>
+          ) : (
+            <Unavailable>اتمام موجودی</Unavailable>
+          )}
         </PriceContainer>
       </Details>
     </Container>

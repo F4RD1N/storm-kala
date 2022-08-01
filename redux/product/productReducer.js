@@ -12,7 +12,7 @@ const productReducer = (state = initialState, action) => {
         ...state,
         product: {
           ...state.product,
-          comments: [...state.product.comments, ...action.payload],
+          comments: {...state.product.comments, comments: [...state.product.comments.comments, ...action.payload.comments], pager:{...action.payload.pager}},
         },
       };
     
@@ -22,3 +22,4 @@ const productReducer = (state = initialState, action) => {
 };
 
 export default productReducer;
+
