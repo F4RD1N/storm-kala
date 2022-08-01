@@ -34,8 +34,8 @@ export const fetchSearch = (query, page = 1) => {
     axios
       .get(`search/?q=${query}&page=${page}`)
       .then((response) => {
-        const users = response.data;
-        dispatch(fetchSearchSuccess(users));
+        const items = response.data;
+        dispatch(fetchSearchSuccess(items));
       })
       .catch((err) => {
         const errorMsg = err.message;

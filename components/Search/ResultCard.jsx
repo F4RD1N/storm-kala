@@ -5,7 +5,7 @@ import {
   CardContainer,
   CardImageContainer,
   CardTitle,
-} from "./SearchOverlay.style";
+} from "./Search.style";
 const SearchCard = ({ data }) => {
   const { title_fa, images } = data;
   return (

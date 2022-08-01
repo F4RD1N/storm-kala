@@ -24,6 +24,7 @@ const ProductCard = ({ data }) => {
       <ImageContainer>
         <Image
           src={images.main.url[0]}
+          alt={title_fa}
           objectFit="cover"
           width={100}
           height={100}

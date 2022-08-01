@@ -21,7 +21,7 @@ const useCart = (product) => {
   const [orderLimit, setOrderLimit] = useState(1);
   const dispatch = useDispatch();
   const { cartItems, itemsCounter, total, discount } = useCartState();
-  const { id, price, mainDetails, images } = product;
+  const { id, price, mainDetails, images, status } = product;
 
   //create a preset of data to pushin into redux store
   const cartPreset = {
@@ -30,6 +30,7 @@ const useCart = (product) => {
     price,
     quantity: 1,
     images,
+    status
   };
 
   //broadcast channel

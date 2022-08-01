@@ -10,9 +10,9 @@ const useLoadMore = (pusher, pager) => {
   const dispatch = useDispatch();
 
   useEffect(() => {}, [pager]);
+
   const handler = () => {
     setLoading(true);
-
     const fetcher = async () => {
       const response = await axios(pusher.endpoint(pager?.current_page + 1));
 

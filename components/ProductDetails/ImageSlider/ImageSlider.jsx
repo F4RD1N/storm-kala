@@ -16,7 +16,7 @@ import SliderItem from "./SliderItem";
 import { useProductState } from "../../../hooks";
 
 const ImageSlider = () => {
-  const { images } = useProductState();
+  const { images, mainDetails } = useProductState();
   return (
     <Container>
       <Swiper
@@ -31,7 +31,7 @@ const ImageSlider = () => {
         {images?.map((item) => {
             return (
               <SwiperSlide key={item.url[0]}>
-                <SliderItem source={item.url[0]} />
+                <SliderItem source={item.url[0]} alt={mainDetails.title}/>
               </SwiperSlide>
             );
           })}

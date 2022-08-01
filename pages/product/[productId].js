@@ -41,9 +41,6 @@ const ProductDetails = ({ productData }) => {
     return () => dispatch(getProduct({products:[], recommendations: []}))
   }, [router.query]);
 
-  // if(router.isFallback) {
-  //   return <Loading />
-  // }
   return (
     <div>
       <Head>
@@ -56,7 +53,7 @@ const ProductDetails = ({ productData }) => {
       <Introduce />
       <Information />
       <AddToCart />
-      <Comments pusher={dataPusher(`product/${id}/comments/?`, pushComments, 'comments')}/>
+      <Comments pusher={dataPusher(`product/${id}/comments/?`, pushComments)}/>
       <AddReview />
       <ListSlider data={recommended} title="کالا های مشابه" pusherLess={true} />
     </div>

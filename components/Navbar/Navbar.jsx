@@ -14,25 +14,20 @@ import {
   LeftContainer,
 } from "./Navbar.style";
 
-//Components
-import { SearchOverlay } from "../";
 
-//logic
-import { useNavbar } from "../../hooks";
 //cart state
 import { useCartState } from "../../hooks";
 
 const Navbar = () => {
-  const { toggleSearch, searchHandler } = useNavbar();
   const { itemsCounter } = useCartState();
   return (
     <Container>
-      {toggleSearch && <SearchOverlay overlayHandler={searchHandler} />}
-
-      <InputContainer onClick={searchHandler}>
-        <FiSearch />
-        <Input disabled placeholder="جستجو" />
-      </InputContainer>
+      <Link href='/search?q='>
+          <InputContainer>
+            <FiSearch />
+            <Input disabled placeholder="جستجو" />
+          </InputContainer>
+      </Link>
       <LeftContainer>
         <Item>
           <BsPerson />

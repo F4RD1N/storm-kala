@@ -2,15 +2,9 @@ import styled from "styled-components";
 //shared
 import { GlobalButton } from "../../styles/shared";
 export const Container = styled.section`
-  position: ${props => props.hasData ? 'absolute' : 'fixed'};
-  margin-bottom: 0;
   padding: 1rem 0.5rem;
   background-color: ${(props) => props.theme.colors.natural};
-  top: 0;
-  left: 0;
-  right: 0;
-  height: ${props => props.hasData ? '100%' : '100vh'};
-  z-index: 10;
+
 `;
 
 export const ResultsContainer = styled.div`
@@ -90,6 +84,7 @@ export const Input = styled.input`
 
 export const IconContainer = styled.div`
   margin-top: 5px;
+  cursor: pointer;
 `;
 
 export const LoadMoreButton = styled(GlobalButton)`

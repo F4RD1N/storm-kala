@@ -22,25 +22,14 @@ import {
 import { useCategoryState } from "../../hooks";
 
 const CategoryId = ({ data }) => {
-  const {seo} = useCategoryState()
+  const {seo, products} = useCategoryState()
   console.log(seo)
   //store data to redux in the first load
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getCategoryData(data));
-
-    return () =>
-      dispatch(
-        getCategoryData({
-          categoryState: {
-            loading: false,
-            products: [],
-            filters: [],
-            error: null,
-            pager: [],
-          },
-        })
-      );
+    if(!products.length) {
+      dispatch(getCategoryData(data))
+    }
   }, []);
 
   const { query } = useRouter();

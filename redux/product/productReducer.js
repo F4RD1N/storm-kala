@@ -1,7 +1,7 @@
 const initialState = {
-  product: {},
+  product: { comments: {} },
   recommendations: {},
-  seo: {}
+  seo: {},
 };
 
 const productReducer = (state = initialState, action) => {
@@ -13,14 +13,20 @@ const productReducer = (state = initialState, action) => {
         ...state,
         product: {
           ...state.product,
-          comments: {...state.product.comments, comments: [...state.product.comments.comments, ...action.payload.comments], pager:{...action.payload.pager}},
+          comments: {
+            ...state.product.comments,
+            comments: [
+              ...state.product.comments.comments,
+              ...action.payload.comments,
+            ],
+            pager: { ...action.payload.pager },
+          },
         },
       };
-    
+
     default:
       return state;
   }
 };
 
 export default productReducer;
-

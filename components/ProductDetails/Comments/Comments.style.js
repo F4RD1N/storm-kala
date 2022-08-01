@@ -23,7 +23,8 @@ export const Suggestion = styled.span`
   gap: 0.2rem;
 `;
 export const IconContainer = styled.div`
-  color: green;
+  color: ${(props) =>
+    props.value < 40 ? "orangered" : props.value < 70 ? "orange" : "green"}; ;
 `;
 
 export const CommentContainer = styled.div`

@@ -1,26 +1,25 @@
 import { useEffect, useState } from "react";
-
+import { useRouter } from "next/router";
 //redux
 import { useDispatch } from "react-redux";
 import { fetchSearch, clearSearch } from "../redux/search/searchAction";
 
-const useResults = (value) => {
+//state
+import { useSearchState } from "../hooks";
+const useResults = () => {
+  const { pager } = useSearchState();
+  const { query } = useRouter();
   const dispatch = useDispatch();
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      value && dispatch(fetchSearch(value));
-    }, 1000);
+    query.q && dispatch(fetchSearch(query.q));
     return () => {
       dispatch(clearSearch());
-      clearTimeout(timeout);
     };
-  }, [value]);
+  }, [query.q]);
 
   //page Handler
-  const [page, setPage] = useState(2);
   const pageHandler = () => {
-    setPage((currentValue) => currentValue + 1);
-    dispatch(fetchSearch(value, page));
+    dispatch(fetchSearch(query.q, pager?.current_page + 1));
   };
 
   return {

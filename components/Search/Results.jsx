@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 //Styled Components
 import {
@@ -7,15 +6,15 @@ import {
   LoadMoreButton,
   Loading,
   Error,
-} from "./SearchOverlay.style";
+} from "./Search.style";
 
 //Components
 import { ProductCard } from "../shared";
 
 //logic
-import {useResults} from '../../hooks'
-const Results = ({ value , state }) => {
-  const { pageHandler } = useResults(value);
+import { useResults } from "../../hooks";
+const Results = ({ state }) => {
+  const { pageHandler } = useResults();
 
   const { products, loading, error, pager } = state();
 
@@ -26,12 +25,11 @@ const Results = ({ value , state }) => {
     <>
       <ResultsContainer>
         {products?.map((product) => {
-          const { id, status } = product;
+          const { id } = product;
 
           //check if the page is last page
           if (pager?.current_page === pager?.total_pages) return;
-          //check if item is unavailavle
-          if (status !== "marketable") return;
+
           return (
             <a
               target="_blank"

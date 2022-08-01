@@ -40,6 +40,7 @@ export const InputContainer = styled.div`
   padding: 1rem;
   min-width: 70%;
   border-radius: 2px;
+  cursor: pointer;
 `;
 
 export const Input = styled.input`
@@ -47,6 +48,7 @@ export const Input = styled.input`
   outline: none;
   background-color: transparent;
   width: 100%;
+  cursor: pointer;
   &::placeholder {
     font-family: ${(props) => props.theme.fonts.main};
     font-size: 0.9rem;

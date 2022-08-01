@@ -8,7 +8,7 @@ import {
   RelatedWordsContainer,
   RelatedWordsTitle,
   RelatedWord,
-} from "./SearchOverlay.style";
+} from "./Search.style";
 
 const Search = () => {
   const { relatedWords } = useSearchState();
