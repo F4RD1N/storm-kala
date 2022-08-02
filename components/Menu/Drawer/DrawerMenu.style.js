@@ -88,7 +88,6 @@ export const ItemContainer = styled.div`
   gap: 0 1rem;
   font-size: 1.5rem;
   margin-bottom: .5rem;
-  width: 90%;
   padding: .7rem .5rem;
   border-radius: 5px;
   cursor: pointer;

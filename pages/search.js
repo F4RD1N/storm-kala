@@ -33,7 +33,7 @@ export default Search;
 
 export const getServerSideProps = ({ query }) => {
   return {
-    props: { query },
+    props: { query: query },
   };
 };
 Search.getLayout = function PageLayout(page) {

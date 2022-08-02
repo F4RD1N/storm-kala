@@ -13,10 +13,16 @@ const Input = () => {
 
   const router = useRouter();
   const searchHandler = () => {
-    if (value) router.push(`/search?q=${value}`);
+    if (value) {
+      router.push(`/search?q=${value}`)
+      document.body.style.overflow = "unset"
+    }
   };
   const keyHandler = (event) => {
-    if (value && event.key === "Enter") router.push(`/search?q=${value}`);
+    if (value && event.key === "Enter") {
+      router.push(`/search?q=${value}`)
+      document.body.style.overflow = "unset"
+    }
   };
   return (
     <InputContainer>

@@ -7,6 +7,7 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 5px;
 `;
 
 export const IconContainer = styled.div`
