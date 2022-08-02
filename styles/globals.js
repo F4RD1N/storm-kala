@@ -111,10 +111,10 @@ const GlobalStyles = createGlobalStyle`
 
 *
 {        
-    -webkit-user-select: none;
-    -moz-user-select: -moz-none;
+    /* -webkit-user-select: none; */
+    /* -moz-user-select: -moz-none; */
     /*IE10*/
-    -ms-user-select: none;
+    /* -ms-user-select: none; */
     user-select: none;
 
     /*You just need this if you are only concerned with android and not desktop browsers.*/

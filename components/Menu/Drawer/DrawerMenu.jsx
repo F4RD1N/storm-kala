@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Link from "next/link";
 
 //Styled Components
 import {
@@ -7,23 +8,19 @@ import {
   CloseDrawer,
   MainTitle,
   HorizontalRuler,
-  Title
+  Title,
 } from "./DrawerMenu.style";
 
 //Icons
 import { IoMdClose } from "react-icons/io";
-import { AiOutlineCar } from "react-icons/ai";
-import { FiCoffee } from "react-icons/fi";
-import { BsBook, BsTelegram, BsGithub, BsInstagram } from "react-icons/bs";
-import { TbShirt, TbToolsKitchen } from "react-icons/tb";
-import { GiPearlNecklace } from "react-icons/gi";
-import { BiHomeAlt, BiMobileAlt } from "react-icons/bi";
-import { MdOutlineToys,MdSportsSoccer } from "react-icons/md";
 
 //Components
 import Input from "./Input";
 import Item from "./Item";
+import DropDown from "./DropDown/DropDown";
 
+//Constants
+import { menu } from "../../../constants";
 const DrawerMenu = ({ active, handler }) => {
   //prevent background scroll when drawer is open!
   useEffect(() => {
@@ -48,23 +45,33 @@ const DrawerMenu = ({ active, handler }) => {
         <Input />
         <HorizontalRuler />
         <Title>اصلی</Title>
-        <Item title='خانه' icon={<BiHomeAlt />}/>
+        {menu.main.map((item) => {
+          return (
+            <Link key={item.id} href={item.url}>
+              <a>
+              <Item title={item.title} icon={item.icon} />
+
+              </a>
+            </Link>
+          );
+        })}
         <HorizontalRuler />
         <Title>دسته بندی کالا ها</Title>
-        <Item title='کالای دیجیتال' icon ={<BiMobileAlt />}/>
-        <Item title='تجهیزات صنعتی' icon ={<AiOutlineCar />}/>
-        <Item title='مد و پوشاک' icon ={<TbShirt />}/>
-        <Item title='کالاهای سوپرمارکتی' icon ={<FiCoffee />}/>
-        <Item title='کودک و نوزاد' icon ={<MdOutlineToys />}/>
-        <Item title='زیبایی و سلامت' icon ={<GiPearlNecklace />}/>
-        <Item title='خانه و آشپزخانه' icon ={< TbToolsKitchen />}/>
-        <Item title='کتاب و لوازم تحریر' icon ={<BsBook />}/>
-        <Item title='ورزش و سفر' icon ={<MdSportsSoccer />}/>
+        {menu.category.map((item) => {
+          return (
+            <DropDown
+              key={item.id}
+              title={item.title}
+              sub={item.sub}
+              icon={item.icon}
+            />
+          );
+        })}
         <HorizontalRuler />
         <Title>لینک های مفید</Title>
-        <Item title='Telegram' icon ={< BsTelegram />}/>
-        <Item title='Github' icon ={<BsGithub />}/>
-        <Item title='Instagram' icon ={<BsInstagram />}/>
+        {menu.links.map((item) => {
+          return <Item key={item.id} title={item.title} icon={item.icon} />;
+        })}
       </Drawer>
     </Container>
   );
