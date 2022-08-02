@@ -12,6 +12,7 @@ export const Container = styled(GlobalButton)`
   overflow: hidden;
   height: 60px;
   transition: all 100ms linear;
+  box-shadow: none;
 
 `;
 

@@ -1,5 +1,6 @@
-const categoryPreset = ({ products, filters, pager, seo }) => {
+const categoryPreset = ({ products, filters, pager, seo, category }) => {
   return {
+    title: category.title_fa,
     products: [
       ...products.map((product) => {
         return {

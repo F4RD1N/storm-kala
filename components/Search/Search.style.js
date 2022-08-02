@@ -2,9 +2,6 @@ import styled from "styled-components";
 //shared
 import { GlobalButton } from "../../styles/shared";
 export const Container = styled.section`
-  padding: 1rem 0.5rem;
-  background-color: ${(props) => props.theme.colors.natural};
-
 `;
 
 export const ResultsContainer = styled.div`
@@ -90,9 +87,12 @@ export const IconContainer = styled.div`
 export const LoadMoreButton = styled(GlobalButton)`
   width: 100%;
   margin: 1rem 0;
-  background-color: ${(props) => props.theme.colors.card};
+  background-color: ${(props) =>
+    props.pressed ? props.theme.colors.primary : props.theme.colors.card};
   color: ${(props) => props.theme.colors.textPrimary};
   font-size: 1rem;
+  height: 60px;
+  transition: all 100ms linear;
   cursor: pointer;
 `;
 
@@ -109,3 +109,11 @@ export const Error = styled(Loading)`
   color: ${(props) => props.theme.colors.red};
   margin-top: 2rem;
 `;
+
+export const BaseStatement = styled.span`
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+`
+
+export const EndOfList = styled(Loading)``

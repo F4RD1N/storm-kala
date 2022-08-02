@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
+//Styled Components
+import { Title } from "../../components/Catergory/Category.style";
+
 //Components
 import { Results, LoadMore } from "../../components/Catergory";
 
@@ -22,14 +25,14 @@ import {
 import { useCategoryState } from "../../hooks";
 
 const CategoryId = ({ data }) => {
-  const {seo} = useCategoryState()
+  const {seo, title} = useCategoryState()
   const { query } = useRouter();
   
   //store data to redux in the first load
   const dispatch = useDispatch();
   useEffect(() => {
       dispatch(getCategoryData(data))
-  }, []);
+  }, [query]);
 
 
   return (
@@ -37,6 +40,7 @@ const CategoryId = ({ data }) => {
       <Head>
         <title>{seo?.title}</title>
       </Head>
+      <Title>{title}</Title>
       <Results state={useCategoryState} />
       <LoadMore
         pusher={dataPusher(
