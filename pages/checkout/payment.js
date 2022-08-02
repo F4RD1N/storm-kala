@@ -9,7 +9,7 @@ import { NextStep, NextButton } from "../../components/Checkout";
 import { PaymentMethod, Discount } from "../../components/Checkout/Payment";
 import { Order, Details } from "../../components/Checkout/Shipping";
 
-const payment = () => {
+const Payment = () => {
   return (
     <div>
       <Head>
@@ -27,8 +27,8 @@ const payment = () => {
   );
 };
 
-export default payment;
+export default Payment;
 
-payment.getLayout = function PageLayout(page) {
+Payment.getLayout = function PageLayout(page) {
   return <>{page}</>;
 };

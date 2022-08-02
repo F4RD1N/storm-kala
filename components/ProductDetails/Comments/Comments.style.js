@@ -3,7 +3,10 @@ import styled from "styled-components";
 //Shared Styles
 import { SectionCard } from "../../../styles/shared";
 
-export const Container = styled(SectionCard)``;
+export const Container = styled(SectionCard)`
+  max-height: 800px;
+  overflow-y: scroll;
+`;
 
 export const Titlebar = styled.div`
   display: flex;

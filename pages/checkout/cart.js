@@ -7,7 +7,7 @@ import { Container, Title } from "../../components/Checkout/Cart/Cart.style";
 import { Items } from "../../components/Checkout/Cart";
 import { NextButton } from "../../components/Checkout";
 
-const cart = () => {
+const Cart = () => {
   return (
     <div>
       <Head>
@@ -22,4 +22,4 @@ const cart = () => {
   );
 };
 
-export default cart;
+export default Cart;

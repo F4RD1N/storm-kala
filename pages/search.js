@@ -36,4 +36,6 @@ export const getServerSideProps = ({ query }) => {
     props: { query },
   };
 };
-
+Search.getLayout = function PageLayout(page) {
+  return <>{page}</>;
+};

@@ -5,7 +5,7 @@ import { SectionCard } from "../../../styles/shared";
 
 export const Container = styled(SectionCard)`
   position: relative;
-  max-height: ${(props) => (props.showFull ? "" : "275px")};
+  max-height: ${(props) => (props.showFull ? "" : "320px")};
   padding-bottom: 2rem;
 `;
 

@@ -20,7 +20,7 @@ const SearchInput = ({ value, valueHandler}) => {
   //pass query to url
   useEffect(() => {
     const timeout = setTimeout(() => {
-      router.push(`/search?q=${value}`, undefined, {shallow: true})
+      router.replace(`/search?q=${value}`, undefined, {shallow: true})
     }, 500);
     return () => clearTimeout(timeout)
   }, [value])

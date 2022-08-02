@@ -1,24 +1,33 @@
 import React from "react";
 import Link from "next/link";
+
 //Icons
-import { FiMenu } from "react-icons/fi";
-import { BsQuestionCircle } from "react-icons/bs";
+import { BsCart } from "react-icons/bs";
+import { GiHamburgerMenu } from "react-icons/gi";
+
 //Styled Components
-import { Container, Item, MainTitle } from "./Header.style";
+import { Container, IconContainer, MainTitle, CartCounter } from "./Header.style";
+
+//cart state
+import { useCartState } from "../../hooks";
+
 const Header = () => {
+  const { itemsCounter } = useCartState();
+
   return (
     <Container>
-      <Item>
-        <FiMenu />
-      </Item>
+      <IconContainer>
+        <GiHamburgerMenu />
+      </IconContainer>
       <Link href="/">
-        <a>
-          <MainTitle>StromKala</MainTitle>
-        </a>
+        <MainTitle>StromKala</MainTitle>
       </Link>
-      <Item>
-        <BsQuestionCircle />
-      </Item>
+      <Link href="/checkout/cart">
+        <IconContainer>
+          <BsCart />
+          {itemsCounter ? <CartCounter>{itemsCounter}</CartCounter> : ""}
+        </IconContainer>
+      </Link>
     </Container>
   );
 };

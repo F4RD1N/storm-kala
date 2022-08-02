@@ -6,7 +6,7 @@ import { NextStep, NextButton } from "../../components/Checkout";
 import { Address, Order, Details } from "../../components/Checkout/Shipping";
 //Styled Components
 import { Container } from "../../components/Checkout/Shipping/Shipping.style";
-const shipping = () => {
+const Shipping = () => {
   return (
     <div>
       <Head>
@@ -23,8 +23,8 @@ const shipping = () => {
   );
 };
 
-export default shipping;
+export default Shipping;
 
-shipping.getLayout = function PageLayout(page) {
+Shipping.getLayout = function PageLayout(page) {
   return <>{page}</>;
 };
