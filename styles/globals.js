@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
     color: ${(props) => props.theme.colors.textPrimary};
     background-color: ${(props) => props.theme.colors.natural};
     position: relative;
+    
   }
 
   /* Swiper Styles */

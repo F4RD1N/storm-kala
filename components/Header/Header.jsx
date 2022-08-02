@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 //Icons
@@ -6,17 +6,22 @@ import { BsCart } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 //Styled Components
-import { Container, IconContainer, MainTitle, CartCounter } from "./Header.style";
+import {
+  Container,
+  IconContainer,
+  MainTitle,
+  CartCounter,
+} from "./Header.style";
 
 //cart state
 import { useCartState } from "../../hooks";
 
-const Header = () => {
+const Header = ({ drawerHandler }) => {
   const { itemsCounter } = useCartState();
 
   return (
     <Container>
-      <IconContainer>
+      <IconContainer onClick={drawerHandler}>
         <GiHamburgerMenu />
       </IconContainer>
       <Link href="/">

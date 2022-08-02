@@ -36,9 +36,9 @@ const Home = ({ homeData }) => {
   //send data to homeReducer
   const dispatch = useDispatch();
   useEffect(() => {
-      if(!popularBrands.length) {
-        dispatch(getHomeData(homeData));
-      }
+    if (!popularBrands.length) {
+      dispatch(getHomeData(homeData));
+    }
   }, []);
 
   return (
