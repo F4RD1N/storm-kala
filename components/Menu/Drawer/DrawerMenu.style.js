@@ -14,13 +14,14 @@ export const Container = styled.section`
 export const Drawer = styled.div`
   position: relative;
   height: 100%;
-  width: 55%;
+  width: 65%;
   padding: 1rem;
   background-color: #fff;
   transform: translateX(${(props) => (props.active ? "0%" : "100%")});
   transition: transform 100ms linear;
   overflow-y: scroll;
 `;
+
 
 export const CloseDrawer = styled.div`
   position: absolute;
@@ -48,7 +49,7 @@ export const InputContainer = styled.div`
   color: ${(props) => props.theme.colors.textPrimary};
   gap: 0.5rem;
   padding: 0.7rem 1rem;
-  border-radius: 10px;
+  border-radius: 5px;
 `;
 
 export const SearchInput = styled.input`
@@ -73,7 +74,7 @@ export const HorizontalRuler = styled.hr`
   border: none;
   outline: none;
   border-top: 1px solid ${(props) => props.theme.colors.border};
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 `;
 
 export const Title = styled.h3`
@@ -86,7 +87,14 @@ export const ItemContainer = styled.div`
   align-items: center;
   gap: 0 1rem;
   font-size: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: .5rem;
+  width: 90%;
+  padding: .7rem .5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: ${props => props.theme.colors.gray};
+  }
 `
 export const ItemTitle = styled.h4`
 font-size: 1rem;

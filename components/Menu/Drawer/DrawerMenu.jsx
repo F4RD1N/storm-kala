@@ -14,7 +14,7 @@ import {
 import { IoMdClose } from "react-icons/io";
 import { AiOutlineCar } from "react-icons/ai";
 import { FiCoffee } from "react-icons/fi";
-import { BsBook } from "react-icons/bs";
+import { BsBook, BsTelegram, BsGithub, BsInstagram } from "react-icons/bs";
 import { TbShirt, TbToolsKitchen } from "react-icons/tb";
 import { GiPearlNecklace } from "react-icons/gi";
 import { BiHomeAlt, BiMobileAlt } from "react-icons/bi";
@@ -47,18 +47,24 @@ const DrawerMenu = ({ active, handler }) => {
         <MainTitle>StormKala</MainTitle>
         <Input />
         <HorizontalRuler />
+        <Title>اصلی</Title>
         <Item title='خانه' icon={<BiHomeAlt />}/>
         <HorizontalRuler />
         <Title>دسته بندی کالا ها</Title>
         <Item title='کالای دیجیتال' icon ={<BiMobileAlt />}/>
-        <Item title='خودرو، ابزار و تجهیزات صنعتی' icon ={<AiOutlineCar />}/>
+        <Item title='تجهیزات صنعتی' icon ={<AiOutlineCar />}/>
         <Item title='مد و پوشاک' icon ={<TbShirt />}/>
         <Item title='کالاهای سوپرمارکتی' icon ={<FiCoffee />}/>
-        <Item title='اسباب بازی، کودک و نوزاد' icon ={<MdOutlineToys />}/>
+        <Item title='کودک و نوزاد' icon ={<MdOutlineToys />}/>
         <Item title='زیبایی و سلامت' icon ={<GiPearlNecklace />}/>
         <Item title='خانه و آشپزخانه' icon ={< TbToolsKitchen />}/>
-        <Item title='کتاب، لوازم تحریر و هنر' icon ={<BsBook />}/>
+        <Item title='کتاب و لوازم تحریر' icon ={<BsBook />}/>
         <Item title='ورزش و سفر' icon ={<MdSportsSoccer />}/>
+        <HorizontalRuler />
+        <Title>لینک های مفید</Title>
+        <Item title='Telegram' icon ={< BsTelegram />}/>
+        <Item title='Github' icon ={<BsGithub />}/>
+        <Item title='Instagram' icon ={<BsInstagram />}/>
       </Drawer>
     </Container>
   );
