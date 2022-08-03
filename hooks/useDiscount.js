@@ -16,11 +16,15 @@ const useDiscount = () => {
       setDiscountCode("");
     }
   };
+  const clearDiscountHandler = () => {
+    dispatch(setDiscount(0));
+  }
 
   return {
     discountHandler,
     discountCode,
     inputHandler,
+    clearDiscountHandler
   };
 };
 

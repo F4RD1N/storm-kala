@@ -19,7 +19,8 @@ const nextConfig = {
       "dkstatics-public.digikala.com",
       "dkstatics-public-2.digikala.com",
       'dkstatics-private.digikala.com',
-      'dkstatics-private-2.digikala.com'
+      'dkstatics-private-2.digikala.com',
+      'www.digikala.com'
     ],
   },
   eslint: {

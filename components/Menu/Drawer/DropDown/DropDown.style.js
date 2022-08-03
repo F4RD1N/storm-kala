@@ -5,8 +5,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   font-size: 1.5rem;
-  margin-bottom: 0.8rem;
-  padding: 0.7rem 0.5rem;
+  padding: 1rem 0.5rem;
   border-radius: 5px;
   cursor: pointer;
   &:hover {
@@ -40,8 +39,7 @@ export const Content = styled.div`
 `;
 export const Item = styled.h4`
   border-radius: 5px;
-  padding: 0.7rem 0.5rem;
-  margin-bottom: .5rem;
+  padding: 1rem 0.5rem;
   cursor: pointer;
 
   &:hover {

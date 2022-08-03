@@ -259,19 +259,19 @@ const menu = {
       id: 1,
       title: "Telegram",
       icon: <BsTelegram />,
-      url: "",
+      url: "https://t.me/HiddenID",
     },
     {
       id: 2,
       title: "Github",
       icon: <BsGithub />,
-      url: "",
+      url: "https://github.com/F4RD1N",
     },
     {
       id: 3,
       title: "Instagram",
       icon: <BsInstagram />,
-      url: "",
+      url: "instagram.com/react.nick",
     },
   ],
 };

@@ -20,8 +20,10 @@ export const Drawer = styled.div`
   transform: translateX(${(props) => (props.active ? "0%" : "100%")});
   transition: transform 100ms linear;
   overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
 `;
-
 
 export const CloseDrawer = styled.div`
   position: absolute;
@@ -63,12 +65,12 @@ export const SearchInput = styled.input`
   }
 `;
 export const IconContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: ${props => props.theme.colors.textPrimary};
-    `
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: ${(props) => props.theme.colors.textPrimary};
+`;
 
 export const HorizontalRuler = styled.hr`
   border: none;
@@ -80,21 +82,20 @@ export const HorizontalRuler = styled.hr`
 export const Title = styled.h3`
   margin-bottom: 2rem;
   font-weight: 500;
-`
+`;
 
 export const ItemContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0 1rem;
   font-size: 1.5rem;
-  margin-bottom: .5rem;
-  padding: .7rem .5rem;
+  padding: 1rem 0.5rem;
   border-radius: 5px;
   cursor: pointer;
   &:hover {
-    background-color: ${props => props.theme.colors.gray};
+    background-color: ${(props) => props.theme.colors.gray};
   }
-`
+`;
 export const ItemTitle = styled.h4`
-font-size: 1rem;
-`
+  font-size: 1rem;
+`;

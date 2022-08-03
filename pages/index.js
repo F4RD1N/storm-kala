@@ -63,15 +63,17 @@ const Home = ({ homeData }) => {
       />
       <CatagoryList />
       <SpecialCatagoryList />
-      <PopularBrandsList />
+      {/* <PopularBrandsList /> */}
       <ListSlider
         data={mobileList}
         title="موبایل"
-        pusher={dataPusher("categories/mobile/search/?", pushMobile)}
+        pusher={dataPusher("categories/mobile-phone/search/?", pushMobile)}
       />
       <ListSlider
         data={laptopList}
         title="لپتاپ"
+        subTitle='لپتاپ و تجهیزات جانبی'
+
         pusher={dataPusher("categories/laptop/search/?", pushLaptop)}
       />
     </div>
@@ -88,7 +90,7 @@ export const getStaticProps = async () => {
   let laptopList = [];
   const fetchMobile = async () => {
     const response = await fetch(
-      "https://api.digikala.com/v1/categories/mobile/search/?page=1"
+      "https://api.digikala.com/v1/categories/mobile-phone/search/?page=1"
     );
     const data = await response.json();
     return data;

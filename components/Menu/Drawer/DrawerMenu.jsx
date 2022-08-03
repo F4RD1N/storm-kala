@@ -49,8 +49,7 @@ const DrawerMenu = ({ active, handler }) => {
           return (
             <Link key={item.id} href={item.url}>
               <a>
-              <Item title={item.title} icon={item.icon} />
-
+                <Item title={item.title} icon={item.icon} />
               </a>
             </Link>
           );
@@ -70,7 +69,16 @@ const DrawerMenu = ({ active, handler }) => {
         <HorizontalRuler />
         <Title>لینک های مفید</Title>
         {menu.links.map((item) => {
-          return <Item key={item.id} title={item.title} icon={item.icon} />;
+          return (
+            <a
+              key={item.id}
+              href={item.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Item title={item.title} icon={item.icon} />
+            </a>
+          );
         })}
       </Drawer>
     </Container>

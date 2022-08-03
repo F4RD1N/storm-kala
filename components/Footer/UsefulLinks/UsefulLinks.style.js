@@ -14,8 +14,10 @@ export const LinksTitle = styled.h2`
     font-weight: bold;
     margin-bottom: 1.5rem;
 `
-export const Link = styled.a`
+export const LinkItem = styled.a`
     color: ${props => props.theme.colors.textSecondary};
     margin-bottom: .8rem;
     font-size: .9rem;
+    cursor: pointer;
+    width: fit-content;
 `

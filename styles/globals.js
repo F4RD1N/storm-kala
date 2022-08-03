@@ -86,7 +86,7 @@ const GlobalStyles = createGlobalStyle`
   /* custom scrollbar */
 /* width */
 ::-webkit-scrollbar {
-  width: 3px;
+  width: 7px;
 }
 
 /* Track */
@@ -102,12 +102,6 @@ const GlobalStyles = createGlobalStyle`
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background-color: ${(props) => props.theme.colors.red}
-}
-
-@media ${props => props.theme.breakpoints.lg} {
-  ::-webkit-scrollbar {
-  width: 7px;
-}
 }
 
 

@@ -12,6 +12,7 @@ export const Container = styled(SectionCard)`
 export const Title = styled.h2`
   font-weight: bold;
   margin-bottom: 2rem;
+
 `;
 
 export const ItemContainer = styled.div`

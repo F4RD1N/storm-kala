@@ -3,7 +3,7 @@ export const Container = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
 `;

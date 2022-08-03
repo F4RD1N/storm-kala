@@ -6,10 +6,14 @@ export const Container = styled.section`
   gap: 1rem;
 `
 export const Honor = styled.div`
+margin-bottom: 1rem;
 `
-export const ImageContainer = styled.div`
+export const IconContainer = styled.div`
 display: flex;
 justify-content: center;
+font-size: 3.5rem;
+color: ${props => props.theme.colors.blue};
+margin-bottom: 1rem;
 `
 export const HonorTitle = styled.h3`
     text-align: center;

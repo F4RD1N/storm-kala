@@ -9,7 +9,8 @@ import {
   CodeContainer,
   CodeInput,
   AddButton,
-  CodeAlreadyUsed
+  CodeAlreadyUsed,
+  RemoveCode,
 } from "./Discount.style";
 
 //state & logic
@@ -18,7 +19,7 @@ import { useCartState, useDiscount } from "../../../../hooks";
 const Discount = () => {
   const [toggle, setToggle] = useState(false);
 
-  const { discountHandler, discountCode, inputHandler } = useDiscount();
+  const { discountHandler, discountCode, inputHandler, clearDiscountHandler } = useDiscount();
   const { discount } = useCartState();
 
   //focus input when add code button clicked
@@ -38,7 +39,7 @@ const Discount = () => {
 
       {toggle && (
         <CodeContainer>
-          {discount === 0 ?
+          {discount === 0 ? (
             <>
               <CodeInput
                 placeholder="از این کد استفاده کنید: F4RD1N"
@@ -48,8 +49,11 @@ const Discount = () => {
               />
               <AddButton onClick={discountHandler}>اعمال تخفیف</AddButton>
             </>
-            : <CodeAlreadyUsed>تخفیف اعمال شده است!</CodeAlreadyUsed>
-          }
+          ) : (
+              <CodeAlreadyUsed>
+                تخفیف اعمال شده است! <RemoveCode onClick={clearDiscountHandler}>حذف تخفیف</RemoveCode>
+              </CodeAlreadyUsed>
+          )}
         </CodeContainer>
       )}
     </Container>
