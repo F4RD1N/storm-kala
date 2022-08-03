@@ -5,6 +5,7 @@ const homePreset = (
     best_selling_products,
     main_categories,
     recommendation_sub_categories,
+    header_banners
   },
   mobileList,
   laptopList
@@ -143,6 +144,15 @@ const homePreset = (
         };
       }),
     ],
+    banners: [
+      ...header_banners.map(item => {
+        return {
+          id: item.id,
+          image: item.image,
+          title: item.title
+        }
+      })
+    ]
   };
 };
 

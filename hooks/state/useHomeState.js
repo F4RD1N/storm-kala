@@ -24,7 +24,7 @@ const useHomeState = () => {
       products: state.laptopList.products?.filter((v,i,a)=>a.findIndex(v2=>(v2.id===v.id))===i),
       pager: state.laptopList.pager
     },
-
+    banners: state.banners
   };
 };
 

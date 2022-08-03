@@ -9,6 +9,8 @@ export const Container = styled.div`
   margin-bottom: 2rem;
 `;
 
-export const ImageContainer = styled(GlobalCard)`
-  max-height: 230px;  
+export const ImageContainer = styled.div`
+  height: 230px;
+  border-radius: 5px;
+  overflow: hidden;
 `;
