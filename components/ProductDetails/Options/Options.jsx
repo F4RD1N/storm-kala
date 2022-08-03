@@ -8,6 +8,7 @@ import {
   ItemValue,
   HorizontalRuler,
   ContentDescription,
+  Content
 } from "./Options.style";
 
 //state
@@ -18,26 +19,24 @@ const Options = () => {
   return (
     <Container isVisible={options}>
       <Title>ویژگی ها</Title>
-
+      <Content>
       {options?.map((item) => {
         const { title, values } = item;
         return (
           <Item key={title}>
-            {title}:
-            {values.map((item) => (
-              <ItemValue key={item}>{item}</ItemValue>
-            ))}
+            {title}:<ItemValue key={item}>{values[values.length -1]}</ItemValue>
           </Item>
         );
       })}
-      {category?.content_description && (
+      </Content>
+      {/* {category?.content_description && (
         <>
           <HorizontalRuler />
           <ContentDescription>
             {category?.content_description}
           </ContentDescription>
         </>
-      )}
+      )} */}
     </Container>
   );
 };

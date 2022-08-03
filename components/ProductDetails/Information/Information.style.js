@@ -7,6 +7,12 @@ export const Container = styled(SectionCard)`
   position: relative;
   max-height: ${(props) => (props.showFull ? "" : "320px")};
   padding-bottom: 2rem;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    max-height: unset;
+    height: 100%;
+    overflow-y: scroll;
+  }
 `;
 
 export const Title = styled.h2`
@@ -35,3 +41,10 @@ export const ItemValue = styled.h3`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5; /* number of lines to show */
 `;
+
+
+export const More = styled.div`
+  @media ${(props) => props.theme.breakpoints.lg} {
+   display: none;
+  }
+`

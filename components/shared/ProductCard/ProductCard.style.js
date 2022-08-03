@@ -8,8 +8,17 @@ export const Container = styled.div`
   padding: 1.5rem 0.7rem;
   padding-bottom: 1rem;
   user-select: none;
-  height: 270px;
+  height: 225px;
   background-color: ${(props) => props.theme.colors.card};
+  @media ${(props) => props.theme.breakpoints['2xs']} {
+    height: 250px;
+  }
+  @media ${(props) => props.theme.breakpoints.xs} {
+    height: 270px;
+  }
+
+
+
 `;
 export const ImageContainer = styled.div`
   width: 100px;

@@ -7,6 +7,7 @@ export const Container = styled(SectionCard)`
   display: ${(props) => (props.isVisible ? "block" : "none")};
   position: relative;
   padding-bottom: 2.5rem;
+  margin-bottom: .5rem;
 `;
 
 export const Title = styled.h2`
@@ -18,6 +19,7 @@ export const Description = styled.p`
   margin: 0 0.5rem;
   font-weight: 300;
   overflow: hidden;
+  line-height: 1.8;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;

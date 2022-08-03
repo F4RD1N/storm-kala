@@ -11,24 +11,33 @@ import {
 
 //state
 import { useCartState } from "../../../hooks";
+//logic
+import { useCart } from "../../../hooks";
 //helpers
 import { convertPrice } from "../../../helpers";
 
-const NextButton = ({url, title = 'ادامه'}) => {
+const NextButton = ({ url, title = "ادامه" }) => {
   const { cartItems, total, discount } = useCartState();
-
+  const { clearHandler } = useCart({ id: "" });
   if (!cartItems.length) return;
 
+  const payHandler = () => {
+    if (title === "پرداخت") {
+      clearHandler()
+    }
+  };
   return (
     <Container>
       <Link href={`/checkout${url}`}>
         <a>
-          <HandleButton>{title}</HandleButton>
+          <HandleButton onClick={payHandler}>{title}</HandleButton>
         </a>
       </Link>
       <PriceContainer>
         <TotalTitle>جمع سبد خرید</TotalTitle>
-        <ProductPrice>{convertPrice(total - (total * discount))} تومان</ProductPrice>
+        <ProductPrice>
+          {convertPrice(total - total * discount)} تومان
+        </ProductPrice>
       </PriceContainer>
     </Container>
   );

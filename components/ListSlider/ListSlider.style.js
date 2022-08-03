@@ -17,6 +17,10 @@ export const SecTitle = styled.h3`
   margin-bottom: 1rem;
 `;
 
+export const Content = styled.div`
+
+`
+
 export const LoadMoreContainer = styled.div`
   height: 270px;
   display: flex;

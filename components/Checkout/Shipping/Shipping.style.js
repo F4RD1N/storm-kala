@@ -5,4 +5,25 @@ export const Container = styled.div`
   width: 100%;
   margin: auto;
   margin-top: 0.5rem;
+
+  
+  @media ${(props) => props.theme.breakpoints.sm} {
+    max-width: 85%;
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    max-width: 82%;
+  }
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    max-width: 70%;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+    max-width: 60%;
+  }
+
+  @media ${(props) => props.theme.breakpoints['2xl']} {
+    max-width: 50%;
+  }
 `;

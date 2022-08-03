@@ -13,6 +13,16 @@ const GlobalStyles = createGlobalStyle`
     /* font-size: 62.5%; */
     scroll-behavior: smooth;
     direction: rtl;
+    font-size: 13px;
+
+    @media ${(props) => props.theme.breakpoints["2xs"]} {
+    font-size: 14px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xs} {
+    font-size: 16px;
+  }
+
   }
   body {
     font-family: ${(props) => props.theme.fonts.main};

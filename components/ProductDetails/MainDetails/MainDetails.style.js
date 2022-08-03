@@ -4,6 +4,11 @@ import styled from "styled-components";
 import { SectionCard } from "../../../styles/shared";
 
 export const Container = styled(SectionCard)`
+@media ${(props) => props.theme.breakpoints.lg} {
+  height: 30%;
+  margin: 0;
+  border-bottom: .5rem solid ${props => props.theme.colors.natural};
+}
 `;
 
 export const ProductName = styled.h2`

@@ -10,14 +10,36 @@ export const Container = styled(SectionCard)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   margin: 1rem 0;
+  flex-direction: column-reverse;
+  gap: 0.5rem 0;
+  padding-top: 0.5rem;
+
+  @media ${(props) => props.theme.breakpoints["2xs"]} {
+    flex-direction: row;
+    gap: 0;
+    padding-top: 1rem;
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    margin: 0;
+    height: 20%;
+    box-shadow: none;
+    margin: 0;
+    flex-direction: row-reverse;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 `;
 
 export const AddButton = styled(GlobalButton)`
   font-size: 1rem;
   padding: 0.7rem 1.5rem;
-  min-width: 180px;
+  width: 130px;
+  @media ${(props) => props.theme.breakpoints.xs} {
+    width: 150px;
+  }
   ${(props) =>
     props.outStock &&
     `
@@ -57,14 +79,17 @@ export const HandleButtonsContainer = styled.div`
   color: #000;
   display: flex;
   align-items: center;
-  background-color: ${props => props.theme.col};
+  background-color: ${(props) => props.theme.col};
   justify-content: space-between;
-  gap: .5rem;
+  gap: 0.5rem;
   width: fit-content;
   border-radius: 5px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.08);
   padding: 0 1rem;
-  width: 140px;
+  width: 130px;
+  @media ${(props) => props.theme.breakpoints.xs} {
+    width: 150px;
+  }
 `;
 export const HandleButton = styled.button`
   border: none;

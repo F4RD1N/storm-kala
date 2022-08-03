@@ -4,7 +4,7 @@ import React from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 //Styled Components
-import { Container, Title } from "./Information.style";
+import { Container, Title, More } from "./Information.style";
 
 //Shared Styled Components
 import { ReadMore } from "../../../styles/shared";
@@ -33,9 +33,9 @@ const Information = () => {
       })}
 
       {information?.length > 4 && (
-        <ReadMore onClick={toggleHandler} showFull={toggle}>
-          {toggle ? "کمتر" : "بیشتر"} <AiOutlineArrowLeft />
-        </ReadMore>
+        <More><ReadMore onClick={toggleHandler} showFull={toggle}>
+          {toggle ? "بستن" : "بیشتر"} <AiOutlineArrowLeft />
+        </ReadMore></More>
       )}
     </Container>
   );

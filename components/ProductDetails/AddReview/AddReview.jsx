@@ -6,7 +6,7 @@ const AddReview = () => {
   return (
     <Container id="similar">
         <Title>دیدگاه خود را درباره این کالا بنویسید</Title>
-        <Add>افزودن دیدگاه</Add>
+        <Add>نوشتن</Add>
     </Container>
   )
 }

@@ -11,14 +11,24 @@ export const Container = styled(SectionCard)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   margin: 1rem 0;
+  flex-direction: column-reverse;
+  gap: 0.5rem 0;
+  padding-top: 0.5rem;
+  @media ${(props) => props.theme.breakpoints["2xs"]} {
+    flex-direction: row;
+    gap: 0;
+    padding-top: 1rem;
+  }
 `;
 
 export const HandleButton = styled(GlobalButton)`
   font-size: 1rem;
   padding: 0.7rem 1.5rem;
-  min-width: 180px;
+  width: 130px;
+  @media ${(props) => props.theme.breakpoints.xs} {
+    width: 150px;
+  }
 `;
 
 export const PriceContainer = styled.div`

@@ -14,7 +14,7 @@ const EmptyCart = () => {
       <Empty>
         <Icon>
           <BsCart />
-        </Icon>{" "}
+        </Icon>
         سبد شما خالی است!
       </Empty>
       <Link href="/">

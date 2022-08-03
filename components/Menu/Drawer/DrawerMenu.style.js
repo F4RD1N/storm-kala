@@ -23,12 +23,12 @@ export const Drawer = styled.div`
   &::-webkit-scrollbar {
     width: 3px;
   }
-  @media ${(props) => props.theme.breakpoints['2xs']} {
+  @media ${(props) => props.theme.breakpoints["2xs"]} {
     width: 90%;
   }
 
   @media ${(props) => props.theme.breakpoints.xs} {
-    width: 70%;
+    width: 75%;
   }
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 40%;
@@ -46,10 +46,9 @@ export const Drawer = styled.div`
     width: 25%;
   }
 
-  @media ${(props) => props.theme.breakpoints['2xl']} {
+  @media ${(props) => props.theme.breakpoints["2xl"]} {
     width: 20%;
   }
-  
 `;
 
 export const CloseDrawer = styled.div`

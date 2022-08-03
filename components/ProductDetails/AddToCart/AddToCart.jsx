@@ -38,7 +38,7 @@ const AddToCart = () => {
           onClick={addHandler}
           outStock={status !== "marketable" && true}
         >
-          {status !== "marketable" ? "اتمام موجودی" : "افزودن به سبد خرید"}
+          {status !== "marketable" ? "اتمام موجودی" : "افزودن به سبد"}
         </AddButton>
       ) : (
         <CartHandler data={useProductState}/>

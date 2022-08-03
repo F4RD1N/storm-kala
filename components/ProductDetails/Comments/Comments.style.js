@@ -6,6 +6,11 @@ import { SectionCard } from "../../../styles/shared";
 export const Container = styled(SectionCard)`
   max-height: 800px;
   overflow-y: scroll;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    max-height: unset;
+    height: 100%;
+  }
 `;
 
 export const Titlebar = styled.div`
@@ -31,9 +36,10 @@ export const IconContainer = styled.div`
 `;
 
 export const CommentContainer = styled.div`
-  margin: 0 1rem 2rem 1rem;
   border-bottom: 2px solid ${(props) => props.theme.colors.natural};
   padding: 0.5rem 0 0.5rem 0;
+  margin-bottom: 2rem;
+  width: 100%;
 `;
 export const CommentTitlebar = styled.div`
   margin-bottom: 1rem;
@@ -61,6 +67,15 @@ export const IsBuyer = styled.span`
 export const CommentTime = styled.h3`
   color: ${(props) => props.theme.colors.textSecondary};
   gap: 0.5rem;
+  display: none;
+  @media ${(props) => props.theme.breakpoints.xs} {
+    display: block;
+    font-size: 0.8rem;
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: block;
+    font-size: 0.9rem;
+  }
 `;
 export const Rate = styled.span`
   color: #fff;

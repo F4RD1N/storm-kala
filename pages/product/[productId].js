@@ -2,6 +2,13 @@ import React, { useEffect } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
+//Styled Components
+import {
+  Container,
+  SecondContainer,
+  Right,
+  Left,
+} from "../../components/ProductDetails/ProductDetails.style";
 //Components
 import {
   ImageSlider,
@@ -38,7 +45,7 @@ const ProductDetails = ({ productData }) => {
   useEffect(() => {
     dispatch(getProduct(productData));
     //cleanup product state after unmounting
-    return () => dispatch(getProduct({products:[], recommendations: []}))
+    return () => dispatch(getProduct({ products: [], recommendations: [] }));
   }, [router.query]);
 
   return (
@@ -47,14 +54,31 @@ const ProductDetails = ({ productData }) => {
         <title>{seo?.title}</title>
         <link rel="icon" href={seo?.image} />
       </Head>
-      <ImageSlider />
-      <MainDetails />
-      <Options />
+      <Container>
+        <Right>
+          <ImageSlider />
+        </Right>
+
+        <Left>
+          <MainDetails />
+          <Options />
+
+          <AddToCart />
+        </Left>
+      </Container>
       <Introduce />
+
+      <SecondContainer>
+        <Right>
       <Information />
-      <AddToCart />
-      <Comments pusher={dataPusher(`product/${id}/comments/?`, pushComments)}/>
-      <AddReview />
+
+        </Right>
+        <Left>
+
+      <Comments pusher={dataPusher(`product/${id}/comments/?`, pushComments)} />
+      {/* <AddReview /> */}
+        </Left>
+      </SecondContainer>
       <ListSlider data={recommended} title="کالا های مشابه" pusherLess={true} />
     </div>
   );

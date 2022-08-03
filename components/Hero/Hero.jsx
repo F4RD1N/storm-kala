@@ -35,8 +35,9 @@ const Hero = () => {
               <ImageContainer title={item.title}>
                 <Image
                   src={item.image}
-                  width={1280}
-                  height={720}
+                  placeholder='blur'
+                  blurDataURL={item.image}
+                  layout='fill'
                   objectFit="cover"
                 />
               </ImageContainer>

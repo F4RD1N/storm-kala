@@ -20,13 +20,13 @@ const MainDetails = () => {
   return (
     <Container>
       <ProductName>{mainDetails?.title}</ProductName>
-      <ColorsContainer isVisible={!mainDetails?.colors.length ? false : true}>
+      {/* <ColorsContainer isVisible={!mainDetails?.colors.length ? false : true}>
         رنگ:
         {mainDetails?.colors.map((item) => {
           const { id, hex_code } = item;
           return <Color key={id} color={hex_code} pressed={true} />;
         })}
-      </ColorsContainer>
+      </ColorsContainer> */}
       <CategoryContainer>
         دسته بندی:
         <Link href={`/category/${category?.code}`}>
