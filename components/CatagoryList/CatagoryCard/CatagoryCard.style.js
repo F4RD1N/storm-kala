@@ -8,7 +8,6 @@ export const Container = styled.div`
   gap: 0.5rem;
   padding: 1rem;
   align-items: center;
-  justify-content: space-between;
   transition: all ${(props) => props.theme.utilities.transition};
   cursor: pointer;
 
@@ -22,5 +21,5 @@ export const ImageContainer = styled.div``;
 
 export const Title = styled.h2`
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 `;

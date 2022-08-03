@@ -82,7 +82,6 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.6;
   }
 
-
   /* custom scrollbar */
 /* width */
 ::-webkit-scrollbar {

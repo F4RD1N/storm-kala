@@ -46,7 +46,7 @@ const Results = ({ state }) => {
           );
         })}
       </ResultsContainer>
-       {!pager && !loading && <BaseStatement>دنبال چه محصولی میگردی؟!</BaseStatement>}
+       {!pager && !loading && !error && <BaseStatement>دنبال چه محصولی میگردی؟!</BaseStatement>}
       {!products.length && loading ? <Loading>کمی صبر کنید ...</Loading> : ""}
       {products.length ? (
         pager?.current_page < pager?.total_pages ? (
@@ -63,7 +63,7 @@ const Results = ({ state }) => {
       ) : (
         ""
       )}
-      {error && <Error>{error}</Error>}
+      {error && <Error>مشکلی در ارتباط با سرور بیش آمد!</Error>}
     </>
   );
 };

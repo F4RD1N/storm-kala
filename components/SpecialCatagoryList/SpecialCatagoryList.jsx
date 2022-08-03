@@ -21,9 +21,35 @@ const SpecialList = () => {
     <Container>
       <Swiper
         spaceBetween={3}
-        slidesPerView={1.1}
-        freeMode={false}
+        slidesPerView={.5}
+        freeMode={true}
         modules={[FreeMode]}
+        breakpoints={{
+          280: {
+            slidesPerView: .8,
+          },
+          320: {
+            slidesPerView: .9,
+          },
+          440: {
+            slidesPerView: 1.2,
+          },
+          640: {
+            slidesPerView: 1.6,
+          },
+          768: {
+            slidesPerView: 1.75,
+          },
+          1024: {
+            slidesPerView: 2.1,
+          },
+          1280: {
+            slidesPerView: 2.6,
+          },
+          1660: {
+            slidesPerView: 3.4,
+          },
+        }}
       >
         {recommendationSubCategories?.map((category) => {
           return (

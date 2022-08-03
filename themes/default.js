@@ -15,7 +15,7 @@ export default {
     red: "#FC185A",
     gray: "#efefef",
     blue: "#3A97FF",
-    card: '#fff'
+    card: "#fff",
   },
   utilities: {
     radius: {
@@ -30,6 +30,8 @@ export default {
     translate: "1px",
   },
   breakpoints: {
+    "2xs": "screen and (min-width: 280px)",
+    xs: "screen and (min-width: 320px)",
     sm: "screen and (min-width: 640px)",
     md: "screen and (min-width: 768px)",
     lg: "screen and (min-width: 1024px)",

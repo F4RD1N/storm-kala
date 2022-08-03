@@ -8,7 +8,8 @@ export const Container = styled.section`
   margin: 0;
   padding: 1rem;
   text-align: center;
-  font-size: .9rem;
-  /* background-color: ${props => props.theme.colors.natural}; */
-  border-top: 3px solid ${props => props.theme.colors.natural};
+  font-size: 0.9rem;
+  /* background-color: ${(props) => props.theme.colors.natural}; */
+  border-top: 3px solid ${(props) => props.theme.colors.natural};
+  line-height: 1.5;
 `;

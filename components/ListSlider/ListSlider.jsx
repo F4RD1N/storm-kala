@@ -23,13 +23,38 @@ const ListSlider = ({ data, title, subTitle, pusher, pusherLess }) => {
       <SecTitle>{subTitle}</SecTitle>
       <Swiper
         spaceBetween={3}
-        slidesPerView={2.6}
+        slidesPerView={1.4}
         freeMode={true}
         modules={[FreeMode]}
+        breakpoints={{
+          280: {
+            slidesPerView: 1.8,
+          },
+          320: {
+            slidesPerView: 2.25,
+          },
+          440: {
+            slidesPerView: 2.6,
+          },
+          640: {
+            slidesPerView: 3.5,
+          },
+          768: {
+            slidesPerView: 4.2,
+          },
+          1024: {
+            slidesPerView: 5.2,
+          },
+          1280: {
+            slidesPerView: 6.5,
+          },
+          1660: {
+            slidesPerView: 7.2,
+          },
+        }}
       >
-        {data.products &&
-          data.products.length &&
-          data.products.map((product) => {
+        {data?.products?.length &&
+          data?.products?.map((product) => {
             const { id, status } = product;
             if (status !== "marketable") return;
 
