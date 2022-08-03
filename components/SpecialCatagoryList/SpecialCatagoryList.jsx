@@ -31,6 +31,9 @@ const SpecialList = () => {
           320: {
             slidesPerView: .9,
           },
+          380: {
+            slidesPerView: 1,
+          },
           440: {
             slidesPerView: 1.2,
           },

@@ -14,7 +14,7 @@ export const Container = styled.section`
 export const Drawer = styled.div`
   position: relative;
   height: 100%;
-  width: 65%;
+  width: 100%;
   padding: 1rem;
   background-color: #fff;
   transform: translateX(${(props) => (props.active ? "0%" : "100%")});
@@ -23,6 +23,33 @@ export const Drawer = styled.div`
   &::-webkit-scrollbar {
     width: 3px;
   }
+  @media ${(props) => props.theme.breakpoints['2xs']} {
+    width: 90%;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xs} {
+    width: 70%;
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 40%;
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    width: 35%;
+  }
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    width: 30%;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+    width: 25%;
+  }
+
+  @media ${(props) => props.theme.breakpoints['2xl']} {
+    width: 20%;
+  }
+  
 `;
 
 export const CloseDrawer = styled.div`

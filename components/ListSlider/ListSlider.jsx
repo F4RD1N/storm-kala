@@ -33,8 +33,11 @@ const ListSlider = ({ data, title, subTitle, pusher, pusherLess }) => {
           320: {
             slidesPerView: 2.25,
           },
-          440: {
+          380: {
             slidesPerView: 2.6,
+          },
+          440: {
+            slidesPerView: 3.1,
           },
           640: {
             slidesPerView: 3.5,
