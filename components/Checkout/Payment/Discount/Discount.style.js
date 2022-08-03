@@ -6,7 +6,7 @@ import { GlobalButton } from "../../../../styles/shared";
 export const Container = styled.section`
   background-color: ${(props) => props.theme.colors.card};
   padding: 1rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
   height: ${(props) => (props.toggle ? "120px" : "50px")};
 `;
 export const Titlebar = styled.div`

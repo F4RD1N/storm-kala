@@ -11,6 +11,11 @@ export const Title = styled.h2`
   margin-bottom: 2rem;
 `;
 
+export const Content = styled.div`
+  @media ${(props) => props.theme.breakpoints.lg} {
+    column-count: 2;
+  }
+`;
 export const ClearCart = styled.span`
   position: absolute;
   font-size: 0.9rem;
@@ -21,4 +26,3 @@ export const ClearCart = styled.span`
   margin: 1rem;
   cursor: pointer;
 `;
-

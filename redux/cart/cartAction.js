@@ -38,17 +38,22 @@ export const clearCart = () => {
   };
 };
 
-
 export const broadCastCart = (data) => {
   return {
-    type: 'BROADCAST_CART',
-    payload: data
-  }
-}
+    type: "BROADCAST_CART",
+    payload: data,
+  };
+};
 
 export const setDiscount = (value) => {
   return {
-    type: 'SET_DISCOUNT',
-    payload: value
-  }
-}
+    type: "SET_DISCOUNT",
+    payload: value,
+  };
+};
+
+export const setCheckout = () => {
+  return {
+    type: "SET_CHECKOUT",
+  };
+};

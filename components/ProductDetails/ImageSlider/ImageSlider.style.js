@@ -5,7 +5,7 @@ import { SectionCard } from "../../../styles/shared";
 
 export const Container = styled(SectionCard)`
   margin: 0;
-  padding: .5rem;
+  padding: 0.5rem;
   @media ${(props) => props.theme.breakpoints.lg} {
     height: 100%;
   }

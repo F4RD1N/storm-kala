@@ -6,7 +6,11 @@ export const OrderContainer = styled.section`
   padding: 1rem;
   position: relative;
   padding-bottom: 4rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    border-left: .5rem solid ${props => props.theme.colors.natural};
+  }
 `;
 export const OrderTitle = styled.h3`
   font-size: 0.9rem;

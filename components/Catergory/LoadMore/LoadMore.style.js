@@ -4,7 +4,7 @@ import { GlobalButton } from "../../../styles/shared";
 
 export const Container = styled(GlobalButton)`
   width: 100%;
-  margin: 1rem 0;
+  margin: .5rem 0 3rem;
   background-color: ${(props) => props.pressed ? props.theme.colors.primary : props.theme.colors.card};
   color: ${(props) => props.theme.colors.textPrimary};
   font-size: 1rem;

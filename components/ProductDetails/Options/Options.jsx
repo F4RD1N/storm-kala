@@ -24,7 +24,10 @@ const Options = () => {
         const { title, values } = item;
         return (
           <Item key={title}>
-            {title}:<ItemValue key={item}>{values[values.length -1]}</ItemValue>
+            {title}:
+            {values.map((item) => (
+              <ItemValue key={item}>{item}</ItemValue>
+            ))}
           </Item>
         );
       })}

@@ -7,3 +7,4 @@ export { default as PopularBrandsList } from "./PopularBrandsList/PopularBrandsL
 export { default as Footer } from "./Footer/Footer";
 export { default as Loading } from "./Loading/Loading";
 export {default as DrawerMenu} from './Menu/Drawer/DrawerMenu'
+export {default as SubHeader} from './Menu/SubHeader/SubHeader'

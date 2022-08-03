@@ -2,8 +2,8 @@ const initialState = {
   cartItems: [],
   itemsCounter: 0,
   total: 0,
-  discount: 0
-  //   checkout: false,
+  discount: 0,
+  checkout: false,
 };
 
 const cartReducer = (state = initialState, action) => {
@@ -51,17 +51,23 @@ const cartReducer = (state = initialState, action) => {
         cartItems: [],
         itemsCounter: 0,
         total: 0,
-        discount: 0
+        discount: 0,
+        checkout: false,
       };
-    case 'BROADCAST_CART':
+    case "BROADCAST_CART":
       return action.payload;
 
-    case 'SET_DISCOUNT':
+    case "SET_DISCOUNT":
       return {
         ...state,
-        discount: action.payload
-      }
-      
+        discount: action.payload,
+      };
+    case "SET_CHECKOUT":
+      return {
+        ...state,
+        checkout: true,
+      };
+
     default:
       return state;
   }

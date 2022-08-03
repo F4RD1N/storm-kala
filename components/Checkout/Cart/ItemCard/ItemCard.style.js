@@ -8,17 +8,23 @@ export const Container = styled.div`
   padding-bottom: 0.5rem;
   border-bottom: 2px solid ${(props) => props.theme.colors.natural};
   gap: 1rem;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const RightContainer = styled.div`
-display: flex;
-max-width: 50%;
-align-items: center;
-gap: 0 1rem;
-`
+  display: flex;
+  max-width: 50%;
+  align-items: center;
+  gap: 0 1rem;
+`;
 
 export const ImageContainer = styled.div`
-width: 50px;
+  width: 50px;
 `;
 
 export const DetailsContainer = styled.div`
@@ -34,6 +40,6 @@ export const Title = styled.h3`
 `;
 
 export const Price = styled.h3`
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: bold;
-`
+`;

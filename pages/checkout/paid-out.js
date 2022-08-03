@@ -1,12 +1,31 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
 
+//Styled Components
+import { Container } from "../../components/Checkout/PaidOut/PaidOut.style";
+
+//state and logic
+import { useCartState, useCart } from "../../hooks";
 const PaidOut = () => {
-  return (
-    <center style={{margin: '2rem 0', fontSize: '1.5rem'}}>پرداخت انجام شد!</center>
-  )
-}
+  const { clearHandler } = useCart({ id: "" });
+  const { checkout } = useCartState();
+  const router = useRouter();
 
-export default PaidOut
+  //check if checked out
+  useEffect(() => {
+    if (checkout) {
+      setTimeout(() => {
+        router.replace("/");
+        clearHandler();
+      }, 1000);
+    } else router.replace("/");
+    return () => {
+      if (checkout) clearHandler();
+    };
+  }, []);
 
+  if (!checkout) return;
+  return <Container>پرداخت با موفقیت انجام شد!</Container>;
+};
 
-  
+export default PaidOut;

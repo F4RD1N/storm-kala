@@ -18,12 +18,12 @@ import { convertPrice } from "../../../helpers";
 
 const NextButton = ({ url, title = "ادامه" }) => {
   const { cartItems, total, discount } = useCartState();
-  const { clearHandler } = useCart({ id: "" });
+  const { checkoutHanlder } = useCart({ id: "" });
   if (!cartItems.length) return;
 
   const payHandler = () => {
     if (title === "پرداخت") {
-      clearHandler()
+      checkoutHanlder()
     }
   };
   return (

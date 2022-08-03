@@ -2,7 +2,11 @@ import React from "react";
 import Head from "next/head";
 
 //Styled Components
-import { Container, Title } from "../../components/Checkout/Cart/Cart.style";
+import {
+  Container,
+  Title,
+  Content,
+} from "../../components/Checkout/Cart/Cart.style";
 //Components
 import { Items } from "../../components/Checkout/Cart";
 import { NextButton } from "../../components/Checkout";
@@ -15,9 +19,11 @@ const Cart = () => {
       </Head>
       <Container>
         <Title>سبد خرید شما</Title>
-        <Items />
+        <Content>
+          <Items />
+        </Content>
       </Container>
-        <NextButton url='/shipping'/>
+      <NextButton url="/shipping" />
     </div>
   );
 };

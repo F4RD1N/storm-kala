@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
-import { Header, Footer, DrawerMenu } from "../components";
+import { Header, Footer, DrawerMenu, SubHeader } from "../components";
 import { Container } from "./Layout.style";
 
 const Layout = ({ children }) => {
@@ -19,6 +19,7 @@ const Layout = ({ children }) => {
     <Container>
       <Header drawerHandler={drawerHandler} />
       <DrawerMenu active={toggleDrawer} handler={drawerHandler} />
+      {/* <SubHeader /> */}
       <main>{children}</main>
       <Footer />
     </Container>

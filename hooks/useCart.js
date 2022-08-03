@@ -8,6 +8,7 @@ import {
   removeItem,
   clearCart,
   broadCastCart,
+  setCheckout
 } from "../redux/cart/cartAction";
 
 //state
@@ -20,7 +21,7 @@ const useCart = (product) => {
   const [itemQuantity, setItemQuantity] = useState(0);
   const [orderLimit, setOrderLimit] = useState(1);
   const dispatch = useDispatch();
-  const { cartItems, itemsCounter, total, discount } = useCartState();
+  const { cartItems, itemsCounter, total, discount, checkout } = useCartState();
   const { id, price, mainDetails, images, status } = product;
 
   //create a preset of data to pushin into redux store
@@ -38,7 +39,7 @@ const useCart = (product) => {
   
   useEffect(() => {
     const cartChannel = new BroadcastChannel("cart");
-    cartChannel.postMessage({ cartItems, itemsCounter, total, discount });
+    cartChannel.postMessage({ cartItems, itemsCounter, total, discount, checkout });
     cartChannel.onmessage = (msg) => {
       dispatch(broadCastCart(msg));
       console.log('first')
@@ -81,12 +82,17 @@ const useCart = (product) => {
     setPressed((currentValue) => currentValue + 1);
   };
 
+  const checkoutHanlder = () => {
+    dispatch(setCheckout())
+  }
+
   return {
     addHandler,
     increaseHandler,
     decreaseHandler,
     removeHanlder,
     clearHandler,
+    checkoutHanlder,
     isItemExist,
     itemQuantity,
     orderLimit,

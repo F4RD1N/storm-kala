@@ -14,6 +14,7 @@ export default {
     border: "#D9D9D9",
     red: "#FC185A",
     gray: "#efefef",
+    graylower: "rgba(210,214,222)",
     blue: "#3A97FF",
     card: "#fff",
   },

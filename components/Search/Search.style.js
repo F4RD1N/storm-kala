@@ -1,16 +1,14 @@
 import styled from "styled-components";
 //shared
 import { GlobalButton } from "../../styles/shared";
-export const Container = styled.section`
-`;
+export const Container = styled.section``;
 
 export const ResultsContainer = styled.div`
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 0.2rem;
+  gap: 0.3rem;
 
-  
   @media ${(props) => props.theme.breakpoints.xs} {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -107,7 +105,7 @@ export const IconContainer = styled.div`
 
 export const LoadMoreButton = styled(GlobalButton)`
   width: 100%;
-  margin: 1rem 0;
+  margin: .5rem 0;
   background-color: ${(props) =>
     props.pressed ? props.theme.colors.primary : props.theme.colors.card};
   color: ${(props) => props.theme.colors.textPrimary};
@@ -115,6 +113,7 @@ export const LoadMoreButton = styled(GlobalButton)`
   height: 60px;
   transition: all 100ms linear;
   cursor: pointer;
+  box-shadow: none;
 `;
 
 export const Loading = styled.span`
@@ -135,6 +134,6 @@ export const BaseStatement = styled.span`
   display: block;
   margin-top: 1rem;
   text-align: center;
-`
+`;
 
-export const EndOfList = styled(Loading)``
+export const EndOfList = styled(Loading)``;

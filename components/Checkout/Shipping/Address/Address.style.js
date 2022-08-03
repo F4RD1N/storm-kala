@@ -4,7 +4,7 @@ export const AddressSection = styled.section`
   background-color: ${(props) => props.theme.colors.card};
   padding: 1rem 1rem 2rem;
   position: relative;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const AddressTitle = styled.h3`

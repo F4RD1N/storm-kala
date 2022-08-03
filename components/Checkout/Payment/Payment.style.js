@@ -15,14 +15,15 @@ export const Container = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.lg} {
-    max-width: 70%;
+    max-width: 79%;
+    margin-top: 8rem;
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
     max-width: 60%;
   }
 
-  @media ${(props) => props.theme.breakpoints['2xl']} {
+  @media ${(props) => props.theme.breakpoints["2xl"]} {
     max-width: 50%;
   }
 `;

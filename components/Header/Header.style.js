@@ -8,6 +8,10 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
+
+  /* @media ${(props) => props.theme.breakpoints.lg} {
+    margin-bottom: 0;
+  } */
 `;
 
 export const IconContainer = styled.div`

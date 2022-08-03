@@ -20,6 +20,13 @@ export const Container = styled(SectionCard)`
     gap: 0;
     padding-top: 1rem;
   }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    flex-direction: row-reverse;
+    margin: 0;
+    box-shadow: none;
+    height: 35%;
+    position: unset;
+  }
 `;
 
 export const HandleButton = styled(GlobalButton)`

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
   background-color: ${(props) => props.theme.colors.card};
   padding: 1rem 1rem .5rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const Title = styled.h2`
