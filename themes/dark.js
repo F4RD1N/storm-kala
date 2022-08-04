@@ -1,7 +1,7 @@
-import light from "./light";
+import defaultTheme from './default'
 
 export default {
-    ...light,
+    ...defaultTheme,
     colors: {
       primary: "#1d4ed8",
       natural: "rgb(14,35,56)",
