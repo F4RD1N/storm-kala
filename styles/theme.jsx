@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 import { ThemeProvider } from "styled-components";
 
 import lightTheme from "../themes/light";

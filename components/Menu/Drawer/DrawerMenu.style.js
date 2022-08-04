@@ -4,21 +4,29 @@ export const Container = styled.section`
   position: fixed;
   top: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
   height: 100%;
   z-index: 30;
   transform: translateX(${(props) => (props.active ? "0%" : "100%")});
+  ${(props) =>
+    !props.active &&
+    `
+    background-color: transparent;
+    transition: transform 200ms linear;
+    pointer-events: none;
+  `}
 `;
 
 export const Drawer = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: ${props => props.theme.colors.card};
+  background-color: ${(props) => props.theme.colors.card};
   padding: 1rem;
   transform: translateX(${(props) => (props.active ? "0%" : "100%")});
   transition: transform 100ms linear;
+
   overflow-y: scroll;
   &::-webkit-scrollbar {
     width: 3px;
@@ -55,7 +63,7 @@ export const CloseDrawer = styled.div`
   position: absolute;
   left: 0;
   top: 0;
-  margin: 0.5rem;
+  margin: 1rem;
   padding: 0.5rem;
   font-size: 1.5rem;
   cursor: pointer;
@@ -64,7 +72,7 @@ export const CloseDrawer = styled.div`
 export const ThemeContaienr = styled(CloseDrawer)`
   left: unset;
   right: 0;
-  background-color: ${props => props.theme.colors.gray};
+  background-color: ${(props) => props.theme.colors.gray};
   border-radius: 50%;
   padding: 0;
   width: 40px;
@@ -72,7 +80,7 @@ export const ThemeContaienr = styled(CloseDrawer)`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 export const MainTitle = styled.h1`
   font-size: 1.9rem;
@@ -97,13 +105,13 @@ export const SearchInput = styled.input`
   border: none;
   outline: none;
   background-color: transparent;
-  color: ${props => props.theme.colors.graylower};
+  color: ${(props) => props.theme.colors.graylower};
 
   width: 100%;
   &::placeholder {
     font-family: ${(props) => props.theme.fonts.main};
     font-size: 0.8rem;
-    color: ${props => props.theme.colors.graylower};
+    color: ${(props) => props.theme.colors.graylower};
   }
 `;
 export const IconContainer = styled.div`

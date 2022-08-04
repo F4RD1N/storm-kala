@@ -10,7 +10,7 @@ const useTheme = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   const toggleTheme = () => {
-    setTheme((currentValue) => currentValue === 'light' ? 'dark' : 'light');
+    setTheme((currentValue) => (currentValue === "light" ? "dark" : "light"));
   };
 
   useEffect(() => {

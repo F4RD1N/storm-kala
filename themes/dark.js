@@ -11,7 +11,7 @@ export default {
       red: "#ef4444",
       gray: "rgb(14,35,56)",
       graylower: "rgba(210,214,222)",
-      buttonHover: '#374151',
+      buttonHover: '#1e40af',
       blue: "#fb923c",
       card: "rgb(27,52,77)",
     }

@@ -9,6 +9,7 @@ import {
   IconContainer,
   LoadMore,
   EndOfList,
+  EmptyComments
 } from "./Comments.style";
 
 //Icons
@@ -40,6 +41,9 @@ const Comments = ({ pusher }) => {
         </Suggestion>
       </Titlebar>
 
+      {
+        !comments?.comments?.length && <EmptyComments>دیدگاهی برای این محصول وجود ندارد!</EmptyComments>
+      }
       {comments?.comments?.map((item) => {
         const { id, user_name, body, created_at, is_buyer, rate } = item;
         return (

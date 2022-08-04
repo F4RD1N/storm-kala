@@ -119,3 +119,11 @@ export const EndOfList = styled.span`
   color: ${(props) => props.theme.colors.textSecondary};
   text-align: center;
 `;
+
+
+export const EmptyComments = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+`

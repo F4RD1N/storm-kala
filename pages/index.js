@@ -54,6 +54,14 @@ const Home = ({ homeData }) => {
         pusher={dataPusher("incredible-offers/products/?", pushIncredible)}
       />
       <ListSlider
+        data={mobileList}
+        title="موبایل"
+        pusher={dataPusher("categories/mobile-phone/search/?", pushMobile)}
+      />
+      <CatagoryList />
+      <SpecialCatagoryList />
+      {/* <PopularBrandsList /> */}
+      <ListSlider
         data={bestSelling}
         title="محبوب ترین ها"
         pusher={dataPusher(
@@ -61,19 +69,10 @@ const Home = ({ homeData }) => {
           pushBestSelling
         )}
       />
-      <CatagoryList />
-      <SpecialCatagoryList />
-      {/* <PopularBrandsList /> */}
-      <ListSlider
-        data={mobileList}
-        title="موبایل"
-        pusher={dataPusher("categories/mobile-phone/search/?", pushMobile)}
-      />
       <ListSlider
         data={laptopList}
         title="لپتاپ"
-        subTitle='لپتاپ و تجهیزات جانبی'
-
+        subTitle="لپتاپ و تجهیزات جانبی"
         pusher={dataPusher("categories/laptop/search/?", pushLaptop)}
       />
     </div>

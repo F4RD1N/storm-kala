@@ -27,8 +27,12 @@ import { menu } from "../../../constants";
 //logic
 import { useTheme } from "../../../hooks";
 
+//state
+import { useConfigState } from "../../../hooks";
+
 const DrawerMenu = ({ active, handler }) => {
-  const {toggleTheme, getTheme} = useTheme()
+  const { toggleTheme } = useTheme();
+  const { theme } = useConfigState();
   //prevent background scroll when drawer is open!
   useEffect(() => {
     if (active) {
@@ -50,7 +54,7 @@ const DrawerMenu = ({ active, handler }) => {
         </CloseDrawer>
 
         <ThemeContaienr onClick={toggleTheme}>
-          <MdDarkMode />
+          {theme === 'light' ? <MdDarkMode /> : <MdLightMode />}
         </ThemeContaienr>
         <MainTitle>StormKala</MainTitle>
         <Input />
