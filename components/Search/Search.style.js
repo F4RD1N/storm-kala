@@ -114,7 +114,7 @@ export const LoadMoreButton = styled(GlobalButton)`
   color: ${(props) => props.theme.colors.textPrimary};
   font-size: 1rem;
   height: 60px;
-  transition: all 100ms linear;
+  transition: all ${props => props.theme.utilities.transition};
   cursor: pointer;
   box-shadow: none;
 

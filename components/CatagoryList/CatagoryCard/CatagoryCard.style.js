@@ -12,12 +12,12 @@ export const Container = styled.div`
   cursor: pointer;
 
   &:hover {
-    /* background-color: ${(props) => props.theme.colors.red};
-    color: #fff; */
+
     box-shadow: ${props => props.theme.utilities.shadow.card};
   }
 `;
-export const ImageContainer = styled.div``;
+export const ImageContainer = styled.div`
+`;
 
 export const Title = styled.h2`
   text-align: center;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const Container = styled.div`
   padding: 1rem;
-  background-color: #fff;
+  background-color:${props => props.theme.colors.card};
   position: relative;
   height: 180px;
   display: flex;

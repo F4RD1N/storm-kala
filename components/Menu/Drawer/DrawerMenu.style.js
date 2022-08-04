@@ -25,7 +25,7 @@ export const Drawer = styled.div`
   background-color: ${(props) => props.theme.colors.card};
   padding: 1rem;
   transform: translateX(${(props) => (props.active ? "0%" : "100%")});
-  transition: transform 100ms linear;
+  transition: transform ${props => props.theme.utilities.transition};
 
   overflow-y: scroll;
   &::-webkit-scrollbar {

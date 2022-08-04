@@ -10,6 +10,7 @@ import {
   Description,
   BuyButton,
   LeftContainer,
+  ImageContainer
 } from "./SpecialCard.style";
 
 //Images
@@ -28,12 +29,14 @@ const SpecialCard = ({ category }) => {
         </Link>
       </RightContainer>
       <LeftContainer>
+        <ImageContainer>
         <Image
           src={top_product_image}
-          width={60}
-          height={60}
-          objectFit="cover"
+          width={70}
+          height={70}
+          objectFit="contain"
         />
+        </ImageContainer>
       </LeftContainer>
     </Container>
   );

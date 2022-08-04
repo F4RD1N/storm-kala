@@ -11,7 +11,7 @@ export const Container = styled(GlobalButton)`
   cursor: pointer;
   overflow: hidden;
   height: 60px;
-  transition: all 100ms linear;
+  transition: all ${props => props.theme.utilities.transition};
   box-shadow: none;
   &:hover {
     background-color: ${props => props.theme.colors.primary};

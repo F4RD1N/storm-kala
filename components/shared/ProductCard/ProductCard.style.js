@@ -26,6 +26,8 @@ export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
 `;
 
 export const ProductName = styled.h3`

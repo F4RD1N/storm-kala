@@ -10,7 +10,7 @@ const LoadMoreButton = styled.button`
   align-items: center;
   border-radius: ${(props) => props.theme.utilities.radius.button};
   box-shadow: ${(props) => props.theme.utilities.shadow.button};
-  transition: background-color 100ms linear;
+  transition: background-color ${props => props.theme.utilities.transition};
   cursor: pointer;
   &:hover {
     background-color : ${props => props.theme.colors.buttonHover};
