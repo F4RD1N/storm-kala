@@ -21,7 +21,7 @@ const PaymentType = () => {
       <Title>انتخاب روش پرداخت</Title>
 
       <MethodContainer for="credit">
-        <Radio type="radio" name="method" id="credit"/>
+        <Radio type="radio" name="method" id="credit" checked/>
         <IconContainer>
           <BsCreditCard />
         </IconContainer>

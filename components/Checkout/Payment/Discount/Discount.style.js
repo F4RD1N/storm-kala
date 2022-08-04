@@ -40,6 +40,13 @@ export const CodeInput = styled.input`
   width: 60%;
   border-radius: 5px;
   height: 40px;
+  color: ${(props) => props.theme.colors.graylower};
+
+  &::placeholder {
+    font-family: ${(props) => props.theme.fonts.main};
+    font-size: 0.8rem;
+    color: ${(props) => props.theme.colors.graylower};
+  }
 `;
 
 export const AddButton = styled(GlobalButton)`
@@ -53,10 +60,10 @@ export const CodeAlreadyUsed = styled.span`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 `;
 
 export const RemoveCode = styled.span`
-    color: ${props => props.theme.colors.red};
-    cursor: pointer;
+  color: ${(props) => props.theme.colors.red};
+  cursor: pointer;
 `;

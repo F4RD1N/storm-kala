@@ -23,7 +23,7 @@ export const ItemsContainer = styled.div`
     margin: 0 auto;
   }
 
-  @media ${(props) => props.theme.breakpoints['2xl']} {
+  @media ${(props) => props.theme.breakpoints["2xl"]} {
     max-width: 50%;
   }
 `;
@@ -34,9 +34,10 @@ export const Item = styled.div`
   align-items: center;
   gap: 0.5rem;
   font-size: ${(props) => (props.isMain ? "1.2rem" : "0.9rem")};
-  font-weight: ${(props) => (props.isMain ? "bold" : "")};
   color: ${(props) =>
     props.isMain ? props.theme.colors.blue : props.theme.colors.textSecondary};
 `;
-export const ItemTitle = styled.h3``;
+export const ItemTitle = styled.h3`
+  color: inherit;
+`;
 export const IconContainer = styled.div``;

@@ -22,10 +22,10 @@ const Address = () => {
         <IconContainer>
           <HiOutlineLocationMarker />
         </IconContainer>
-        <AddressValue>خ. ملا رضا، خ. توحید</AddressValue>
+        <AddressValue>جاده قدیم فتح، سه راه شهریار، بعد از سعید آباد</AddressValue>
       </AddressContainer>
 
-      <ChangeAddress>تغییر | ویرایش</ChangeAddress>
+      <ChangeAddress onClick={() => alert('فعلا در دسترس نیست!')}>تغییر | ویرایش</ChangeAddress>
     </AddressSection>
   );
 };
