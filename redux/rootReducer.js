@@ -8,6 +8,7 @@ import homeReducer from "./home/homeReducer";
 import searchReducer from "./search/searchReducer";
 import cartReducer from "./cart/cartReducer";
 import categoryReducer from './category/categoryReducer'
+import configReducer from './config/configReducer'
 const persistConfig = {
   key: "cart",
   storage,
@@ -20,7 +21,8 @@ const rootReducer = combineReducers({
   homeState: homeReducer,
   searchState: searchReducer,
   cartState: persistedReducer,
-  categoryState: categoryReducer
+  categoryState: categoryReducer,
+  configState: configReducer
 });
 
 export default rootReducer;

@@ -13,6 +13,8 @@ export const Container = styled(GlobalButton)`
   height: 60px;
   transition: all 100ms linear;
   box-shadow: none;
-
+  &:hover {
+    background-color: ${props => props.theme.colors.primary};
+  }
 `;
 

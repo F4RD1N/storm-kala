@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #fff;
+  background-color: ${props => props.theme.colors.card};
   user-select: none;
   display: flex;
   flex-direction: column;

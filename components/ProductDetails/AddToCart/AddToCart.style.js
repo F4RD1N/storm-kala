@@ -76,7 +76,7 @@ export const GoToSimilarSection = styled.a`
 `;
 
 export const HandleButtonsContainer = styled.div`
-  color: #000;
+  color: ${props => props.theme.colors.textPrimary};
   display: flex;
   align-items: center;
   background-color: ${(props) => props.theme.col};

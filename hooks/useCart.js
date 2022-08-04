@@ -37,15 +37,15 @@ const useCart = (product) => {
   //broadcast channel
   const [pressed, setPressed] = useState(0);
   
-  useEffect(() => {
-    const cartChannel = new BroadcastChannel("cart");
-    cartChannel.postMessage({ cartItems, itemsCounter, total, discount, checkout });
-    cartChannel.onmessage = (msg) => {
-      dispatch(broadCastCart(msg));
-      console.log('first')
-    };
-    return async () => await cartChannel.close();
-  }, [pressed]);
+  // useEffect(() => {
+  //   const cartChannel = new BroadcastChannel("cart");
+  //   cartChannel.postMessage({ cartItems, itemsCounter, total, discount, checkout });
+  //   cartChannel.onmessage = (msg) => {
+  //     dispatch(broadCastCart(msg));
+  //     console.log('first')
+  //   };
+  //   return async () => await cartChannel.close();
+  // }, [pressed]);
 
   useEffect(() => {
     //check if already exists in the store and if exists, then dont push it again!

@@ -81,7 +81,7 @@ export const InputContainer = styled.div`
   font-size: 1.4rem;
   color: ${(props) => props.theme.colors.textPrimary};
   gap: 0.5rem;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.card};
   padding: 1rem;
   min-width: 70%;
   border-radius: 2px;
@@ -92,9 +92,12 @@ export const Input = styled.input`
   outline: none;
   background-color: transparent;
   width: 100%;
+  color: ${(props) => props.theme.colors.graylower};
+
   &::placeholder {
     font-family: ${(props) => props.theme.fonts.main};
     font-size: 0.9rem;
+    color: ${(props) => props.theme.colors.graylower};
   }
 `;
 
@@ -105,7 +108,7 @@ export const IconContainer = styled.div`
 
 export const LoadMoreButton = styled(GlobalButton)`
   width: 100%;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   background-color: ${(props) =>
     props.pressed ? props.theme.colors.primary : props.theme.colors.card};
   color: ${(props) => props.theme.colors.textPrimary};
@@ -114,6 +117,10 @@ export const LoadMoreButton = styled(GlobalButton)`
   transition: all 100ms linear;
   cursor: pointer;
   box-shadow: none;
+
+  &:hover {
+    background-color: ${props => props.theme.colors.primary};
+  }
 `;
 
 export const Loading = styled.span`

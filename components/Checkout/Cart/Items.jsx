@@ -1,7 +1,6 @@
 import React from "react";
 //Styled Components
-import { ClearCart } from "./Cart.style";
-
+import { ClearCart, Content } from "./Cart.style";
 
 //Components
 import ItemCard from "./ItemCard/ItemCard";
@@ -11,7 +10,7 @@ import EmptyCart from "./EmptyCart/EmptyCart";
 import { useCart, useCartState } from "../../../hooks";
 
 const Items = () => {
-  const { clearHandler } = useCart({ id: '' });
+  const { clearHandler } = useCart({ id: "" });
   const { cartItems } = useCartState();
 
   //check if there is no data in Cart
@@ -19,9 +18,11 @@ const Items = () => {
 
   return (
     <>
-      {cartItems?.map((item) => {
-        return <ItemCard key={item.id} data={item} />;
-      })}
+      <Content>
+        {cartItems?.map((item) => {
+          return <ItemCard key={item.id} data={item} />;
+        })}
+      </Content>
 
       <ClearCart onClick={clearHandler}>خالی کردن سبد</ClearCart>
     </>

@@ -6,6 +6,7 @@ import {
   Container,
   Drawer,
   CloseDrawer,
+  ThemeContaienr,
   MainTitle,
   HorizontalRuler,
   Title,
@@ -13,6 +14,7 @@ import {
 
 //Icons
 import { IoMdClose } from "react-icons/io";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 //Components
 import Input from "./Input";
@@ -21,11 +23,16 @@ import DropDown from "./DropDown/DropDown";
 
 //Constants
 import { menu } from "../../../constants";
+
+//logic
+import { useTheme } from "../../../hooks";
+
 const DrawerMenu = ({ active, handler }) => {
+  const {toggleTheme, getTheme} = useTheme()
   //prevent background scroll when drawer is open!
   useEffect(() => {
     if (active) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
     } else document.body.style.overflow = "unset";
   }, [active]);
 
@@ -41,6 +48,10 @@ const DrawerMenu = ({ active, handler }) => {
         <CloseDrawer onClick={handler}>
           <IoMdClose />
         </CloseDrawer>
+
+        <ThemeContaienr onClick={toggleTheme}>
+          <MdDarkMode />
+        </ThemeContaienr>
         <MainTitle>StormKala</MainTitle>
         <Input />
         <HorizontalRuler />
@@ -70,12 +81,7 @@ const DrawerMenu = ({ active, handler }) => {
         <Title>لینک های مفید</Title>
         {menu.links.map((item) => {
           return (
-            <a
-              key={item.id}
-              href={item.url}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a key={item.id} href={item.url} target="_blank" rel="noreferrer">
               <Item title={item.title} icon={item.icon} />
             </a>
           );

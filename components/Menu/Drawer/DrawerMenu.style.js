@@ -15,8 +15,8 @@ export const Drawer = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
+  background-color: ${props => props.theme.colors.card};
   padding: 1rem;
-  background-color: #fff;
   transform: translateX(${(props) => (props.active ? "0%" : "100%")});
   transition: transform 100ms linear;
   overflow-y: scroll;
@@ -28,7 +28,7 @@ export const Drawer = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.xs} {
-    width: 75%;
+    width: 70%;
   }
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 40%;
@@ -61,6 +61,19 @@ export const CloseDrawer = styled.div`
   cursor: pointer;
 `;
 
+export const ThemeContaienr = styled(CloseDrawer)`
+  left: unset;
+  right: 0;
+  background-color: ${props => props.theme.colors.gray};
+  border-radius: 50%;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 export const MainTitle = styled.h1`
   font-size: 1.9rem;
   font-weight: bold;
@@ -84,10 +97,13 @@ export const SearchInput = styled.input`
   border: none;
   outline: none;
   background-color: transparent;
+  color: ${props => props.theme.colors.graylower};
+
   width: 100%;
   &::placeholder {
     font-family: ${(props) => props.theme.fonts.main};
     font-size: 0.8rem;
+    color: ${props => props.theme.colors.graylower};
   }
 `;
 export const IconContainer = styled.div`

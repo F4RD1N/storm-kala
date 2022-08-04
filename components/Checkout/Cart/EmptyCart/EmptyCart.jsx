@@ -3,14 +3,14 @@ import Link from "next/link";
 
 
 //Styled Components
-import { Empty, GoBackToTheShop, Icon } from "./EmptyCart.style";
+import { Container, Empty, GoBackToTheShop, Icon } from "./EmptyCart.style";
 
 //Icons
 import { BsCart } from "react-icons/bs";
 
 const EmptyCart = () => {
   return (
-    <>
+    <Container>
       <Empty>
         <Icon>
           <BsCart />
@@ -22,7 +22,7 @@ const EmptyCart = () => {
           <GoBackToTheShop>بازگشت به فروشگاه</GoBackToTheShop>
         </a>
       </Link>
-    </>
+    </Container>
   );
 };
 

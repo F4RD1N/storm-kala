@@ -5,7 +5,6 @@ import Head from "next/head";
 import {
   Container,
   Title,
-  Content,
 } from "../../components/Checkout/Cart/Cart.style";
 //Components
 import { Items } from "../../components/Checkout/Cart";
@@ -19,9 +18,8 @@ const Cart = () => {
       </Head>
       <Container>
         <Title>سبد خرید شما</Title>
-        <Content>
+        
           <Items />
-        </Content>
       </Container>
       <NextButton url="/shipping" />
     </div>
