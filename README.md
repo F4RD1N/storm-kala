@@ -2,7 +2,7 @@
 Storm Kala
 
 ## Demo link:
-access my site at [storm-kala.vercel.app](https://storm-kala.vercel.app)
+access my site at [cranky-herschel-pwpbglfrs.iran.liara.run](https://cranky-herschel-pwpbglfrs.iran.liara.run/)
 
 ## Table of Content:
 

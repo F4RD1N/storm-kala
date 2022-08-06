@@ -24,10 +24,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // experimental: {
-  //   // outputStandalone: true,
-  //   scrollRestoration: true,
-  // },
+  experimental: {
+    outputStandalone: true,
+    scrollRestoration: true,
+  },
 };
 
 module.exports = nextConfig;
