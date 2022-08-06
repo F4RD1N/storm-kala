@@ -13,7 +13,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 //config
-import "../config";
+import "../config/config";
 const _app = ({ Component, pageProps }) => {
   if (Component.getLayout) {
     return Component.getLayout(

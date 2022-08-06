@@ -7,7 +7,13 @@ import { setThemeAction } from "../redux/config/configAction";
 const useTheme = () => {
   const dispatch = useDispatch();
   //set Theme
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== "undefined") {
+      if (localStorage.getItem("theme")) {
+        return localStorage.getItem("theme");
+      } else return "light";
+    }
+  });
 
   const themeHandler = () => {
     setTheme((currentValue) => (currentValue === "light" ? "dark" : "light"));
@@ -25,7 +31,7 @@ const useTheme = () => {
 
   return {
     themeHandler,
-    theme
+    theme,
   };
 };
 

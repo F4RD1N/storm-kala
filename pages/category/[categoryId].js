@@ -25,15 +25,14 @@ import {
 import { useCategoryState } from "../../hooks";
 
 const CategoryId = ({ data }) => {
-  const {seo, title} = useCategoryState()
+  const { seo, title } = useCategoryState();
   const { query } = useRouter();
-  
+
   //store data to redux in the first load
   const dispatch = useDispatch();
   useEffect(() => {
-      dispatch(getCategoryData(data))
+    dispatch(getCategoryData(data));
   }, [query]);
-
 
   return (
     <div>
@@ -54,12 +53,17 @@ const CategoryId = ({ data }) => {
 
 export default CategoryId;
 
-export const getServerSideProps = async ({ query }) => {
+export const getServerSideProps = async ({ res, query }) => {
   const { categoryId } = query;
   const response = await fetch(
     `https://api.digikala.com/v1/categories/${categoryId}/search/?page=1`
   );
   const data = await response.json();
+
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=10, stale-while-revalidate=59"
+  );
 
   return { props: { data: categoryPreset(data.data) } };
 };

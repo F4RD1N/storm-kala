@@ -7,9 +7,10 @@ import productReducer from "./product/productReducer";
 import homeReducer from "./home/homeReducer";
 import searchReducer from "./search/searchReducer";
 import cartReducer from "./cart/cartReducer";
-import categoryReducer from './category/categoryReducer'
-import configReducer from './config/configReducer'
+import categoryReducer from "./category/categoryReducer";
+import configReducer from "./config/configReducer";
 const persistConfig = {
+  timeout: 2000,
   key: "cart",
   storage,
 };
@@ -22,7 +23,7 @@ const rootReducer = combineReducers({
   searchState: searchReducer,
   cartState: persistedReducer,
   categoryState: categoryReducer,
-  configState: configReducer
+  configState: configReducer,
 });
 
 export default rootReducer;
