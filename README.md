@@ -15,7 +15,7 @@ access my site at [storm-kala.vercel.app](https://storm-kala.vercel.app)
 - [Credits](#credits)
 
 ## About The App
-Strom Kala is an ecommerce app where you can find anything from a to z :)
+Storm Kala is an ecommerce app where you can find anything from a to z :)
 
 ## Screenshots
 
