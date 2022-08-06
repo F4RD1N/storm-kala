@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-//Images
-import EarPods from "../../assets/earpods.jpeg";
 
 //Styled Components
 import { Container, ImageContainer } from "./Hero.style";

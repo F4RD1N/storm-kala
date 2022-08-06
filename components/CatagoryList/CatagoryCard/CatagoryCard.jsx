@@ -5,8 +5,6 @@ import Link from "next/link";
 //Styled Components
 import { Container, Title, ImageContainer } from "./CatagoryCard.style";
 
-//Images
-import Digital from "../../../assets/digital.png";
 const CatagoryCard = ({ data }) => {
   const { title_fa, logo, code } = data;
   return (

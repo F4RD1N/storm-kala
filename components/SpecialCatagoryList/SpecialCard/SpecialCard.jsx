@@ -13,8 +13,6 @@ import {
   ImageContainer
 } from "./SpecialCard.style";
 
-//Images
-import Digital from "../../../assets/digital.png";
 
 const SpecialCard = ({ category }) => {
   const { title_fa, top_product_image, products_count, code } = category;
