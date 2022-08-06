@@ -8,13 +8,13 @@ import {
   Error,
   BaseStatement,
   EndOfList
-} from "./Search.style";
+} from "./Results.style";
 
 //Components
-import { ProductCard, LoadingIndicator } from "../shared";
+import { ProductCard, LoadingIndicator } from "../../shared";
 
 //logic
-import { useResults } from "../../hooks";
+import { useResults } from "../../../hooks";
 const Results = ({ state }) => {
   const { pageHandler } = useResults();
 

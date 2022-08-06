@@ -1,40 +1,17 @@
 import React from "react";
-import Image from "next/image";
 
 //Styled Components
-import { Container, ImageContainer } from "./Trusts.style";
+import { Container } from "./Trusts.style";
 
-//Images
-import Trust from "../../../assets/digital.png";
+//Components
+import Trust from "./Trust";
+
 const Trusts = () => {
   return (
     <Container>
-      <ImageContainer>
-        <Image
-          src="https://www.digikala.com/statics/img/png/rezi.png"
-          height={150}
-          width={150}
-          objectFit="contain"
-        />
-      </ImageContainer>
-
-      <ImageContainer>
-        <Image
-          src="https://www.digikala.com/statics/img/png/kasbokar.png"
-          height={150}
-          width={150}
-          objectFit="contain"
-        />
-      </ImageContainer>
-
-      <ImageContainer>
-        <Image
-          src="https://www.digikala.com/statics/img/png/enamad.png"
-          height={150}
-          width={150}
-          objectFit="contain"
-        />
-      </ImageContainer>
+      <Trust source="https://www.digikala.com/statics/img/png/rezi.png" />
+      <Trust source="https://www.digikala.com/statics/img/png/kasbokar.png" />
+      <Trust source="https://www.digikala.com/statics/img/png/enamad.png" />
     </Container>
   );
 };

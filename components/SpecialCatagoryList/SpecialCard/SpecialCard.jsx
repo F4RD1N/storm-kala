@@ -31,6 +31,7 @@ const SpecialCard = ({ category }) => {
       <LeftContainer>
         <ImageContainer>
         <Image
+          alt={title_fa}
           src={top_product_image}
           width={70}
           height={70}

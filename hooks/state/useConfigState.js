@@ -1,12 +1,11 @@
 import { useSelector } from "react-redux";
 
 const useConfigState = () => {
-  const { theme } = useSelector(
-    (state) => state.configState
-  );
+  const { theme, drawerStatus } = useSelector((state) => state.configState);
 
   return {
-  theme
+    theme,
+    drawerStatus,
   };
 };
 

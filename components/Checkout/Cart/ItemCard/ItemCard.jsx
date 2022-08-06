@@ -26,7 +26,8 @@ const ItemCard = ({ data }) => {
         <Link href={`/product/${id}`}>
           <a>
             <ImageContainer>
-              <Image
+              <Image  
+                alt={title}
                 src={images[0].url[0]}
                 objectFit="contain"
                 width={50}

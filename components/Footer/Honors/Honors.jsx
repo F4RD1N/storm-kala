@@ -1,52 +1,27 @@
 import React from "react";
-import Image from "next/image";
 
 //Styled Compoennts
-import { Container, Honor, IconContainer, HonorTitle } from "./Honors.style";
+import { Container } from "./Honors.style";
 
 //Icons
 import { BsShieldCheck } from "react-icons/bs";
 import { FaShippingFast } from "react-icons/fa";
 import { TbDiscount2 } from "react-icons/tb";
 import { BiSupport } from "react-icons/bi";
-//Images
-import Express from "../../../assets/digital.png";
+
+//Components
+import Honor from "./Honor";
+
 const Honors = () => {
   return (
     <Container>
-      {/* {[0, 1, 2, 3].map((item) => {
-        return (
-          <Honor key={item}>
-            <ImageContainer>
-              <Image src={Express} width={100} height={100} objectFit="cover" />
-            </ImageContainer>
-            <HonorTitle>تضمین بهترین قیمت</HonorTitle>
-          </Honor>
-        );
-      })} */}
-
-      <Honor>
-        <IconContainer><BsShieldCheck /></IconContainer>
-        <HonorTitle>ضمانت اصالت کالا</HonorTitle>
-      </Honor>
-
-      <Honor>
-        <IconContainer><FaShippingFast /></IconContainer>
-        <HonorTitle>ارسال اکسپرس</HonorTitle>
-      </Honor>
-
-      <Honor>
-        <IconContainer><TbDiscount2 /></IconContainer>
-        <HonorTitle>تخفیفات شگفت انگیز</HonorTitle>
-      </Honor>
-
-      <Honor>
-        <IconContainer><BiSupport /></IconContainer>
-        <HonorTitle>پشتیبانی 24 ساعته</HonorTitle>
-      </Honor>
-
+      <Honor title="ضمانت اصالت کالا" icon={<BsShieldCheck />} />
+      <Honor title="ارسال اکسپرس" icon={<FaShippingFast />} />
+      <Honor title="تخفیفات شگفت انگیز" icon={<TbDiscount2 />} />
+      <Honor title="پشتیبانی 24 ساعته" icon={<BiSupport />} />
     </Container>
   );
 };
 
 export default Honors;
+

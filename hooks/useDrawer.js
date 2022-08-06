@@ -1,26 +1,33 @@
 import { useEffect } from "react";
 
-const useDrawer = (toggleDrawer, setToggleDrawer) => {
+//redux
+import { useDispatch } from "react-redux";
+import { setDrawerStatus } from "../redux/config/configAction";
 
-  const drawerHandler = () => setToggleDrawer((currentValue) => !currentValue);
+//state
+import { useConfigState } from "../hooks";
+const useDrawer = () => {
+  const { drawerStatus } = useConfigState();
+  const dispatch = useDispatch();
+  const drawerHandler = () => dispatch(setDrawerStatus());
   //prevent background scroll when drawer is open!
   useEffect(() => {
-    if (toggleDrawer) {
+    if (drawerStatus) {
       document.body.style.overflow = "hidden";
     } else document.body.style.overflow = "unset";
-  }, [toggleDrawer]);
+  }, [drawerStatus]);
 
   //close the drawer when clicked on background
   const closeHandler = (event) => {
     if (event.target.classList.contains("drawer")) {
-      drawerHandler();
+      dispatch(setDrawerStatus());
     }
   };
 
   return {
+    drawerStatus,
     closeHandler,
     drawerHandler,
-    toggleDrawer,
   };
 };
 

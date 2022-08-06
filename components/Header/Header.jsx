@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 
 //Icons
@@ -14,11 +14,11 @@ import {
 } from "./Header.style";
 
 //cart state
-import { useCartState } from "../../hooks";
+import { useCartState, useDrawer } from "../../hooks";
 
-const Header = ({ drawerHandler }) => {
+const Header = () => {
   const { itemsCounter } = useCartState();
-
+  const {drawerHandler} = useDrawer()
   return (
     <Container>
       <IconContainer onClick={drawerHandler}>

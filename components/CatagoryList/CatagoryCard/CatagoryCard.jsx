@@ -13,7 +13,7 @@ const CatagoryCard = ({ data }) => {
     <Link href={`/category/${code}`}>
     <Container>
       <ImageContainer>
-        <Image src={logo.url[0]} width={50} height={50} objectFit="cover" />
+        <Image alt={title_fa} src={logo.url[0]} width={50} height={50} objectFit="cover" />
       </ImageContainer>
       <Title>{title_fa}</Title>
     </Container>

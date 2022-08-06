@@ -5,7 +5,7 @@ import { Container } from "../components/Search/Search.style";
 
 //Components
 
-import { SearchInput, Results, Related } from "../components/Search";
+import { SearchInput, Results } from "../components/Search";
 
 //state
 import { useSearchState } from "../hooks";
@@ -24,7 +24,6 @@ const Search = ({ query }) => {
     <Container hasData={products?.length}>
       <SearchInput value={value} valueHandler={valueHandler} />
       <Results state={useSearchState} />
-      <Related />
     </Container>
   );
 };
@@ -36,4 +35,3 @@ export const getServerSideProps = ({ query }) => {
     props: { query: query },
   };
 };
-

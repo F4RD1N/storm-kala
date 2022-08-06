@@ -9,7 +9,7 @@ const useTheme = () => {
   //set Theme
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
-  const toggleTheme = () => {
+  const themeHandler = () => {
     setTheme((currentValue) => (currentValue === "light" ? "dark" : "light"));
   };
 
@@ -24,7 +24,8 @@ const useTheme = () => {
   }, [theme]);
 
   return {
-    toggleTheme,
+    themeHandler,
+    theme
   };
 };
 

@@ -9,11 +9,11 @@ import {
   OrderItemCard,
   OrderItemImageContainer,
   OrderItemQuantity,
-  BackToCart
+  BackToCart,
 } from "./Order.style";
 
 //state
-import {useCartState} from "../../../../hooks";
+import { useCartState } from "../../../../hooks";
 
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -22,8 +22,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode } from "swiper";
 
 const Order = () => {
-  const router = useRouter()
-  const routeHandler = () => router.replace('cart')
+  const router = useRouter();
+  const routeHandler = () => router.replace("cart");
 
   const { cartItems } = useCartState();
   return (
@@ -42,6 +42,7 @@ const Order = () => {
               <OrderItemCard>
                 <OrderItemImageContainer>
                   <Image
+                    alt="cart item image"
                     src={item.images[0].url[0]}
                     objectFit="contain"
                     width={100}

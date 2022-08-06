@@ -13,7 +13,6 @@ import {
 } from "./DropDown.style";
 
 //Icons
-import { BiMobileAlt } from "react-icons/bi";
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 
 const DropDown = ({ title, icon, sub }) => {

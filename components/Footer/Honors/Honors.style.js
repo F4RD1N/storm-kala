@@ -9,7 +9,7 @@ export const Container = styled.section`
     grid-template-columns: repeat(4, 1fr);
   }
 `;
-export const Honor = styled.div`
+export const HonorItem = styled.div`
   margin-bottom: 1rem;
 `;
 export const IconContainer = styled.div`

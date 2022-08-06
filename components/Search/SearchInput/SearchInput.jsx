@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 //Styled Components
-import { Input, InputContainer, IconContainer } from "./Search.style";
+import { Input, InputContainer, IconContainer } from "./SearchInput.style";
 
 const SearchInput = ({ value, valueHandler}) => {
   //focus input when page mounted

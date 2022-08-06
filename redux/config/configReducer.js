@@ -1,5 +1,6 @@
 const initialState = {
-  theme: false,
+  theme: "light",
+  drawerStatus: false,
 };
 
 const configReducer = (state = initialState, action) => {
@@ -8,6 +9,11 @@ const configReducer = (state = initialState, action) => {
       return {
         ...state,
         theme: action.payload,
+      };
+    case "SET_DRAWER_STATUS":
+      return {
+        ...state,
+        drawerStatus: !state.drawerStatus,
       };
     default:
       return state;

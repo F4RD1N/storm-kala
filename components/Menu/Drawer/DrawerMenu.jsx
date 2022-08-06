@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 //Styled Components
 import {
@@ -24,37 +25,27 @@ import DropDown from "./DropDown/DropDown";
 //Constants
 import { menu } from "../../../constants";
 
-//logic
-import { useTheme } from "../../../hooks";
+//logic and state
+import { useTheme, useDrawer } from "../../../hooks";
 
-//state
-import { useConfigState } from "../../../hooks";
+const DrawerMenu = () => {
+  const { themeHandler, theme } = useTheme();
+  const { drawerStatus, closeHandler, drawerHandler } = useDrawer();
 
-const DrawerMenu = ({ active, handler }) => {
-  const { toggleTheme } = useTheme();
-  const { theme } = useConfigState();
-  //prevent background scroll when drawer is open!
+  //clost drawer when route changes
+  const router = useRouter();
   useEffect(() => {
-    if (active) {
-      document.body.style.overflowY = "hidden";
-    } else document.body.style.overflow = "unset";
-  }, [active]);
-
-  //close the drawer when clicked on background
-  const closeHandler = (event) => {
-    if (event.target.classList.contains("drawer")) {
-      handler();
-    }
-  };
+    if (drawerStatus) drawerHandler();
+  }, [router.query]);
   return (
-    <Container active={active} onClick={closeHandler} className="drawer">
-      <Drawer active={active}>
-        <CloseDrawer onClick={handler}>
+    <Container active={drawerStatus} onClick={closeHandler} className="drawer">
+      <Drawer active={drawerStatus}>
+        <CloseDrawer onClick={drawerHandler}>
           <IoMdClose />
         </CloseDrawer>
 
-        <ThemeContaienr onClick={toggleTheme}>
-          {theme === 'light' ? <MdDarkMode /> : <MdLightMode />}
+        <ThemeContaienr onClick={themeHandler}>
+          {theme === "light" ? <MdDarkMode /> : <MdLightMode />}
         </ThemeContaienr>
         <MainTitle>StormKala</MainTitle>
         <Input />

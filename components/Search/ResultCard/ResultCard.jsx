@@ -5,13 +5,14 @@ import {
   CardContainer,
   CardImageContainer,
   CardTitle,
-} from "./Search.style";
+} from "./ResultCard.style";
 const SearchCard = ({ data }) => {
   const { title_fa, images } = data;
   return (
     <CardContainer>
       <CardImageContainer>
         <Image
+          alt={title_fa}
           src={images.main.url[0]}
           objectFit="cover"
           width={75}

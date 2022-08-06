@@ -1,4 +1,3 @@
-export {default as Results} from './Results'
-export {default as SearchInput} from './SearchInput'
-export {default as ResultCard} from './ResultCard'
-export {default as Related} from './Related'
+export {default as Results} from './Results/Results'
+export {default as SearchInput} from './SearchInput/SearchInput'
+export {default as ResultCard} from './ResultCard/ResultCard'

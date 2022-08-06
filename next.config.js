@@ -24,7 +24,7 @@ const nextConfig = {
     ],
   },
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true,
   },
   experimental: {
     // outputStandalone: true,

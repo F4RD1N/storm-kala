@@ -34,6 +34,7 @@ const Hero = () => {
             <SwiperSlide key={item.id}>
               <ImageContainer title={item.title}>
                 <Image
+                  alt="hero slide images"
                   src={item.image}
                   placeholder='blur'
                   blurDataURL={item.image}
