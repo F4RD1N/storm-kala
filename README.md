@@ -33,7 +33,7 @@ Strom Kala is an ecommerce app where you can find anything from a to z :)
 [![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)](https://styled-components.com/)
 
 ## Setup
-- Clone down this repository. You will need node and npm installed globally on your machine.
+- clone down this repository. you will need node and npm installed globally on your machine.
 ### Install yarn
 `npm i -g yarn`
 ### Installation the Project:
@@ -44,7 +44,7 @@ Strom Kala is an ecommerce app where you can find anything from a to z :)
 `yarn build`
 
 ## Approach
-i have made the components samll and reusable and separated the ui and logic of the components
+i have made the components small and reusable and separated the ui and logic of the components
 
 ## Status
 Storm Kala is still in progress. there are many features left to add to the project.
