@@ -1,5 +1,5 @@
 # Project Title
-Strom Kala
+Storm Kala
 
 ## Demo link:
 access my site at [storm-kala.vercel.app](https://storm-kala.vercel.app)
