@@ -12,8 +12,9 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-//config
+//config and initialization
 import "../config/config";
+import '../config/init'
 const _app = ({ Component, pageProps }) => {
   if (Component.getLayout) {
     return Component.getLayout(
