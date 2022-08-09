@@ -4,27 +4,29 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setDiscount } from "../redux/cart/cartAction";
 
+//discount config
+import { DISCOUNT } from "../config/config";
+
 const useDiscount = () => {
   const [discountCode, setDiscountCode] = useState("");
   const inputHandler = (event) => setDiscountCode(event.target.value);
 
-  const discountValue = 0.1;
   const dispatch = useDispatch();
   const discountHandler = () => {
-    if (discountCode === "F4RD1N") {
-      dispatch(setDiscount(discountValue));
+    if (discountCode === DISCOUNT.CODE) {
+      dispatch(setDiscount(DISCOUNT.VALUE));
       setDiscountCode("");
     }
   };
   const clearDiscountHandler = () => {
     dispatch(setDiscount(0));
-  }
+  };
 
   return {
     discountHandler,
     discountCode,
     inputHandler,
-    clearDiscountHandler
+    clearDiscountHandler,
   };
 };
 

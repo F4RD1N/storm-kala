@@ -15,6 +15,7 @@ import "swiper/css/navigation";
 //config and initialization
 import "../config/config";
 import '../config/init'
+
 const _app = ({ Component, pageProps }) => {
   if (Component.getLayout) {
     return Component.getLayout(
