@@ -17,9 +17,9 @@ import { categoryPreset } from "../../presets";
 //redux
 import { useDispatch } from "react-redux";
 import {
-  getCategoryData,
-  pushCategory,
-} from "../../redux/category/categoryAction";
+  getData,
+  pushData,
+} from "../../redux/Slices/categorySlice";
 
 //state
 import { useCategoryState } from "../../hooks";
@@ -27,11 +27,10 @@ import { useCategoryState } from "../../hooks";
 const CategoryId = ({ data }) => {
   const { seo, title } = useCategoryState();
   const { query } = useRouter();
-
   //store data to redux in the first load
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getCategoryData(data));
+    dispatch(getData(data));
   }, [query]);
 
   return (
@@ -44,7 +43,7 @@ const CategoryId = ({ data }) => {
       <LoadMore
         pusher={dataPusher(
           `categories/${query.categoryId}/search/?`,
-          pushCategory
+          pushData
         )}
       />
     </div>

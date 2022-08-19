@@ -5,10 +5,10 @@ import storage from "reduxjs-toolkit-persist/lib/storage"; // defaults to localS
 //reducers
 import homeSlice from "./Slices/homeSlice";
 import productSlice from "./Slices/productSlice";
+import categorySlice from "./Slices/categorySlice";
 
 import searchReducer from "./search/searchReducer";
 import cartReducer from "./cart/cartReducer";
-import categoryReducer from "./category/categoryReducer";
 import configReducer from "./config/configReducer";
 const persistConfig = {
   timeout: 2000,
@@ -23,7 +23,7 @@ const rootReducer = combineReducers({
   homeState: homeSlice,
   searchState: searchReducer,
   cartState: persistedReducer,
-  categoryState: categoryReducer,
+  categoryState: categorySlice,
   configState: configReducer,
 });
 
