@@ -8,7 +8,7 @@ access my site at
 <br />
 or
 <br />
-[storm-kala.netlify.app/](https://storm-kala.netlify.app)
+[storm-kala.netlify.app](https://storm-kala.netlify.app)
 
 ## Table of Content:
 
