@@ -9,6 +9,7 @@ const initialState = {
   laptopList: {},
 };
 
+
 const homeSlice = createSlice({
   name: "home",
   initialState,
