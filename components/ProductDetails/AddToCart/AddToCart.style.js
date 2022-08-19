@@ -45,6 +45,9 @@ export const AddButton = styled(GlobalButton)`
     `
     background-color: gray;
   `}
+  &:hover {
+    background-color: ${props => props.outStock && 'gray'};
+  }
 `;
 
 export const PriceContainer = styled.div`

@@ -14,12 +14,7 @@ const homeSlice = createSlice({
   initialState,
   reducers: {
     getData: (state, action) => {
-      state.incredible = action.payload.incredible;
-      state.bestSelling = action.payload.bestSelling;
-      state.popularBrands = action.payload.popularBrands;
-      state.categories = action.payload.categories;
-      state.mobileList = action.payload.mobileList;
-      state.laptopList = action.payload.laptopList;
+      return {...action.payload}
     },
     pushIncredible: (state, action) => {
       state.incredible.products.push(...action.payload.products);

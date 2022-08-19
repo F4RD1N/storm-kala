@@ -36,6 +36,7 @@ const AddToCart = () => {
       {!isItemExist ? (
         <AddButton
           onClick={addHandler}
+          disabled={status !== "marketable" && true}
           outStock={status !== "marketable" && true}
         >
           {status !== "marketable" ? "اتمام موجودی" : "افزودن به سبد"}
