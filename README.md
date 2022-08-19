@@ -2,7 +2,13 @@
 Storm Kala
 
 ## Demo link:
-access my site at [cranky-herschel-pwpbglfrs.iran.liara.run](https://cranky-herschel-pwpbglfrs.iran.liara.run/)
+access my site at 
+<br />
+[cranky-herschel-pwpbglfrs.iran.liara.run](https://cranky-herschel-pwpbglfrs.iran.liara.run/)
+<br />
+or
+<br />
+[storm-kala.netlify.app/](https://storm-kala.netlify.app)
 
 ## Table of Content:
 
