@@ -11,8 +11,7 @@ const productSlice = createSlice({
   initialState,
   reducers: {
     getProduct: (state, action) => {
-      state.product = action.payload.product;
-      state.recommendations = action.payload.recommendations;
+      return {...action.payload}
     },
     pushComments: (state, action) => {
       state.product.comments.comments.push(...action.payload.comments);
