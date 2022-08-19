@@ -10,7 +10,6 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
     "axios": "^0.27.2",
-    "broadcast-channel": "^4.14.0",
     "next": "12.2.2",
     "next-redux-wrapper": "^7.0.5",
     "nprogress": "^0.2.0",

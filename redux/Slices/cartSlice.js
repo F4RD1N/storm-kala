@@ -59,9 +59,6 @@ const cartSlice = createSlice({
     setDiscount: (state, action) => {
       state.discount = action.payload;
     },
-    broadCastCart: (state, action) => {
-      return action.payload;
-    },
   },
 });
 
@@ -74,5 +71,4 @@ export const {
   clearCart,
   setCheckout,
   setDiscount,
-  broadCastCart,
 } = cartSlice.actions;

@@ -7,21 +7,18 @@ import {
   decrease,
   removeItem,
   clearCart,
-  broadCastCart,
-  setCheckout
+  setCheckout,
 } from "../redux/Slices/cartSlice";
 
 //state
-import {useCartState} from "./";
-
-import { BroadcastChannel } from "broadcast-channel";
+import { useCartState } from "./";
 
 const useCart = (product) => {
   const [isItemExist, setIsItemExist] = useState(false);
   const [itemQuantity, setItemQuantity] = useState(0);
   const [orderLimit, setOrderLimit] = useState(1);
   const dispatch = useDispatch();
-  const { cartItems, itemsCounter, total, discount, checkout } = useCartState();
+  const { cartItems } = useCartState();
   const { id, price, mainDetails, images, status } = product;
 
   //create a preset of data to pushin into redux store
@@ -31,21 +28,8 @@ const useCart = (product) => {
     price,
     quantity: 1,
     images,
-    status
+    status,
   };
-
-  //broadcast channel
-  const [pressed, setPressed] = useState(0);
-  
-  // useEffect(() => {
-  //   const cartChannel = new BroadcastChannel("cart");
-  //   cartChannel.postMessage({ cartItems, itemsCounter, total, discount, checkout });
-  //   cartChannel.onmessage = (msg) => {
-  //     dispatch(broadCastCart(msg));
-  //     console.log('first')
-  //   };
-  //   return async () => await cartChannel.close();
-  // }, [pressed]);
 
   useEffect(() => {
     //check if already exists in the store and if exists, then dont push it again!
@@ -62,29 +46,24 @@ const useCart = (product) => {
 
   const addHandler = () => {
     if (!isItemExist) dispatch(addItem(cartPreset));
-    setPressed((currentValue) => currentValue + 1);
   };
   const increaseHandler = async () => {
     dispatch(increase(cartPreset));
-    setPressed((currentValue) => currentValue + 1);
   };
   const decreaseHandler = () => {
     if (isItemExist && itemQuantity > 1) dispatch(decrease(cartPreset));
-    setPressed((currentValue) => currentValue + 1);
   };
   const removeHanlder = () => {
     if (isItemExist && itemQuantity === 1) dispatch(removeItem(cartPreset));
-    setPressed((currentValue) => currentValue + 1);
   };
 
   const clearHandler = () => {
     dispatch(clearCart());
-    setPressed((currentValue) => currentValue + 1);
   };
 
   const checkoutHanlder = () => {
-    dispatch(setCheckout())
-  }
+    dispatch(setCheckout());
+  };
 
   return {
     addHandler,
@@ -99,6 +78,4 @@ const useCart = (product) => {
   };
 };
 
-
 export default useCart;
-
