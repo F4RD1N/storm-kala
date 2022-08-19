@@ -2,13 +2,15 @@ import { combineReducers } from "@reduxjs/toolkit";
 import { persistReducer } from "reduxjs-toolkit-persist";
 import storage from "reduxjs-toolkit-persist/lib/storage"; // defaults to localStorage for web
 
-//reducers
-import homeSlice from "./Slices/homeSlice";
-import productSlice from "./Slices/productSlice";
-import categorySlice from "./Slices/categorySlice";
-import searchSlice from "./Slices/searchSlice";
-import cartSlice from "./Slices/cartSlice";
-import mainSlice from "./Slices/mainSlice";
+//Slice Reducers
+import {
+  homeSlice,
+  productSlice,
+  categorySlice,
+  searchSlice,
+  cartSlice,
+  mainSlice
+} from './Slices'
 
 //Persist Config
 const persistConfig = {

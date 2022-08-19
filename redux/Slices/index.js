@@ -1,0 +1,6 @@
+export {default as homeSlice} from './homeSlice'
+export {default as productSlice} from './productSlice'
+export {default as categorySlice} from './categorySlice'
+export {default as searchSlice} from './searchSlice'
+export {default as cartSlice} from './cartSlice'
+export {default as mainSlice} from './mainSlice'
