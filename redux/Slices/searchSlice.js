@@ -40,7 +40,7 @@ const searchSlice = createSlice({
       state.loading = false;
       state.results = action.payload;
     });
-    builder.addCase(fetchSearch, (state, action) => {
+    builder.addCase(fetchSearch.rejected, (state, action) => {
       return {
         loading: false,
         results: [],
