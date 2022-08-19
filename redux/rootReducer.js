@@ -4,7 +4,8 @@ import storage from "reduxjs-toolkit-persist/lib/storage"; // defaults to localS
 
 //reducers
 import productReducer from "./product/productReducer";
-import homeReducer from "./home/homeReducer";
+import homeSlice from "./Slices/homeSlice";
+
 import searchReducer from "./search/searchReducer";
 import cartReducer from "./cart/cartReducer";
 import categoryReducer from "./category/categoryReducer";
@@ -19,7 +20,7 @@ const persistedReducer = persistReducer(persistConfig, cartReducer);
 
 const rootReducer = combineReducers({
   productState: productReducer,
-  homeState: homeReducer,
+  homeState: homeSlice,
   searchState: searchReducer,
   cartState: persistedReducer,
   categoryState: categoryReducer,
