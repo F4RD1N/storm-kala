@@ -17,7 +17,6 @@ import {
   Introduce,
   Information,
   Comments,
-  AddReview,
   AddToCart,
 } from "../../components/ProductDetails";
 import { ListSlider, Loading } from "../../components";
@@ -27,7 +26,7 @@ import { productPreset } from "../../presets";
 
 //redux
 import { useDispatch } from "react-redux";
-import { getProduct, pushComments } from "../../redux/product/productAction";
+import { getProduct, pushComments } from "../../redux/Slices/productSlice";
 
 //state
 import { useProductState } from "../../hooks";

@@ -3,8 +3,8 @@ import { persistReducer } from "reduxjs-toolkit-persist";
 import storage from "reduxjs-toolkit-persist/lib/storage"; // defaults to localStorage for web
 
 //reducers
-import productReducer from "./product/productReducer";
 import homeSlice from "./Slices/homeSlice";
+import productSlice from "./Slices/productSlice";
 
 import searchReducer from "./search/searchReducer";
 import cartReducer from "./cart/cartReducer";
@@ -19,7 +19,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, cartReducer);
 
 const rootReducer = combineReducers({
-  productState: productReducer,
+  productState: productSlice,
   homeState: homeSlice,
   searchState: searchReducer,
   cartState: persistedReducer,
