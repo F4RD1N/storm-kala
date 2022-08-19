@@ -7,7 +7,6 @@ import {
   ListSlider,
   CatagoryList,
   SpecialCatagoryList,
-  PopularBrandsList,
 } from "../components";
 
 //preset data
@@ -15,13 +14,14 @@ import { homePreset } from "../presets";
 
 //redux
 import { useDispatch } from "react-redux";
+
 import {
-  getHomeData,
+  getData,
   pushIncredible,
   pushBestSelling,
   pushLaptop,
   pushMobile,
-} from "../redux/home/homeAction";
+} from '../redux/Slices/homeSlice'
 
 //state
 import { useHomeState } from "../hooks";
@@ -37,7 +37,7 @@ const Home = ({ homeData }) => {
   const dispatch = useDispatch();
   useEffect(() => {
     if (!popularBrands.length) {
-      dispatch(getHomeData(homeData));
+      dispatch(getData(homeData));
     }
   }, []);
 

@@ -2,12 +2,12 @@ import { useEffect } from "react";
 
 //redux
 import { useDispatch } from "react-redux";
-import { setDrawerStatus } from "../redux/config/configAction";
+import { setDrawerStatus } from "../redux/Slices/mainSlice";
 
 //state
-import { useConfigState } from "../hooks";
+import { useMainState } from "../hooks";
 const useDrawer = () => {
-  const { drawerStatus } = useConfigState();
+  const { drawerStatus } = useMainState();
   const dispatch = useDispatch();
   const drawerHandler = () => dispatch(setDrawerStatus());
   //prevent background scroll when drawer is open!

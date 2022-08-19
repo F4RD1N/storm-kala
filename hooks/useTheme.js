@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 //redux
 import { useDispatch } from "react-redux";
-import { setThemeAction } from "../redux/config/configAction";
+import { setTheme as setThemeAction } from "../redux/Slices/mainSlice";
 
 const useTheme = () => {
   const dispatch = useDispatch();

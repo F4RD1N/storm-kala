@@ -4,12 +4,12 @@ import lightTheme from "../themes/light";
 import darkTheme from "../themes/dark";
 
 //state
-import { useConfigState } from "../hooks";
+import { useMainState } from "../hooks";
 
 import GlobalStyles from "./globals";
 
 const Theme = ({ children }) => {
-  const { theme } = useConfigState();
+  const { theme } = useMainState();
   return (
     <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
       <GlobalStyles />
