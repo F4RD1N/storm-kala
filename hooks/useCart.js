@@ -8,7 +8,7 @@ import {
   removeItem,
   clearCart,
   setCheckout,
-} from "../redux/Slices/cartSlice";
+} from "../redux/slices/cartSlice";
 
 //state
 import { useCartState } from "./";

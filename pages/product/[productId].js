@@ -26,7 +26,7 @@ import { productPreset } from "../../presets";
 
 //redux
 import { useDispatch } from "react-redux";
-import { getProduct, pushComments } from "../../redux/Slices/productSlice";
+import { getProduct, pushComments } from "../../redux/slices/productSlice";
 
 //state
 import { useProductState } from "../../hooks";

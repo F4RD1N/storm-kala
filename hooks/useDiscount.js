@@ -2,7 +2,7 @@ import { useState } from "react";
 
 //redux
 import { useDispatch } from "react-redux";
-import { setDiscount } from "../redux/Slices/cartSlice";
+import { setDiscount } from "../redux/slices/cartSlice";
 
 //discount config
 import { DISCOUNT } from "../config/config";

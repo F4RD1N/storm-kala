@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 //redux
 import { useDispatch } from "react-redux";
-import { fetchSearch, clearResults } from "../redux/Slices/searchSlice";
+import { fetchSearch, clearResults } from "../redux/slices/searchSlice";
 
 //state
 import { useSearchState } from "../hooks";

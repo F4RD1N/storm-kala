@@ -19,7 +19,7 @@ import { useDispatch } from "react-redux";
 import {
   getData,
   pushData,
-} from "../../redux/Slices/categorySlice";
+} from "../../redux/slices/categorySlice";
 
 //state
 import { useCategoryState } from "../../hooks";

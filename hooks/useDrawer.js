@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 //redux
 import { useDispatch } from "react-redux";
-import { setDrawerStatus } from "../redux/Slices/mainSlice";
+import { setDrawerStatus } from "../redux/slices/mainSlice";
 
 //state
 import { useMainState } from "../hooks";

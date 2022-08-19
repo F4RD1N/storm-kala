@@ -21,7 +21,7 @@ import {
   pushBestSelling,
   pushLaptop,
   pushMobile,
-} from '../redux/Slices/homeSlice'
+} from '../redux/slices/homeSlice'
 
 //state
 import { useHomeState } from "../hooks";

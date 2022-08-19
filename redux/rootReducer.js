@@ -10,7 +10,7 @@ import {
   searchSlice,
   cartSlice,
   mainSlice
-} from './Slices'
+} from './slices'
 
 //Persist Config
 const persistConfig = {
