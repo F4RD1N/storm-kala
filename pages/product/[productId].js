@@ -78,6 +78,7 @@ const ProductDetails = ({ productData }) => {
       {/* <AddReview /> */}
         </Left>
       </SecondContainer>
+      <div id="similar"></div>
       <ListSlider data={recommended} title="کالا های مشابه" pusherLess={true} />
     </div>
   );
