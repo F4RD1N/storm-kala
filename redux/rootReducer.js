@@ -7,8 +7,8 @@ import homeSlice from "./Slices/homeSlice";
 import productSlice from "./Slices/productSlice";
 import categorySlice from "./Slices/categorySlice";
 import searchSlice from "./Slices/searchSlice";
+import cartSlice from "./Slices/cartSlice";
 
-import cartReducer from "./cart/cartReducer";
 import configReducer from "./config/configReducer";
 const persistConfig = {
   timeout: 2000,
@@ -16,7 +16,7 @@ const persistConfig = {
   storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, cartReducer);
+const persistedReducer = persistReducer(persistConfig, cartSlice);
 
 const rootReducer = combineReducers({
   productState: productSlice,

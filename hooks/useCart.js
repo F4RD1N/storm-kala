@@ -9,7 +9,7 @@ import {
   clearCart,
   broadCastCart,
   setCheckout
-} from "../redux/cart/cartAction";
+} from "../redux/Slices/cartSlice";
 
 //state
 import {useCartState} from "./";
