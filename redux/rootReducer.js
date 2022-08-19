@@ -6,8 +6,8 @@ import storage from "reduxjs-toolkit-persist/lib/storage"; // defaults to localS
 import homeSlice from "./Slices/homeSlice";
 import productSlice from "./Slices/productSlice";
 import categorySlice from "./Slices/categorySlice";
+import searchSlice from "./Slices/searchSlice";
 
-import searchReducer from "./search/searchReducer";
 import cartReducer from "./cart/cartReducer";
 import configReducer from "./config/configReducer";
 const persistConfig = {
@@ -21,7 +21,7 @@ const persistedReducer = persistReducer(persistConfig, cartReducer);
 const rootReducer = combineReducers({
   productState: productSlice,
   homeState: homeSlice,
-  searchState: searchReducer,
+  searchState: searchSlice,
   cartState: persistedReducer,
   categoryState: categorySlice,
   configState: configReducer,
