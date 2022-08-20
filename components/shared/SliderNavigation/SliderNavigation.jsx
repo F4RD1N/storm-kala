@@ -10,8 +10,8 @@ const SliderNavigation = ({refs}) => {
     console.log(refs);
   return (
     <Container>
-        <Button ref={refs.next}><BiChevronRight /></Button>
-        <Button ref={refs.prev}><BiChevronLeft /></Button>
+        <Button ref={refs.prev}><BiChevronRight /></Button>
+        <Button ref={refs.next}><BiChevronLeft /></Button>
     </Container>
   )
 }
