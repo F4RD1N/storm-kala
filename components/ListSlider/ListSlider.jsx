@@ -16,7 +16,17 @@ import { Container, Title, SecTitle, Content } from "./ListSlider.style";
 //Components
 import LoadMore from "./LoadMore";
 
-const ListSlider = ({ data, title, subTitle, pusher, pusherLess }) => {
+//redux
+import { fetchPushData } from "../../redux/slices/homeSlice";
+
+const ListSlider = ({ data, title, subTitle, pusherLess }) => {
+  const arg = {
+    loading: data.loading,
+    url: data.url,
+    type: data.type,
+    pager: data?.pager,
+    action: fetchPushData
+  };
   return (
     <Container>
       <Title>{title}</Title>
@@ -78,7 +88,7 @@ const ListSlider = ({ data, title, subTitle, pusher, pusherLess }) => {
 
           {!pusherLess && (
             <SwiperSlide className="swiper-item">
-              <LoadMore pusher={pusher} pager={data?.pager} />
+              <LoadMore arg={arg} />
             </SwiperSlide>
           )}
         </Swiper>

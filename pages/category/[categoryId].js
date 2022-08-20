@@ -8,24 +8,18 @@ import { Title } from "../../components/Catergory/Category.style";
 //Components
 import { Results, LoadMore } from "../../components/Catergory";
 
-//pusher
-import { dataPusher } from "../../helpers/pusher";
-
 //preset
 import { categoryPreset } from "../../presets";
 
 //redux
 import { useDispatch } from "react-redux";
-import {
-  getData,
-  pushData,
-} from "../../redux/slices/categorySlice";
+import { getData, fetchPushData } from "../../redux/slices/categorySlice";
 
 //state
 import { useCategoryState } from "../../hooks";
 
 const CategoryId = ({ data }) => {
-  const { seo, title } = useCategoryState();
+  const { seo, title, pager, loading } = useCategoryState();
   const { query } = useRouter();
   //store data to redux in the first load
   const dispatch = useDispatch();
@@ -33,6 +27,13 @@ const CategoryId = ({ data }) => {
     dispatch(getData(data));
   }, [query]);
 
+  const arg = {
+    loading,
+    url: `categories/${query.categoryId}/search/?`,
+    pager,
+    action: fetchPushData,
+  };
+  console.log(arg);
   return (
     <div>
       <Head>
@@ -40,12 +41,7 @@ const CategoryId = ({ data }) => {
       </Head>
       <Title>{title}</Title>
       <Results state={useCategoryState} />
-      <LoadMore
-        pusher={dataPusher(
-          `categories/${query.categoryId}/search/?`,
-          pushData
-        )}
-      />
+      <LoadMore arg={arg} />
     </div>
   );
 };

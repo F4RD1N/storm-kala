@@ -10,8 +10,9 @@ import { LoadingIndicator } from "../shared";
 //logic
 import { useLoadMore } from "../../hooks";
 
-const LoadMore = ({ pusher, pager }) => {
-  const { loading, end, handler } = useLoadMore(pusher, pager);
+const LoadMore = ({ arg }) => {
+  const { loading } = arg;
+  const { end, handler } = useLoadMore(arg);
   return (
     <LoadMoreContainer>
       {!end ? (

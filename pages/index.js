@@ -15,22 +15,13 @@ import { homePreset } from "../presets";
 //redux
 import { useDispatch } from "react-redux";
 
-import {
-  getData,
-  pushIncredible,
-  pushBestSelling,
-  pushLaptop,
-  pushMobile,
-} from '../redux/slices/homeSlice'
+import { getData } from "../redux/slices/homeSlice";
 
 //state
 import { useHomeState } from "../hooks";
 
-//pusher
-import { dataPusher } from "../helpers/pusher";
-
 const Home = ({ homeData }) => {
-  const { incredible, bestSelling, mobileList, laptopList, popularBrands } =
+  const { incredible, bestSelling, mobile, laptop, popularBrands } =
     useHomeState();
 
   //send data to homeReducer
@@ -51,29 +42,16 @@ const Home = ({ homeData }) => {
         data={incredible}
         title="تخفیفات شگفت انگیز"
         subTitle="خریدی به صرفه با تخفیفات شگفت انگیز"
-        pusher={dataPusher("incredible-offers/products/?", pushIncredible)}
       />
-      <ListSlider
-        data={mobileList}
-        title="موبایل"
-        pusher={dataPusher("categories/mobile-phone/search/?", pushMobile)}
-      />
+      <ListSlider data={mobile} title="موبایل" />
       <CatagoryList />
       <SpecialCatagoryList />
       {/* <PopularBrandsList /> */}
+      <ListSlider data={bestSelling} title="محبوب ترین ها" />
       <ListSlider
-        data={bestSelling}
-        title="محبوب ترین ها"
-        pusher={dataPusher(
-          "promotion-search/?promotion_types%5B0%5D=incredible_offer&promotion_types%5B1%5D=promotion&",
-          pushBestSelling
-        )}
-      />
-      <ListSlider
-        data={laptopList}
+        data={laptop}
         title="لپتاپ"
         subTitle="لپتاپ و تجهیزات جانبی"
-        pusher={dataPusher("categories/laptop/search/?", pushLaptop)}
       />
     </div>
   );
@@ -85,8 +63,8 @@ export const getStaticProps = async () => {
   const response = await fetch("https://api.digikala.com/v1/");
   const data = await response.json();
 
-  let mobileList = [];
-  let laptopList = [];
+  let mobile = [];
+  let laptop = [];
   const fetchMobile = async () => {
     const response = await fetch(
       "https://api.digikala.com/v1/categories/mobile-phone/search/?page=1"
@@ -101,10 +79,10 @@ export const getStaticProps = async () => {
     const data = await response.json();
     return data;
   };
-  await fetchMobile().then((item) => (mobileList = item));
-  await fetchLoptop().then((item) => (laptopList = item));
+  await fetchMobile().then((item) => (mobile = item));
+  await fetchLoptop().then((item) => (laptop = item));
   return {
-    props: { homeData: homePreset(data.data, mobileList, laptopList) },
+    props: { homeData: homePreset(data.data, mobile, laptop) },
     revalidate: 21600,
   };
 };

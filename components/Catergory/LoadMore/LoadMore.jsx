@@ -4,14 +4,14 @@ import React from "react";
 import { Container } from "./LoadMore.style";
 
 //logic
-import { useLoadMore, useCategoryState } from "../../../hooks";
+import { useLoadMore } from "../../../hooks";
 
 //Components
 import { LoadingIndicator } from "../../shared";
 
-const LoadMore = ({ pusher }) => {
-  const { pager } = useCategoryState();
-  const { loading, end, handler } = useLoadMore(pusher, pager);
+const LoadMore = ({ arg }) => {
+  const { loading } = arg;
+  const { end, handler } = useLoadMore(arg);
   return (
     <div>
       {!end ? (

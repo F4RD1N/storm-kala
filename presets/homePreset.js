@@ -7,11 +7,15 @@ const homePreset = (
     recommendation_sub_categories,
     header_banners
   },
-  mobileList,
-  laptopList
+  mobile,
+  laptop
 ) => {
   return {
     incredible: {
+      loading: false,
+      error: '',
+      url: 'incredible-offers/products/?',
+      type: 'incredible',
       products: [
         ...incredible_products.products.map((product) => {
           return {
@@ -40,6 +44,10 @@ const homePreset = (
     },
 
     bestSelling: {
+      loading: false,
+      error: '',
+      url: 'promotion-search/?promotion_types%5B0%5D=incredible_offer&promotion_types%5B1%5D=promotion&',
+      type: 'bestSelling',
       products: [
         ...best_selling_products.products.map((product) => {
           return {
@@ -66,9 +74,13 @@ const homePreset = (
       ],
       pager: { current_page: 1, total_pages: 5 },
     },
-    mobileList: {
+    mobile: {
+      loading: false,
+      error: '',
+      url: 'categories/mobile-phone/search/?',
+      type: 'mobile',
       products: [
-        ...mobileList.data.products.map((product) => {
+        ...mobile.data.products.map((product) => {
           return {
             id: product.id,
             title_fa: product.title_fa,
@@ -91,11 +103,15 @@ const homePreset = (
           };
         }),
       ],
-      pager: mobileList.data.pager,
+      pager: mobile.data.pager,
     },
-    laptopList: {
+    laptop: {
+      loading: false,
+      error: '',
+      url: 'categories/laptop/search/?',
+      type: 'laptop',
       products: [
-        ...laptopList.data.products.map((product) => {
+        ...laptop.data.products.map((product) => {
           return {
             id: product.id,
             title_fa: product.title_fa,
@@ -118,7 +134,7 @@ const homePreset = (
           };
         }),
       ],
-      pager: laptopList.data.pager,
+      pager: laptop.data.pager,
     },
     popularBrands: [
       ...popular_brands.brands.map((brand) => {

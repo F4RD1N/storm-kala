@@ -1,46 +1,47 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const initialState = {
+  loading: false,
+  error: "",
   incredible: {},
   bestSelling: {},
   popularBrands: [],
   categories: [],
-  mobileList: {},
-  laptopList: {},
+  mobile: {},
+  laptop: {},
 };
 
-
+export const fetchPushData = createAsyncThunk(
+  "home/fetchPushData",
+  async (arg) => {
+    const { url, type } = arg;
+    return axios.get(url).then((response) => ({ ...response.data.data, type }));
+  }
+);
 const homeSlice = createSlice({
   name: "home",
   initialState,
   reducers: {
     getData: (state, action) => {
-      return {...action.payload}
+      return { ...action.payload };
     },
-    pushIncredible: (state, action) => {
-      state.incredible.products.push(...action.payload.products);
-      state.incredible.pager = action.payload.pager;
-    },
-    pushBestSelling: (state, action) => {
-      state.bestSelling.products.push(...action.payload.products);
-      state.bestSelling.pager = action.payload.pager;
-    },
-    pushMobile: (state, action) => {
-      state.mobileList.products.push(...action.payload.products);
-      state.mobileList.pager = action.payload.pager;
-    },
-    pushLaptop: (state, action) => {
-      state.laptopList.products.push(...action.payload.products);
-      state.laptopList.pager = action.payload.pager;
-    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchPushData.pending, (state, action) => {
+      state[action.meta.arg.type].loading = true;
+    });
+    builder.addCase(fetchPushData.fulfilled, (state, action) => {
+      state[action.payload.type].loading = false;
+      state[action.payload.type].products.push(...action.payload.products);
+      state[action.payload.type].pager = action.payload.pager;
+    });
+    builder.addCase(fetchPushData.rejected, (state, action) => {
+      state[action.meta.arg.type].loading = true;
+      state[action.meta.arg.type] = action.error.errMessage;
+    });
   },
 });
 
 export default homeSlice.reducer;
-export const {
-  getData,
-  pushIncredible,
-  pushBestSelling,
-  pushMobile,
-  pushLaptop,
-} = homeSlice.actions;
+export const { getData, pushData } = homeSlice.actions;

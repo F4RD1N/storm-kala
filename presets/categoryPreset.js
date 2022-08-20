@@ -1,6 +1,8 @@
 const categoryPreset = ({ products, filters, pager, seo, category }) => {
   return {
     title: category.title_fa,
+    loading: false,
+    error: '',
     products: [
       ...products.map((product) => {
         return {
