@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
 
 `
-export const Empty = styled.p`
+export const Empty = styled.div`
   font-size: 1.2rem;
   text-align: center;
   padding: 2rem 0;
