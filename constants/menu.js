@@ -271,7 +271,7 @@ const menu = {
       id: 3,
       title: "Instagram",
       icon: <BsInstagram />,
-      url: "instagram.com/react.nick",
+      url: "https://instagram.com/react.nick",
     },
   ],
 };

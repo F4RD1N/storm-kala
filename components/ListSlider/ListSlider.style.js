@@ -18,6 +18,7 @@ export const SecTitle = styled.h3`
 `;
 
 export const Content = styled.div`
+position: relative;
 
 `
 

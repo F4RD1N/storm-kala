@@ -7,18 +7,18 @@ export const Container = styled(SectionCard)`
   position: relative;
   max-height: ${(props) => (props.showFull ? "" : "320px")};
   padding-bottom: 2rem;
-
   @media ${(props) => props.theme.breakpoints.lg} {
-    max-height: unset;
-    height: 100%;
+    max-height: 1500px;
     overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
   }
 `;
 
 export const Title = styled.h2`
   font-weight: bold;
   margin-bottom: 2rem;
-
 `;
 
 export const ItemContainer = styled.div`
@@ -42,9 +42,8 @@ export const ItemValue = styled.h3`
   -webkit-line-clamp: 5; /* number of lines to show */
 `;
 
-
 export const More = styled.div`
   @media ${(props) => props.theme.breakpoints.lg} {
-   display: none;
+    display: none;
   }
-`
+`;

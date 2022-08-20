@@ -10,7 +10,7 @@ export const Container = styled(SectionCard)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem 0;
+  margin: .5rem 0;
   flex-direction: column-reverse;
   gap: 0.5rem 0;
   padding-top: 0.5rem;

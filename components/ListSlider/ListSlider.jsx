@@ -6,37 +6,47 @@ import { ProductCard } from "../shared";
 
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-
 //required modules
-import { FreeMode } from "swiper";
+import { FreeMode, Navigation } from "swiper";
 
 //Styled Components
 import { Container, Title, SecTitle, Content } from "./ListSlider.style";
 
 //Components
 import LoadMore from "./LoadMore";
+import SliderNavigation from "../shared/SliderNavigation/SliderNavigation";
 
 //redux
 import { fetchPushData } from "../../redux/slices/homeSlice";
 
 const ListSlider = ({ data, title, subTitle, pusherLess }) => {
+  //Slider Nvigation Control
+  const navigationPrevRef = React.useRef(null);
+  const navigationNextRef = React.useRef(null);
+
   const arg = {
     loading: data.loading,
     url: data.url,
     type: data.type,
     pager: data?.pager,
-    action: fetchPushData
+    action: fetchPushData,
   };
   return (
     <Container>
       <Title>{title}</Title>
       <SecTitle>{subTitle}</SecTitle>
       <Content>
+      <SliderNavigation refs={{next: navigationNextRef, prev: navigationPrevRef}}/>
         <Swiper
+          navigation={{
+            // Both prevEl & nextEl are null at render so this does not work
+            prevEl: navigationPrevRef.current,
+            nextEl: navigationNextRef.current,
+          }}
           spaceBetween={3}
           slidesPerView={1.8}
           freeMode={true}
-          modules={[FreeMode]}
+          modules={[FreeMode, Navigation]}
           breakpoints={{
             280: {
               slidesPerView: 1.9,
@@ -85,7 +95,6 @@ const ListSlider = ({ data, title, subTitle, pusherLess }) => {
                 </SwiperSlide>
               );
             })}
-
           {!pusherLess && (
             <SwiperSlide className="swiper-item">
               <LoadMore arg={arg} />

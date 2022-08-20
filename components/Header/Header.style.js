@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.header`
   padding: 1.4rem 1rem;
   background-color: ${(props) => props.theme.colors.card};
-  margin: 1rem 0;
+  margin: 1rem 0 2rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;

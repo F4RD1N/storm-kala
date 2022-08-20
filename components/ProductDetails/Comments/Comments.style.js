@@ -6,10 +6,11 @@ import { SectionCard } from "../../../styles/shared";
 export const Container = styled(SectionCard)`
   max-height: 800px;
   overflow-y: scroll;
-
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
   @media ${(props) => props.theme.breakpoints.lg} {
-    max-height: unset;
-    height: 100%;
+    max-height: 1500px;
   }
 `;
 
