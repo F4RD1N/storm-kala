@@ -18,6 +18,8 @@ const productPreset = ({ product, recommendations, seo }) => {
       options: product.review.attributes ? product.review.attributes : null,
       information: product.specifications[0].attributes,
       comments: {
+        loading: false,
+        error: '',
         comments: product.last_comments,
         pager: {current_page: 1, total_pages: 3}
       },

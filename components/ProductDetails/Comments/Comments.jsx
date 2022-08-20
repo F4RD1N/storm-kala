@@ -18,15 +18,24 @@ import { AiFillLike, AiOutlineArrowDown } from "react-icons/ai";
 //Components
 import CommentCard from "./CommentCard";
 
+
 //state and logic
 import { useProductState, useLoadMore } from "../../../hooks";
 
 //helpers
 import { englishToPersian } from "../../../helpers";
 
-const Comments = ({ pusher }) => {
-  const { comments, suggestion } = useProductState();
-  const { loading, end, handler } = useLoadMore(pusher, comments?.pager);
+const Comments = ({action}) => {
+  const { comments, suggestion, id } = useProductState();
+  
+  const arg = {
+    loading: comments?.loading,
+    url: `product/${id}/comments/?`,
+    pager: comments?.pager,
+    action: action,
+  };
+
+  const { end, handler } = useLoadMore(arg);
 
 
   return (
@@ -60,9 +69,9 @@ const Comments = ({ pusher }) => {
 
       {comments?.comments?.length > 2 ? (
         !end ? (
-          <LoadMore disabled={loading} onClick={handler}>
-            {loading ? "کمی صبر کنید ... " : "بیشتر"}
-            {!loading && <AiOutlineArrowDown />}
+          <LoadMore disabled={arg.loading} onClick={handler}>
+            {arg.loading ? "کمی صبر کنید ... " : "بیشتر"}
+            {!arg.loading && <AiOutlineArrowDown />}
           </LoadMore>
         ) : (
           <EndOfList>به انتهای لیست رسیدید!</EndOfList>

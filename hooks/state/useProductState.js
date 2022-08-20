@@ -17,7 +17,10 @@ const useProductState = () => {
     introduce: product?.introduce,
     options: product?.options,
     information: product?.information,
-    comments: product?.comments,
+    comments: {
+      ...product?.comments,
+      comments: product?.comments?.comments?.filter((v,i,a)=>a.findIndex(v2=>(v2.id===v.id))===i)
+    },
     recommended: {
       products: recommendations
     },

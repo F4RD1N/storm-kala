@@ -33,7 +33,6 @@ const CategoryId = ({ data }) => {
     pager,
     action: fetchPushData,
   };
-  console.log(arg);
   return (
     <div>
       <Head>

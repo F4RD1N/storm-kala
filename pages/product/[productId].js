@@ -19,23 +19,20 @@ import {
   Comments,
   AddToCart,
 } from "../../components/ProductDetails";
-import { ListSlider, Loading } from "../../components";
+import { ListSlider } from "../../components";
 
 //data presets
 import { productPreset } from "../../presets";
 
 //redux
 import { useDispatch } from "react-redux";
-import { getProduct, pushComments } from "../../redux/slices/productSlice";
+import { getProduct, fetchPushComments } from "../../redux/slices/productSlice";
 
 //state
 import { useProductState } from "../../hooks";
 
-//pusher
-import { dataPusher } from "../../helpers/pusher";
-
 const ProductDetails = ({ productData }) => {
-  const { id, recommended, seo } = useProductState();
+  const { recommended, seo } = useProductState();
 
   //send data to productReducer
   const dispatch = useDispatch();
@@ -44,7 +41,7 @@ const ProductDetails = ({ productData }) => {
   useEffect(() => {
     dispatch(getProduct(productData));
     //cleanup product state after unmounting
-    return () => dispatch(getProduct({ products: [], recommendations: [] }));
+    return () => dispatch(getProduct());
   }, [router.query]);
 
   return (
@@ -74,7 +71,7 @@ const ProductDetails = ({ productData }) => {
         </Right>
         <Left>
 
-      <Comments pusher={dataPusher(`product/${id}/comments/?`, pushComments)} />
+      <Comments action={fetchPushComments}/>
       {/* <AddReview /> */}
         </Left>
       </SecondContainer>

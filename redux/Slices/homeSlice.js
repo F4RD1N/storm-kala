@@ -37,8 +37,8 @@ const homeSlice = createSlice({
       state[action.payload.type].pager = action.payload.pager;
     });
     builder.addCase(fetchPushData.rejected, (state, action) => {
-      state[action.meta.arg.type].loading = true;
-      state[action.meta.arg.type] = action.error.errMessage;
+      state[action.meta.arg.type].loading = false;
+      state[action.meta.arg.type].error = action.error.errMessage;
     });
   },
 });

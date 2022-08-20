@@ -40,8 +40,8 @@ const categorySlice = createSlice({
       state.pager = action.payload.pager;
     });
     builder.addCase(fetchPushData.rejected, (state, action) => {
-      state.loading = true;
-      state = action.error.errMessage;
+      state.loading = false;
+      state.error = action.error.errMessage;
     });
   },
 });

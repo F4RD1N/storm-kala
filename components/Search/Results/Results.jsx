@@ -32,7 +32,7 @@ const Results = ({ state }) => {
           const { id } = product;
 
           //check if the page is last page
-          if (pager?.current_page === pager?.total_pages) return;
+          // if (pager?.current_page === pager?.total_pages) return;
 
           return (
             <a

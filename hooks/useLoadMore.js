@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 const useLoadMore = (arg) => {
   const { pager, type, url, action } = arg;
-  console.log(arg)
   const [end, setEnd] = useState(pager?.current_page >= pager?.total_pages);
   const dispatch = useDispatch();
-  useEffect(() => {}, [pager]);
-
+  useEffect(() => {
+    setEnd(pager?.current_page >= pager?.total_pages)
+  }, [pager]);
   const handler = () => {
     dispatch(
       action({
@@ -16,7 +16,7 @@ const useLoadMore = (arg) => {
         type,
       })
     );
-    if (pager?.current_page >= pager?.total_pages) {
+    if (pager?.current_page + 1 >= pager?.total_pages) {
       setEnd(true);
     }
   };
