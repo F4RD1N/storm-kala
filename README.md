@@ -22,11 +22,6 @@ or
 
 ## About The App
 Storm Kala is an ecommerce app where you can find anything from a to z :)
-
-## Screenshots
-
-![StormKalaScreenshot](https://iili.io/UFFwwQ.png)
-
 ## Technologies
 [![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://reactjs.org/docs/getting-started.html)
@@ -35,6 +30,10 @@ Storm Kala is an ecommerce app where you can find anything from a to z :)
 [![ReduxToolkit](https://img.shields.io/badge/redux_toolkit-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)](https://redux.js.org/)
 <br />
 [![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)](https://styled-components.com/)
+
+## Screenshots
+
+![StormKalaScreenshot](https://iili.io/UFFwwQ.png)
 
 ## Setup
 - clone down this repository. you will need node and npm installed globally on your machine.
