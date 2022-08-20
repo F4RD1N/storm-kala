@@ -6,3 +6,7 @@ import "nprogress/nprogress.css"; //styles of nprogress
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
+
+//Swiper
+import SwiperCore, { Autoplay } from 'swiper';
+SwiperCore.use([Autoplay])

@@ -22,6 +22,7 @@ const Hero = () => {
         slidesPerView={1}
         spaceBetween={5}
         loop={true}
+        autoplay={{ delay: 2000 }}
         pagination={{
           clickable: true,
         }}
