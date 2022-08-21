@@ -98,7 +98,10 @@ export const CommentBody = styled.p`
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: ${(props) =>
-    props.showFull ? "N" : 3}; /* number of lines to show */
+    props.showFull ? "N" : 6}; /* number of lines to show */
+  &:hover {
+    -webkit-line-clamp: initial
+  }
 `;
 
 export const LoadMore = styled.button`
