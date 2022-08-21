@@ -11,6 +11,16 @@ const nextConfig = {
       destination: "/",
       permanent: false,
     },
+    {
+      source: "/category",
+      destination: "/",
+      permanent: false,
+    },
+    {
+      source: "/checkout",
+      destination: "/checkout/cart",
+      permanent: false,
+    },
   ],
   images: {
     domains: [
