@@ -7,7 +7,6 @@ import { Container, Button } from './SliderNavigation.style'
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 const SliderNavigation = ({refs}) => {
-    console.log(refs);
   return (
     <Container>
         <Button ref={refs.prev}><BiChevronRight /></Button>
