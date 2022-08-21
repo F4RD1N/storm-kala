@@ -1,12 +1,9 @@
-import React from 'react'
-
+import React from "react";
 
 //Styled Components
-import { Container } from './Copyright.style'
+import { Container, Owner } from "./Copyright.style";
 const Copyright = () => {
-  return (
-    <Container>تمامی حقوق محفوظ میباشد. CopyrightⒸ 2022</Container>
-  )
-}
+  return <Container>طراحی و توسعه توسط <Owner target='_blank' href='https://github.com/F4RD1N'>F4RD1N</Owner></Container>;
+};
 
-export default Copyright
+export default Copyright;
