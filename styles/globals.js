@@ -124,7 +124,7 @@ const GlobalStyles = createGlobalStyle`
     /* -moz-user-select: -moz-none; */
     /*IE10*/
     /* -ms-user-select: none; */
-    user-select: none;
+    /* user-select: none; */
 
     /*You just need this if you are only concerned with android and not desktop browsers.*/
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
