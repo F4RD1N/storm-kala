@@ -64,16 +64,22 @@ export const getStaticPaths = async () => {
 };
 export const getStaticProps = async (context) => {
   const { categoryId } = context.params;
-  const response = await fetch(
-    `https://api.digikala.com/v1/categories/${categoryId}/search/?page=1`
-  );
-  const data = await response.json();
+  try {
+    const response = await fetch(
+      `https://api.digikala.com/v1/categories/${categoryId}/search/?page=1`
+    );
+    const data = await response.json();
 
-  //cache dada when fetch in ssr(doesnt effect in isr or ssg)
-  // res.setHeader(
-  //   "Cache-Control",
-  //   "public, s-maxage=10, stale-while-revalidate=59"
-  // );
+    //cache dada when fetch in ssr(doesnt effect in isr or ssg)
+    // res.setHeader(
+    //   "Cache-Control",
+    //   "public, s-maxage=10, stale-while-revalidate=59"
+    // );
 
-  return { props: { data: categoryPreset(data.data) }, revalidate: 21600 };
+    return { props: { data: categoryPreset(data.data) }, revalidate: 21600 };
+  } catch (err) {
+    return {
+      notFound: true,
+    };
+  }
 };

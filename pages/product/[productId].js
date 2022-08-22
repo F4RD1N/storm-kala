@@ -66,13 +66,11 @@ const ProductDetails = ({ productData }) => {
 
       <SecondContainer>
         <Right>
-      <Information />
-
+          <Information />
         </Right>
         <Left>
-
-      <Comments action={fetchPushComments}/>
-      {/* <AddReview /> */}
+          <Comments action={fetchPushComments} />
+          {/* <AddReview /> */}
         </Left>
       </SecondContainer>
       <div id="similar"></div>
@@ -93,18 +91,24 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const { productId } = context.params;
-  const response = await fetch(
-    `https://api.digikala.com/v1/product/${productId}/`
-  );
-  const data = await response.json();
+  try {
+    const response = await fetch(
+      `https://api.digikala.com/v1/product/${productId}/`
+    );
+    const data = await response.json();
 
-  if (!data.data) {
+    if (!data.data) {
+      return {
+        notFound: true,
+      };
+    }
+    return {
+      props: { productData: productPreset(data.data) },
+      revalidate: 21600,
+    };
+  } catch (err) {
     return {
       notFound: true,
     };
   }
-  return {
-    props: { productData: productPreset(data.data) },
-    revalidate: 21600,
-  };
 };
