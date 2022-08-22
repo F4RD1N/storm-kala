@@ -97,11 +97,7 @@ export const CommentBody = styled.p`
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: ${(props) =>
-    props.showFull ? "N" : 6}; /* number of lines to show */
-  &:hover {
-    -webkit-line-clamp: initial
-  }
+  -webkit-line-clamp:12; /* number of lines to show */
 `;
 
 export const LoadMore = styled.button`
