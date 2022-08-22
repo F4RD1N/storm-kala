@@ -2235,11 +2235,6 @@ styled-jsx@5.0.2:
   resolved "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.0.2.tgz"
   integrity sha512-LqPQrbBh3egD57NBcHET4qcgshPks+yblyhPlH2GY8oaDgKs8SK4C3dBh3oSJjgzJ3G5t1SYEZGHkP+QEpX9EQ==
 
-styled-normalize@^8.0.7:
-  version "8.0.7"
-  resolved "https://registry.npmjs.org/styled-normalize/-/styled-normalize-8.0.7.tgz"
-  integrity sha512-qQV4O7B9g7ZUnStCwGde7Dc/mcFF/pz0Ha/LL7+j/r6uopf6kJCmmR7jCPQMCBrDkYiQ4xvw1hUoceVJkdaMuQ==
-
 styled-reset@^4.4.2:
   version "4.4.2"
   resolved "https://registry.npmjs.org/styled-reset/-/styled-reset-4.4.2.tgz"
