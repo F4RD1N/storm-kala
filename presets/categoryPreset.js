@@ -26,7 +26,6 @@ const categoryPreset = ({ products, filters, pager, seo, category }) => {
         };
       }),
     ],
-    filters: filters,
     pager: pager,
     seo: {
       title: seo.open_graph.title,

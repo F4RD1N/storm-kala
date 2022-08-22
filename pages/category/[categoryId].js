@@ -18,6 +18,9 @@ import { getData, fetchPushData } from "../../redux/slices/categorySlice";
 //state
 import { useCategoryState } from "../../hooks";
 
+//constants
+import { menu } from "../../constants";
+
 const CategoryId = ({ data }) => {
   const { seo, title, pager, loading } = useCategoryState();
   const { query } = useRouter();
@@ -47,17 +50,29 @@ const CategoryId = ({ data }) => {
 
 export default CategoryId;
 
-export const getServerSideProps = async ({ res, query }) => {
-  const { categoryId } = query;
+//fetch Category Data
+export const getStaticPaths = async () => {
+  const presetPaths = [
+    ...menu.category.map((item) =>
+      item.sub.map((item) => "/category/" + item.code)
+    ),
+  ].flat();
+  return {
+    paths: presetPaths,
+    fallback: `blocking`,
+  };
+};
+export const getStaticProps = async (context) => {
+  const { categoryId } = context.params;
   const response = await fetch(
     `https://api.digikala.com/v1/categories/${categoryId}/search/?page=1`
   );
   const data = await response.json();
 
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=10, stale-while-revalidate=59"
-  );
+  // res.setHeader(
+  //   "Cache-Control",
+  //   "public, s-maxage=10, stale-while-revalidate=59"
+  // );
 
-  return { props: { data: categoryPreset(data.data) } };
+  return { props: { data: categoryPreset(data.data) }, revalidate: 21600 };
 };

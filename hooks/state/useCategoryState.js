@@ -9,7 +9,6 @@ const useCategoryState = () => {
     error: state.error,
     title: state.title,
     products: state.products?.filter((v,i,a)=>a.findIndex(v2=>(v2.id===v.id))===i),
-    filters: state.filters,
     pager: state.pager,
     seo: state.seo
   };

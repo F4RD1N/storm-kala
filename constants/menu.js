@@ -190,7 +190,7 @@ const menu = {
         {
           id: 3,
           title: "مواد شوینده",
-          code: "-detergents",
+          code: "detergents",
         },
         {
           id: 4,
