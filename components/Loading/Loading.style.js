@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     position: fixed;
-    background-color: rgba(0,0,0, .1);
+    background-color: ${props => props.theme.colors.card};
     inset: 0;
     height: 100vh;
     z-index: 20;
@@ -12,11 +12,11 @@ export const Container = styled.div`
 `
 
 export const Card = styled.div`
-    background-color: ${props => props.theme.colors.red};
+    background-color: ${props => props.theme.colors.primary};
     width: 200px;
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 5px;
 `
