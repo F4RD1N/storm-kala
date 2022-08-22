@@ -69,6 +69,7 @@ export const getStaticProps = async (context) => {
   );
   const data = await response.json();
 
+  //cache dada when fetch in ssr(doesnt effect in isr or ssg)
   // res.setHeader(
   //   "Cache-Control",
   //   "public, s-maxage=10, stale-while-revalidate=59"
