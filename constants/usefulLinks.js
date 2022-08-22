@@ -11,7 +11,7 @@ const usefulLinks = [
       {
         id: 2,
         title: "لباس زنانه",
-        code: "women-clothin",
+        code: "women-clothing",
       },
       {
         id: 3,
