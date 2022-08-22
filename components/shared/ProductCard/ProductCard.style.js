@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+//assets
+import PictureBackground from "../../../assets/picture-bg.jpg";
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -10,19 +13,17 @@ export const Container = styled.div`
   user-select: none;
   height: 225px;
   background-color: ${(props) => props.theme.colors.card};
-  @media ${(props) => props.theme.breakpoints['2xs']} {
+  @media ${(props) => props.theme.breakpoints["2xs"]} {
     height: 250px;
   }
   @media ${(props) => props.theme.breakpoints.xs} {
     height: 270px;
   }
-
-
-
 `;
 export const ImageContainer = styled.div`
   width: 100px;
   height: 100px;
+  background: url(${PictureBackground.src}) center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,8 +70,8 @@ export const OldPrice = styled.h4`
 `;
 
 export const Unavailable = styled.span`
-  font-size: .9rem;
-  color: ${props => props.theme.colors.textSecondary};
+  font-size: 0.9rem;
+  color: ${(props) => props.theme.colors.textSecondary};
 `;
 export const Badge = styled.div`
   display: ${(props) => (props.isVisible ? "flex" : "none")};
