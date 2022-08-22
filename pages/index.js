@@ -46,7 +46,6 @@ const Home = ({ homeData }) => {
       <ListSlider data={mobile} title="موبایل" />
       <CatagoryList />
       <SpecialCatagoryList />
-      {/* <PopularBrandsList /> */}
       <ListSlider data={bestSelling} title="محبوب ترین ها" />
       <ListSlider
         data={laptop}
