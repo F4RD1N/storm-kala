@@ -1,6 +1,5 @@
 const searchPreset = (results) => {
   return {
-    filters: results.data.filters,
     products: [
       ...results.data.products.map((product) => {
         return {
