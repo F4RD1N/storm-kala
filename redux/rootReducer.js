@@ -4,12 +4,12 @@ import storage from "reduxjs-toolkit-persist/lib/storage"; // defaults to localS
 
 //Slice Reducers
 import {
-  homeSlice,
-  productSlice,
-  categorySlice,
-  searchSlice,
-  cartSlice,
-  mainSlice
+  homeReducer,
+  productReducer,
+  categoryReducer,
+  searchReducer,
+  cartReducer,
+  mainReducer
 } from './slices'
 
 //Persist Config
@@ -18,15 +18,15 @@ const persistConfig = {
   key: "cart",
   storage,
 };
-const persistedCart = persistReducer(persistConfig, cartSlice);
+const persistedCart = persistReducer(persistConfig, cartReducer);
 
 const rootReducer = combineReducers({
-  productState: productSlice,
-  homeState: homeSlice,
-  searchState: searchSlice,
+  productState: productReducer,
+  homeState: homeReducer,
+  searchState: searchReducer,
   cartState: persistedCart,
-  categoryState: categorySlice,
-  mainState: mainSlice,
+  categoryState: categoryReducer,
+  mainState: mainReducer,
 });
 
 export default rootReducer;
