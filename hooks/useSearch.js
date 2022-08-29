@@ -6,7 +6,7 @@ import { fetchSearch, clearResults } from "../redux/slices/searchSlice";
 
 //state
 import { useSearchState } from "../hooks";
-const useResults = () => {
+const useSearch = () => {
   const { pager } = useSearchState();
   const { query } = useRouter();
   const dispatch = useDispatch();
@@ -27,4 +27,4 @@ const useResults = () => {
   };
 };
 
-export default useResults;
+export default useSearch;

@@ -14,9 +14,9 @@ import {
 import { ProductCard, LoadingIndicator } from "../../shared";
 
 //logic
-import { useResults } from "../../../hooks";
+import { useSearch } from "../../../hooks";
 const Results = ({ state }) => {
-  const { pageHandler } = useResults();
+  const { pageHandler } = useSearch();
 
   const { products, loading, error, pager } = state();
 
