@@ -16,4 +16,4 @@ jobs:
           LIARA_TOKEN: ${{ secrets.LIARA_API_TOKEN }}
         run: |
           npm i -g @liara/cli@2
-          liara deploy --app="cranky-herschel-pwpbglfrs" --platform docker --api-token="$LIARA_TOKEN" --region iran
+          liara deploy --app="cranky-herschel-pwpbglfrs" --platform docker --api-token="$LIARA_TOKEN" --region iran --detach
