@@ -4,7 +4,7 @@ Storm Kala
 ## Demo link:
 access my site at 
 <br />
-[cranky-herschel-pwpbglfrs.iran.liara.run](https://cranky-herschel-pwpbglfrs.iran.liara.run/)
+[storm-kala.f4rd1n.ir](https://storm-kala.f4rd1n.ir) `recommended`
 <br />
 or
 <br />
