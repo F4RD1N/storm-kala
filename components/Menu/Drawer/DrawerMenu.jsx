@@ -18,9 +18,7 @@ import { IoMdClose } from "react-icons/io";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 //Components
-import Input from "./Input";
-import Item from "./Item";
-import DropDown from "./DropDown/DropDown";
+import { Input, Item, DropDown } from "./";
 
 //Constants
 import { menu } from "../../../constants";
