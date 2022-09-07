@@ -1,4 +1,4 @@
-export { default as ListSlider } from "./listSlider/listSlider";
-export { default as SliderNavigation } from "./sliderNavigation/sliderNavigation";
-export { default as ProductCard } from "./productCard/productCard";
-export { default as LoadingIndicator } from "./loadingIndicator/loadingIndicator";
+export { default as ListSlider } from "./ListSlider/ListSlider";
+export { default as SliderNavigation } from "./SliderNavigation/SliderNavigation";
+export { default as ProductCard } from "./ProductCard/ProductCard";
+export { default as LoadingIndicator } from "./LoadingIndicator/LoadingIndicator";

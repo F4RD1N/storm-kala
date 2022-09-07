@@ -11,7 +11,7 @@ import { FreeMode, Navigation } from "swiper";
 import { Container, Title, SecTitle, Content } from "./listSlider.style";
 
 //Components
-import LoadMore from "./loadMore";
+import LoadMore from "./LoadMore";
 import { ProductCard, SliderNavigation } from "..";
 
 //redux
