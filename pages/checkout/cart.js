@@ -7,8 +7,8 @@ import {
   Title,
 } from "../../components/checkout/Cart/Cart.style";
 //Components
-import { Items } from "../../components/Checkout/Cart";
-import { NextButton } from "../../components/Checkout";
+import { Items } from "../../components/checkout/Cart";
+import { NextButton } from "../../components/checkout";
 
 const Cart = () => {
   return (
