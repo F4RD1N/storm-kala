@@ -5,7 +5,7 @@ import React from 'react'
 import { Container, Card } from './Loading.style'
 
 //Components
-import { LoadingIndicator } from '../shared'
+import { LoadingIndicator } from '../../shared'
 
 const Loading = () => {
   return (
