@@ -4,7 +4,7 @@ import React from "react";
 import { Container } from "./trusts.style";
 
 //Components
-import Trust from "./trust";
+import Trust from "./Trust";
 
 const Trusts = () => {
   return (

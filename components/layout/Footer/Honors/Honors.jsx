@@ -10,7 +10,7 @@ import { TbDiscount2 } from "react-icons/tb";
 import { BiSupport } from "react-icons/bi";
 
 //Components
-import Honor from "./honor";
+import Honor from "./Honor";
 
 const Honors = () => {
   return (

@@ -4,7 +4,7 @@ import React from "react";
 import { Container, LinksContainer, LinksTitle } from "./usefulLinks.style";
 
 //Components
-import UsefulLinkItem from "./usefulLinkItem";
+import UsefulLinkItem from "./UsefulLinkItem";
 
 //constants
 import { usefulLinks } from "../../../../constants";
