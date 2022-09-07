@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 //Global shared
-import { GlobalButton } from "../../styles/shared";
+import { GlobalButton } from "../../../styles/shared";
 
 export const Container = styled.section`
 `;

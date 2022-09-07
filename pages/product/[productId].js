@@ -19,7 +19,7 @@ import {
   Comments,
   AddToCart,
 } from "../../components/ProductDetails";
-import { ListSlider } from "../../components";
+import { ListSlider } from "../../components/shared";
 
 //data presets
 import { productPreset } from "../../presets";

@@ -4,7 +4,7 @@ import Head from "next/head";
 //Components
 import {
   ListSlider,
-} from "../components";
+} from "../components/shared";
 import {
   Hero,
   CatagoryList,

@@ -1,1 +1,0 @@
-export { default as ListSlider } from "./ListSlider/ListSlider";

@@ -5,10 +5,10 @@ import { LoadMoreContainer, LoadMoreButton } from "./ListSlider.style";
 //Icons
 import { AiOutlineArrowLeft } from "react-icons/ai";
 //Components
-import { LoadingIndicator } from "../shared";
+import { LoadingIndicator } from "..";
 
 //logic
-import { useLoadMore } from "../../hooks";
+import { useLoadMore } from "../../../hooks";
 
 const LoadMore = ({ arg }) => {
   const { loading } = arg;

@@ -2,9 +2,6 @@ import React from "react";
 import Link from "next/link";
 import propTypes from 'prop-types'
 
-//Shared Components
-import { ProductCard } from "../shared";
-
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 //required modules
@@ -15,10 +12,10 @@ import { Container, Title, SecTitle, Content } from "./ListSlider.style";
 
 //Components
 import LoadMore from "./LoadMore";
-import SliderNavigation from "../shared/SliderNavigation/SliderNavigation";
+import { ProductCard, SliderNavigation } from "../";
 
 //redux
-import { fetchPushData } from "../../redux/slices/homeSlice";
+import { fetchPushData } from "../../../redux/slices/homeSlice";
 
 const ListSlider = ({ data, title, subTitle, pusherLess }) => {
   //Slider Nvigation Control
