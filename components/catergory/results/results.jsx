@@ -1,7 +1,7 @@
 import React from "react";
 
 //Styled Components
-import { Container } from "./Results.style";
+import { Container } from "./results.style";
 
 //Components
 import { ProductCard } from "../../shared";

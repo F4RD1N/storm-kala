@@ -1,7 +1,7 @@
 import React from "react";
 import propTypes from 'prop-types'
 //Styled Components
-import { Container } from "./LoadMore.style";
+import { Container } from "./loadMore.style";
 
 //logic
 import { useLoadMore } from "../../../hooks";
