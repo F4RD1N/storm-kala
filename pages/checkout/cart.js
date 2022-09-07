@@ -5,7 +5,7 @@ import Head from "next/head";
 import {
   Container,
   Title,
-} from "../../components/Checkout/Cart/Cart.style";
+} from "../../components/checkout/Cart/Cart.style";
 //Components
 import { Items } from "../../components/Checkout/Cart";
 import { NextButton } from "../../components/Checkout";

@@ -3,13 +3,13 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 
 //Styled Components
-import { Container } from "../../components/Checkout/Payment/Payment.style";
-import { Content, Left } from "../../components/Checkout/Shipping/Shipping.style";
+import { Container } from "../../components/checkout/Payment/Payment.style";
+import { Content, Left } from "../../components/checkout/Shipping/Shipping.style";
 
 //Components
 import { NextStep, NextButton } from "../../components/Checkout";
-import { PaymentMethod, Discount } from "../../components/Checkout/Payment";
-import { Order, Details } from "../../components/Checkout/Shipping";
+import { PaymentMethod, Discount } from "../../components/checkout/Payment";
+import { Order, Details } from "../../components/checkout/Shipping";
 
 //state
 import { useCartState } from "../../hooks";

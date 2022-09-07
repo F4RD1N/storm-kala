@@ -9,7 +9,7 @@ import {
   Hero,
   CatagoryList,
   SpecialCatagoryList,
-} from "../components/Home";
+} from "../components/home";
 
 //preset data
 import { homePreset } from "../presets";

@@ -3,14 +3,14 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 
 //Components
-import { NextStep, NextButton } from "../../components/Checkout";
-import { Address, Order, Details } from "../../components/Checkout/Shipping";
+import { NextStep, NextButton } from "../../components/checkout";
+import { Address, Order, Details } from "../../components/checkout/Shipping";
 //Styled Components
 import {
   Container,
   Content,
   Left,
-} from "../../components/Checkout/Shipping/Shipping.style";
+} from "../../components/checkout/Shipping/Shipping.style";
 
 //state
 import { useCartState } from "../../hooks";

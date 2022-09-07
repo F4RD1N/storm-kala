@@ -8,7 +8,7 @@ import {
   SecondContainer,
   Right,
   Left,
-} from "../../components/ProductDetails/ProductDetails.style";
+} from "../../components/product/product.style";
 //Components
 import {
   ImageSlider,
@@ -18,7 +18,7 @@ import {
   Information,
   Comments,
   AddToCart,
-} from "../../components/ProductDetails";
+} from "../../components/product";
 import { ListSlider } from "../../components/shared";
 
 //data presets
