@@ -10,7 +10,7 @@ import { Container, Title, More } from "./information.style";
 import { ReadMore } from "../../../styles/shared";
 
 //Components
-import InfoCard from "./infoCard";
+import InfoCard from "./InfoCard";
 
 //state
 import { useProductState } from "../../../hooks";

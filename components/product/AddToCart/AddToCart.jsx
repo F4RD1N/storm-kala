@@ -11,7 +11,7 @@ import {
 } from "./addToCart.style";
 
 //Components
-import CartHandler from "./cartHandler";
+import CartHandler from "./CartHandler";
 
 //state
 import {useProductState} from '../../../hooks'

@@ -1,8 +1,8 @@
-export { default as ImageSlider } from "./imageSlider/imageSlider";
-export { default as MainDetails } from "./mainDetails/mainDetails";
-export { default as Options } from "./options/options";
-export { default as Introduce } from "./introduce/introduce";
-export { default as Information } from "./information/information";
-export { default as Comments } from "./comments/comments";
-export { default as AddReview } from "./addReview/addReview";
-export { default as AddToCart } from "./addToCart/addToCart";
+export { default as ImageSlider } from "./ImageSlider/ImageSlider";
+export { default as MainDetails } from "./MainDetails/MainDetails";
+export { default as Options } from "./Options/Options";
+export { default as Introduce } from "./Introduce/Introduce";
+export { default as Information } from "./Information/Information";
+export { default as Comments } from "./Comments/Comments";
+export { default as AddReview } from "./AddReview/AddReview";
+export { default as AddToCart } from "./AddToCart/AddToCart";

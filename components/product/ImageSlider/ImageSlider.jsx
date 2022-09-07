@@ -10,7 +10,7 @@ import { Pagination } from "swiper";
 import { Container} from "./imageSlider.style";
 
 //Components
-import SliderItem from "./sliderItem";
+import SliderItem from "./SliderItem";
 
 //state
 import { useProductState } from "../../../hooks";
