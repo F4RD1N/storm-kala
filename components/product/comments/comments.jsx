@@ -11,7 +11,7 @@ import {
   LoadMore,
   EndOfList,
   EmptyComments
-} from "./Comments.style";
+} from "./comments.style";
 
 //Icons
 import { AiFillLike, AiOutlineArrowDown } from "react-icons/ai";

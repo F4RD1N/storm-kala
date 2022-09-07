@@ -9,7 +9,7 @@ import {
   Color,
   CategoryContainer,
   Category,
-} from "./MainDetails.style";
+} from "./mainDetails.style";
 
 //state
 import { useProductState } from "../../../hooks";

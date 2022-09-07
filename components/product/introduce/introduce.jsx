@@ -4,7 +4,7 @@ import React from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 //Styled Components
-import { Container, Title, Description } from "./Introduce.style";
+import { Container, Title, Description } from "./introduce.style";
 
 //Shared Styled Components
 import { ReadMore } from "../../../styles/shared";

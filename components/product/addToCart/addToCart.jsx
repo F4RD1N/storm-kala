@@ -8,10 +8,10 @@ import {
   ProductPrice,
   OldPrice,
   GoToSimilarSection,
-} from "./AddToCart.style";
+} from "./addToCart.style";
 
 //Components
-import CartHandler from "./CartHandler";
+import CartHandler from "./cartHandler";
 
 //state
 import {useProductState} from '../../../hooks'

@@ -7,10 +7,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 
 //Styled Components
-import { Container} from "./ImageSlider.style";
+import { Container} from "./imageSlider.style";
 
 //Components
-import SliderItem from "./SliderItem";
+import SliderItem from "./sliderItem";
 
 //state
 import { useProductState } from "../../../hooks";

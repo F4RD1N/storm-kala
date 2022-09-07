@@ -7,7 +7,7 @@ import {
   HandleButton,
   Quantity,
   QuantityLimit,
-} from "./AddToCart.style";
+} from "./addToCart.style";
 
 //Icons
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";

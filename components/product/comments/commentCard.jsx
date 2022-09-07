@@ -11,7 +11,7 @@ import {
   CommentBody,
   IsBuyer,
   Rate,
-} from "./Comments.style";
+} from "./comments.style";
 
 //helpers
 import { englishToPersian } from "../../../helpers";

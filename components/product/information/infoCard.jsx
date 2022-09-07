@@ -2,7 +2,7 @@ import React from "react";
 import propTypes from 'prop-types'
 
 //Styled Components
-import { ItemContainer, Item, ItemValue } from "./Information.style";
+import { ItemContainer, Item, ItemValue } from "./information.style";
 
 const InfoCard = ({title, value}) => {
   return (

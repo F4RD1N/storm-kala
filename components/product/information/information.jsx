@@ -4,13 +4,13 @@ import React from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 //Styled Components
-import { Container, Title, More } from "./Information.style";
+import { Container, Title, More } from "./information.style";
 
 //Shared Styled Components
 import { ReadMore } from "../../../styles/shared";
 
 //Components
-import InfoCard from "./InfoCard";
+import InfoCard from "./infoCard";
 
 //state
 import { useProductState } from "../../../hooks";

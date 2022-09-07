@@ -9,7 +9,7 @@ import {
   HorizontalRuler,
   ContentDescription,
   Content
-} from "./Options.style";
+} from "./options.style";
 
 //state
 import { useProductState } from "../../../hooks";

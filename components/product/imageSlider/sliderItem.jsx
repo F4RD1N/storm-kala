@@ -2,7 +2,7 @@ import Image from "next/image";
 import propTypes from 'prop-types'
 
 //Styled Components
-import { Item } from "./ImageSlider.style";
+import { Item } from "./imageSlider.style";
 
 
 const SliderItem = ({ source, alt }) => {
