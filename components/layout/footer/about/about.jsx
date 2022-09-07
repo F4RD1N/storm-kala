@@ -2,7 +2,7 @@ import React from 'react'
 
 
 //Styled Components
-import { Container, Title, Description } from './About.style'
+import { Container, Title, Description } from './about.style'
 const About = () => {
   return (
     <Container>

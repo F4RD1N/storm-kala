@@ -1,5 +1,5 @@
-export { default as Header } from "./Header/Header";
-export { default as Footer } from "./Footer/Footer";
-export { default as DrawerMenu } from "./Menu/Drawer/DrawerMenu";
-export { default as SubHeader } from "./Menu/SubHeader/SubHeader";
-export { default as Loading } from "./Loading/Loading";
+export { default as Header } from "./header/header";
+export { default as Footer } from "./footer/footer";
+export { default as DrawerMenu } from "./menu/drawer/drawerMenu";
+export { default as SubHeader } from "./menu/subHeader/subHeader";
+export { default as Loading } from "./loading/loading";

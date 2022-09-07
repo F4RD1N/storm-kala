@@ -3,7 +3,7 @@ import Image from "next/image";
 import propTypes from 'prop-types'
 
 //Styled Components
-import { ImageContainer } from "./Trusts.style";
+import { ImageContainer } from "./trusts.style";
 
 const Trust = ({source}) => {
   return (

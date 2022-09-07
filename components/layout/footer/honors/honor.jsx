@@ -2,7 +2,7 @@ import React from "react";
 import propTypes from 'prop-types'
 
 //Styled Compoennts
-import { HonorItem, IconContainer, HonorTitle } from "./Honors.style";
+import { HonorItem, IconContainer, HonorTitle } from "./honors.style";
 
 const Honor = ({title, icon}) => {
   return (

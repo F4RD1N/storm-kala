@@ -1,7 +1,7 @@
 import React from "react";
 
 //Styled Compoennts
-import { Container } from "./Honors.style";
+import { Container } from "./honors.style";
 
 //Icons
 import { BsShieldCheck } from "react-icons/bs";
@@ -10,7 +10,7 @@ import { TbDiscount2 } from "react-icons/tb";
 import { BiSupport } from "react-icons/bi";
 
 //Components
-import Honor from "./Honor";
+import Honor from "./honor";
 
 const Honors = () => {
   return (

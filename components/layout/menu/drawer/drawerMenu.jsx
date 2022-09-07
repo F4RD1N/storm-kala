@@ -11,14 +11,14 @@ import {
   MainTitle,
   HorizontalRuler,
   Title,
-} from "./DrawerMenu.style";
+} from "./drawerMenu.style";
 
 //Icons
 import { IoMdClose } from "react-icons/io";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 //Components
-import { Input, Item, DropDown } from "./";
+import { Input, Item, DropDown } from ".";
 
 //Constants
 import { menu } from "../../../../constants";

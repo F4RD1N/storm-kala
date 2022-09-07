@@ -1,10 +1,10 @@
 import React from 'react'
 
 //Styled Components
-import { Container, Item, Content } from './SubHeader.style'
+import { Container, Item, Content } from './subHeader.style'
 
 //Components
-import DropDown from './DropDown/DropDown'
+import DropDown from './dropDown/dropDown'
 
 const SubHeader = () => {
   return (

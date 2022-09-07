@@ -1,10 +1,10 @@
 import React from "react";
 
 //Styled Components
-import { Container } from "./Footer.style";
+import { Container } from "./footer.style";
 
 //Components
-import { Honors, UsefulLinks, About, Trusts, Copyright } from "./";
+import { Honors, UsefulLinks, About, Trusts, Copyright } from ".";
 
 const Footer = () => {
   return (

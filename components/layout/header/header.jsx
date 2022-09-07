@@ -11,7 +11,7 @@ import {
   IconContainer,
   MainTitle,
   CartCounter,
-} from "./Header.style";
+} from "./header.style";
 
 //cart state
 import { useCartState, useDrawer } from "../../../hooks";

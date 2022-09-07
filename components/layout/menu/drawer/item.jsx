@@ -2,7 +2,7 @@ import React from 'react'
 import propTypes from 'prop-types'
 
 //Styled Components
-import { ItemContainer, IconContainer, ItemTitle } from './DrawerMenu.style'
+import { ItemContainer, IconContainer, ItemTitle } from './drawerMenu.style'
 
 const Item = ({title, icon}) => {
   return (

@@ -1,10 +1,10 @@
 import React from "react";
 
 //Styled Components
-import { Container } from "./Trusts.style";
+import { Container } from "./trusts.style";
 
 //Components
-import Trust from "./Trust";
+import Trust from "./trust";
 
 const Trusts = () => {
   return (

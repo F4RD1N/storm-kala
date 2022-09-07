@@ -9,7 +9,7 @@ import {
   Right,
   Content,
   Item,
-} from "./DropDown.style";
+} from "./dropDown.style";
 
 //Icons
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";

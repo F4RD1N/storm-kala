@@ -3,7 +3,7 @@ import Link from "next/link";
 import propTypes from 'prop-types'
 
 //Styled Components
-import { LinkItem } from "./UsefulLinks.style";
+import { LinkItem } from "./usefulLinks.style";
 
 const UsefulLinkItem = ({ url, title }) => {
   return (

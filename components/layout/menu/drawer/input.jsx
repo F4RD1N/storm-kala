@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 //Styled Components
-import { InputContainer, SearchInput, IconContainer } from "./DrawerMenu.style";
+import { InputContainer, SearchInput, IconContainer } from "./drawerMenu.style";
 
 //Icons
 import { FiSearch } from "react-icons/fi";

@@ -1,10 +1,10 @@
 import React from "react";
 
 //Styled Components
-import { Container, LinksContainer, LinksTitle } from "./UsefulLinks.style";
+import { Container, LinksContainer, LinksTitle } from "./usefulLinks.style";
 
 //Components
-import UsefulLinkItem from "./UsefulLinkItem";
+import UsefulLinkItem from "./usefulLinkItem";
 
 //constants
 import { usefulLinks } from "../../../../constants";
