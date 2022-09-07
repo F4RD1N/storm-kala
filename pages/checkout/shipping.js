@@ -4,13 +4,13 @@ import Head from "next/head";
 
 //Components
 import { NextStep, NextButton } from "../../components/checkout";
-import { Address, Order, Details } from "../../components/checkout/shipping";
+import { Address, Order, Details } from "../../components/checkout/Shipping";
 //Styled Components
 import {
   Container,
   Content,
   Left,
-} from "../../components/checkout/shipping/shipping.style";
+} from "../../components/checkout/Shipping/shipping.style";
 
 //state
 import { useCartState } from "../../hooks";

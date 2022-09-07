@@ -5,9 +5,9 @@ import Head from "next/head";
 import {
   Container,
   Title,
-} from "../../components/checkout/cart/cart.style";
+} from "../../components/checkout/Cart/cart.style";
 //Components
-import { Items } from "../../components/checkout/cart";
+import { Items } from "../../components/checkout/Cart";
 import { NextButton } from "../../components/checkout";
 
 const Cart = () => {
