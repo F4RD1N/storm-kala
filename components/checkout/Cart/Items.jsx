@@ -3,8 +3,8 @@ import React from "react";
 import { ClearCart, Content } from "./cart.style";
 
 //Components
-import ItemCard from "./itemCard/itemCard";
-import EmptyCart from "./emptyCart/emptyCart";
+import ItemCard from "./ItemCard/ItemCard";
+import EmptyCart from "./EmptyCart/EmptyCart";
 
 //hooks
 import { useCart, useCartState } from "../../../hooks";

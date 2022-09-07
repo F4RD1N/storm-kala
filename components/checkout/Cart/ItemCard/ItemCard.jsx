@@ -14,7 +14,7 @@ import {
 } from "./itemCard.style";
 
 //Components
-import CartHandler from "../../../product/addToCart/cartHandler";
+import CartHandler from "../../../product/AddToCart/CartHandler";
 
 //helpers
 import { convertPrice } from "../../../../helpers";
