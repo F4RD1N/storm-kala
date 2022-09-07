@@ -6,7 +6,7 @@ import propTypes from 'prop-types'
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 //Styled Components
-import { Input, InputContainer, IconContainer } from "./SearchInput.style";
+import { Input, InputContainer, IconContainer } from "./searchInput.style";
 
 const SearchInput = ({ value, valueHandler}) => {
   //focus input when page mounted

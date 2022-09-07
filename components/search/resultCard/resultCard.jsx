@@ -7,7 +7,7 @@ import {
   CardContainer,
   CardImageContainer,
   CardTitle,
-} from "./ResultCard.style";
+} from "./resultCard.style";
 const SearchCard = ({ data }) => {
   const { title_fa, images } = data;
   return (

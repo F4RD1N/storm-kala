@@ -9,7 +9,7 @@ import {
   Error,
   BaseStatement,
   EndOfList
-} from "./Results.style";
+} from "./results.style";
 
 //Components
 import { ProductCard, LoadingIndicator } from "../../shared";
