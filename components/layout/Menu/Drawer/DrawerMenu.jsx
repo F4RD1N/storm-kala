@@ -21,10 +21,10 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { Input, Item, DropDown } from "./";
 
 //Constants
-import { menu } from "../../../constants";
+import { menu } from "../../../../constants";
 
 //logic and state
-import { useTheme, useDrawer } from "../../../hooks";
+import { useTheme, useDrawer } from "../../../../hooks";
 
 const DrawerMenu = () => {
   const { themeHandler, theme } = useTheme();

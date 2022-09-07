@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Header, Footer, DrawerMenu, SubHeader } from "../components";
+import { Header, Footer, DrawerMenu, SubHeader } from "../components/layout";
 import { Container } from "./Layout.style";
 
 const Layout = ({ children }) => {

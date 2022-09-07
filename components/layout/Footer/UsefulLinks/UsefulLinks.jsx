@@ -7,7 +7,7 @@ import { Container, LinksContainer, LinksTitle } from "./UsefulLinks.style";
 import UsefulLinkItem from "./UsefulLinkItem";
 
 //constants
-import { usefulLinks } from "../../../constants";
+import { usefulLinks } from "../../../../constants";
 
 const UsefulLinks = () => {
   return (

@@ -14,7 +14,7 @@ import {
 } from "./Header.style";
 
 //cart state
-import { useCartState, useDrawer } from "../../hooks";
+import { useCartState, useDrawer } from "../../../hooks";
 
 const Header = () => {
   const { itemsCounter } = useCartState();
