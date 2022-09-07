@@ -7,7 +7,7 @@ import { Container, SectionTitle, List } from "./CatagoryList.style";
 import CatagoryCard from "./CatagoryCard";
 
 //state
-import { useHomeState } from "../../hooks";
+import { useHomeState } from "../../../hooks";
 
 const CatagoryList = () => {
   const { categories } = useHomeState();

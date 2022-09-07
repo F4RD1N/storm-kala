@@ -11,7 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 
 //state
-import { useHomeState } from "../../hooks";
+import { useHomeState } from "../../../hooks";
 
 const Hero = () => {
   const { banners } = useHomeState();
