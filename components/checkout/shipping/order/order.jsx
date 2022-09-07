@@ -10,7 +10,7 @@ import {
   OrderItemImageContainer,
   OrderItemQuantity,
   BackToCart,
-} from "./Order.style";
+} from "./order.style";
 
 //state
 import { useCartState } from "../../../../hooks";

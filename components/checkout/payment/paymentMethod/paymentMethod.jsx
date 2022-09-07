@@ -8,7 +8,7 @@ import {
   Radio,
   IconContainer,
   MethodTitle,
-} from "./PaymentMethod.style";
+} from "./paymentMethod.style";
 
 //Icons
 import { BsCreditCard } from "react-icons/bs";

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 
 //Styled Components
-import { Container, Empty, GoBackToTheShop, Icon } from "./EmptyCart.style";
+import { Container, Empty, GoBackToTheShop, Icon } from "./emptyCart.style";
 
 //Icons
 import { BsCart } from "react-icons/bs";

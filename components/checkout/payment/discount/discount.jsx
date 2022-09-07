@@ -11,7 +11,7 @@ import {
   AddButton,
   CodeAlreadyUsed,
   RemoveCode,
-} from "./Discount.style";
+} from "./discount.style";
 
 //state & logic
 import { useCartState, useDiscount } from "../../../../hooks";

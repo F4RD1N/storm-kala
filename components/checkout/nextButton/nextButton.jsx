@@ -9,7 +9,7 @@ import {
   PriceContainer,
   ProductPrice,
   TotalTitle,
-} from "./NextButton.style";
+} from "./nextButton.style";
 
 //state
 import { useCartState } from "../../../hooks";

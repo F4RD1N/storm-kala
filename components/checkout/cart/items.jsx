@@ -1,10 +1,10 @@
 import React from "react";
 //Styled Components
-import { ClearCart, Content } from "./Cart.style";
+import { ClearCart, Content } from "./cart.style";
 
 //Components
-import ItemCard from "./ItemCard/ItemCard";
-import EmptyCart from "./EmptyCart/EmptyCart";
+import ItemCard from "./itemCard/itemCard";
+import EmptyCart from "./emptyCart/emptyCart";
 
 //hooks
 import { useCart, useCartState } from "../../../hooks";

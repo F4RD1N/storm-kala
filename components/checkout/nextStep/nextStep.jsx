@@ -16,7 +16,7 @@ import {
   Item,
   IconContainer,
   ItemTitle,
-} from "./NextStep.style";
+} from "./nextStep.style";
 const NextStep = ({ status }) => {
   const router = useRouter();
 

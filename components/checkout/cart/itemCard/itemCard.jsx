@@ -11,10 +11,10 @@ import {
   DetailsContainer,
   Title,
   Price,
-} from "./ItemCard.style";
+} from "./itemCard.style";
 
 //Components
-import CartHandler from "../../../product/AddToCart/CartHandler";
+import CartHandler from "../../../product/addToCart/cartHandler";
 
 //helpers
 import { convertPrice } from "../../../../helpers";

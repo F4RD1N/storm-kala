@@ -8,7 +8,7 @@ import {
   AddressValue,
   IconContainer,
   ChangeAddress
-} from "./Address.style";
+} from "./address.style";
 
 //Icons
 import { HiOutlineLocationMarker } from "react-icons/hi";

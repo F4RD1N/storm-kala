@@ -9,7 +9,7 @@ import {
   DetailsItemContainer,
   DetailsItemTitle,
   DetailsItemPrice,
-} from "./Detials.style";
+} from "./detials.style";
 
 //state
 import { useCartState } from "../../../../hooks";

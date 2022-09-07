@@ -1,2 +1,2 @@
-export { default as NextStep } from "./NextStep/NextStep";
-export { default as NextButton } from "./NextButton/NextButton";
+export { default as NextStep } from "./nextStep/nextStep";
+export { default as NextButton } from "./nextButton/nextButton";
