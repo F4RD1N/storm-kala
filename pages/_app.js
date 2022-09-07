@@ -1,4 +1,4 @@
-import Theme from "../styles/theme";
+import Theme from "../styles/Theme";
 import Layout from "../layout";
 
 //redux

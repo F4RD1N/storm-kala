@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 
 //Styled Components
-import { Container } from "../../components/Checkout/PaidOut/PaidOut.style";
+import { Container } from "../../components/checkout/PaidOut/paidOut.style";
 
 //state and logic
 import { useCartState, useCart } from "../../hooks";

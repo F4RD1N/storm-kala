@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Header, Footer, DrawerMenu, SubHeader } from "../components";
-import { Container } from "./Layout.style";
+import { Header, Footer, DrawerMenu, SubHeader } from "../components/layout";
+import { Container } from "./layout.style";
 
 const Layout = ({ children }) => {
   return (

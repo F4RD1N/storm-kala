@@ -3,11 +3,13 @@ import Head from "next/head";
 
 //Components
 import {
-  Hero,
   ListSlider,
+} from "../components/shared";
+import {
+  Hero,
   CatagoryList,
   SpecialCatagoryList,
-} from "../components";
+} from "../components/home";
 
 //preset data
 import { homePreset } from "../presets";

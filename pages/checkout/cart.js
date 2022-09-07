@@ -5,10 +5,10 @@ import Head from "next/head";
 import {
   Container,
   Title,
-} from "../../components/Checkout/Cart/Cart.style";
+} from "../../components/checkout/Cart/cart.style";
 //Components
-import { Items } from "../../components/Checkout/Cart";
-import { NextButton } from "../../components/Checkout";
+import { Items } from "../../components/checkout/Cart";
+import { NextButton } from "../../components/checkout";
 
 const Cart = () => {
   return (

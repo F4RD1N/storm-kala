@@ -3,10 +3,10 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 
 //Styled Components
-import { Title } from "../../components/Catergory/Category.style";
+import { Title } from "../../components/catergory/category.style";
 
 //Components
-import { Results, LoadMore } from "../../components/Catergory";
+import { Results, LoadMore } from "../../components/catergory";
 
 //preset
 import { categoryPreset } from "../../presets";

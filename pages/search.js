@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 //Styled Components
-import { Container } from "../components/Search/Search.style";
+import { Container } from "../components/search/search.style";
 
 //Components
 
-import { SearchInput, Results } from "../components/Search";
+import { SearchInput, Results } from "../components/search";
 
 //state
 import { useSearchState } from "../hooks";
