@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import propTypes from 'prop-types'
 
 //Styled Components
 import {
@@ -52,6 +53,11 @@ const ProductCard = ({ data }) => {
       </Details>
     </Container>
   );
+};
+
+//props types
+ProductCard.propTypes = {
+  data: propTypes.object.isRequired,
 };
 
 export default ProductCard;

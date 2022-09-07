@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 //Styled Components
 import {
@@ -53,6 +53,11 @@ const CartHandler = ({ data }) => {
       )}
     </HandleButtonsContainer>
   );
+};
+
+//props types
+CartHandler.propTypes = {
+  data: propTypes.func.isRequired,
 };
 
 export default CartHandler;

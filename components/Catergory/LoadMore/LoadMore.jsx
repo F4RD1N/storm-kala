@@ -1,5 +1,5 @@
 import React from "react";
-
+import propTypes from 'prop-types'
 //Styled Components
 import { Container } from "./LoadMore.style";
 
@@ -23,6 +23,11 @@ const LoadMore = ({ arg }) => {
       )}
     </div>
   );
+};
+
+//props types
+LoadMore.propTypes = {
+  arg: propTypes.object.isRequired,
 };
 
 export default LoadMore;

@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from "next/image";
+import propTypes from 'prop-types'
 
 //Styled Components
 import { ImageContainer } from "./Trusts.style";
@@ -17,5 +18,10 @@ const Trust = ({source}) => {
       </ImageContainer>
   )
 }
+
+//props types
+Trust.propTypes = {
+  source: propTypes.string.isRequired
+};
 
 export default Trust

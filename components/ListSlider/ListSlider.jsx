@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import propTypes from 'prop-types'
 
 //Shared Components
 import { ProductCard } from "../shared";
@@ -104,6 +105,14 @@ const ListSlider = ({ data, title, subTitle, pusherLess }) => {
       </Content>
     </Container>
   );
+};
+
+//props types
+ListSlider.propTypes = {
+  data: propTypes.object.isRequired,
+  title: propTypes.string.isRequired,
+  subTitle: propTypes.string,
+  pusherLess: propTypes.bool
 };
 
 export default ListSlider;

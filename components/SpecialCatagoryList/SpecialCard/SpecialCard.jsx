@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import propTypes from 'prop-types'
 
 //Styled Components
 import {
@@ -39,6 +40,11 @@ const SpecialCard = ({ category }) => {
       </LeftContainer>
     </Container>
   );
+};
+
+//props types
+SpecialCard.propTypes = {
+  category: propTypes.object.isRequired,
 };
 
 export default SpecialCard;

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import propTypes from 'prop-types'
 
 //Styled Components
 import { LinkItem } from "./UsefulLinks.style";
@@ -12,4 +13,9 @@ const UsefulLinkItem = ({ url, title }) => {
   );
 };
 
+//props types
+UsefulLinkItem.propTypes = {
+  title: propTypes.string.isRequired,
+  url: propTypes.string.isRequired,
+};
 export default UsefulLinkItem;

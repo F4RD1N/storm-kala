@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import propTypes from 'prop-types'
 
 //Styled Components
 import {
@@ -41,6 +42,13 @@ const DropDown = ({ title, icon, sub }) => {
       </Content>
     </>
   );
+};
+
+//props types
+DropDown.propTypes = {
+  title: propTypes.string.isRequired,
+  icon: propTypes.object.isRequired,
+  sub: propTypes.array.isRequired,
 };
 
 export default DropDown;

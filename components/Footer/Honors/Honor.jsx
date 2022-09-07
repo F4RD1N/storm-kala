@@ -1,4 +1,6 @@
 import React from "react";
+import propTypes from 'prop-types'
+
 //Styled Compoennts
 import { HonorItem, IconContainer, HonorTitle } from "./Honors.style";
 
@@ -11,6 +13,12 @@ const Honor = ({title, icon}) => {
       <HonorTitle>{title}</HonorTitle>
     </HonorItem>
   );
+};
+
+//props types
+Honor.propTypes = {
+  title: propTypes.string.isRequired,
+  icon: propTypes.object.isRequired
 };
 
 export default Honor;

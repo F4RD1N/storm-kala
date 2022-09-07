@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from 'prop-types'
 
 //Styled Components
 import {
@@ -81,6 +82,11 @@ const Comments = ({action}) => {
       )}
     </Container>
   );
+};
+
+//props types
+Comments.propTypes = {
+  action: propTypes.func.isRequired,
 };
 
 export default Comments;

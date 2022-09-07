@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from 'prop-types'
 
 //Styled Components
 import {
@@ -31,4 +32,12 @@ const CommentCard = ({ name, body, time, isBuyer, rate }) => {
   );
 };
 
+//props types
+CommentCard.propTypes = {
+  name: propTypes.string.isRequired,
+  body: propTypes.string.isRequired,
+  time: propTypes.string.isRequired,
+  isBuyer: propTypes.bool.isRequired,
+  rate: propTypes.number.isRequired,
+};
 export default CommentCard;

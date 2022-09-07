@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types'
 
 //Styled Components
 import { Container, Button } from './SliderNavigation.style'
@@ -15,4 +16,8 @@ const SliderNavigation = ({refs}) => {
   )
 }
 
+//props types
+SliderNavigation.propTypes = {
+  refs: propTypes.object.isRequired,
+};
 export default SliderNavigation

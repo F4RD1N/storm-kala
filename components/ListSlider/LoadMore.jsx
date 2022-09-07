@@ -1,5 +1,5 @@
 import React from "react";
-
+import propTypes from 'prop-types'
 //Styled Components
 import { LoadMoreContainer, LoadMoreButton } from "./ListSlider.style";
 //Icons
@@ -26,4 +26,9 @@ const LoadMore = ({ arg }) => {
   );
 };
 
+//props types
+LoadMore.propTypes = {
+  arg: propTypes.object.isRequired,
+
+};
 export default LoadMore;

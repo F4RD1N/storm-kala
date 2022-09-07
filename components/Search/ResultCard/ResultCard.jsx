@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import propTypes from 'prop-types'
+
 //styled Components
 import {
   CardContainer,
@@ -22,6 +24,11 @@ const SearchCard = ({ data }) => {
       <CardTitle>{title_fa}</CardTitle>
     </CardContainer>
   );
+};
+
+//props types
+SearchCard.propTypes = {
+  data: propTypes.object.isRequired,
 };
 
 export default SearchCard;

@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import propTypes from "prop-types";
+
 //Styled Components
 import {
   Container,
@@ -23,7 +25,7 @@ const NextButton = ({ url, title = "ادامه" }) => {
 
   const payHandler = () => {
     if (title === "پرداخت") {
-      checkoutHanlder()
+      checkoutHanlder();
     }
   };
   return (
@@ -41,6 +43,12 @@ const NextButton = ({ url, title = "ادامه" }) => {
       </PriceContainer>
     </Container>
   );
+};
+
+//props types
+NextButton.propTypes = {
+  url: propTypes.string.isRequired,
+  title: propTypes.string.isRequired,
 };
 
 export default NextButton;

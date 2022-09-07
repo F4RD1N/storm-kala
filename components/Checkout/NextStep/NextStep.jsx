@@ -1,6 +1,8 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import propTypes from 'prop-types'
+
 //Icons
 import { BsCart } from "react-icons/bs";
 import { MdOutlineLocalShipping } from "react-icons/md";
@@ -47,4 +49,8 @@ const NextStep = ({ status }) => {
   );
 };
 
+//props types
+NextStep.propTypes = {
+  status: propTypes.string.isRequired,
+};
 export default NextStep;

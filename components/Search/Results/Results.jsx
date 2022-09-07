@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from 'prop-types'
 
 //Styled Components
 import {
@@ -66,6 +67,11 @@ const Results = ({ state }) => {
       {error && <Error>مشکلی در ارتباط با سرور بیش آمد!</Error>}
     </>
   );
+};
+
+//props types
+Results.propTypes = {
+  state: propTypes.func.isRequired,
 };
 
 export default Results;

@@ -1,7 +1,7 @@
 import React from "react";
 
 //Styled Components
-import { Container, LinksContainer, LinksTitle, LinkItem } from "./UsefulLinks.style";
+import { Container, LinksContainer, LinksTitle } from "./UsefulLinks.style";
 
 //Components
 import UsefulLinkItem from "./UsefulLinkItem";

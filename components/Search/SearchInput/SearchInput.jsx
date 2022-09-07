@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
+import propTypes from 'prop-types'
 
 //Icons
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -37,6 +38,12 @@ const SearchInput = ({ value, valueHandler}) => {
       />
     </InputContainer>
   );
+};
+
+//props types
+SearchInput.propTypes = {
+  value: propTypes.string.isRequired,
+  valueHandler: propTypes.func.isRequired,
 };
 
 export default SearchInput;
