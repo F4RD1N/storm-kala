@@ -4,7 +4,7 @@ import React from "react";
 import { Container, SectionTitle, List } from "./catagoryList.style";
 
 //Shared Components
-import CatagoryCard from "./catagoryCard";
+import { CatagoryCard } from "./CatagoryCard";
 
 //state
 import { useHomeState } from "../../../hooks";
@@ -12,7 +12,6 @@ import { useHomeState } from "../../../hooks";
 const CatagoryList = () => {
   const { categories } = useHomeState();
 
-  
   return (
     <Container>
       <SectionTitle>دسته بندی ها</SectionTitle>
