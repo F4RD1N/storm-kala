@@ -8,11 +8,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation } from "swiper";
 
 //Styled Components
-import { Container, Title, SecTitle, Content } from "./ListSlider.style";
+import { Container, Title, SecTitle, Content } from "./listSlider.style";
 
 //Components
-import LoadMore from "./LoadMore";
-import { ProductCard, SliderNavigation } from "../";
+import LoadMore from "./loadMore";
+import { ProductCard, SliderNavigation } from "..";
 
 //redux
 import { fetchPushData } from "../../../redux/slices/homeSlice";

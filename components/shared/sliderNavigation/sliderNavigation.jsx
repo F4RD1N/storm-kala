@@ -2,7 +2,7 @@ import React from 'react'
 import propTypes from 'prop-types'
 
 //Styled Components
-import { Container, Button } from './SliderNavigation.style'
+import { Container, Button } from './sliderNavigation.style'
 
 //icons
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";

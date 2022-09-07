@@ -1,7 +1,7 @@
 import React from "react";
 import propTypes from 'prop-types'
 //Styled Components
-import { LoadMoreContainer, LoadMoreButton } from "./ListSlider.style";
+import { LoadMoreContainer, LoadMoreButton } from "./listSlider.style";
 //Icons
 import { AiOutlineArrowLeft } from "react-icons/ai";
 //Components

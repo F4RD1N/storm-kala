@@ -13,7 +13,7 @@ import {
   OldPrice,
   Badge,
   Unavailable,
-} from "./ProductCard.style";
+} from "./productCard.style";
 
 //Helpers
 import { convertPrice, englishToPersian } from "../../../helpers";
