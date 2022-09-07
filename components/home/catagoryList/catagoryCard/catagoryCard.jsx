@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import propTypes from "prop-types";
 //Styled Components
-import { Container, Title, ImageContainer } from "./CatagoryCard.style";
+import { Container, Title, ImageContainer } from "./catagoryCard.style";
 
 const CatagoryCard = ({ data }) => {
   const { title_fa, logo, code } = data;

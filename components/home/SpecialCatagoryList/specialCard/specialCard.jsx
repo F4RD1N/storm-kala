@@ -12,7 +12,7 @@ import {
   BuyButton,
   LeftContainer,
   ImageContainer
-} from "./SpecialCard.style";
+} from "./specialCard.style";
 
 
 const SpecialCard = ({ category }) => {

@@ -1,3 +1,3 @@
-export { default as CatagoryList } from "./CatagoryList/CatagoryList";
-export { default as SpecialCatagoryList } from "./SpecialCatagoryList/SpecialCatagoryList";
-export { default as Hero } from "./Hero/Hero";
+export { default as CatagoryList } from "./catagoryList/catagoryList";
+export { default as SpecialCatagoryList } from "./specialCatagoryList/specialCatagoryList";
+export { default as Hero } from "./hero/hero";

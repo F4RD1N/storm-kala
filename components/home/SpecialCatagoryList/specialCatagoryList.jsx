@@ -1,10 +1,10 @@
 import React from "react";
 
 //Components
-import SpecialCard from "./SpecialCard/SpecialCard";
+import { SpecialCard } from "./specialCard";
 
 //Shared Components
-import { Container } from "./SpecialCatagoryList.style";
+import { Container } from "./specialCatagoryList.style";
 
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,15 +21,15 @@ const SpecialList = () => {
     <Container>
       <Swiper
         spaceBetween={3}
-        slidesPerView={.5}
+        slidesPerView={0.5}
         freeMode={true}
         modules={[FreeMode]}
         breakpoints={{
           280: {
-            slidesPerView: .8,
+            slidesPerView: 0.8,
           },
           320: {
-            slidesPerView: .9,
+            slidesPerView: 0.9,
           },
           380: {
             slidesPerView: 1,

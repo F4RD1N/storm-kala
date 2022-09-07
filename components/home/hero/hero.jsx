@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 //Styled Components
-import { Container, ImageContainer } from "./Hero.style";
+import { Container, ImageContainer } from "./hero.style";
 
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";

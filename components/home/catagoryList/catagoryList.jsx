@@ -1,10 +1,10 @@
 import React from "react";
 
 //Styled Components
-import { Container, SectionTitle, List } from "./CatagoryList.style";
+import { Container, SectionTitle, List } from "./catagoryList.style";
 
 //Shared Components
-import CatagoryCard from "./CatagoryCard";
+import CatagoryCard from "./catagoryCard";
 
 //state
 import { useHomeState } from "../../../hooks";
