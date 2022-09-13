@@ -11,10 +11,10 @@ import {
 } from "./addToCart.style";
 
 //Components
-import CartHandler from "./CartHandler";
+import { CartHandler } from "../../shared";
 
 //state
-import {useProductState} from '../../../hooks'
+import { useProductState } from "../../../hooks";
 
 // helpers
 import { convertPrice } from "../../../helpers";
@@ -26,10 +26,7 @@ const AddToCart = () => {
   const { price, status } = useProductState();
 
   //cart functions
-  const {
-    addHandler,
-    isItemExist,
-  } = useCart(useProductState());
+  const { addHandler, isItemExist } = useCart(useProductState());
 
   return (
     <Container>
@@ -42,7 +39,7 @@ const AddToCart = () => {
           {status !== "marketable" ? "اتمام موجودی" : "افزودن به سبد"}
         </AddButton>
       ) : (
-        <CartHandler data={useProductState}/>
+        <CartHandler data={useProductState} />
       )}
       <PriceContainer>
         {status !== "marketable" ? (

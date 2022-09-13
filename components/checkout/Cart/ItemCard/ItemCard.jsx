@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import propTypes from 'prop-types'
+import propTypes from "prop-types";
 
 //Styled Components
 import {
@@ -14,20 +14,20 @@ import {
 } from "./itemCard.style";
 
 //Components
-import CartHandler from "../../../product/AddToCart/CartHandler";
+import { CartHandler } from "../../../shared";
 
 //helpers
 import { convertPrice } from "../../../../helpers";
 const ItemCard = ({ data }) => {
   const { id, title, images, price, quantity } = data;
-  
+
   return (
     <Container>
       <RightContainer>
         <Link href={`/product/${id}`}>
           <a>
             <ImageContainer>
-              <Image  
+              <Image
                 alt={title}
                 src={images[0].url[0]}
                 objectFit="contain"
