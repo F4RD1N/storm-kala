@@ -1,15 +1,15 @@
 import React from "react";
 
 //Styled Components
-import { Container, SectionTitle, List } from "./catagoryList.style";
+import { Container, SectionTitle, List } from "./categoryList.style";
 
-//Shared Components
-import { CatagoryCard } from "./CatagoryCard";
+//Components
+import { CategoryCard } from "./CategoryCard";
 
 //state
 import { useHomeState } from "../../../hooks";
 
-const CatagoryList = () => {
+const CategoryList = () => {
   const { categories } = useHomeState();
 
   return (
@@ -19,11 +19,11 @@ const CatagoryList = () => {
         {categories &&
           categories.length &&
           categories.map((category) => {
-            return <CatagoryCard key={category.id} data={category} />;
+            return <CategoryCard key={category.id} data={category} />;
           })}
       </List>
     </Container>
   );
 };
 
-export default CatagoryList;
+export default CategoryList;

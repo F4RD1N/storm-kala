@@ -4,7 +4,7 @@ import React from "react";
 import SpecialCard from "./SpecialCard/SpecialCard";
 
 //Shared Components
-import { Container } from "./specialCatagoryList.style";
+import { Container } from "./specialCategoryList.style";
 
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";

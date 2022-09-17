@@ -7,8 +7,8 @@ import {
 } from "../components/shared";
 import {
   Hero,
-  CatagoryList,
-  SpecialCatagoryList,
+  CategoryList,
+  SpecialCategoryList,
 } from "../components/home";
 
 //preset data
@@ -46,8 +46,8 @@ const Home = ({ homeData }) => {
         subTitle="خریدی به صرفه با تخفیفات شگفت انگیز"
       />
       <ListSlider data={mobile} title="موبایل" />
-      <CatagoryList />
-      <SpecialCatagoryList />
+      <CategoryList />
+      <SpecialCategoryList />
       <ListSlider data={bestSelling} title="محبوب ترین ها" />
       <ListSlider
         data={laptop}

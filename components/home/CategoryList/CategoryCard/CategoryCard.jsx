@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import propTypes from "prop-types";
 //Styled Components
-import { Container, Title, ImageContainer } from "./catagoryCard.style";
+import { Container, Title, ImageContainer } from "./categoryCard.style";
 
-const CatagoryCard = ({ data }) => {
+const CategoryCard = ({ data }) => {
   const { title_fa, logo, code } = data;
   return (
     <Link href={`/category/${code}`}>
@@ -26,8 +26,8 @@ const CatagoryCard = ({ data }) => {
 };
 
 //props types
-CatagoryCard.propTypes = {
+CategoryCard.propTypes = {
   data: propTypes.object.isRequired,
 };
 
-export default CatagoryCard;
+export default CategoryCard;
