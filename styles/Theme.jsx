@@ -1,7 +1,6 @@
 import { ThemeProvider } from "styled-components";
 
-import lightTheme from "../themes/light";
-import darkTheme from "../themes/dark";
+import { light, dark } from "../themes";
 
 //state
 import { useMainState } from "../hooks";
@@ -11,7 +10,7 @@ import GlobalStyles from "./globals";
 const Theme = ({ children }) => {
   const { theme } = useMainState();
   return (
-    <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
+    <ThemeProvider theme={theme === "dark" ? dark : light}>
       <GlobalStyles />
       {children}
     </ThemeProvider>
