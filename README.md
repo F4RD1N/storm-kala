@@ -4,7 +4,7 @@ Storm Kala
 ## Demo link:
 access my site at 
 <br />
-[storm-kala.f4rd1n.ir](https://storm-kala.f4rd1n.ir) `recommended`
+[storm-kala.f4rd1n.ir](https://storm-kala.f4rd1n.ir) `unavailable`
 <br />
 or
 <br />
